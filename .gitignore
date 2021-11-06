@@ -1,3 +1,5 @@
+out/vs2019/.vs
+out/vs2019/gen
 .vscode/
 .vscode-server/
 .DS_Store
@@ -6,10 +8,19 @@
 .gdb_history
 .gdbinit
 *.aps
+*.log
+*.ninja_deps
+*.ninja_log
+*.o
+*.obj
+*.o.d
 *.opensdf
+*.pdb
 *.pyc
 *.sdf
+*.stamp
 *.suo
 *.user
+*.VC.db
 *~
 
