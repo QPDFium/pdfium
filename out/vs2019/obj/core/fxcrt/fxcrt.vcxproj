@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{461077A6-F0F8-1B68-7CB8-B76DD73E8856}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fxcrt</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/core/fxcrt/fxcrt.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/freetype/include;../../../../../third_party/freetype/src/include;../../../../../third_party/abseil-cpp;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../core/fxcrt/autonuller.h" />
+    <None Include="../../../../../core/fxcrt/autorestorer.h" />
+    <None Include="../../../../../core/fxcrt/byteorder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/bytestring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/bytestring.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/bytestring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/bytestring.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_binarybuf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_binarybuf.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_binarybuf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_binarybuf.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_bitstream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_bitstream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_bitstream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_bitstream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_datetime.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_datetime.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_datetime.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_datetime.h" />
+    <None Include="../../../../../core/fxcrt/cfx_fixedbufgrow.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_readonlymemorystream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_readonlymemorystream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_readonlymemorystream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_readonlymemorystream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_seekablestreamproxy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_seekablestreamproxy.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_seekablestreamproxy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_seekablestreamproxy.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_timer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_timer.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_timer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_timer.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_utf8decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_utf8decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_utf8decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_utf8decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_utf8encoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_utf8encoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_utf8encoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_utf8encoder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_widetextbuf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_widetextbuf.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_widetextbuf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_widetextbuf.h" />
+    <None Include="../../../../../core/fxcrt/fileaccess_iface.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_bidi.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_bidi.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_bidi.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_bidi.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_codepage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_codepage.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_codepage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_codepage.h" />
+    <None Include="../../../../../core/fxcrt/fx_codepage_forward.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_coordinates.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_coordinates.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_coordinates.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_coordinates.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_extension.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_extension.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_extension.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_extension.h" />
+    <None Include="../../../../../core/fxcrt/fx_folder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_memory.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_memory.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_memory.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_memory.h" />
+    <None Include="../../../../../core/fxcrt/fx_memory_wrappers.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_number.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_number.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_number.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_number.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_random.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_random.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_random.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_random.h" />
+    <None Include="../../../../../core/fxcrt/fx_safe_types.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_stream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_stream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_stream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_stream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_string.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_string.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_string.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_string.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_system.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_system.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_system.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_system.h" />
+    <None Include="../../../../../core/fxcrt/fx_types.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_unicode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_unicode.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_unicode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/fx_unicode.h" />
+    <None Include="../../../../../core/fxcrt/mask.h" />
+    <None Include="../../../../../core/fxcrt/maybe_owned.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/observed_ptr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/observed_ptr.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/observed_ptr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/observed_ptr.h" />
+    <None Include="../../../../../core/fxcrt/pauseindicator_iface.h" />
+    <None Include="../../../../../core/fxcrt/retain_ptr.h" />
+    <None Include="../../../../../core/fxcrt/retained_tree_node.h" />
+    <None Include="../../../../../core/fxcrt/scoped_set_insertion.h" />
+    <None Include="../../../../../core/fxcrt/shared_copy_on_write.h" />
+    <None Include="../../../../../core/fxcrt/span_util.h" />
+    <None Include="../../../../../core/fxcrt/stl_util.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/string_data_template.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/string_data_template.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/string_data_template.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/string_data_template.h" />
+    <None Include="../../../../../core/fxcrt/string_pool_template.h" />
+    <None Include="../../../../../core/fxcrt/string_view_template.h" />
+    <None Include="../../../../../core/fxcrt/tree_node.h" />
+    <None Include="../../../../../core/fxcrt/weak_ptr.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/widestring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/widestring.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/widestring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/widestring.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlchardata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmlchardata.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmlchardata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlchardata.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmldocument.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmldocument.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmldocument.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmldocument.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlelement.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmlelement.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmlelement.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlelement.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlinstruction.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmlinstruction.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmlinstruction.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlinstruction.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlnode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmlnode.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmlnode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlnode.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmlparser.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmlparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlparser.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmltext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_xmltext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_xmltext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmltext.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_fileaccess_windows.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_fileaccess_windows.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_fileaccess_windows.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_fileaccess_windows.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_folder_windows.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/fx_folder_windows.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/fx_folder_windows.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_memorystream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt/cfx_memorystream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcrt/fxcrt/cfx_memorystream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/cfx_memorystream.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/core/fxcrt/fxcrt.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/core/fxcrt/fxcrt.stamp" />
+  </Target>
+</Project>

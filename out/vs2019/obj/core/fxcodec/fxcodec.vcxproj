@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7B6D415-A3CA-F943-58AA-138D93EC2865}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fxcodec</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/core/fxcodec/fxcodec.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/zlib;../../../../../third_party/freetype/include;../../../../../third_party/freetype/src/include;../../../../../third_party/abseil-cpp;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;../../../../../third_party/libjpeg_turbo;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USE_LIBJPEG_TURBO=1;MANGLE_JPEG_NAMES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fxcodec/basic/basicmodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/basicmodule.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/basicmodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/basic/basicmodule.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/cfx_codec_memory.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cfx_codec_memory.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cfx_codec_memory.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/cfx_codec_memory.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/fax/faxmodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/faxmodule.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/faxmodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/fax/faxmodule.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/flate/flatemodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/flatemodule.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/flatemodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/flate/flatemodule.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/fx_codec.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/fx_codec.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/fx_codec.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/fx_codec.h" />
+    <None Include="../../../../../core/fxcodec/fx_codec_def.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/icc/icc_transform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/icc_transform.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/icc_transform.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/icc/icc_transform.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_ArithDecoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_ArithDecoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_ArithDecoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_ArithDecoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_ArithIntDecoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_ArithIntDecoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_ArithIntDecoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_ArithIntDecoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_BitStream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_BitStream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_BitStream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_BitStream.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Context.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_Context.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_Context.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Context.h" />
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Define.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_DocumentContext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_DocumentContext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_DocumentContext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_DocumentContext.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_GrdProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_GrdProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_GrdProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_GrdProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_GrrdProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_GrrdProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_GrrdProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_GrrdProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HtrdProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_HtrdProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_HtrdProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HtrdProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanDecoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_HuffmanDecoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_HuffmanDecoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanDecoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanTable.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_HuffmanTable.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_HuffmanTable.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanTable.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Image.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_Image.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_Image.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Image.h" />
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Page.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_PatternDict.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_PatternDict.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_PatternDict.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_PatternDict.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_PddProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_PddProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_PddProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_PddProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_SddProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_SddProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_SddProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_SddProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Segment.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_Segment.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_Segment.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Segment.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_SymbolDict.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_SymbolDict.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_SymbolDict.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_SymbolDict.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_TrdProc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/JBig2_TrdProc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/JBig2_TrdProc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_TrdProc.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/jbig2_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/jbig2_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/jbig2_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/jbig2_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpeg_common.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/jpeg_common.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/jpeg_common.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpeg_common.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpegmodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/jpegmodule.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/jpegmodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpegmodule.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpx/cjpx_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cjpx_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cjpx_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpx/cjpx_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpx/jpx_decode_utils.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/jpx_decode_utils.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/jpx_decode_utils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpx/jpx_decode_utils.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/scanlinedecoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/scanlinedecoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/scanlinedecoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/scanlinedecoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/jpeg_progressive_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/jpeg_progressive_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/progressive_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/progressive_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/progressive_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/progressive_decoder.h" />
+    <None Include="../../../../../core/fxcodec/progressive_decoder_iface.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/bmp_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/bmp_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/bmp_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/bmp_progressive_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/bmp_progressive_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cfx_bmpcontext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cfx_bmpcontext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cfx_bmpdecompressor.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cfx_bmpdecompressor.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.h" />
+    <None Include="../../../../../core/fxcodec/bmp/fx_bmp.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gif.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cfx_gif.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cfx_gif.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/cfx_gif.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gifcontext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/cfx_gifcontext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/cfx_gifcontext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/cfx_gifcontext.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/gif_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/gif_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/gif_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/gif_progressive_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/gif_progressive_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/gif/lzw_decompressor.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/lzw_decompressor.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/lzw_decompressor.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/lzw_decompressor.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/png/png_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/png_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/png_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/png/png_decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/tiff/tiff_decoder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec/tiff_decoder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fxcodec/fxcodec/tiff_decoder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/tiff/tiff_decoder.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/core/fxcodec/fxcodec.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/core/fxcodec/fxcodec.stamp" />
+  </Target>
+</Project>

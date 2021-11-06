@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{D1B18317-D6F2-36BC-598B-58D0029825FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\debug">
+      <UniqueIdentifier>{C43924B4-5AEB-905E-C395-EAE849E368CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\numbers">
+      <UniqueIdentifier>{93610879-6E8C-FD0F-2658-A9906D1F95CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\platform">
+      <UniqueIdentifier>{916B878B-7F39-A20D-3D2E-18C11A81E787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\sanitizer">
+      <UniqueIdentifier>{238C468A-3E64-C872-FC30-82B7817B7F88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\utils">
+      <UniqueIdentifier>{CCCED0E0-165D-DC9F-173A-2F26BCB25D4F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../v8/src/base/address-region.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/atomic-utils.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/atomicops.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/atomicops_internals_atomicword_compat.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/base-export.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/bit-field.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/bits-iterator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/bits.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/bits.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/bounded-page-allocator.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/bounded-page-allocator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/bounds.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/build_config.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/compiler-specific.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/cpu.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/cpu.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/debug/stack_trace.cc">
+      <Filter>src\base\debug</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/debug/stack_trace.h">
+      <Filter>src\base\debug</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/division-by-constant.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/division-by-constant.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/enum-set.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/export-template.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/file-utils.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/file-utils.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/flags.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/free_deleter.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/functional.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/functional.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/hashmap-entry.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/hashmap.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/ieee754.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/ieee754.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/immediate-crash.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/iterator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/lazy-instance.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/logging.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/logging.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/macros.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/memory.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/bignum-dtoa.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/bignum-dtoa.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/bignum.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/bignum.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/cached-powers.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/cached-powers.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/diy-fp.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/diy-fp.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/numbers/double.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/dtoa.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/dtoa.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/fast-dtoa.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/fast-dtoa.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/fixed-dtoa.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/fixed-dtoa.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/numbers/strtod.cc">
+      <Filter>src\base\numbers</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/numbers/strtod.h">
+      <Filter>src\base\numbers</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/once.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/once.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/optional.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/overflowing-math.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/page-allocator.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/page-allocator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/platform/condition-variable.cc">
+      <Filter>src\base\platform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/platform/condition-variable.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/platform/elapsed-timer.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/platform/mutex.cc">
+      <Filter>src\base\platform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/platform/mutex.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/platform/platform.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/platform/semaphore.cc">
+      <Filter>src\base\platform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/platform/semaphore.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/platform/time.cc">
+      <Filter>src\base\platform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/platform/time.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/platform/wrappers.h">
+      <Filter>src\base\platform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/region-allocator.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/region-allocator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/ring-buffer.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/safe_conversions.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/safe_conversions_arm_impl.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/safe_conversions_impl.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/sanitizer/asan.h">
+      <Filter>src\base\sanitizer</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/sanitizer/lsan-page-allocator.cc">
+      <Filter>src\base\sanitizer</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/sanitizer/lsan-page-allocator.h">
+      <Filter>src\base\sanitizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/sanitizer/lsan.h">
+      <Filter>src\base\sanitizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/sanitizer/msan.h">
+      <Filter>src\base\sanitizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/sanitizer/tsan.h">
+      <Filter>src\base\sanitizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/small-vector.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/strings.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/strings.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/sys-info.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/sys-info.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/template-utils.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/threaded-list.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/timezone-cache.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/type-traits.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/utils/random-number-generator.cc">
+      <Filter>src\base\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/utils/random-number-generator.h">
+      <Filter>src\base\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/v8-fallthrough.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/vector.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/vlq-base64.cc">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/vlq-base64.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../v8/src/base/vlq.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/base/debug/stack_trace_win.cc">
+      <Filter>src\base\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/base/platform/platform-win32.cc">
+      <Filter>src\base\platform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/base/win32-headers.h">
+      <Filter>src\base</Filter>
+    </None>
+  </ItemGroup>
+</Project>

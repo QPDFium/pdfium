@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{491C1162-B360-DE3B-E630-CA30EE1E002C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fxfa</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/xfa/fxfa/fxfa.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/freetype/include;../../../../../third_party/freetype/src/include;../../../../../third_party/abseil-cpp;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;../../../../../v8/include;../../../../../out/vs2019/gen/v8/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_SHARED;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_eventparam.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_eventparam.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_eventparam.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_eventparam.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffapp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffapp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffapp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffapp.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffarc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffarc.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffarc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffarc.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffbarcode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffbarcode.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffbarcode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffbarcode.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffcheckbutton.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffcheckbutton.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffcheckbutton.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffcheckbutton.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffcombobox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffcombobox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffcombobox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffcombobox.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffdatetimeedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffdatetimeedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffdatetimeedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffdatetimeedit.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffdoc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffdoc.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffdoc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffdoc.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffdocview.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffdocview.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffdocview.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffdocview.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffdropdown.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffdropdown.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffdropdown.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffdropdown.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffexclgroup.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffexclgroup.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffexclgroup.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffexclgroup.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fffield.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fffield.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fffield.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fffield.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffimage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffimage.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffimage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffimage.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffimageedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffimageedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffimageedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffimageedit.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffline.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffline.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffline.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffline.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fflistbox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fflistbox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fflistbox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fflistbox.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffnotify.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffnotify.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffnotify.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffnotify.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffnumericedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffnumericedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffnumericedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffnumericedit.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffpageview.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffpageview.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffpageview.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffpageview.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffpasswordedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffpasswordedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffpasswordedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffpasswordedit.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffpushbutton.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffpushbutton.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffpushbutton.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffpushbutton.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffrectangle.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffrectangle.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffrectangle.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffrectangle.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffsignature.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffsignature.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffsignature.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffsignature.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fftext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fftext.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fftext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fftext.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fftextedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fftextedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fftextedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fftextedit.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffwidget.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffwidget.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffwidget.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffwidget.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_ffwidgethandler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_ffwidgethandler.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_ffwidgethandler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_ffwidgethandler.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fontmgr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fontmgr.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fontmgr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fontmgr.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fwladapterwidgetmgr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fwladapterwidgetmgr.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fwladapterwidgetmgr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fwladapterwidgetmgr.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_fwltheme.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_fwltheme.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_fwltheme.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_fwltheme.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_imagerenderer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_imagerenderer.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_imagerenderer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_imagerenderer.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_readynodeiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_readynodeiterator.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_readynodeiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_readynodeiterator.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_textlayout.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_textlayout.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_textlayout.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_textlayout.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_textparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_textparser.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_textparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_textparser.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_textprovider.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_textprovider.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_textprovider.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_textprovider.h" />
+    <CustomBuild Include="../../../../../xfa/fxfa/cxfa_texttabstopscontext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa/cxfa_texttabstopscontext.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/fxfa/cxfa_texttabstopscontext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fxfa/cxfa_texttabstopscontext.h" />
+    <None Include="../../../../../xfa/fxfa/fxfa.h" />
+    <None Include="../../../../../xfa/fxfa/fxfa_basic.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/xfa/fxfa/fxfa.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/xfa/fxfa/fxfa.stamp" />
+  </Target>
+</Project>

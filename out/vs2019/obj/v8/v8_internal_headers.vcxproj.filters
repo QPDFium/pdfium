@@ -1,0 +1,2674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\out\vs2019\gen\v8\builtins-generated">
+      <UniqueIdentifier>{3E38A3CA-98A7-F95E-1B91-0F9197A7A2DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8">
+      <UniqueIdentifier>{7759FF7E-003C-E2C6-7163-B259E1BF5CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen">
+      <UniqueIdentifier>{0E8AB76B-5751-F980-0EC7-B9741E74BA80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019">
+      <UniqueIdentifier>{7078447C-44AA-E0CF-74C8-BF2E4C761502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out">
+      <UniqueIdentifier>{FBD62108-6F7E-E78E-9895-92E1AA2F5AC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\base\trace_event\common">
+      <UniqueIdentifier>{010D3D01-5A45-EFFA-BFF4-F184065DEC3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\base\trace_event">
+      <UniqueIdentifier>{89343095-9770-71E4-ADB6-FF479033A646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\base">
+      <UniqueIdentifier>{75A87448-82D5-A482-73D7-30FC73F47474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\cppgc">
+      <UniqueIdentifier>{04C6895B-0509-ECF2-87AB-2F46712473F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\api">
+      <UniqueIdentifier>{1F5CE53F-73AA-8835-5BCA-093AB9A31A38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ast">
+      <UniqueIdentifier>{0D5909B6-456A-8E25-7393-FA5891BB1B9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\baseline">
+      <UniqueIdentifier>{B17A65E9-CEB3-9234-ED0F-F5E841AB3EA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\builtins">
+      <UniqueIdentifier>{DE53AEB8-0D67-021F-B30F-0EEBFF146C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen">
+      <UniqueIdentifier>{A53049AB-D190-D2C0-93CE-04EF4D78DF2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{5C3F1AB9-1290-10AE-B933-CF80561941FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler-dispatcher">
+      <UniqueIdentifier>{0CC8988F-EA4B-17A2-7407-24FCD0A4D8DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler">
+      <UniqueIdentifier>{AD208415-7CDF-8A22-3B4D-31D583BED58C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler\backend">
+      <UniqueIdentifier>{F46034A4-B263-A986-8802-AD53B1CE5E01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\date">
+      <UniqueIdentifier>{B1BD4043-339E-F63F-07BF-352D7C56E8AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\debug">
+      <UniqueIdentifier>{111EAA30-C639-C883-1DDE-D4B86FC1FAAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deoptimizer">
+      <UniqueIdentifier>{E2518451-726E-C88A-54BE-D2C64AF03058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\diagnostics">
+      <UniqueIdentifier>{0F14C5BD-BB00-627B-1A3D-F29240065BC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\execution">
+      <UniqueIdentifier>{B0D59D66-0B8D-3D8C-E6F1-D953111B6108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extensions">
+      <UniqueIdentifier>{6D5E1016-CD0D-4FCF-C170-388DB8FE9341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\handles">
+      <UniqueIdentifier>{CE356507-0015-98D9-920F-722919BA8094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\heap">
+      <UniqueIdentifier>{19B3F6EE-F232-8635-AEDF-406086FD378F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\heap\cppgc-js">
+      <UniqueIdentifier>{284ECF58-EE88-5200-DE8E-7C2D6FC390E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ic">
+      <UniqueIdentifier>{B1E9DB05-3005-45C4-6BAA-8B759B8AC69E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\init">
+      <UniqueIdentifier>{0DFC9A87-0155-3C53-AAF4-F6BB05D678FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\interpreter">
+      <UniqueIdentifier>{B5E0D3E1-2903-6CDC-BD7C-41E3BD5C8EAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\json">
+      <UniqueIdentifier>{F4B19EA2-2B18-D07B-036A-7E2435B8F639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libsampler">
+      <UniqueIdentifier>{9F21D738-CFDB-0062-A888-4BAD594617F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\logging">
+      <UniqueIdentifier>{5D19F21E-4CE6-A8DE-BFED-015C6896C86B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\numbers">
+      <UniqueIdentifier>{68379905-9492-27ED-5C4D-3783BC684FD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\objects">
+      <UniqueIdentifier>{1E39EB9B-68FA-8C14-A397-01DFCA45EC72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\parsing">
+      <UniqueIdentifier>{0F0ABB8A-4530-4842-29DF-7181BBD10023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\profiler">
+      <UniqueIdentifier>{2D50675F-504D-8308-199A-8F7E3585AC8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp\experimental">
+      <UniqueIdentifier>{22BF7263-A9F6-821A-57A7-DD856F2C58F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp">
+      <UniqueIdentifier>{86AADEC8-03BA-EBB7-78FA-B90B827153EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\roots">
+      <UniqueIdentifier>{6F891005-121E-2506-1409-6C543F096F83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\runtime">
+      <UniqueIdentifier>{1036D233-DF54-B4D7-16A7-906E8AEE990F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\snapshot">
+      <UniqueIdentifier>{45494930-91AB-037E-2AB4-ACE929A50747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\snapshot\embedded">
+      <UniqueIdentifier>{0914058B-D6A5-D516-AA7D-2B8CBFB907F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\strings">
+      <UniqueIdentifier>{E78AE62D-579C-D6AE-4172-31BBF3E770C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tasks">
+      <UniqueIdentifier>{146B7B51-9C61-00D9-7BC0-820F9832F296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\siphash">
+      <UniqueIdentifier>{603034E8-F94A-7D84-DF7F-55BE6D1B8598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party">
+      <UniqueIdentifier>{9BD31BDD-8D35-CC4D-E8F7-A9830ECDF817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\utf8-decoder">
+      <UniqueIdentifier>{7E9286BF-A6E1-E30B-034B-3B2188854E7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\torque">
+      <UniqueIdentifier>{056F648A-0AC2-44F7-DCBE-0382C7F2D248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tracing">
+      <UniqueIdentifier>{D7A17AAC-F76A-1EA9-FC37-F2D5B8F551DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8FC2063E-4721-2C9C-FF62-6C19AE822741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\zone">
+      <UniqueIdentifier>{B7B5E15A-99F4-5BF3-9BEF-929D1527B55B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\baseline\x64">
+      <UniqueIdentifier>{474DAA24-CCCA-2501-CEFD-4AC996874FE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen\shared-ia32-x64">
+      <UniqueIdentifier>{D463E2D6-3148-6EE3-8237-8DE9B73643DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen\x64">
+      <UniqueIdentifier>{5D214674-6897-91E8-6BC7-BAB2025C76AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler\backend\x64">
+      <UniqueIdentifier>{20FCAA33-3E71-4197-3048-D75E1724331B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\execution\x64">
+      <UniqueIdentifier>{FBF1EEF8-9D4C-0EC1-C721-9AE78051FD8E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp\x64">
+      <UniqueIdentifier>{80E4453F-7B0E-AEFF-5670-296E731D016A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\valgrind">
+      <UniqueIdentifier>{CBDDEC6D-B7FF-1F8F-6A1C-D43BBFD8A233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\wasm\baseline\x64">
+      <UniqueIdentifier>{654FB8DA-D23A-20FC-7514-EBCDE380087F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\wasm\baseline">
+      <UniqueIdentifier>{63E3D7C2-B9AF-8815-AC8D-294E1E9CFA47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\wasm">
+      <UniqueIdentifier>{0B9BA6A4-64FF-6495-6B6E-747418FCB23A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../out/vs2019/gen/v8/builtins-generated/bytecodes-builtins-list.h">
+      <Filter>..\out\vs2019\gen\v8\builtins-generated</Filter>
+    </None>
+    <None Include="../../../../base/trace_event/common/trace_event_common.h">
+      <Filter>..\base\trace_event\common</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/common.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/v8-inspector-protocol.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="../../../../v8/include/v8-inspector.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="../../../../v8/include/v8-metrics.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="../../../../v8/include/v8-unwinder-state.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="../../../../v8/include/v8-wasm-trap-handler-posix.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-arguments-inl.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-arguments.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-inl.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-macros-undef.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-macros.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api-natives.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/api/api.h">
+      <Filter>src\api</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/ast-function-literal-id-reindexer.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/ast-source-ranges.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/ast-traversal-visitor.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/ast-value-factory.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/ast.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/modules.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/prettyprinter.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/scopes.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/source-range-ast-visitor.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/ast/variables.h">
+      <Filter>src\ast</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/baseline-assembler-inl.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/baseline-assembler.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/baseline-batch-compiler.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/baseline-compiler.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/baseline.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/bytecode-offset-iterator.h">
+      <Filter>src\baseline</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/accessors.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-constructor.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-definitions.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-descriptors.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-promise.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-utils-inl.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins-utils.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/builtins.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/constants-table-builder.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/builtins/profile-data-reader.h">
+      <Filter>src\builtins</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/aligned-slot-allocator.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/assembler-arch.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/assembler-inl.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/assembler.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/atomic-memory-order.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/bailout-reason.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/callable.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/code-comments.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/code-desc.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/code-factory.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/code-reference.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/compilation-cache.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/compiler.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/constant-pool.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/constants-arch.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/cpu-features.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/external-reference-encoder.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/external-reference-table.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/external-reference.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/flush-instruction-cache.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/handler-table.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/interface-descriptors-inl.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/interface-descriptors.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/label.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/machine-type.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/macro-assembler-inl.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/macro-assembler.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/optimized-compilation-info.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/pending-optimization-table.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/register-arch.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/register-configuration.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/register.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/reglist.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/reloc-info.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/safepoint-table.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/script-details.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/signature.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/source-position-table.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/source-position.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/string-constants.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/tick-counter.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/tnode.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/turbo-assembler.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/unoptimized-compilation-info.h">
+      <Filter>src\codegen</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/assert-scope.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/checks.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/external-pointer-inl.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/external-pointer.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/message-template.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/ptr-compr-inl.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/common/ptr-compr.h">
+      <Filter>src\common</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler-dispatcher/lazy-compile-dispatcher.h">
+      <Filter>src\compiler-dispatcher</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler-dispatcher/optimizing-compile-dispatcher.h">
+      <Filter>src\compiler-dispatcher</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/access-builder.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/access-info.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/add-type-assertions-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/all-nodes.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/allocation-builder-inl.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/allocation-builder.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/code-generator-impl.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/code-generator.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/frame-elider.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/gap-resolver.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/instruction-codes.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/instruction-scheduler.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/instruction-selector-impl.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/instruction-selector.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/instruction.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/jump-threading.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/mid-tier-register-allocator.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/move-optimizer.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/register-allocation.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/register-allocator-verifier.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/register-allocator.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/spill-placer.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/unwinding-info-writer.h">
+      <Filter>src\compiler\backend</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/basic-block-instrumentor.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/branch-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/bytecode-analysis.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/bytecode-graph-builder.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/bytecode-liveness-map.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/checkpoint-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/code-assembler.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/common-node-cache.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/common-operator-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/common-operator.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/compilation-dependencies.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/compiler-source-position-table.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/constant-folding-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/control-equivalence.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/control-flow-optimizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/csa-load-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/dead-code-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/decompression-optimizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/diamond.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/effect-control-linearizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/escape-analysis-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/escape-analysis.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/fast-api-calls.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/feedback-source.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/frame-states.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/frame.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/functional-list.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/globals.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph-assembler.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph-trimmer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph-visualizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph-zone-traits.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/graph.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/heap-refs.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-call-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-context-specialization.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-create-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-generic-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-graph.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-heap-broker.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-heap-copy-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-inlining-heuristic.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-inlining.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-intrinsic-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-native-context-specialization.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-operator.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-type-hint-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/js-typed-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/linkage.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/load-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/loop-analysis.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/loop-peeling.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/loop-unrolling.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/loop-variable-optimizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/machine-graph-verifier.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/machine-graph.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/machine-operator-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/machine-operator.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/map-inference.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/memory-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/memory-optimizer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-aux-data.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-cache.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-marker.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-matchers.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-observer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-origin-table.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node-properties.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/node.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/opcodes.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/operation-typer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/operator-properties.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/operator.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/osr.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/per-isolate-compiler-cache.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/persistent-map.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/pipeline-statistics.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/pipeline.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/processed-feedback.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/property-access-builder.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/raw-machine-assembler.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/redundancy-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/refs-map.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/representation-change.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/schedule.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/scheduler.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/select-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/simplified-lowering.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/simplified-operator-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/simplified-operator.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/state-values-utils.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/store-store-elimination.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/type-cache.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/type-narrowing-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/typed-optimization.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/typer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/types.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/value-numbering-reducer.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/verifier.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/write-barrier-kind.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/zone-stats.h">
+      <Filter>src\compiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/date/date.h">
+      <Filter>src\date</Filter>
+    </None>
+    <None Include="../../../../v8/src/date/dateparser-inl.h">
+      <Filter>src\date</Filter>
+    </None>
+    <None Include="../../../../v8/src/date/dateparser.h">
+      <Filter>src\date</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-coverage.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-evaluate.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-frames.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-interface.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-property-iterator.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-scope-iterator.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-scopes.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-stack-trace-iterator.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug-type-profile.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/debug.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/interface-types.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/debug/liveedit.h">
+      <Filter>src\debug</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/deoptimize-reason.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/deoptimized-frame-info.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/deoptimizer.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/frame-description.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/materialized-object-store.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/translated-state.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/translation-array.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/deoptimizer/translation-opcode.h">
+      <Filter>src\deoptimizer</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/basic-block-profiler.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/code-tracer.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/compilation-statistics.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/disasm.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/disassembler.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/eh-frame.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/gdb-jit.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/perf-jit.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/unwinder.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/arguments-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/arguments.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/execution.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/external-pointer-table.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/frame-constants.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/frames-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/frames.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/futex-emulation.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/interrupts-scope.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/isolate-data.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/isolate-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/isolate-utils-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/isolate-utils.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/isolate.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/local-isolate-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/local-isolate.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/messages.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/microtask-queue.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/pointer-authentication.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/protectors-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/protectors.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/runtime-profiler.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/shared-mutex-guard-if-off-thread.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/simulator-base.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/simulator.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/stack-guard.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/thread-id.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/thread-local-top.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/v8threads.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/vm-state-inl.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/vm-state.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/cputracemark-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/externalize-string-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/gc-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/ignition-statistics-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/statistics-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/extensions/trigger-failure-extension.h">
+      <Filter>src\extensions</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/global-handles-inl.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/global-handles.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/handles-inl.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/handles.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/local-handles-inl.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/local-handles.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/maybe-handles-inl.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/maybe-handles.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/handles/persistent-handles.h">
+      <Filter>src\handles</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/allocation-observer.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/allocation-stats.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/array-buffer-sweeper.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/barrier.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/base-space.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/basic-memory-chunk.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/code-object-registry.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/code-range.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/code-stats.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/collection-barrier.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/combined-heap.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/concurrent-allocator-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/concurrent-allocator.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/concurrent-marking.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/cppgc-js/cpp-heap.h">
+      <Filter>src\heap\cppgc-js</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/cppgc-js/cpp-snapshot.h">
+      <Filter>src\heap\cppgc-js</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/cppgc-js/unified-heap-marking-state.h">
+      <Filter>src\heap\cppgc-js</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/cppgc-js/unified-heap-marking-verifier.h">
+      <Filter>src\heap\cppgc-js</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/cppgc-js/unified-heap-marking-visitor.h">
+      <Filter>src\heap\cppgc-js</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/embedder-tracing.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/factory-base-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/factory-base.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/factory-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/factory.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/finalization-registry-cleanup-task.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/free-list-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/free-list.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/gc-idle-time-handler.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/gc-tracer.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/heap-controller.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/heap-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/heap-write-barrier-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/heap-write-barrier.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/heap.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/incremental-marking-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/incremental-marking-job.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/incremental-marking.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/index-generator.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/invalidated-slots-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/invalidated-slots.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/large-spaces.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/linear-allocation-area.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/list.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-allocator-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-allocator.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-factory-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-factory.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-heap-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/local-heap.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/mark-compact-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/mark-compact.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-barrier-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-barrier.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-visitor-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-visitor.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-worklist-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking-worklist.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/marking.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-allocator.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-chunk-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-chunk-layout.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-chunk.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-measurement-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-measurement.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/memory-reducer.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/new-spaces-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/new-spaces.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/object-stats.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/objects-visiting-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/objects-visiting.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/paged-spaces-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/paged-spaces.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/parallel-work-item.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/parked-scope.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/progress-bar.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/read-only-heap-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/read-only-heap.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/read-only-spaces.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/remembered-set-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/remembered-set.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/safepoint.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/scavenge-job.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/scavenger-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/scavenger.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/slot-set.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/spaces-inl.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/spaces.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/stress-marking-observer.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/stress-scavenge-observer.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/sweeper.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/weak-object-worklists.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/heap/worklist.h">
+      <Filter>src\heap</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/call-optimization.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/handler-configuration-inl.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/handler-configuration.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/ic-inl.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/ic-stats.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/ic.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/ic/stub-cache.h">
+      <Filter>src\ic</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/bootstrapper.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/heap-symbols.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/icu_util.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/isolate-allocator.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/setup-isolate.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/startup-data-util.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/v8.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/init/vm-cage.h">
+      <Filter>src\init</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/block-coverage-builder.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-array-builder.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-array-iterator.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-array-random-iterator.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-array-writer.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-decoder.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-flags.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-generator.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-jump-table.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-label.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-node.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-operands.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-register-allocator.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-register-optimizer.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-register.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-source-info.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecode-traits.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/bytecodes.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/constant-array-builder.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/control-flow-builders.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/handler-table-builder.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/interpreter-generator.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/interpreter-intrinsics.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/interpreter/interpreter.h">
+      <Filter>src\interpreter</Filter>
+    </None>
+    <None Include="../../../../v8/src/json/json-parser.h">
+      <Filter>src\json</Filter>
+    </None>
+    <None Include="../../../../v8/src/json/json-stringifier.h">
+      <Filter>src\json</Filter>
+    </None>
+    <None Include="../../../../v8/src/libsampler/sampler.h">
+      <Filter>src\libsampler</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/code-events.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/counters-definitions.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/counters-scopes.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/counters.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/local-logger.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/log-inl.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/log-utils.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/log.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/metrics.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/runtime-call-stats-scope.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/runtime-call-stats.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/logging/tracing-flags.h">
+      <Filter>src\logging</Filter>
+    </None>
+    <None Include="../../../../v8/src/numbers/conversions-inl.h">
+      <Filter>src\numbers</Filter>
+    </None>
+    <None Include="../../../../v8/src/numbers/conversions.h">
+      <Filter>src\numbers</Filter>
+    </None>
+    <None Include="../../../../v8/src/numbers/hash-seed-inl.h">
+      <Filter>src\numbers</Filter>
+    </None>
+    <None Include="../../../../v8/src/numbers/math-random.h">
+      <Filter>src\numbers</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/all-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/allocation-site-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/allocation-site-scopes-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/allocation-site-scopes.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/allocation-site.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/api-callbacks-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/api-callbacks.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/arguments-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/arguments.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/backing-store.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/bigint-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/bigint.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/cell-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/cell.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/code-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/code-kind.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/code.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/compilation-cache-table-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/compilation-cache-table.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/compressed-slots-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/compressed-slots.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/contexts-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/contexts.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/data-handler-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/data-handler.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/debug-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/debug-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/descriptor-array-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/descriptor-array.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/dictionary-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/dictionary.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/elements-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/elements-kind.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/elements.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/embedder-data-array-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/embedder-data-array.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/embedder-data-slot-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/embedder-data-slot.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/feedback-cell-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/feedback-cell.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/feedback-vector-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/feedback-vector.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/field-index-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/field-index.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/field-type.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/fixed-array-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/fixed-array.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/foreign-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/foreign.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/free-space-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/free-space.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/function-kind.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/function-syntax-kind.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/hash-table-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/hash-table.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/heap-number-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/heap-number.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/heap-object-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/heap-object.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/instance-type-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/instance-type.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/internal-index.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-array-buffer-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-array-buffer.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-array-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-array.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collection-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collection-iterator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collection-iterator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collection.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-function-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-function.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-generator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-generator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-promise-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-promise.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-proxy-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-proxy.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-regexp-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-regexp-string-iterator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-regexp-string-iterator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-regexp.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segments-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segments.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-temporal-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-temporal-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-weak-refs-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-weak-refs.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/keys.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/literal-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/literal-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/lookup-cache-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/lookup-cache.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/lookup-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/lookup.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/managed-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/managed.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/map-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/map-updater.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/map.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/maybe-object-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/maybe-object.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/megadom-handler-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/megadom-handler.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/microtask-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/microtask.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/module-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/module.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/name-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/name.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/object-list-macros.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/object-macros-undef.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/object-macros.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/object-type.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/objects-body-descriptors-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/objects-body-descriptors.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/objects-definitions.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/oddball-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/oddball.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/option-utils.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/ordered-hash-table-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/ordered-hash-table.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/osr-optimized-code-cache-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/osr-optimized-code-cache.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/primitive-heap-object-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/primitive-heap-object.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/promise-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/promise.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-array-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-array.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-cell-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-cell.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-descriptor-object-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-descriptor-object.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-descriptor.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property-details.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/property.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/prototype-info-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/prototype-info.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/prototype-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/prototype.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/regexp-match-info.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/scope-info-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/scope-info.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/script-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/script.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/shared-function-info-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/shared-function-info.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/slots-atomic-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/slots-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/slots.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/smi-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/smi.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/source-text-module-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/source-text-module.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/stack-frame-info-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/stack-frame-info.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-comparator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-set-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-set.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-table-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string-table.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/string.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/struct-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/struct.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/swiss-hash-table-helpers.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/swiss-name-dictionary-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/swiss-name-dictionary.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/synthetic-module-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/synthetic-module.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-field-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-field.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-impl-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-impl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-index.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-value-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/tagged-value.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/template-objects-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/template-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/templates-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/templates.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/torque-defined-classes-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/torque-defined-classes.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/transitions-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/transitions.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/type-hints.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/value-serializer.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/visitors-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/visitors.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/expression-scope.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/func-name-inferrer.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/import-assertions.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/keywords-gen.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/literal-buffer.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/parse-info.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/parser-base.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/parser.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/parsing.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/pending-compilation-error-handler.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/preparse-data-impl.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/preparse-data.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/preparser-logger.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/preparser.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/rewriter.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/scanner-character-streams.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/scanner-inl.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/scanner.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/parsing/token.h">
+      <Filter>src\parsing</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/allocation-tracker.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/circular-queue-inl.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/circular-queue.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/cpu-profiler-inl.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/cpu-profiler.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/heap-profiler.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/heap-snapshot-generator-inl.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/heap-snapshot-generator.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/profile-generator-inl.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/profile-generator.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/profiler-listener.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/profiler-stats.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/sampling-heap-profiler.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/strings-storage.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/symbolizer.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/tick-sample.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/tracing-cpu-profiler.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/profiler/weak-code-registry.h">
+      <Filter>src\profiler</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/experimental/experimental-bytecode.h">
+      <Filter>src\regexp\experimental</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/experimental/experimental-compiler.h">
+      <Filter>src\regexp\experimental</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/experimental/experimental-interpreter.h">
+      <Filter>src\regexp\experimental</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/experimental/experimental.h">
+      <Filter>src\regexp\experimental</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/property-sequences.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-ast.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-bytecode-generator-inl.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-bytecode-generator.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-bytecode-peephole.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-bytecodes.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-compiler.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-dotprinter.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-error.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-flags.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-interpreter.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-macro-assembler-arch.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-macro-assembler-tracer.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-macro-assembler.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-nodes.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-parser.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-stack.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp-utils.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/regexp.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/special-case.h">
+      <Filter>src\regexp</Filter>
+    </None>
+    <None Include="../../../../v8/src/roots/roots-inl.h">
+      <Filter>src\roots</Filter>
+    </None>
+    <None Include="../../../../v8/src/roots/roots.h">
+      <Filter>src\roots</Filter>
+    </None>
+    <None Include="../../../../v8/src/runtime/runtime-utils.h">
+      <Filter>src\runtime</Filter>
+    </None>
+    <None Include="../../../../v8/src/runtime/runtime.h">
+      <Filter>src\runtime</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/code-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/context-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/context-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/embedded/embedded-data.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/embedded/embedded-file-writer-interface.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/object-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/read-only-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/read-only-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/references.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/roots-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/serializer-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/serializer-inl.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/shared-heap-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/shared-heap-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/snapshot-compression.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/snapshot-data.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/snapshot-source-sink.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/snapshot-utils.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/snapshot.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/startup-deserializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/snapshot/startup-serializer.h">
+      <Filter>src\snapshot</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/char-predicates-inl.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/char-predicates.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-builder-inl.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-case.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-hasher-inl.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-hasher.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-search.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/string-stream.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/unicode-decoder.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/unicode-inl.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/unicode.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/strings/uri.h">
+      <Filter>src\strings</Filter>
+    </None>
+    <None Include="../../../../v8/src/tasks/cancelable-task.h">
+      <Filter>src\tasks</Filter>
+    </None>
+    <None Include="../../../../v8/src/tasks/operations-barrier.h">
+      <Filter>src\tasks</Filter>
+    </None>
+    <None Include="../../../../v8/src/tasks/task-utils.h">
+      <Filter>src\tasks</Filter>
+    </None>
+    <None Include="../../../../v8/src/third_party/siphash/halfsiphash.h">
+      <Filter>src\third_party\siphash</Filter>
+    </None>
+    <None Include="../../../../v8/src/third_party/utf8-decoder/utf8-decoder.h">
+      <Filter>src\third_party\utf8-decoder</Filter>
+    </None>
+    <None Include="../../../../v8/src/torque/runtime-macro-shims.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <None Include="../../../../v8/src/tracing/trace-event.h">
+      <Filter>src\tracing</Filter>
+    </None>
+    <None Include="../../../../v8/src/tracing/traced-value.h">
+      <Filter>src\tracing</Filter>
+    </None>
+    <None Include="../../../../v8/src/tracing/tracing-category-observer.h">
+      <Filter>src\tracing</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/address-map.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/allocation.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/bit-vector.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/boxed-float.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/detachable-vector.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/identity-map.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/locked-queue-inl.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/locked-queue.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/memcopy.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/ostreams.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/pointer-with-payload.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/scoped-list.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/utils-inl.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/utils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/utils/version.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/accounting-allocator.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/compressed-zone-ptr.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/type-stats.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-allocator.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-chunk-list.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-compression.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-containers.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-handle-set.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-hashmap.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-list-inl.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-list.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-segment.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-type-traits.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone-utils.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/zone/zone.h">
+      <Filter>src\zone</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/intl-objects.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-break-iterator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-break-iterator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-collator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-date-time-format-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-date-time-format.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-display-names-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-display-names.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-list-format-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-list-format.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-locale-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-locale.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-number-format-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-number-format.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-plural-rules-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-plural-rules.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-relative-time-format-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-relative-time-format.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segment-iterator-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segment-iterator.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segmenter-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segmenter.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segments-inl.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/objects/js-segments.h">
+      <Filter>src\objects</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/pointer-authentication-dummy.h">
+      <Filter>src\execution</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/x64/baseline-assembler-x64-inl.h">
+      <Filter>src\baseline\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/baseline/x64/baseline-compiler-x64-inl.h">
+      <Filter>src\baseline\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/shared-ia32-x64/macro-assembler-shared-ia32-x64.h">
+      <Filter>src\codegen\shared-ia32-x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/assembler-x64-inl.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/assembler-x64.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/constants-x64.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/fma-instr.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/interface-descriptors-x64-inl.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/macro-assembler-x64.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/register-x64.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/codegen/x64/sse-instr.h">
+      <Filter>src\codegen\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/x64/instruction-codes-x64.h">
+      <Filter>src\compiler\backend\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/compiler/backend/x64/unwinding-info-writer-x64.h">
+      <Filter>src\compiler\backend\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/execution/x64/frame-constants-x64.h">
+      <Filter>src\execution\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/regexp/x64/regexp-macro-assembler-x64.h">
+      <Filter>src\regexp\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/third_party/valgrind/valgrind.h">
+      <Filter>src\third_party\valgrind</Filter>
+    </None>
+    <None Include="../../../../v8/src/wasm/baseline/x64/liftoff-assembler-x64.h">
+      <Filter>src\wasm\baseline\x64</Filter>
+    </None>
+    <None Include="../../../../v8/src/diagnostics/unwinding-info-win64.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+  </ItemGroup>
+</Project>

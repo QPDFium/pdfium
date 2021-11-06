@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="xml">
+      <UniqueIdentifier>{EEE7D001-654F-6B64-48AF-C45561D8126C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../core/fxcrt/autonuller.h" />
+    <None Include="../../../../../core/fxcrt/autorestorer.h" />
+    <None Include="../../../../../core/fxcrt/byteorder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/bytestring.cpp" />
+    <None Include="../../../../../core/fxcrt/bytestring.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_binarybuf.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_binarybuf.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_bitstream.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_bitstream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_datetime.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_datetime.h" />
+    <None Include="../../../../../core/fxcrt/cfx_fixedbufgrow.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_readonlymemorystream.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_readonlymemorystream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_seekablestreamproxy.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_seekablestreamproxy.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_timer.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_timer.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_utf8decoder.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_utf8decoder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_utf8encoder.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_utf8encoder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_widetextbuf.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_widetextbuf.h" />
+    <None Include="../../../../../core/fxcrt/fileaccess_iface.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_bidi.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_bidi.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_codepage.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_codepage.h" />
+    <None Include="../../../../../core/fxcrt/fx_codepage_forward.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_coordinates.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_coordinates.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_extension.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_extension.h" />
+    <None Include="../../../../../core/fxcrt/fx_folder.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_memory.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_memory.h" />
+    <None Include="../../../../../core/fxcrt/fx_memory_wrappers.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_number.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_number.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_random.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_random.h" />
+    <None Include="../../../../../core/fxcrt/fx_safe_types.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_stream.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_stream.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_string.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_string.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_system.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_system.h" />
+    <None Include="../../../../../core/fxcrt/fx_types.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_unicode.cpp" />
+    <None Include="../../../../../core/fxcrt/fx_unicode.h" />
+    <None Include="../../../../../core/fxcrt/mask.h" />
+    <None Include="../../../../../core/fxcrt/maybe_owned.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/observed_ptr.cpp" />
+    <None Include="../../../../../core/fxcrt/observed_ptr.h" />
+    <None Include="../../../../../core/fxcrt/pauseindicator_iface.h" />
+    <None Include="../../../../../core/fxcrt/retain_ptr.h" />
+    <None Include="../../../../../core/fxcrt/retained_tree_node.h" />
+    <None Include="../../../../../core/fxcrt/scoped_set_insertion.h" />
+    <None Include="../../../../../core/fxcrt/shared_copy_on_write.h" />
+    <None Include="../../../../../core/fxcrt/span_util.h" />
+    <None Include="../../../../../core/fxcrt/stl_util.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/string_data_template.cpp" />
+    <None Include="../../../../../core/fxcrt/string_data_template.h" />
+    <None Include="../../../../../core/fxcrt/string_pool_template.h" />
+    <None Include="../../../../../core/fxcrt/string_view_template.h" />
+    <None Include="../../../../../core/fxcrt/tree_node.h" />
+    <None Include="../../../../../core/fxcrt/weak_ptr.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/widestring.cpp" />
+    <None Include="../../../../../core/fxcrt/widestring.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlchardata.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlchardata.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmldocument.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmldocument.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlelement.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlelement.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlinstruction.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlinstruction.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlnode.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlnode.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlparser.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmlparser.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmltext.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcrt/xml/cfx_xmltext.h">
+      <Filter>xml</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_fileaccess_windows.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_fileaccess_windows.h" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_folder_windows.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_memorystream.cpp" />
+    <None Include="../../../../../core/fxcrt/cfx_memorystream.h" />
+  </ItemGroup>
+</Project>

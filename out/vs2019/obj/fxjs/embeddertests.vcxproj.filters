@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="xfa">
+      <UniqueIdentifier>{E83D9143-6C72-226B-160A-C8925595477E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../fxjs/cfxjs_engine_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fxjs/cjs_publicmethods_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_app_embeddertest.cpp">
+      <Filter>xfa</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_formcalc_context_embeddertest.cpp">
+      <Filter>xfa</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_value_embeddertest.cpp">
+      <Filter>xfa</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_hostpseudomodel_embeddertest.cpp">
+      <Filter>xfa</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_list_embeddertest.cpp">
+      <Filter>xfa</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

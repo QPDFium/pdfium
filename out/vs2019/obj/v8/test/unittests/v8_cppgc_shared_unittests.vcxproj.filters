@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="heap\base">
+      <UniqueIdentifier>{495C042B-9883-8C2A-5D8A-A899BE3559AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="heap">
+      <UniqueIdentifier>{D5622591-3592-B92E-E3A1-8790CC9CE2A1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../v8/test/unittests/heap/base/run-all-unittests.cc">
+      <Filter>heap\base</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

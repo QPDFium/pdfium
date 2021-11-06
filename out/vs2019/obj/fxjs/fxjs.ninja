@@ -1,0 +1,97 @@
+defines = -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -D_HAS_NODISCARD -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DWIN32_LEAN_AND_MEAN -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE -DUSING_V8_SHARED -DV8_COMPRESS_POINTERS -DV8_COMPRESS_POINTERS_IN_SHARED_CAGE -DV8_31BIT_SMIS_ON_64BIT_ARCH -DV8_DEPRECATION_WARNINGS -DV8_IMMINENT_DEPRECATION_WARNINGS -DCPPGC_CAGED_HEAP -DUSING_V8_BASE_SHARED -DUSING_V8_PLATFORM_SHARED
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n -I../../v8/include -Igen/v8/include
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /W4 -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /wd4324 /wd4577 /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors
+cflags_cc = -Wno-trigraphs /TP /GR- -I../../buildtools/third_party/libc++/trunk/include
+label_name = fxjs
+target_out_dir = obj/fxjs
+target_output_name = fxjs
+
+build obj/fxjs/fxjs.inputdeps.stamp: stamp obj/third_party/icu/icudata.stamp obj/v8/generate_bytecode_builtins_list.stamp obj/v8/run_gen-regexp-special-case.stamp obj/v8/run_torque.stamp obj/v8/src/inspector/protocol_generated_sources.stamp
+build obj/fxjs/fxjs/cjs_event_context_stub.obj: cxx ../../fxjs/cjs_event_context_stub.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_runtimestub.obj: cxx ../../fxjs/cjs_runtimestub.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/ijs_runtime.obj: cxx ../../fxjs/ijs_runtime.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfx_globaldata.obj: cxx ../../fxjs/cfx_globaldata.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfx_keyvalue.obj: cxx ../../fxjs/cfx_keyvalue.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfx_v8.obj: cxx ../../fxjs/cfx_v8.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfx_v8_array_buffer_allocator.obj: cxx ../../fxjs/cfx_v8_array_buffer_allocator.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjs_engine.obj: cxx ../../fxjs/cfxjs_engine.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_annot.obj: cxx ../../fxjs/cjs_annot.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_app.obj: cxx ../../fxjs/cjs_app.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_border.obj: cxx ../../fxjs/cjs_border.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_color.obj: cxx ../../fxjs/cjs_color.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_console.obj: cxx ../../fxjs/cjs_console.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_delaydata.obj: cxx ../../fxjs/cjs_delaydata.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_display.obj: cxx ../../fxjs/cjs_display.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_document.obj: cxx ../../fxjs/cjs_document.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_event.obj: cxx ../../fxjs/cjs_event.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_event_context.obj: cxx ../../fxjs/cjs_event_context.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_field.obj: cxx ../../fxjs/cjs_field.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_font.obj: cxx ../../fxjs/cjs_font.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_global.obj: cxx ../../fxjs/cjs_global.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_globalarrays.obj: cxx ../../fxjs/cjs_globalarrays.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_globalconsts.obj: cxx ../../fxjs/cjs_globalconsts.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_highlight.obj: cxx ../../fxjs/cjs_highlight.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_icon.obj: cxx ../../fxjs/cjs_icon.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_object.obj: cxx ../../fxjs/cjs_object.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_position.obj: cxx ../../fxjs/cjs_position.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_publicmethods.obj: cxx ../../fxjs/cjs_publicmethods.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_result.obj: cxx ../../fxjs/cjs_result.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_runtime.obj: cxx ../../fxjs/cjs_runtime.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_scalehow.obj: cxx ../../fxjs/cjs_scalehow.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_scalewhen.obj: cxx ../../fxjs/cjs_scalewhen.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_style.obj: cxx ../../fxjs/cjs_style.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_timerobj.obj: cxx ../../fxjs/cjs_timerobj.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_util.obj: cxx ../../fxjs/cjs_util.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjs_zoomtype.obj: cxx ../../fxjs/cjs_zoomtype.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/fx_date_helpers.obj: cxx ../../fxjs/fx_date_helpers.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/fxv8.obj: cxx ../../fxjs/fxv8.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/global_timer.obj: cxx ../../fxjs/global_timer.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/js_define.obj: cxx ../../fxjs/js_define.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/js_resources.obj: cxx ../../fxjs/js_resources.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_class.obj: cxx ../../fxjs/xfa/cfxjse_class.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_context.obj: cxx ../../fxjs/xfa/cfxjse_context.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_engine.obj: cxx ../../fxjs/xfa/cfxjse_engine.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_formcalc_context.obj: cxx ../../fxjs/xfa/cfxjse_formcalc_context.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_isolatetracker.obj: cxx ../../fxjs/xfa/cfxjse_isolatetracker.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_mapmodule.obj: cxx ../../fxjs/xfa/cfxjse_mapmodule.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_nodehelper.obj: cxx ../../fxjs/xfa/cfxjse_nodehelper.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_resolveprocessor.obj: cxx ../../fxjs/xfa/cfxjse_resolveprocessor.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_runtimedata.obj: cxx ../../fxjs/xfa/cfxjse_runtimedata.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cfxjse_value.obj: cxx ../../fxjs/xfa/cfxjse_value.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_boolean.obj: cxx ../../fxjs/xfa/cjx_boolean.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_container.obj: cxx ../../fxjs/xfa/cjx_container.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_datawindow.obj: cxx ../../fxjs/xfa/cjx_datawindow.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_delta.obj: cxx ../../fxjs/xfa/cjx_delta.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_desc.obj: cxx ../../fxjs/xfa/cjx_desc.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_draw.obj: cxx ../../fxjs/xfa/cjx_draw.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_encrypt.obj: cxx ../../fxjs/xfa/cjx_encrypt.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_eventpseudomodel.obj: cxx ../../fxjs/xfa/cjx_eventpseudomodel.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_exclgroup.obj: cxx ../../fxjs/xfa/cjx_exclgroup.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_extras.obj: cxx ../../fxjs/xfa/cjx_extras.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_field.obj: cxx ../../fxjs/xfa/cjx_field.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_form.obj: cxx ../../fxjs/xfa/cjx_form.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_handler.obj: cxx ../../fxjs/xfa/cjx_handler.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_hostpseudomodel.obj: cxx ../../fxjs/xfa/cjx_hostpseudomodel.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_instancemanager.obj: cxx ../../fxjs/xfa/cjx_instancemanager.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_layoutpseudomodel.obj: cxx ../../fxjs/xfa/cjx_layoutpseudomodel.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_list.obj: cxx ../../fxjs/xfa/cjx_list.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_logpseudomodel.obj: cxx ../../fxjs/xfa/cjx_logpseudomodel.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_manifest.obj: cxx ../../fxjs/xfa/cjx_manifest.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_model.obj: cxx ../../fxjs/xfa/cjx_model.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_node.obj: cxx ../../fxjs/xfa/cjx_node.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_object.obj: cxx ../../fxjs/xfa/cjx_object.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_occur.obj: cxx ../../fxjs/xfa/cjx_occur.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_packet.obj: cxx ../../fxjs/xfa/cjx_packet.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_script.obj: cxx ../../fxjs/xfa/cjx_script.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_signaturepseudomodel.obj: cxx ../../fxjs/xfa/cjx_signaturepseudomodel.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_source.obj: cxx ../../fxjs/xfa/cjx_source.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_subform.obj: cxx ../../fxjs/xfa/cjx_subform.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_template.obj: cxx ../../fxjs/xfa/cjx_template.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_textnode.obj: cxx ../../fxjs/xfa/cjx_textnode.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_tree.obj: cxx ../../fxjs/xfa/cjx_tree.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_treelist.obj: cxx ../../fxjs/xfa/cjx_treelist.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_wsdlconnection.obj: cxx ../../fxjs/xfa/cjx_wsdlconnection.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/cjx_xfa.obj: cxx ../../fxjs/xfa/cjx_xfa.cpp || obj/fxjs/fxjs.inputdeps.stamp
+build obj/fxjs/fxjs/fxjse.obj: cxx ../../fxjs/xfa/fxjse.cpp || obj/fxjs/fxjs.inputdeps.stamp
+
+build obj/fxjs/fxjs.stamp: stamp obj/fxjs/fxjs/cjs_event_context_stub.obj obj/fxjs/fxjs/cjs_runtimestub.obj obj/fxjs/fxjs/ijs_runtime.obj obj/fxjs/fxjs/cfx_globaldata.obj obj/fxjs/fxjs/cfx_keyvalue.obj obj/fxjs/fxjs/cfx_v8.obj obj/fxjs/fxjs/cfx_v8_array_buffer_allocator.obj obj/fxjs/fxjs/cfxjs_engine.obj obj/fxjs/fxjs/cjs_annot.obj obj/fxjs/fxjs/cjs_app.obj obj/fxjs/fxjs/cjs_border.obj obj/fxjs/fxjs/cjs_color.obj obj/fxjs/fxjs/cjs_console.obj obj/fxjs/fxjs/cjs_delaydata.obj obj/fxjs/fxjs/cjs_display.obj obj/fxjs/fxjs/cjs_document.obj obj/fxjs/fxjs/cjs_event.obj obj/fxjs/fxjs/cjs_event_context.obj obj/fxjs/fxjs/cjs_field.obj obj/fxjs/fxjs/cjs_font.obj obj/fxjs/fxjs/cjs_global.obj obj/fxjs/fxjs/cjs_globalarrays.obj obj/fxjs/fxjs/cjs_globalconsts.obj obj/fxjs/fxjs/cjs_highlight.obj obj/fxjs/fxjs/cjs_icon.obj obj/fxjs/fxjs/cjs_object.obj obj/fxjs/fxjs/cjs_position.obj obj/fxjs/fxjs/cjs_publicmethods.obj obj/fxjs/fxjs/cjs_result.obj obj/fxjs/fxjs/cjs_runtime.obj obj/fxjs/fxjs/cjs_scalehow.obj obj/fxjs/fxjs/cjs_scalewhen.obj obj/fxjs/fxjs/cjs_style.obj obj/fxjs/fxjs/cjs_timerobj.obj obj/fxjs/fxjs/cjs_util.obj obj/fxjs/fxjs/cjs_zoomtype.obj obj/fxjs/fxjs/fx_date_helpers.obj obj/fxjs/fxjs/fxv8.obj obj/fxjs/fxjs/global_timer.obj obj/fxjs/fxjs/js_define.obj obj/fxjs/fxjs/js_resources.obj obj/fxjs/fxjs/cfxjse_class.obj obj/fxjs/fxjs/cfxjse_context.obj obj/fxjs/fxjs/cfxjse_engine.obj obj/fxjs/fxjs/cfxjse_formcalc_context.obj obj/fxjs/fxjs/cfxjse_isolatetracker.obj obj/fxjs/fxjs/cfxjse_mapmodule.obj obj/fxjs/fxjs/cfxjse_nodehelper.obj obj/fxjs/fxjs/cfxjse_resolveprocessor.obj obj/fxjs/fxjs/cfxjse_runtimedata.obj obj/fxjs/fxjs/cfxjse_value.obj obj/fxjs/fxjs/cjx_boolean.obj obj/fxjs/fxjs/cjx_container.obj obj/fxjs/fxjs/cjx_datawindow.obj obj/fxjs/fxjs/cjx_delta.obj obj/fxjs/fxjs/cjx_desc.obj obj/fxjs/fxjs/cjx_draw.obj obj/fxjs/fxjs/cjx_encrypt.obj obj/fxjs/fxjs/cjx_eventpseudomodel.obj obj/fxjs/fxjs/cjx_exclgroup.obj obj/fxjs/fxjs/cjx_extras.obj obj/fxjs/fxjs/cjx_field.obj obj/fxjs/fxjs/cjx_form.obj obj/fxjs/fxjs/cjx_handler.obj obj/fxjs/fxjs/cjx_hostpseudomodel.obj obj/fxjs/fxjs/cjx_instancemanager.obj obj/fxjs/fxjs/cjx_layoutpseudomodel.obj obj/fxjs/fxjs/cjx_list.obj obj/fxjs/fxjs/cjx_logpseudomodel.obj obj/fxjs/fxjs/cjx_manifest.obj obj/fxjs/fxjs/cjx_model.obj obj/fxjs/fxjs/cjx_node.obj obj/fxjs/fxjs/cjx_object.obj obj/fxjs/fxjs/cjx_occur.obj obj/fxjs/fxjs/cjx_packet.obj obj/fxjs/fxjs/cjx_script.obj obj/fxjs/fxjs/cjx_signaturepseudomodel.obj obj/fxjs/fxjs/cjx_source.obj obj/fxjs/fxjs/cjx_subform.obj obj/fxjs/fxjs/cjx_template.obj obj/fxjs/fxjs/cjx_textnode.obj obj/fxjs/fxjs/cjx_tree.obj obj/fxjs/fxjs/cjx_treelist.obj obj/fxjs/fxjs/cjx_wsdlconnection.obj obj/fxjs/fxjs/cjx_xfa.obj obj/fxjs/fxjs/fxjse.obj || obj/core/fxcrt/fxcrt.stamp ./v8.dll.lib obj/constants/constants.stamp obj/core/fdrm/fdrm.stamp obj/core/fpdfapi/page/page.stamp obj/core/fpdfapi/parser/parser.stamp obj/core/fpdfapi/render/render.stamp obj/core/fpdfdoc/fpdfdoc.stamp obj/core/fxge/fxge.stamp ./v8_libplatform.dll.lib obj/fxjs/gc.stamp obj/xfa/fgas/crt/crt.stamp obj/xfa/fxfa/fm2js/fm2js.stamp obj/core/fxcrt/unowned_ptr.stamp obj/third_party/fx_freetype.stamp obj/third_party/pdfium_base.stamp ./absl.dll.lib ./icuuc.dll.lib ./v8_libbase.dll.lib ./icui18n.dll.lib obj/core/fxcodec/fxcodec.stamp obj/third_party/fx_lcms2.stamp obj/third_party/fx_libopenjpeg.stamp ./zlib.dll.lib obj/third_party/fx_agg.stamp obj/third_party/libjpeg_turbo/libjpeg.lib obj/third_party/libjpeg_turbo/libjpeg_headers.stamp obj/third_party/libjpeg_turbo/simd.lib obj/third_party/libjpeg_turbo/simd_asm.lib obj/third_party/fx_lpng.stamp obj/third_party/fx_tiff.stamp obj/core/fpdfapi/font/font.stamp obj/core/fpdfapi/cmaps/cmaps.stamp ./cppgc.dll.lib

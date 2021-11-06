@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B4CED08-1AFD-60C7-C190-7A1AF33A17D2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pdfium_base</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/third_party/pdfium_base.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/abseil-cpp;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;ABSL_CONSUME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/address_space_randomization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/address_space_randomization.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/address_space_randomization.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/address_space_randomization.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/oom.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/oom_callback.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/oom_callback.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/oom_callback.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/oom_callback.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/page_allocator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/page_allocator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/page_allocator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/page_allocator.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/page_allocator_constants.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/page_allocator_internal.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/partition_alloc.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/partition_alloc.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/partition_alloc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_alloc.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_alloc_check.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_alloc_constants.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/partition_bucket.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/partition_bucket.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/partition_bucket.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_bucket.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_cookie.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_direct_map_extent.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_freelist_entry.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/partition_oom.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/partition_oom.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/partition_oom.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_oom.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/partition_page.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/partition_page.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/partition_page.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_page.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/partition_root_base.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/partition_root_base.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/partition_root_base.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/partition_root_base.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/random.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/random.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/random.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/random.h" />
+    <CustomBuild Include="../../../../third_party/base/allocator/partition_allocator/spin_lock.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/spin_lock.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/spin_lock.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/allocator/partition_allocator/spin_lock.h" />
+    <None Include="../../../../third_party/base/base_export.h" />
+    <None Include="../../../../third_party/base/bits.h" />
+    <None Include="../../../../third_party/base/check.h" />
+    <None Include="../../../../third_party/base/check_op.h" />
+    <None Include="../../../../third_party/base/compiler_specific.h" />
+    <None Include="../../../../third_party/base/containers/adapters.h" />
+    <None Include="../../../../third_party/base/containers/contains.h" />
+    <None Include="../../../../third_party/base/cxx17_backports.h" />
+    <CustomBuild Include="../../../../third_party/base/debug/alias.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/alias.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/alias.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/debug/alias.h" />
+    <None Include="../../../../third_party/base/immediate_crash.h" />
+    <CustomBuild Include="../../../../third_party/base/memory/aligned_memory.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/aligned_memory.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/aligned_memory.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/memory/aligned_memory.h" />
+    <None Include="../../../../third_party/base/no_destructor.h" />
+    <None Include="../../../../third_party/base/notreached.h" />
+    <None Include="../../../../third_party/base/numerics/checked_math.h" />
+    <None Include="../../../../third_party/base/numerics/checked_math_impl.h" />
+    <None Include="../../../../third_party/base/numerics/clamped_math.h" />
+    <None Include="../../../../third_party/base/numerics/clamped_math_impl.h" />
+    <None Include="../../../../third_party/base/numerics/safe_conversions.h" />
+    <None Include="../../../../third_party/base/numerics/safe_conversions_arm_impl.h" />
+    <None Include="../../../../third_party/base/numerics/safe_conversions_impl.h" />
+    <None Include="../../../../third_party/base/numerics/safe_math.h" />
+    <None Include="../../../../third_party/base/numerics/safe_math_arm_impl.h" />
+    <None Include="../../../../third_party/base/numerics/safe_math_clang_gcc_impl.h" />
+    <None Include="../../../../third_party/base/numerics/safe_math_shared_impl.h" />
+    <None Include="../../../../third_party/base/span.h" />
+    <None Include="../../../../third_party/base/sys_byteorder.h" />
+    <None Include="../../../../third_party/base/template_util.h" />
+    <None Include="../../../../third_party/base/allocator/partition_allocator/page_allocator_internals_win.h" />
+    <CustomBuild Include="../../../../third_party/base/win/win_util.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base/win_util.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/pdfium_base/win_util.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/base/win/win_util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/third_party/pdfium_base.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/pdfium_base.stamp" />
+  </Target>
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interpreter">
+      <UniqueIdentifier>{2E73810D-BECB-A64F-2646-9E7E61E8465D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.h">
+      <Filter>interpreter</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/generate-bytecode-expectations.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

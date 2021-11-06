@@ -1,0 +1,44 @@
+defines = -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -D_HAS_NODISCARD -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DWIN32_LEAN_AND_MEAN -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /W4 -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /wd4324 /wd4577 /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors
+cflags_cc = -Wno-trigraphs /TP /GR- -I../../buildtools/third_party/libc++/trunk/include
+label_name = fxcrt
+target_out_dir = obj/core/fxcrt
+target_output_name = fxcrt
+
+build obj/core/fxcrt/fxcrt/bytestring.obj: cxx ../../core/fxcrt/bytestring.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_binarybuf.obj: cxx ../../core/fxcrt/cfx_binarybuf.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_bitstream.obj: cxx ../../core/fxcrt/cfx_bitstream.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_datetime.obj: cxx ../../core/fxcrt/cfx_datetime.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_readonlymemorystream.obj: cxx ../../core/fxcrt/cfx_readonlymemorystream.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_seekablestreamproxy.obj: cxx ../../core/fxcrt/cfx_seekablestreamproxy.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_timer.obj: cxx ../../core/fxcrt/cfx_timer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_utf8decoder.obj: cxx ../../core/fxcrt/cfx_utf8decoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_utf8encoder.obj: cxx ../../core/fxcrt/cfx_utf8encoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_widetextbuf.obj: cxx ../../core/fxcrt/cfx_widetextbuf.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_bidi.obj: cxx ../../core/fxcrt/fx_bidi.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_codepage.obj: cxx ../../core/fxcrt/fx_codepage.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_coordinates.obj: cxx ../../core/fxcrt/fx_coordinates.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_extension.obj: cxx ../../core/fxcrt/fx_extension.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_memory.obj: cxx ../../core/fxcrt/fx_memory.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_number.obj: cxx ../../core/fxcrt/fx_number.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_random.obj: cxx ../../core/fxcrt/fx_random.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_stream.obj: cxx ../../core/fxcrt/fx_stream.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_string.obj: cxx ../../core/fxcrt/fx_string.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_system.obj: cxx ../../core/fxcrt/fx_system.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_unicode.obj: cxx ../../core/fxcrt/fx_unicode.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/observed_ptr.obj: cxx ../../core/fxcrt/observed_ptr.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/string_data_template.obj: cxx ../../core/fxcrt/string_data_template.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/widestring.obj: cxx ../../core/fxcrt/widestring.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmlchardata.obj: cxx ../../core/fxcrt/xml/cfx_xmlchardata.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmldocument.obj: cxx ../../core/fxcrt/xml/cfx_xmldocument.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmlelement.obj: cxx ../../core/fxcrt/xml/cfx_xmlelement.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmlinstruction.obj: cxx ../../core/fxcrt/xml/cfx_xmlinstruction.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmlnode.obj: cxx ../../core/fxcrt/xml/cfx_xmlnode.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmlparser.obj: cxx ../../core/fxcrt/xml/cfx_xmlparser.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_xmltext.obj: cxx ../../core/fxcrt/xml/cfx_xmltext.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_fileaccess_windows.obj: cxx ../../core/fxcrt/cfx_fileaccess_windows.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/fx_folder_windows.obj: cxx ../../core/fxcrt/fx_folder_windows.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxcrt/fxcrt/cfx_memorystream.obj: cxx ../../core/fxcrt/cfx_memorystream.cpp || obj/third_party/icu/icudata.stamp
+
+build obj/core/fxcrt/fxcrt.stamp: stamp obj/core/fxcrt/fxcrt/bytestring.obj obj/core/fxcrt/fxcrt/cfx_binarybuf.obj obj/core/fxcrt/fxcrt/cfx_bitstream.obj obj/core/fxcrt/fxcrt/cfx_datetime.obj obj/core/fxcrt/fxcrt/cfx_readonlymemorystream.obj obj/core/fxcrt/fxcrt/cfx_seekablestreamproxy.obj obj/core/fxcrt/fxcrt/cfx_timer.obj obj/core/fxcrt/fxcrt/cfx_utf8decoder.obj obj/core/fxcrt/fxcrt/cfx_utf8encoder.obj obj/core/fxcrt/fxcrt/cfx_widetextbuf.obj obj/core/fxcrt/fxcrt/fx_bidi.obj obj/core/fxcrt/fxcrt/fx_codepage.obj obj/core/fxcrt/fxcrt/fx_coordinates.obj obj/core/fxcrt/fxcrt/fx_extension.obj obj/core/fxcrt/fxcrt/fx_memory.obj obj/core/fxcrt/fxcrt/fx_number.obj obj/core/fxcrt/fxcrt/fx_random.obj obj/core/fxcrt/fxcrt/fx_stream.obj obj/core/fxcrt/fxcrt/fx_string.obj obj/core/fxcrt/fxcrt/fx_system.obj obj/core/fxcrt/fxcrt/fx_unicode.obj obj/core/fxcrt/fxcrt/observed_ptr.obj obj/core/fxcrt/fxcrt/string_data_template.obj obj/core/fxcrt/fxcrt/widestring.obj obj/core/fxcrt/fxcrt/cfx_xmlchardata.obj obj/core/fxcrt/fxcrt/cfx_xmldocument.obj obj/core/fxcrt/fxcrt/cfx_xmlelement.obj obj/core/fxcrt/fxcrt/cfx_xmlinstruction.obj obj/core/fxcrt/fxcrt/cfx_xmlnode.obj obj/core/fxcrt/fxcrt/cfx_xmlparser.obj obj/core/fxcrt/fxcrt/cfx_xmltext.obj obj/core/fxcrt/fxcrt/cfx_fileaccess_windows.obj obj/core/fxcrt/fxcrt/fx_folder_windows.obj obj/core/fxcrt/fxcrt/cfx_memorystream.obj || obj/core/fxcrt/unowned_ptr.stamp obj/freetype_common.stamp obj/third_party/pdfium_base.stamp obj/third_party/icu/icuuc.stamp obj/third_party/fx_freetype.stamp ./absl.dll.lib ./icuuc.dll.lib

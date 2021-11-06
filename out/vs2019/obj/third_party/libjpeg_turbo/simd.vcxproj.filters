@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="simd\x86_64">
+      <UniqueIdentifier>{CBA4F415-6CA4-94F9-A57F-14923425BF89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simd">
+      <UniqueIdentifier>{0394451E-EA0C-72A4-10B6-0384BC9CFDC2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/simd/x86_64/jsimd.c">
+      <Filter>simd\x86_64</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

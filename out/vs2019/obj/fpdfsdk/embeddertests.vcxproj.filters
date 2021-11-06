@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_annotiterator_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_baannothandler_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_annot_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_attachment_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_dataavail_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_doc_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_edit_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editimg_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editpage_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editpath_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_ext_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_flatten_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_formfill_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_javascript_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_ppo_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_save_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_searchex_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_signature_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_structtree_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_sysfontinfo_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_text_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_thumbnail_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_transformpage_embeddertest.cpp" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_view_c_api_test.c" />
+    <None Include="../../../../fpdfsdk/fpdf_view_c_api_test.h" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_view_embeddertest.cpp" />
+  </ItemGroup>
+</Project>

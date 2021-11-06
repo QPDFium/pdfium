@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcapimin.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcapistd.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jccoefct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jccolor.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcdctmgr.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jchuff.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcicc.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcinit.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcmainct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcmarker.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcmaster.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcomapi.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcparam.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcphuff.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcprepct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jcsample.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jctrans.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdapimin.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdapistd.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdatadst.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdatasrc.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdcoefct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdcolor.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jddctmgr.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdhuff.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdicc.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdinput.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdmainct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdmarker.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdmaster.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdmerge.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdphuff.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdpostct.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdsample.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jdtrans.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jerror.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jfdctflt.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jfdctfst.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jfdctint.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jidctflt.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jidctfst.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jidctint.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jidctred.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jmemmgr.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jmemnobs.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jpeg_nbits_table.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jquant1.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jquant2.c" />
+    <CustomBuild Include="../../../../../third_party/libjpeg_turbo/jutils.c" />
+  </ItemGroup>
+</Project>

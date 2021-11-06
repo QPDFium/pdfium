@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C61C0B9-1013-F2E3-BA59-87BA2F76FFD5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fpdfsdk</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/fpdfsdk/fpdfsdk.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/freetype/include;../../../../third_party/freetype/src/include;../../../../third_party/abseil-cpp;../../../../third_party/icu/source/common;../../../../third_party/icu/source/i18n;../../../../v8/include;../../../../out/vs2019/gen/v8/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FPDF_IMPLEMENTATION;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_SHARED;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_actionhandler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_actionhandler.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_actionhandler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_actionhandler.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_annot.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_annot.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_annot.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_annot.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_annothandlermgr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_annothandlermgr.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_annothandlermgr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_annothandlermgr.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_annotiteration.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_annotiteration.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_annotiteration.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_annotiteration.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_annotiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_annotiterator.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_annotiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_annotiterator.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_appstream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_appstream.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_appstream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_appstream.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_baannot.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_baannot.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_baannot.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_baannot.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_baannothandler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_baannothandler.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_baannothandler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_baannothandler.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_customaccess.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_customaccess.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_customaccess.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_customaccess.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_filewriteadapter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_filewriteadapter.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_filewriteadapter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_filewriteadapter.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_formfillenvironment.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_formfillenvironment.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_formfillenvironment.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_formfillenvironment.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_helpers.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_helpers.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_helpers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_helpers.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_interactiveform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_interactiveform.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_interactiveform.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_interactiveform.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_pageview.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_pageview.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_pageview.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_pageview.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_pauseadapter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_pauseadapter.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_pauseadapter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_pauseadapter.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_renderpage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_renderpage.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_renderpage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_renderpage.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_widget.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_widget.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_widget.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_widget.h" />
+    <CustomBuild Include="../../../../fpdfsdk/cpdfsdk_widgethandler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/cpdfsdk_widgethandler.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/cpdfsdk_widgethandler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/cpdfsdk_widgethandler.h" />
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_annot.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_annot.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_annot.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_attachment.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_attachment.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_attachment.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_catalog.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_catalog.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_catalog.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_dataavail.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_dataavail.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_dataavail.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_doc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_doc.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_doc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editimg.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_editimg.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_editimg.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editpage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_editpage.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_editpage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_editpath.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_editpath.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_editpath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_edittext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_edittext.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_edittext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_ext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_ext.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_ext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_flatten.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_flatten.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_flatten.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_formfill.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_formfill.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_formfill.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_javascript.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_javascript.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_javascript.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_ppo.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_ppo.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_ppo.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_progressive.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_progressive.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_progressive.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_save.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_save.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_save.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_searchex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_searchex.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_searchex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_signature.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_signature.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_signature.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_structtree.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_structtree.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_structtree.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_sysfontinfo.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_sysfontinfo.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_sysfontinfo.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_text.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_text.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_text.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_thumbnail.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_thumbnail.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_thumbnail.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_transformpage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_transformpage.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_transformpage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/fpdf_view.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/fpdf_view.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/fpdf_view.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../fpdfsdk/ipdfsdk_annothandler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk/ipdfsdk_annothandler.obj</Command>
+      <Outputs>$(OutDir)obj/fpdfsdk/fpdfsdk/ipdfsdk_annothandler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fpdfsdk/ipdfsdk_annothandler.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/fpdfsdk/fpdfsdk.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/fpdfsdk/fpdfsdk.stamp" />
+  </Target>
+</Project>

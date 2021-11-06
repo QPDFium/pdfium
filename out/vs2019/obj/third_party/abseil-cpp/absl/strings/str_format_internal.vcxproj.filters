@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal\str_format">
+      <UniqueIdentifier>{DA93CFDB-A105-47A8-120B-02D4EA8C1DDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/arg.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/bind.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/extension.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/output.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_format/parser.cc">
+      <Filter>internal\str_format</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

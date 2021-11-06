@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include\cppgc">
+      <UniqueIdentifier>{04C6895B-0509-ECF2-87AB-2F46712473F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\cppgc\internal">
+      <UniqueIdentifier>{4B0F8306-77BD-9158-6E7F-390FB28205B8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../v8/include/cppgc/allocation.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/common.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/cross-thread-persistent.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/custom-space.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/default-platform.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/ephemeron-pair.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/explicit-management.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/garbage-collected.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/heap-consistency.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/heap-state.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/heap-statistics.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/heap.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/api-constants.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/atomic-entry-flag.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/compiler-specific.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/finalizer-trait.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/gc-info.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/name-trait.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/persistent-node.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/pointer-policies.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/prefinalizer-handler.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/write-barrier.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/liveness-broker.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/macros.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/member.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/name-provider.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/object-size-trait.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/persistent.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/platform.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/prefinalizer.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/process-heap-statistics.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/sentinel-pointer.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/source-location.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/testing.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/trace-trait.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/type-traits.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/visitor.h">
+      <Filter>include\cppgc</Filter>
+    </None>
+    <None Include="../../../../v8/include/cppgc/internal/caged-heap-local-data.h">
+      <Filter>include\cppgc\internal</Filter>
+    </None>
+  </ItemGroup>
+</Project>

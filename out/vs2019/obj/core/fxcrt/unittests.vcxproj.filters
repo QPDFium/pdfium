@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="xml">
+      <UniqueIdentifier>{EEE7D001-654F-6B64-48AF-C45561D8126C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fxcrt/autonuller_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/autorestorer_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/byteorder_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/bytestring_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_bitstream_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_seekablestreamproxy_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_timer_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_widetextbuf_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_bidi_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_coordinates_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_extension_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_memory_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_memory_wrappers_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_number_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_random_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_string_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/fx_system_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/mask_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/maybe_owned_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/observed_ptr_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/pdfium_span_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/retain_ptr_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/retained_tree_node_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/scoped_set_insertion_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/shared_copy_on_write_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/span_util_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/string_pool_template_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/tree_node_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/unowned_ptr_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/weak_ptr_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/widestring_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlchardata_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmldocument_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlelement_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlinstruction_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlnode_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmlparser_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmltext_unittest.cpp">
+      <Filter>xml</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxcrt/cfx_memorystream_unittest.cpp" />
+  </ItemGroup>
+</Project>

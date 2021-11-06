@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libpng16">
+      <UniqueIdentifier>{588FB12B-6837-8AC5-2C27-031084039D2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libpng16\intel">
+      <UniqueIdentifier>{5943BA71-93C1-8C5E-D42D-3EBB11B0CEEB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../third_party/libpng16/png.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/png.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <None Include="../../../../third_party/libpng16/pngconf.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <None Include="../../../../third_party/libpng16/pngdebug.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/libpng16/pngerror.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngget.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pnginfo.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <None Include="../../../../third_party/libpng16/pnglibconf.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/libpng16/pngmem.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngpread.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pngprefix.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <None Include="../../../../third_party/libpng16/pngpriv.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/libpng16/pngread.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrio.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrtran.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrutil.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngset.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pngstruct.h">
+      <Filter>libpng16</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/libpng16/pngtrans.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwio.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwrite.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwtran.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwutil.c">
+      <Filter>libpng16</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/intel/filter_sse2_intrinsics.c">
+      <Filter>libpng16\intel</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/intel/intel_init.c">
+      <Filter>libpng16\intel</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

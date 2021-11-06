@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{530671C4-A49E-2227-1185-B142528140EB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../v8/tools/v8windbg/base/dbgext.cc">
+      <Filter>base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/tools/v8windbg/base/dbgext.h">
+      <Filter>base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/tools/v8windbg/base/utilities.cc">
+      <Filter>base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/tools/v8windbg/base/utilities.h">
+      <Filter>base</Filter>
+    </None>
+  </ItemGroup>
+</Project>

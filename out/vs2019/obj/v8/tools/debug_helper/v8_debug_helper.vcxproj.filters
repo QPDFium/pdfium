@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\..\..\out\vs2019\gen\v8\torque-generated">
+      <UniqueIdentifier>{82F0D175-944B-77FA-605E-03DAE14AE9CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out\vs2019\gen\v8">
+      <UniqueIdentifier>{630FC283-F696-2E0C-5B84-859516EA8AEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out\vs2019\gen">
+      <UniqueIdentifier>{DB6503B1-4E9F-54F0-DF7C-1AAA80A8738F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out\vs2019">
+      <UniqueIdentifier>{F604B094-40FB-0989-74F9-25EEA3CA78B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out">
+      <UniqueIdentifier>{50BC2BDD-CE9C-16A8-60AF-198B16301065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{BC2D405D-5A7E-241B-15FC-441581082017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{A8A4AA46-5437-4AB8-6540-F14ED994B38E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out\vs2019\gen\v8\tools\debug_helper">
+      <UniqueIdentifier>{925B6793-6AA1-0D7B-3628-3D453C535811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\out\vs2019\gen\v8\tools">
+      <UniqueIdentifier>{FFC005D7-2FE7-90AD-FAE0-47F3C186112E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../out/vs2019/gen/v8/torque-generated/class-debug-readers.cc">
+      <Filter>..\..\..\out\vs2019\gen\v8\torque-generated</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../out/vs2019/gen/v8/torque-generated/class-debug-readers.h">
+      <Filter>..\..\..\out\vs2019\gen\v8\torque-generated</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../out/vs2019/gen/v8/torque-generated/debug-macros.cc">
+      <Filter>..\..\..\out\vs2019\gen\v8\torque-generated</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../out/vs2019/gen/v8/torque-generated/debug-macros.h">
+      <Filter>..\..\..\out\vs2019\gen\v8\torque-generated</Filter>
+    </None>
+    <None Include="../../../../../../out/vs2019/gen/v8/torque-generated/instance-types.h">
+      <Filter>..\..\..\out\vs2019\gen\v8\torque-generated</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../out/vs2019/gen/v8/tools/debug_helper/heap-constants-gen.cc">
+      <Filter>..\..\..\out\vs2019\gen\v8\tools\debug_helper</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/tools/debug_helper/compiler-types.cc" />
+    <CustomBuild Include="../../../../../../v8/tools/debug_helper/debug-helper-internal.cc" />
+    <None Include="../../../../../../v8/tools/debug_helper/debug-helper-internal.h" />
+    <None Include="../../../../../../v8/tools/debug_helper/debug-helper.h" />
+    <CustomBuild Include="../../../../../../v8/tools/debug_helper/get-object-properties.cc" />
+    <CustomBuild Include="../../../../../../v8/tools/debug_helper/heap-constants.cc" />
+    <None Include="../../../../../../v8/tools/debug_helper/heap-constants.h" />
+    <CustomBuild Include="../../../../../../v8/tools/debug_helper/list-object-classes.cc" />
+  </ItemGroup>
+</Project>

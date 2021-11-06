@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\..\..\v8\test\common">
+      <UniqueIdentifier>{98C09BBD-F8ED-7644-0244-E95A33A7BD6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\v8\test">
+      <UniqueIdentifier>{6381FC4A-D507-04A5-DAF8-F9A40CFB3568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\v8">
+      <UniqueIdentifier>{83188EA3-716F-70A4-5277-86972A1C37C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{BC2D405D-5A7E-241B-15FC-441581082017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{A8A4AA46-5437-4AB8-6540-F14ED994B38E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{6175F9ED-476E-BCB7-1B62-5BC1A981CFF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="heap">
+      <UniqueIdentifier>{D5622591-3592-B92E-E3A1-8790CC9CE2A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interpreter">
+      <UniqueIdentifier>{2E73810D-BECB-A64F-2646-9E7E61E8465D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libplatform">
+      <UniqueIdentifier>{FBB0A53D-C950-2290-AA61-C676A4929B87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libsampler">
+      <UniqueIdentifier>{DDFB505C-8A26-7AC4-5CDB-6E36DE6C1C90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parsing">
+      <UniqueIdentifier>{E5FC29E7-2D1C-A4D1-5569-B044052F1673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="torque">
+      <UniqueIdentifier>{C678673E-DA60-3126-AC86-1A2893E199B3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../v8/test/common/assembler-tester.h">
+      <Filter>..\..\..\v8\test\common</Filter>
+    </None>
+    <None Include="../../../../../../v8/test/common/flag-utils.h">
+      <Filter>..\..\..\v8\test\common</Filter>
+    </None>
+    <None Include="../../../../../../v8/test/cctest/cctest-utils.h" />
+    <None Include="../../../../../../v8/test/cctest/collector.h" />
+    <None Include="../../../../../../v8/test/cctest/compiler/c-signature.h">
+      <Filter>compiler</Filter>
+    </None>
+    <None Include="../../../../../../v8/test/cctest/compiler/call-tester.h">
+      <Filter>compiler</Filter>
+    </None>
+    <None Include="../../../../../../v8/test/cctest/compiler/code-assembler-tester.h">
+      <Filter>compiler</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/codegen-tester.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/codegen-tester.h">
+      <Filter>compiler</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/function-tester.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/function-tester.h">
+      <Filter>compiler</Filter>
+    </None>
+    <None Include="../../../../../../v8/test/cctest/compiler/node-observer-tester.h">
+      <Filter>compiler</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-atomic-load-store-codegen.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-basic-block-profiler.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-branch-combine.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-calls-with-arraylike-or-spread.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-code-assembler.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-code-generator.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-concurrent-shared-function-info.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-gap-resolver.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-graph-visualizer.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-instruction-scheduler.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-instruction.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-constant-cache.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-context-specialization.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-typed-lowering.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-jump-threading.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-linkage.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-loop-analysis.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-machine-operator-reducer.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-node.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-operator.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-representation-change.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-bytecode-graph-builder.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-calls-to-external-references.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-deopt.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsbranches.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jscalls.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsexceptions.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsobjects.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsops.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-load-store.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-machops.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-stackcheck.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-tail-calls.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-unwinding-info.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-variables.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-sloppy-equality.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-verify-type.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/value-helper.cc">
+      <Filter>compiler</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/value-helper.h">
+      <Filter>compiler</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/disasm-regex-helper.cc" />
+    <None Include="../../../../../../v8/test/cctest/disasm-regex-helper.h" />
+    <None Include="../../../../../../v8/test/cctest/expression-type-collector-macros.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-fixed.cc" />
+    <None Include="../../../../../../v8/test/cctest/gay-fixed.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-precision.cc" />
+    <None Include="../../../../../../v8/test/cctest/gay-precision.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-shortest.cc" />
+    <None Include="../../../../../../v8/test/cctest/gay-shortest.h" />
+    <None Include="../../../../../../v8/test/cctest/heap/heap-tester.h">
+      <Filter>heap</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/heap-utils.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/heap/heap-utils.h">
+      <Filter>heap</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-alloc.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-array-buffer-tracker.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-compaction.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-concurrent-allocation.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-concurrent-marking.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-embedder-tracing.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-external-string-tracker.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-heap.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-incremental-marking.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-invalidated-slots.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-iterators.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-lab.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-mark-compact.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-memory-measurement.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-page-promotion.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-shared-heap.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-spaces.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-unmapper.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-weak-references.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-write-barrier.cc">
+      <Filter>heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.h">
+      <Filter>interpreter</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/interpreter-tester.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/interpreter-tester.h">
+      <Filter>interpreter</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/source-position-matcher.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/source-position-matcher.h">
+      <Filter>interpreter</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-bytecode-generator.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-interpreter-intrinsics.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-interpreter.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-source-positions.cc">
+      <Filter>interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libplatform/test-tracing.cc">
+      <Filter>libplatform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libsampler/signals-and-mutexes.cc">
+      <Filter>libsampler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libsampler/test-sampler.cc">
+      <Filter>libsampler</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/manually-externalized-buffer.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-parse-decision.cc">
+      <Filter>parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-preparser.cc">
+      <Filter>parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-scanner-streams.cc">
+      <Filter>parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-scanner.cc">
+      <Filter>parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/print-extension.cc" />
+    <None Include="../../../../../../v8/test/cctest/print-extension.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/profiler-extension.cc" />
+    <None Include="../../../../../../v8/test/cctest/profiler-extension.h" />
+    <None Include="../../../../../../v8/test/cctest/scope-test-helper.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/setup-isolate-for-tests.cc" />
+    <None Include="../../../../../../v8/test/cctest/setup-isolate-for-tests.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-access-checks.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-accessor-assembler.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-accessors.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-allocation.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-accessors.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-array-buffer.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-icu.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-interceptors.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-stack-traces.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-typed-array.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api.cc" />
+    <None Include="../../../../../../v8/test/cctest/test-api.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-array-list.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-atomicops.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bignum-dtoa.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bignum.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bit-vector.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-circular-queue.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-layout.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-pages.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-stub-assembler.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-compiler.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-descriptor-array.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-feedback-vector.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-js-array.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-prototype.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-script-context-table.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-string.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-transition-array.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-constantpool.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-conversions.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-cpu-profiler.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-date.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-debug-helper.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-debug.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-decls.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-deoptimization.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-descriptor-array.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-dictionary.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-diy-fp.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-double.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-dtoa.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-elements-kind.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-factory.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-fast-dtoa.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-feedback-vector.cc" />
+    <None Include="../../../../../../v8/test/cctest/test-feedback-vector.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-field-type-tracking.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-fixed-dtoa.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-flags.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-func-name-inference.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-global-handles.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-global-object.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-hashcode.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-hashmap.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-heap-profiler.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-icache.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-identity-map.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-ignition-statistics-extension.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-inobject-slack-tracking.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-inspector.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-intl.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-js-weak-refs.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-liveedit.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-local-handles.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-lockers.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-log.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-managed.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-mementos.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-modules.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-object.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-orderedhashtable.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-parsing.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-persistent-handles.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-platform.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-profile-generator.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-property-details.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-ptr-compr-cage.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-random-number-generator.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-regexp.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-representation.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-roots.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-sampler-api.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-serialize.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-shared-strings.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-smi-lexicographic-compare.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-strings.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-strtod.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary-csa.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary-infra.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-symbols.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-thread-termination.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-threads.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-trace-event.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-traced-value.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-transitions.cc" />
+    <None Include="../../../../../../v8/test/cctest/test-transitions.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-typedarrays.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-types.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-unscopables-hidden-prototype.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-unwinder-code-pages.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-usecounters.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-utils.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-verifiers.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-version.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-weakmaps.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-weaksets.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-web-snapshots.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/torque/test-torque.cc">
+      <Filter>torque</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/trace-extension.cc" />
+    <None Include="../../../../../../v8/test/cctest/trace-extension.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/unicode-helpers.cc" />
+    <None Include="../../../../../../v8/test/cctest/unicode-helpers.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-assembler-x64.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-disasm-x64.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-log-stack-tracer.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-macro-assembler-x64.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-stack-unwinding-win64.cc" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-v8windbg.cc" />
+  </ItemGroup>
+</Project>

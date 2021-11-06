@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_contentlayoutitem.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_contentlayoutitem.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_contentlayoutprocessor.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_contentlayoutprocessor.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_layoutitem.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_layoutitem.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_layoutprocessor.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_layoutprocessor.h" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_traversestrategy_layoutitem.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_viewlayoutitem.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_viewlayoutitem.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/layout/cxfa_viewlayoutprocessor.cpp" />
+    <None Include="../../../../../../xfa/fxfa/layout/cxfa_viewlayoutprocessor.h" />
+  </ItemGroup>
+</Project>

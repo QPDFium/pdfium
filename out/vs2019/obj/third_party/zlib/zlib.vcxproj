@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E03C1493-6434-99C0-9376-94D1A6E05DDE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zlib</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\zlib.dll.lib</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw -Wno-incompatible-pointer-types %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;ZLIB_IMPLEMENTATION;ADLER32_SIMD_SSSE3;X86_WINDOWS;INFLATE_CHUNK_SIMD_SSE2;INFLATE_CHUNK_READ_64LE;CRC32_SIMD_SSE42_PCLMUL;DEFLATE_FILL_WINDOW_SSE2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/zlib/adler32.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/adler32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/adler32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/chromeconf.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/compress.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/compress.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/compress.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/contrib/optimizations/insert_string.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/cpu_features.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/cpu_features.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/cpu_features.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/cpu_features.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/crc32.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/crc32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/crc32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/crc32.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/deflate.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/deflate.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/deflate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/deflate.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzclose.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/gzclose.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/gzclose.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/gzguts.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzlib.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/gzlib.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/gzlib.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/zlib/gzread.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/gzread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/gzread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/zlib/gzwrite.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/gzwrite.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/gzwrite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/zlib/infback.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/infback.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/infback.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/zlib/inffast.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/inffast.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/inffast.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/inffast.h" />
+    <None Include="../../../../../third_party/zlib/inffixed.h" />
+    <None Include="../../../../../third_party/zlib/inflate.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/inftrees.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/inftrees.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/inftrees.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/inftrees.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/trees.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/trees.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/trees.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/trees.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/uncompr.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/uncompr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/uncompr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/zconf.h" />
+    <None Include="../../../../../third_party/zlib/zlib.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/zutil.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/zlib/zlib/zutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/zlib/zlib/zutil.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/zlib/zutil.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  zlib.dll.lib" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean zlib.dll.lib" />
+  </Target>
+</Project>

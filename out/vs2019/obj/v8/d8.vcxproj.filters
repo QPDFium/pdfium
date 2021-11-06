@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\d8">
+      <UniqueIdentifier>{45D176C9-F3BE-2BE2-5AB4-385725ED52DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/d8/async-hooks-wrapper.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/d8/async-hooks-wrapper.h">
+      <Filter>src\d8</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/d8/d8-console.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/d8/d8-console.h">
+      <Filter>src\d8</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/d8/d8-js.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/d8/d8-platforms.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/d8/d8-platforms.h">
+      <Filter>src\d8</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/d8/d8-test.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/d8/d8.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/d8/d8.h">
+      <Filter>src\d8</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/d8/d8-windows.cc">
+      <Filter>src\d8</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

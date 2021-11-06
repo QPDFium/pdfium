@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F01C71A5-5DEE-D235-D6B1-CA0B93EC22E4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icui18n</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\icui18n.dll.lib</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /GR -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wno-parentheses -Wno-unused-function -Wno-unused-variable -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;4005;4068;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>U_I18N_IMPLEMENTATION;USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_DLOPEN=0;UCONFIG_ONLY_HTML_CONVERSION=1;UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0;U_CHARSET_IS_UTF8=1;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/alphaindex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/alphaindex.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/alphaindex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/anytrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/anytrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/anytrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/anytrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/astro.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/astro.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/astro.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/astro.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/basictz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/basictz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/basictz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/bocsu.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/bocsu.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/bocsu.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/bocsu.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/brktrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/brktrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/brktrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/brktrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/buddhcal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/buddhcal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/buddhcal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/buddhcal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/calendar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/calendar.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/calendar.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/casetrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/casetrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/casetrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/casetrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/cecal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/cecal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/cecal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/cecal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/chnsecal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/chnsecal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/chnsecal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/chnsecal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/choicfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/choicfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/choicfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/coleitr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/coleitr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/coleitr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationbuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationbuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationbuilder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationbuilder.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationcompare.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationcompare.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationcompare.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationcompare.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collation.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collation.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collation.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationdatabuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationdatabuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationdatabuilder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationdatabuilder.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationdata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationdata.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationdatareader.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationdatareader.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationdatareader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationdatareader.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationdatawriter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationdatawriter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationdatawriter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationdatawriter.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationfastlatinbuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationfastlatinbuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationfastlatinbuilder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationfastlatinbuilder.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationfastlatin.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationfastlatin.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationfastlatin.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationfastlatin.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationfcd.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationfcd.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationfcd.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationfcd.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/collation.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationiterator.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationkeys.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationkeys.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationkeys.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationkeys.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationroot.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationroot.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationroot.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationrootelements.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationrootelements.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationrootelements.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationrootelements.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/collationroot.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationruleparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationruleparser.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationruleparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationruleparser.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationsets.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationsets.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationsets.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationsets.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationsettings.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationsettings.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationsettings.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationsettings.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationtailoring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationtailoring.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationtailoring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationtailoring.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/collationweights.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/collationweights.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/collationweights.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collationweights.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/coll.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/coll.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/coll.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/collunsafe.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/compactdecimalformat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/compactdecimalformat.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/compactdecimalformat.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/coptccal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/coptccal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/coptccal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/coptccal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/cpdtrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/cpdtrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/cpdtrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/cpdtrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csdetect.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csdetect.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csdetect.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csdetect.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csmatch.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csmatch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csmatch.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csmatch.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csr2022.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csr2022.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csr2022.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csr2022.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csrecog.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csrecog.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csrecog.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csrecog.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csrmbcs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csrmbcs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csrmbcs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csrmbcs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csrsbcs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csrsbcs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csrsbcs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csrsbcs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csrucode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csrucode.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csrucode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csrucode.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/csrutf8.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/csrutf8.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/csrutf8.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/csrutf8.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/curramt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/curramt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/curramt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/currfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/currfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/currfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/currfmt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/currpinf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/currpinf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/currpinf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/currunit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/currunit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/currunit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dangical.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dangical.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dangical.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/dangical.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/datefmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/datefmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/datefmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dayperiodrules.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dayperiodrules.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dayperiodrules.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/dayperiodrules.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dcfmtsym.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dcfmtsym.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dcfmtsym.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/decContext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/decContext.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/decContext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/decContext.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/decimfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/decimfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/decimfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/decNumber.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/decNumber.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/decNumber.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/decNumber.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/decNumberLocal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-bignum.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-bignum.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-bignum.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-bignum-dtoa.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-bignum-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-bignum-dtoa.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-bignum-dtoa.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-bignum.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-cached-powers.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-cached-powers.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-cached-powers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-cached-powers.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-diy-fp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-double-to-string.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-double-to-string.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-double-to-string.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-double-to-string.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-fast-dtoa.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-fast-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-fast-dtoa.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-fast-dtoa.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-ieee.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-string-to-double.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-string-to-double.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-string-to-double.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-string-to-double.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/double-conversion-strtod.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/double-conversion-strtod.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/double-conversion-strtod.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-strtod.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/double-conversion-utils.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dtfmtsym.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dtfmtsym.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dtfmtsym.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/dt_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dtitvfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dtitvfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dtitvfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/dtitv_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dtitvinf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dtitvinf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dtitvinf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dtptngen.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dtptngen.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dtptngen.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/dtptngen_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/dtrule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/dtrule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/dtrule.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/erarules.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/erarules.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/erarules.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/erarules.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/esctrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/esctrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/esctrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/esctrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ethpccal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ethpccal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ethpccal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/ethpccal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/fmtable_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/fmtable_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/fmtable_cnv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/fmtable.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/fmtable.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/fmtable.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/fmtableimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/format.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/format.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/format.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/formatted_string_builder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/formatted_string_builder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/formatted_string_builder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/formatted_string_builder.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/formattedval_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/formattedval_iterimpl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/formattedval_iterimpl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/formattedval_iterimpl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/formattedval_sbimpl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/formattedval_sbimpl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/formattedval_sbimpl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/formattedvalue.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/formattedvalue.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/formattedvalue.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/fphdlimp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/fphdlimp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/fphdlimp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/fphdlimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/fpositer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/fpositer.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/fpositer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/funcrepl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/funcrepl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/funcrepl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/funcrepl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/gender.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/gender.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/gender.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/gregocal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/gregocal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/gregocal.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/gregoimp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/gregoimp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/gregoimp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/gregoimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/hebrwcal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/hebrwcal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/hebrwcal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/hebrwcal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/indiancal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/indiancal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/indiancal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/indiancal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/inputext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/inputext.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/inputext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/inputext.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/islamcal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/islamcal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/islamcal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/islamcal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/japancal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/japancal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/japancal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/japancal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/listformatter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/listformatter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/listformatter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/measfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/measfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/measfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/measunit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/measunit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/measunit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/measunit_extra.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/measunit_extra.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/measunit_extra.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/measunit_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/measure.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/measure.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/measure.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/msgfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/msgfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/msgfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/msgfmt_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/name2uni.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/name2uni.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/name2uni.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/name2uni.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/nfrlist.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/nfrs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/nfrs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/nfrs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/nfrs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/nfrule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/nfrule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/nfrule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/nfrule.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/nfsubs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/nfsubs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/nfsubs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/nfsubs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/nortrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/nortrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/nortrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/nortrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/nultrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/nultrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/nultrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/nultrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_affixutils.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_affixutils.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_affixutils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_affixutils.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_asformat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_asformat.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_asformat.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_asformat.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_capi.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_capi.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_capi.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_compact.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_compact.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_compact.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_compact.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_currencysymbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_currencysymbols.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_currencysymbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_currencysymbols.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_decimalquantity.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_decimalquantity.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_decimalquantity.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_decimalquantity.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_decimfmtprops.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_decimfmtprops.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_decimfmtprops.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_decimfmtprops.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/number_decnum.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_fluent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_fluent.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_fluent.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_formatimpl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_formatimpl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_formatimpl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_formatimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_grouping.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_grouping.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_grouping.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_integerwidth.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_integerwidth.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_integerwidth.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_longnames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_longnames.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_longnames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_longnames.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_mapper.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_mapper.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_mapper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_mapper.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/number_microprops.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_modifiers.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_modifiers.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_modifiers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_modifiers.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_multiplier.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_multiplier.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_multiplier.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_multiplier.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_notation.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_notation.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_notation.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_output.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_output.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_output.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_padding.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_padding.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_padding.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_patternmodifier.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_patternmodifier.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_patternmodifier.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_patternmodifier.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_patternstring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_patternstring.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_patternstring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_patternstring.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_rounding.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_rounding.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_rounding.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_roundingutils.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_scientific.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_scientific.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_scientific.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_scientific.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_skeletons.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_skeletons.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_skeletons.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_skeletons.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_symbolswrapper.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_symbolswrapper.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_symbolswrapper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_types.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_usageprefs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_usageprefs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_usageprefs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_usageprefs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/number_utils.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/number_utils.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/number_utils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/number_utils.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/number_utypes.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_affixes.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_affixes.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_affixes.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_affixes.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_compositions.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_compositions.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_compositions.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_compositions.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_currency.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_currency.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_currency.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_currency.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_decimal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_decimal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_decimal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_decimal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_parsednumber.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_parsednumber.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_parsednumber.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_scientific.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_scientific.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_scientific.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_scientific.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_symbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_symbols.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_symbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_symbols.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_types.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_utils.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numparse_validators.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numparse_validators.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numparse_validators.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numparse_validators.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numrange_capi.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numrange_capi.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numrange_capi.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numrange_fluent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numrange_fluent.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numrange_fluent.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numrange_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numrange_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numrange_impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numrange_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/numsys.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/numsys.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/numsys.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/numsys_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/olsontz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/olsontz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/olsontz.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/olsontz.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/persncal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/persncal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/persncal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/persncal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/pluralranges.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/pluralranges.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/pluralranges.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/pluralranges.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/plurfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/plurfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/plurfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/plurrule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/plurrule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/plurrule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/plurrule_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/quant.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/quant.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/quant.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/quant.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/quantityformatter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/quantityformatter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/quantityformatter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/quantityformatter.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbnf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbnf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbnf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbt_data.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbt_data.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbt_data.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/rbt_data.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/rbt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbt_pars.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbt_pars.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbt_pars.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/rbt_pars.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbt_rule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbt_rule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbt_rule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/rbt_rule.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbt_set.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbt_set.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbt_set.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/rbt_set.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rbtz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rbtz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rbtz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/regexcmp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/regexcmp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/regexcmp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/regexcmp.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/regexcst.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/regeximp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/regeximp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/regeximp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/regeximp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/regexst.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/regexst.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/regexst.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/regexst.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/regextxt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/regextxt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/regextxt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/regextxt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/region.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/region.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/region.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/region_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/reldatefmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/reldatefmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/reldatefmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/reldtfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/reldtfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/reldtfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/reldtfmt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rematch.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rematch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rematch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/remtrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/remtrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/remtrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/remtrans.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/repattrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/repattrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/repattrn.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/rulebasedcollator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/rulebasedcollator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/rulebasedcollator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/scientificnumberformatter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/scientificnumberformatter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/scientificnumberformatter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/scriptset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/scriptset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/scriptset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/scriptset.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/search.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/search.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/search.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/selfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/selfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/selfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/selfmtimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/sharedbreakiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/sharedbreakiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/sharedbreakiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/sharedbreakiterator.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/sharedcalendar.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/shareddateformatsymbols.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/sharednumberformat.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/sharedpluralrules.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/simpletz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/simpletz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/simpletz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/smpdtfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/smpdtfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/smpdtfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/smpdtfst.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/smpdtfst.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/smpdtfst.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/smpdtfst.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/sortkey.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/sortkey.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/sortkey.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/standardplural.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/standardplural.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/standardplural.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/standardplural.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/string_segment.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/string_segment.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/string_segment.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/string_segment.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/strmatch.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/strmatch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/strmatch.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/strmatch.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/strrepl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/strrepl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/strrepl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/strrepl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/stsearch.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/stsearch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/stsearch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/taiwncal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/taiwncal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/taiwncal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/taiwncal.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/timezone.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/timezone.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/timezone.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/titletrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/titletrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/titletrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/titletrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tmunit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tmunit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tmunit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tmutamt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tmutamt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tmutamt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tmutfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tmutfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tmutfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tolowtrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tolowtrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tolowtrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/tolowtrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/toupptrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/toupptrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/toupptrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/toupptrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/translit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/translit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/translit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/transreg.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/transreg.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/transreg.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/transreg.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tridpars.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tridpars.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tridpars.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/tridpars.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tzfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tzfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tzfmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tzgnames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tzgnames.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tzgnames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/tzgnames.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tznames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tznames.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tznames.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tznames_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tznames_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tznames_impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/tznames_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tzrule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tzrule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tzrule.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/tztrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/tztrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/tztrans.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucal.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucln_in.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucln_in.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucln_in.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/ucln_in.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucol.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucol.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucol.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucoleitr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucoleitr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucoleitr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/ucol_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucol_res.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucol_res.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucol_res.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucol_sit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucol_sit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucol_sit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ucsdet.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ucsdet.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ucsdet.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/udat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/udat.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/udat.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/udateintervalformat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/udateintervalformat.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/udateintervalformat.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/udatpg.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/udatpg.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/udatpg.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ufieldpositer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ufieldpositer.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ufieldpositer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uitercollationiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uitercollationiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uitercollationiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/uitercollationiterator.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ulistformatter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ulistformatter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ulistformatter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ulocdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ulocdata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ulocdata.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/umsg.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/umsg.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/umsg.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/umsg_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/unesctrn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/unesctrn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/unesctrn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/unesctrn.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uni2name.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uni2name.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uni2name.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/uni2name.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/units_complexconverter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/units_complexconverter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/units_complexconverter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/units_complexconverter.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/units_converter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/units_converter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/units_converter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/units_converter.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/units_data.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/units_data.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/units_data.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/units_data.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/units_router.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/units_router.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/units_router.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/units_router.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/unum.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/unum.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/unum.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/unumsys.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/unumsys.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/unumsys.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/upluralrules.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/upluralrules.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/upluralrules.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uregexc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uregexc.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uregexc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uregex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uregex.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uregex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uregion.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uregion.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uregion.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/usearch.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/usearch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/usearch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uspoof_build.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uspoof_build.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uspoof_build.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uspoof_conf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uspoof_conf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uspoof_conf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/uspoof_conf.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uspoof.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uspoof.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uspoof.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/uspoof_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/uspoof_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/uspoof_impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/uspoof_impl.h" />
+    <None Include="../../../../../third_party/icu/source/i18n/usrchimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/utf16collationiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/utf16collationiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/utf16collationiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/utf16collationiterator.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/utf8collationiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/utf8collationiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/utf8collationiterator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/utf8collationiterator.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/utmscale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/utmscale.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/utmscale.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/utrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/utrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/utrans.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/vtzone.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/vtzone.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/vtzone.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/vzone.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/vzone.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/vzone.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/vzone.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/windtfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/windtfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/windtfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/windtfmt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/winnmfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/winnmfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/winnmfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/winnmfmt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/wintzimpl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/wintzimpl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/wintzimpl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/wintzimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/zonemeta.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/zonemeta.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/zonemeta.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/zonemeta.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/zrule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/zrule.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/zrule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/zrule.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/i18n/ztrans.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icui18n/ztrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icui18n/ztrans.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/i18n/ztrans.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  icui18n.dll.lib" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean icui18n.dll.lib" />
+  </Target>
+</Project>

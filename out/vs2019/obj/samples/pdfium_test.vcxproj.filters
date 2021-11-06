@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../samples/pdfium_test.cc" />
+    <CustomBuild Include="../../../../samples/pdfium_test_dump_helper.cc" />
+    <None Include="../../../../samples/pdfium_test_dump_helper.h" />
+    <CustomBuild Include="../../../../samples/pdfium_test_event_helper.cc" />
+    <None Include="../../../../samples/pdfium_test_event_helper.h" />
+    <CustomBuild Include="../../../../samples/pdfium_test_write_helper.cc" />
+    <None Include="../../../../samples/pdfium_test_write_helper.h" />
+  </ItemGroup>
+</Project>

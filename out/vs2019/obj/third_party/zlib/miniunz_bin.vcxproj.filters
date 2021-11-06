@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="contrib\minizip">
+      <UniqueIdentifier>{D6A8438D-7059-9AC5-3A26-DA8CF0F40035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contrib">
+      <UniqueIdentifier>{89A43375-990C-64BB-F7F4-915DF45BB2FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/zlib/contrib/minizip/miniunz.c">
+      <Filter>contrib\minizip</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

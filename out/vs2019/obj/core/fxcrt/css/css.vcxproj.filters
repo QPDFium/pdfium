@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="../../../../../../core/fxcrt/css/cfx_css.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_csscolorvalue.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_csscolorvalue.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_csscomputedstyle.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_csscomputedstyle.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_csscustomproperty.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_csscustomproperty.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssdata.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssdata.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssdeclaration.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssdeclaration.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssenumvalue.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssenumvalue.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssinputtextbuf.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssinputtextbuf.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssnumbervalue.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssnumbervalue.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssoutputtextbuf.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssoutputtextbuf.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_csspropertyholder.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_csspropertyholder.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssrulecollection.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssrulecollection.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssselector.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssselector.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssstringvalue.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssstringvalue.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssstylerule.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssstylerule.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssstyleselector.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssstyleselector.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssstylesheet.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssstylesheet.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_csssyntaxparser.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_csssyntaxparser.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssvalue.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssvalue.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssvaluelist.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssvaluelist.h" />
+    <CustomBuild Include="../../../../../../core/fxcrt/css/cfx_cssvaluelistparser.cpp" />
+    <None Include="../../../../../../core/fxcrt/css/cfx_cssvaluelistparser.h" />
+  </ItemGroup>
+</Project>

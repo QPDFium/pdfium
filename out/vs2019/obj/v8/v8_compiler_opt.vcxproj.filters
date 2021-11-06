@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\compiler">
+      <UniqueIdentifier>{AD208415-7CDF-8A22-3B4D-31D583BED58C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler\backend">
+      <UniqueIdentifier>{F46034A4-B263-A986-8802-AD53B1CE5E01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/compiler/access-builder.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/access-info.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/add-type-assertions-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/all-nodes.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/code-generator.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/frame-elider.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/gap-resolver.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction-scheduler.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction-selector.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/jump-threading.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/mid-tier-register-allocator.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/move-optimizer.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/register-allocator-verifier.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/register-allocator.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/spill-placer.cc">
+      <Filter>src\compiler\backend</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/basic-block-instrumentor.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/branch-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-analysis.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-graph-builder.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-liveness-map.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/c-linkage.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/checkpoint-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/code-assembler.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-node-cache.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-operator-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-operator.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/compilation-dependencies.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/compiler-source-position-table.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/constant-folding-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/control-equivalence.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/control-flow-optimizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/csa-load-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/dead-code-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/decompression-optimizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/effect-control-linearizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/escape-analysis-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/escape-analysis.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/fast-api-calls.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/feedback-source.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/frame-states.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/frame.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-assembler.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-trimmer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-visualizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/heap-refs.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-call-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-context-specialization.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-create-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-generic-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-graph.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-heap-broker.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-heap-copy-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-inlining-heuristic.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-inlining.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-intrinsic-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-native-context-specialization.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-operator.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-type-hint-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-typed-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/linkage.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/load-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-analysis.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-peeling.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-unrolling.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-variable-optimizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-graph-verifier.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-graph.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-operator-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-operator.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/map-inference.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/memory-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/memory-optimizer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-marker.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-matchers.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-observer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-origin-table.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-properties.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/opcodes.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operation-typer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operator-properties.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operator.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/osr.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/pipeline-statistics.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/pipeline.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/property-access-builder.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/raw-machine-assembler.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/redundancy-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/refs-map.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/representation-change.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/schedule.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/scheduler.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/select-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-lowering.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-operator-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-operator.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/state-values-utils.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/store-store-elimination.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/type-cache.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/type-narrowing-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/typed-optimization.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/typer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/types.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/value-numbering-reducer.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/verifier.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/zone-stats.cc">
+      <Filter>src\compiler</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

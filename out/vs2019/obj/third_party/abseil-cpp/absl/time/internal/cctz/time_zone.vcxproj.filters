@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_lookup.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.h">
+      <Filter>src</Filter>
+    </None>
+    <None Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/tzfile.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../../third_party/abseil-cpp/absl/time/internal/cctz/src/zone_info_source.cc">
+      <Filter>src</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

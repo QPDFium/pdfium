@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CC147C44-AF1C-C5F8-FC47-14B4EAF55E4A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fx_libopenjpeg</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/third_party/fx_libopenjpeg.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/freetype/include;../../../../third_party/freetype/src/include;../../../../third_party/abseil-cpp;../../../../third_party/icu/source/common;../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wno-implicit-int-float-conversion %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/bio.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/bio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/bio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/cio.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/cio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/cio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/dwt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/dwt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/dwt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/event.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/event.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/event.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/function_list.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/function_list.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/function_list.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/image.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/image.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/image.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/invert.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/invert.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/invert.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/j2k.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/j2k.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/j2k.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/jp2.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/jp2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/jp2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/mct.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/mct.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/mct.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/mqc.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/mqc.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/mqc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/openjpeg.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/openjpeg.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/openjpeg.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/opj_clock.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/opj_clock.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/opj_clock.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/opj_malloc.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/opj_malloc.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/opj_malloc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libopenjpeg20/opj_malloc.h" />
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/pi.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/pi.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/pi.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/sparse_array.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/sparse_array.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/sparse_array.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libopenjpeg20/sparse_array.h" />
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/t1.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/t1.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/t1.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/t2.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/t2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/t2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/tcd.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/tcd.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/tcd.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/tgt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/tgt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/tgt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libopenjpeg20/thread.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg/thread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_libopenjpeg/thread.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/third_party/fx_libopenjpeg.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/fx_libopenjpeg.stamp" />
+  </Target>
+</Project>

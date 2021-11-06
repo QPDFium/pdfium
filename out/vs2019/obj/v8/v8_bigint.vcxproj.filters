@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\bigint">
+      <UniqueIdentifier>{B816D87B-C893-E7F7-17DD-A9EAD1A18ECE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/bigint/bigint-internal.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/bigint/bigint-internal.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <None Include="../../../../v8/src/bigint/bigint.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/bigint/bitwise.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/bigint/digit-arithmetic.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/bigint/div-burnikel.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/div-helpers.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/bigint/div-helpers.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/bigint/div-schoolbook.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/fromstring.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/mul-karatsuba.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/mul-schoolbook.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/tostring.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/bigint/util.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/bigint/vector-arithmetic.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/bigint/vector-arithmetic.h">
+      <Filter>src\bigint</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/bigint/div-barrett.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/mul-fft.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/bigint/mul-toom.cc">
+      <Filter>src\bigint</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86947510-F2BB-43F3-C24A-D00C6F25D9E2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icuuc_private_hidden_visibility</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\icuuc_hidden_visibility.dll.lib</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /GR -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wno-parentheses -Wno-unused-function -Wno-unused-variable -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;4005;4068;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>U_COMMON_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;HAVE_DLOPEN=0;UCONFIG_ONLY_HTML_CONVERSION=1;UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0;U_CHARSET_IS_UTF8=1;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/appendable.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/appendable.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/appendable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bmpset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bmpset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bmpset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/bmpset.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/brkeng.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/brkeng.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/brkeng.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/brkeng.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/brkiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/brkiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/brkiter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytesinkutil.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bytesinkutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bytesinkutil.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/bytesinkutil.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bytestream.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bytestream.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestriebuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bytestriebuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bytestriebuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestrie.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bytestrie.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bytestrie.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestrieiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/bytestrieiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/bytestrieiterator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/caniter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/caniter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/caniter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/capi_helper.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/characterproperties.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/characterproperties.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/characterproperties.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/chariter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/chariter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/chariter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/charstr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/charstr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/charstr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/charstr.h" />
+    <None Include="../../../../../third_party/icu/source/common/charstrmap.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cmemory.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/cmemory.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/cmemory.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cmemory.h" />
+    <None Include="../../../../../third_party/icu/source/common/cpputils.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cstr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/cstr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/cstr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cstr.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cstring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/cstring.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/cstring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cstring.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cwchar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/cwchar.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/cwchar.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cwchar.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dictbe.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/dictbe.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/dictbe.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/dictbe.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dictionarydata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/dictionarydata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/dictionarydata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/dictionarydata.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dtintrv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/dtintrv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/dtintrv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/edits.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/edits.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/edits.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/errorcode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/errorcode.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/errorcode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/filteredbrk.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/filteredbrk.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/filteredbrk.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/filterednormalizer2.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/filterednormalizer2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/filterednormalizer2.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/hash.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/icudataver.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/icudataver.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/icudataver.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/icuplug.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/icuplug.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/icuplug.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/icuplugimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loadednormalizer2impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/loadednormalizer2impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/loadednormalizer2impl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localebuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/localebuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/localebuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localematcher.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/localematcher.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/localematcher.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localeprioritylist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/localeprioritylist.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/localeprioritylist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/localeprioritylist.h" />
+    <None Include="../../../../../third_party/icu/source/common/localsvc.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locavailable.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locavailable.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locavailable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locbased.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locbased.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locbased.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locbased.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdispnames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locdispnames.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locdispnames.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdistance.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locdistance.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locdistance.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locdistance.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdspnm.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locdspnm.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locdspnm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locid.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locid.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locid.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loclikely.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/loclikely.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/loclikely.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loclikelysubtags.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/loclikelysubtags.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/loclikelysubtags.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/loclikelysubtags.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locmap.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locmap.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locmap.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locmap.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locresdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locresdata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locresdata.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locutil.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/locutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/locutil.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locutil.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/lsr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/lsr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/lsr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/lsr.h" />
+    <None Include="../../../../../third_party/icu/source/common/messageimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/messagepattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/messagepattern.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/messagepattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/msvcres.h" />
+    <None Include="../../../../../third_party/icu/source/common/mutex.h" />
+    <None Include="../../../../../third_party/icu/source/common/norm2allmodes.h" />
+    <None Include="../../../../../third_party/icu/source/common/norm2_nfc_data.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normalizer2.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/normalizer2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/normalizer2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normalizer2impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/normalizer2impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/normalizer2impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/normalizer2impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normlzr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/normlzr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/normlzr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/parsepos.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/parsepos.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/parsepos.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/patternprops.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/patternprops.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/patternprops.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/patternprops.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/pluralmap.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/pluralmap.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/pluralmap.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/pluralmap.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/propname.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/propname.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/propname.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/propname_data.h" />
+    <None Include="../../../../../third_party/icu/source/common/propname.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/propsvec.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/propsvec.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/propsvec.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/propsvec.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/punycode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/punycode.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/punycode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/punycode.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/putil.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/putil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/putil.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/putilimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbi_cache.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbi_cache.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbi_cache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbi_cache.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbi.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbi.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbi.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbidata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbidata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbidata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbidata.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbinode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbinode.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbinode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbinode.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbirb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbirb.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbirb.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbirb.h" />
+    <None Include="../../../../../third_party/icu/source/common/rbbirpt.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbiscan.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbiscan.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbiscan.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbiscan.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbisetb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbisetb.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbisetb.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbisetb.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbistbl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbistbl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbistbl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbitblb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/rbbitblb.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/rbbitblb.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbitblb.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resbund_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/resbund_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/resbund_cnv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resbund.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/resbund.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/resbund.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resource.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/resource.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/resource.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/resource.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/restrace.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/restrace.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/restrace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/restrace.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ruleiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ruleiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ruleiter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ruleiter.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/schriter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/schriter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/schriter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/serv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/serv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/serv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/serv.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servlk.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servlk.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servlk.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servlkf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servlkf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servlkf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/servloc.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servls.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servls.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servls.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servnotf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servnotf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servnotf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/servnotf.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servrbf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servrbf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servrbf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servslkf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/servslkf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/servslkf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/sharedobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/sharedobject.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/sharedobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/sharedobject.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/simpleformatter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/simpleformatter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/simpleformatter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/sprpimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/static_unicode_sets.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/static_unicode_sets.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/static_unicode_sets.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/static_unicode_sets.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/stringpiece.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/stringpiece.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/stringpiece.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/stringtriebuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/stringtriebuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/stringtriebuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uarrsort.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uarrsort.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uarrsort.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uarrsort.h" />
+    <None Include="../../../../../third_party/icu/source/common/uassert.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidi.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubidi.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubidi.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubidiimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidiln.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubidiln.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubidiln.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidi_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubidi_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubidi_props.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubidi_props_data.h" />
+    <None Include="../../../../../third_party/icu/source/common/ubidi_props.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubiditransform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubiditransform.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubiditransform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidiwrt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubidiwrt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubidiwrt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubrk.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ubrk.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ubrk.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubrkimpl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucase.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucase.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucase.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucase.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucasemap.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucasemap.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucasemap.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucasemap_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucasemap_titlecase_brkiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucasemap_titlecase_brkiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucasemap_titlecase_brkiter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucase_props_data.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucat.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucat.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uchar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uchar.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uchar.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uchar_props_data.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstriebuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucharstriebuilder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucharstriebuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstrie.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucharstrie.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucharstrie.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstrieiterator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucharstrieiterator.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucharstrieiterator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uchriter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uchriter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uchriter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucln_cmn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucln_cmn.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucln_cmn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucln_cmn.h" />
+    <None Include="../../../../../third_party/icu/source/common/ucln.h" />
+    <None Include="../../../../../third_party/icu/source/common/ucln_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucmndata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucmndata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucmndata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucmndata.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv2022.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv2022.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv2022.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_bld.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_bld.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_bld.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_bld.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvbocu.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvbocu.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvbocu.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_cb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_cb.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_cb.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_cnv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_cnv.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_ct.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_ct.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_ct.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvdisp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvdisp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvdisp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_err.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_err.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_err.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_ext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_ext.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_ext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_ext.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvhz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvhz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvhz.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_io.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_io.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_io.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_io.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvisci.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvisci.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvisci.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvlat1.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvlat1.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvlat1.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_lmb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_lmb.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_lmb.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvmbcs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvmbcs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvmbcs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnvmbcs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvscsu.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvscsu.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvscsu.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvsel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnvsel.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnvsel.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_set.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_set.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_set.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u16.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u16.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u16.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u32.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u7.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u7.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u7.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u8.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u8.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucnv_u8.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucol_data.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucol_swp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucol_swp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucol_swp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucol_swp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucptrie.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucptrie.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucptrie.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucptrie_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucurr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ucurr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ucurr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucurrimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/udata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/udata.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udatamem.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/udatamem.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/udatamem.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/udatamem.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udataswp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/udataswp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/udataswp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/udataswp.h" />
+    <None Include="../../../../../third_party/icu/source/common/uelement.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uenum.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uenum.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uenum.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uenumimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uhash.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uhash.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uhash.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uhash.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uhash_us.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uhash_us.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uhash_us.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uidna.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uidna.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uidna.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uinit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uinit.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uinit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uinvchar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uinvchar.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uinvchar.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uinvchar.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uiter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulayout_props.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ulist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ulist.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ulist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulist.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uloc.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uloc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulocimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc_keytype.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uloc_keytype.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uloc_keytype.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc_tag.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uloc_tag.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uloc_tag.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umapfile.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/umapfile.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/umapfile.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/umapfile.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umath.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/umath.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/umath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umutablecptrie.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/umutablecptrie.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/umutablecptrie.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umutex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/umutex.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/umutex.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/umutex.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unames.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unames.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifiedcache.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unifiedcache.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unifiedcache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unifiedcache.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifilt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unifilt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unifilt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifunct.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unifunct.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unifunct.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uniquecharstr.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset_closure.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uniset_closure.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uniset_closure.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uniset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uniset.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uniset_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uniset_props.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unisetspan.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unisetspan.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unisetspan.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unisetspan.h" />
+    <None Include="../../../../../third_party/icu/source/common/unistrappender.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_case.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr_case.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr_case.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_case_locale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr_case_locale.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr_case_locale.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr_cnv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr_props.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_titlecase_brkiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unistr_titlecase_brkiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unistr_titlecase_brkiter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unormcmp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unormcmp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unormcmp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unorm.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/unorm.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/unorm.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unormimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uobject.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uposixdefs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uprops.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uprops.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uprops.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uprops.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uresbund.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uresbund.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uresbund.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ures_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ures_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ures_cnv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uresdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uresdata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uresdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uresdata.h" />
+    <None Include="../../../../../third_party/icu/source/common/uresimp.h" />
+    <None Include="../../../../../third_party/icu/source/common/ureslocs.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usc_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/usc_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/usc_impl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/usc_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uscript.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uscript.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uscript.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uscript_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uscript_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uscript_props.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uset_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usetiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/usetiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/usetiter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uset_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uset_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uset_props.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ushape.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ushape.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ushape.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usprep.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/usprep.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/usprep.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustack.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustack.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustack.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrcase.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustrcase.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustrcase.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrcase_locale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustrcase_locale.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustrcase_locale.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_cnv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustr_cnv.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustr_cnv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustr_cnv.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrenum.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustrenum.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustrenum.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustrenum.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrfmt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustrfmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustrfmt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustrfmt.h" />
+    <None Include="../../../../../third_party/icu/source/common/ustr_imp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustring.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustring.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_titlecase_brkiter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustr_titlecase_brkiter.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustr_titlecase_brkiter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrtrns.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustrtrns.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustrtrns.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_wcs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/ustr_wcs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/ustr_wcs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utext.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utf_impl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utf_impl.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utf_impl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/util.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/util.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/util.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/util.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/util_props.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/util_props.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/util_props.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrace.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utrace.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utrace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utracimp.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie2_builder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utrie2_builder.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utrie2_builder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie2.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utrie2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utrie2.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utrie2.h" />
+    <None Include="../../../../../third_party/icu/source/common/utrie2_impl.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utrie.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utrie.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utrie.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie_swap.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utrie_swap.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utrie_swap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uts46.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uts46.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uts46.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utypeinfo.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utypes.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/utypes.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/utypes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvector.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uvector.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uvector.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvector.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvectr32.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uvectr32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uvectr32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvectr32.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvectr64.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/uvectr64.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/uvectr64.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvectr64.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/common/wintz.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/wintz.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/wintz.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/wintz.h" />
+    <CustomBuild Include="../../../../../third_party/icu/source/stubdata/stubdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/icu/icuuc_private_hidden_visibility/stubdata.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/icu/icuuc_private_hidden_visibility/stubdata.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  icuuc_hidden_visibility.dll.lib" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean icuuc_hidden_visibility.dll.lib" />
+  </Target>
+</Project>

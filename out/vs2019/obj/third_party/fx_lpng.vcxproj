@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FDED553D-63CC-B2C7-ED6E-2B6616006F0A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fx_lpng</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/third_party/fx_lpng.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4146;4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PNG_INTEL_SSE_OPT=1;USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../third_party/libpng16/png.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/png.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/png.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/png.h" />
+    <None Include="../../../../third_party/libpng16/pngconf.h" />
+    <None Include="../../../../third_party/libpng16/pngdebug.h" />
+    <CustomBuild Include="../../../../third_party/libpng16/pngerror.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngerror.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngerror.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngget.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngget.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngget.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pnginfo.h" />
+    <None Include="../../../../third_party/libpng16/pnglibconf.h" />
+    <CustomBuild Include="../../../../third_party/libpng16/pngmem.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngmem.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngmem.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngpread.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngpread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngpread.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pngprefix.h" />
+    <None Include="../../../../third_party/libpng16/pngpriv.h" />
+    <CustomBuild Include="../../../../third_party/libpng16/pngread.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrio.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngrio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngrio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrtran.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngrtran.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngrtran.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngrutil.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngrutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngrutil.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngset.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../third_party/libpng16/pngstruct.h" />
+    <CustomBuild Include="../../../../third_party/libpng16/pngtrans.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngtrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngtrans.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwio.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngwio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngwio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwrite.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngwrite.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngwrite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwtran.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngwtran.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngwtran.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/pngwutil.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/pngwutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/pngwutil.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/intel/filter_sse2_intrinsics.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/filter_sse2_intrinsics.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/filter_sse2_intrinsics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/libpng16/intel/intel_init.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng/intel_init.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lpng/intel_init.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/third_party/fx_lpng.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/fx_lpng.stamp" />
+  </Target>
+</Project>

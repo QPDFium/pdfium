@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lcms\include">
+      <UniqueIdentifier>{405EFB1A-7DAF-BA0E-31A6-1BD847A80832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lcms">
+      <UniqueIdentifier>{5B3A1342-92CA-D91A-7784-C1889F50BF13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lcms\src">
+      <UniqueIdentifier>{6158198E-114D-27BD-F05A-F344D935ACED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../third_party/lcms/include/lcms2.h">
+      <Filter>lcms\include</Filter>
+    </None>
+    <None Include="../../../../third_party/lcms/include/lcms2_plugin.h">
+      <Filter>lcms\include</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsalpha.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscam02.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscgats.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscnvrt.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmserr.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsgamma.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsgmt.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmshalf.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsintrp.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsio0.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsio1.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmslut.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsmd5.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsmtrx.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsnamed.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsopt.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmspack.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmspcs.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsplugin.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsps2.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmssamp.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmssm.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmstypes.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsvirt.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmswtpnt.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsxform.c">
+      <Filter>lcms\src</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

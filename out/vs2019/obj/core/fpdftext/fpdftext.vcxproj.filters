@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fpdftext/cpdf_linkextract.cpp" />
+    <None Include="../../../../../core/fpdftext/cpdf_linkextract.h" />
+    <CustomBuild Include="../../../../../core/fpdftext/cpdf_textpage.cpp" />
+    <None Include="../../../../../core/fpdftext/cpdf_textpage.h" />
+    <CustomBuild Include="../../../../../core/fpdftext/cpdf_textpagefind.cpp" />
+    <None Include="../../../../../core/fpdftext/cpdf_textpagefind.h" />
+    <CustomBuild Include="../../../../../core/fpdftext/unicodenormalizationdata.cpp" />
+    <None Include="../../../../../core/fpdftext/unicodenormalizationdata.h" />
+  </ItemGroup>
+</Project>

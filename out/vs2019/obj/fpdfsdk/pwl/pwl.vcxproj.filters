@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_button.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_button.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_caret.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_caret.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_cbbutton.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_cbbutton.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_cblistbox.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_cblistbox.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_combo_box.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_combo_box.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_edit.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_edit.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_edit_impl.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_edit_impl.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_list_box.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_list_box.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_list_ctrl.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_list_ctrl.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_sbbutton.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_sbbutton.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_scroll_bar.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_scroll_bar.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_special_button.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_special_button.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/pwl/cpwl_wnd.cpp" />
+    <None Include="../../../../../fpdfsdk/pwl/cpwl_wnd.h" />
+    <None Include="../../../../../fpdfsdk/pwl/ipwl_fillernotify.h" />
+    <None Include="../../../../../fpdfsdk/pwl/ipwl_systemhandler.h" />
+  </ItemGroup>
+</Project>

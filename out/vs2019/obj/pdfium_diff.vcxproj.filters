@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="testing\image_diff">
+      <UniqueIdentifier>{F0A7B3CC-3F76-EAF7-8C6D-8E7EBDB8A4FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="testing">
+      <UniqueIdentifier>{4A33C8F9-8FF3-AABD-F0A2-49FF77791878}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../testing/image_diff/image_diff.cpp">
+      <Filter>testing\image_diff</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

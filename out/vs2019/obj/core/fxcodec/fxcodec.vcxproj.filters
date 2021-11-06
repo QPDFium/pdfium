@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="basic">
+      <UniqueIdentifier>{ECD2181B-A712-9922-CAAE-ED6EBADBAD18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fax">
+      <UniqueIdentifier>{8B308913-FAD9-5F98-1EFC-3C514608ECEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flate">
+      <UniqueIdentifier>{4788D3EE-8E9B-3B01-AF13-30997C64A573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="icc">
+      <UniqueIdentifier>{77558326-B0C6-322F-467B-DBFF62E83242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jbig2">
+      <UniqueIdentifier>{380408B4-0C06-0911-B49E-11D64B5F9010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jpeg">
+      <UniqueIdentifier>{11E62226-D3E4-4669-647E-365B8835D65D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jpx">
+      <UniqueIdentifier>{E8D1FA95-3209-0E93-F2BD-47E0EDEA4B04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bmp">
+      <UniqueIdentifier>{4AFAA0E9-88A1-5399-7B06-782386E94415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gif">
+      <UniqueIdentifier>{CB88D884-5D3F-BE08-A0DF-826DDB6E713F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="png">
+      <UniqueIdentifier>{8A39A4A0-B481-5B42-987F-86BC4EA28E81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tiff">
+      <UniqueIdentifier>{46ED83E1-E45F-5FD5-1853-A03E6040CE29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fxcodec/basic/basicmodule.cpp">
+      <Filter>basic</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/basic/basicmodule.h">
+      <Filter>basic</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/cfx_codec_memory.cpp" />
+    <None Include="../../../../../core/fxcodec/cfx_codec_memory.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/fax/faxmodule.cpp">
+      <Filter>fax</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/fax/faxmodule.h">
+      <Filter>fax</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/flate/flatemodule.cpp">
+      <Filter>flate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/flate/flatemodule.h">
+      <Filter>flate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/fx_codec.cpp" />
+    <None Include="../../../../../core/fxcodec/fx_codec.h" />
+    <None Include="../../../../../core/fxcodec/fx_codec_def.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/icc/icc_transform.cpp">
+      <Filter>icc</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/icc/icc_transform.h">
+      <Filter>icc</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_ArithDecoder.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_ArithDecoder.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_ArithIntDecoder.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_ArithIntDecoder.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_BitStream.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_BitStream.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Context.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Context.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Define.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_DocumentContext.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_DocumentContext.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_GrdProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_GrdProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_GrrdProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_GrrdProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HtrdProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HtrdProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanDecoder.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanDecoder.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanTable.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_HuffmanTable.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Image.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Image.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Page.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_PatternDict.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_PatternDict.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_PddProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_PddProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_SddProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_SddProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_Segment.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_Segment.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_SymbolDict.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_SymbolDict.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/JBig2_TrdProc.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/JBig2_TrdProc.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/jbig2_decoder.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jbig2/jbig2_decoder.h">
+      <Filter>jbig2</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpeg_common.cpp">
+      <Filter>jpeg</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpeg_common.h">
+      <Filter>jpeg</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpegmodule.cpp">
+      <Filter>jpeg</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpegmodule.h">
+      <Filter>jpeg</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jpx/cjpx_decoder.cpp">
+      <Filter>jpx</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpx/cjpx_decoder.h">
+      <Filter>jpx</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/jpx/jpx_decode_utils.cpp">
+      <Filter>jpx</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpx/jpx_decode_utils.h">
+      <Filter>jpx</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/scanlinedecoder.cpp" />
+    <None Include="../../../../../core/fxcodec/scanlinedecoder.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.cpp">
+      <Filter>jpeg</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.h">
+      <Filter>jpeg</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/progressive_decoder.cpp" />
+    <None Include="../../../../../core/fxcodec/progressive_decoder.h" />
+    <None Include="../../../../../core/fxcodec/progressive_decoder_iface.h" />
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_decoder.cpp">
+      <Filter>bmp</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/bmp_decoder.h">
+      <Filter>bmp</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.cpp">
+      <Filter>bmp</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.h">
+      <Filter>bmp</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.cpp">
+      <Filter>bmp</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.h">
+      <Filter>bmp</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.cpp">
+      <Filter>bmp</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.h">
+      <Filter>bmp</Filter>
+    </None>
+    <None Include="../../../../../core/fxcodec/bmp/fx_bmp.h">
+      <Filter>bmp</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gif.cpp">
+      <Filter>gif</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/cfx_gif.h">
+      <Filter>gif</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gifcontext.cpp">
+      <Filter>gif</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/cfx_gifcontext.h">
+      <Filter>gif</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_decoder.cpp">
+      <Filter>gif</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/gif_decoder.h">
+      <Filter>gif</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.cpp">
+      <Filter>gif</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.h">
+      <Filter>gif</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/gif/lzw_decompressor.cpp">
+      <Filter>gif</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/gif/lzw_decompressor.h">
+      <Filter>gif</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/png/png_decoder.cpp">
+      <Filter>png</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/png/png_decoder.h">
+      <Filter>png</Filter>
+    </None>
+    <CustomBuild Include="../../../../../core/fxcodec/tiff/tiff_decoder.cpp">
+      <Filter>tiff</Filter>
+    </CustomBuild>
+    <None Include="../../../../../core/fxcodec/tiff/tiff_decoder.h">
+      <Filter>tiff</Filter>
+    </None>
+  </ItemGroup>
+</Project>

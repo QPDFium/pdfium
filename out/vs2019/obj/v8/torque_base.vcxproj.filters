@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\torque">
+      <UniqueIdentifier>{056F648A-0AC2-44F7-DCBE-0382C7F2D248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../v8/src/torque/ast.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/cc-generator.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/cc-generator.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/cfg.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/cfg.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/class-debug-reader-generator.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/constants.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <None Include="../../../../v8/src/torque/contextual.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/cpp-builder.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/cpp-builder.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/csa-generator.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/csa-generator.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/declarable.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/declarable.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/declaration-visitor.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/declaration-visitor.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/declarations.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/declarations.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/earley-parser.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/earley-parser.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/global-context.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/global-context.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/implementation-visitor.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/implementation-visitor.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/instance-type-generator.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/torque/instructions.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/instructions.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/kythe-data.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/kythe-data.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <None Include="../../../../v8/src/torque/parameter-difference.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/server-data.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/server-data.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/source-positions.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/source-positions.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/torque-code-generator.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/torque-code-generator.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/torque-compiler.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/torque-compiler.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/torque-parser.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/torque-parser.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/type-inference.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/type-inference.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/type-oracle.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/type-oracle.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/type-visitor.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/type-visitor.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/types.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/types.h">
+      <Filter>src\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/torque/utils.cc">
+      <Filter>src\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/torque/utils.h">
+      <Filter>src\torque</Filter>
+    </None>
+  </ItemGroup>
+</Project>

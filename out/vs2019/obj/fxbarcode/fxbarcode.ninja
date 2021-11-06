@@ -1,0 +1,71 @@
+defines = -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -D_HAS_NODISCARD -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DWIN32_LEAN_AND_MEAN -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /W4 -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /wd4324 /wd4577 /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors
+cflags_cc = -Wno-trigraphs /TP /GR- -I../../buildtools/third_party/libc++/trunk/include
+label_name = fxbarcode
+target_out_dir = obj/fxbarcode
+target_output_name = fxbarcode
+
+build obj/fxbarcode/fxbarcode/BC_Library.obj: cxx ../../fxbarcode/BC_Library.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_TwoDimWriter.obj: cxx ../../fxbarcode/BC_TwoDimWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_Writer.obj: cxx ../../fxbarcode/BC_Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_codabar.obj: cxx ../../fxbarcode/cbc_codabar.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_code128.obj: cxx ../../fxbarcode/cbc_code128.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_code39.obj: cxx ../../fxbarcode/cbc_code39.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_codebase.obj: cxx ../../fxbarcode/cbc_codebase.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_datamatrix.obj: cxx ../../fxbarcode/cbc_datamatrix.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_ean13.obj: cxx ../../fxbarcode/cbc_ean13.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_ean8.obj: cxx ../../fxbarcode/cbc_ean8.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_eancode.obj: cxx ../../fxbarcode/cbc_eancode.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_onecode.obj: cxx ../../fxbarcode/cbc_onecode.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_pdf417i.obj: cxx ../../fxbarcode/cbc_pdf417i.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_qrcode.obj: cxx ../../fxbarcode/cbc_qrcode.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cbc_upca.obj: cxx ../../fxbarcode/cbc_upca.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/cfx_barcode.obj: cxx ../../fxbarcode/cfx_barcode.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_CommonBitMatrix.obj: cxx ../../fxbarcode/common/BC_CommonBitMatrix.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_CommonByteMatrix.obj: cxx ../../fxbarcode/common/BC_CommonByteMatrix.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_ReedSolomon.obj: cxx ../../fxbarcode/common/reedsolomon/BC_ReedSolomon.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_ReedSolomonGF256.obj: cxx ../../fxbarcode/common/reedsolomon/BC_ReedSolomonGF256.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_ReedSolomonGF256Poly.obj: cxx ../../fxbarcode/common/reedsolomon/BC_ReedSolomonGF256Poly.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_ASCIIEncoder.obj: cxx ../../fxbarcode/datamatrix/BC_ASCIIEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_Base256Encoder.obj: cxx ../../fxbarcode/datamatrix/BC_Base256Encoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_C40Encoder.obj: cxx ../../fxbarcode/datamatrix/BC_C40Encoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_DataMatrixSymbolInfo144.obj: cxx ../../fxbarcode/datamatrix/BC_DataMatrixSymbolInfo144.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_DataMatrixWriter.obj: cxx ../../fxbarcode/datamatrix/BC_DataMatrixWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_DefaultPlacement.obj: cxx ../../fxbarcode/datamatrix/BC_DefaultPlacement.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_EdifactEncoder.obj: cxx ../../fxbarcode/datamatrix/BC_EdifactEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_Encoder.obj: cxx ../../fxbarcode/datamatrix/BC_Encoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_EncoderContext.obj: cxx ../../fxbarcode/datamatrix/BC_EncoderContext.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_ErrorCorrection.obj: cxx ../../fxbarcode/datamatrix/BC_ErrorCorrection.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_HighLevelEncoder.obj: cxx ../../fxbarcode/datamatrix/BC_HighLevelEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_SymbolInfo.obj: cxx ../../fxbarcode/datamatrix/BC_SymbolInfo.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_TextEncoder.obj: cxx ../../fxbarcode/datamatrix/BC_TextEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_X12Encoder.obj: cxx ../../fxbarcode/datamatrix/BC_X12Encoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OneDimWriter.obj: cxx ../../fxbarcode/oned/BC_OneDimWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedCodaBarWriter.obj: cxx ../../fxbarcode/oned/BC_OnedCodaBarWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedCode128Writer.obj: cxx ../../fxbarcode/oned/BC_OnedCode128Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedCode39Writer.obj: cxx ../../fxbarcode/oned/BC_OnedCode39Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedEAN13Writer.obj: cxx ../../fxbarcode/oned/BC_OnedEAN13Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedEAN8Writer.obj: cxx ../../fxbarcode/oned/BC_OnedEAN8Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedEANChecksum.obj: cxx ../../fxbarcode/oned/BC_OnedEANChecksum.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedEANWriter.obj: cxx ../../fxbarcode/oned/BC_OnedEANWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_OnedUPCAWriter.obj: cxx ../../fxbarcode/oned/BC_OnedUPCAWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417.obj: cxx ../../fxbarcode/pdf417/BC_PDF417.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417BarcodeMatrix.obj: cxx ../../fxbarcode/pdf417/BC_PDF417BarcodeMatrix.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417BarcodeRow.obj: cxx ../../fxbarcode/pdf417/BC_PDF417BarcodeRow.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417ErrorCorrection.obj: cxx ../../fxbarcode/pdf417/BC_PDF417ErrorCorrection.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417HighLevelEncoder.obj: cxx ../../fxbarcode/pdf417/BC_PDF417HighLevelEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_PDF417Writer.obj: cxx ../../fxbarcode/pdf417/BC_PDF417Writer.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCodeWriter.obj: cxx ../../fxbarcode/qrcode/BC_QRCodeWriter.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoder.obj: cxx ../../fxbarcode/qrcode/BC_QRCoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderBitVector.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderBitVector.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderECBlocks.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderECBlocks.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderECBlocksData.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderECBlocksData.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderEncoder.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderEncoder.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderErrorCorrectionLevel.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderErrorCorrectionLevel.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderMaskUtil.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderMaskUtil.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderMatrixUtil.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderMatrixUtil.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderMode.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderMode.cpp || obj/third_party/icu/icudata.stamp
+build obj/fxbarcode/fxbarcode/BC_QRCoderVersion.obj: cxx ../../fxbarcode/qrcode/BC_QRCoderVersion.cpp || obj/third_party/icu/icudata.stamp
+
+build obj/fxbarcode/fxbarcode.stamp: stamp obj/fxbarcode/fxbarcode/BC_Library.obj obj/fxbarcode/fxbarcode/BC_TwoDimWriter.obj obj/fxbarcode/fxbarcode/BC_Writer.obj obj/fxbarcode/fxbarcode/cbc_codabar.obj obj/fxbarcode/fxbarcode/cbc_code128.obj obj/fxbarcode/fxbarcode/cbc_code39.obj obj/fxbarcode/fxbarcode/cbc_codebase.obj obj/fxbarcode/fxbarcode/cbc_datamatrix.obj obj/fxbarcode/fxbarcode/cbc_ean13.obj obj/fxbarcode/fxbarcode/cbc_ean8.obj obj/fxbarcode/fxbarcode/cbc_eancode.obj obj/fxbarcode/fxbarcode/cbc_onecode.obj obj/fxbarcode/fxbarcode/cbc_pdf417i.obj obj/fxbarcode/fxbarcode/cbc_qrcode.obj obj/fxbarcode/fxbarcode/cbc_upca.obj obj/fxbarcode/fxbarcode/cfx_barcode.obj obj/fxbarcode/fxbarcode/BC_CommonBitMatrix.obj obj/fxbarcode/fxbarcode/BC_CommonByteMatrix.obj obj/fxbarcode/fxbarcode/BC_ReedSolomon.obj obj/fxbarcode/fxbarcode/BC_ReedSolomonGF256.obj obj/fxbarcode/fxbarcode/BC_ReedSolomonGF256Poly.obj obj/fxbarcode/fxbarcode/BC_ASCIIEncoder.obj obj/fxbarcode/fxbarcode/BC_Base256Encoder.obj obj/fxbarcode/fxbarcode/BC_C40Encoder.obj obj/fxbarcode/fxbarcode/BC_DataMatrixSymbolInfo144.obj obj/fxbarcode/fxbarcode/BC_DataMatrixWriter.obj obj/fxbarcode/fxbarcode/BC_DefaultPlacement.obj obj/fxbarcode/fxbarcode/BC_EdifactEncoder.obj obj/fxbarcode/fxbarcode/BC_Encoder.obj obj/fxbarcode/fxbarcode/BC_EncoderContext.obj obj/fxbarcode/fxbarcode/BC_ErrorCorrection.obj obj/fxbarcode/fxbarcode/BC_HighLevelEncoder.obj obj/fxbarcode/fxbarcode/BC_SymbolInfo.obj obj/fxbarcode/fxbarcode/BC_TextEncoder.obj obj/fxbarcode/fxbarcode/BC_X12Encoder.obj obj/fxbarcode/fxbarcode/BC_OneDimWriter.obj obj/fxbarcode/fxbarcode/BC_OnedCodaBarWriter.obj obj/fxbarcode/fxbarcode/BC_OnedCode128Writer.obj obj/fxbarcode/fxbarcode/BC_OnedCode39Writer.obj obj/fxbarcode/fxbarcode/BC_OnedEAN13Writer.obj obj/fxbarcode/fxbarcode/BC_OnedEAN8Writer.obj obj/fxbarcode/fxbarcode/BC_OnedEANChecksum.obj obj/fxbarcode/fxbarcode/BC_OnedEANWriter.obj obj/fxbarcode/fxbarcode/BC_OnedUPCAWriter.obj obj/fxbarcode/fxbarcode/BC_PDF417.obj obj/fxbarcode/fxbarcode/BC_PDF417BarcodeMatrix.obj obj/fxbarcode/fxbarcode/BC_PDF417BarcodeRow.obj obj/fxbarcode/fxbarcode/BC_PDF417ErrorCorrection.obj obj/fxbarcode/fxbarcode/BC_PDF417HighLevelEncoder.obj obj/fxbarcode/fxbarcode/BC_PDF417Writer.obj obj/fxbarcode/fxbarcode/BC_QRCodeWriter.obj obj/fxbarcode/fxbarcode/BC_QRCoder.obj obj/fxbarcode/fxbarcode/BC_QRCoderBitVector.obj obj/fxbarcode/fxbarcode/BC_QRCoderECBlocks.obj obj/fxbarcode/fxbarcode/BC_QRCoderECBlocksData.obj obj/fxbarcode/fxbarcode/BC_QRCoderEncoder.obj obj/fxbarcode/fxbarcode/BC_QRCoderErrorCorrectionLevel.obj obj/fxbarcode/fxbarcode/BC_QRCoderMaskUtil.obj obj/fxbarcode/fxbarcode/BC_QRCoderMatrixUtil.obj obj/fxbarcode/fxbarcode/BC_QRCoderMode.obj obj/fxbarcode/fxbarcode/BC_QRCoderVersion.obj || obj/core/fxcrt/fxcrt.stamp obj/core/fxge/fxge.stamp obj/third_party/bigint.stamp obj/core/fxcrt/unowned_ptr.stamp obj/third_party/fx_freetype.stamp obj/third_party/pdfium_base.stamp ./absl.dll.lib ./icuuc.dll.lib obj/third_party/fx_agg.stamp

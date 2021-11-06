@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{64AD146C-9781-C0F0-3ACD-B662757ED57A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fwl</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/xfa/fwl/fwl.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../..;../../../../../out/vs2019/gen;../../../../../buildtools/third_party/libc++;../../../../../third_party/freetype/include;../../../../../third_party/freetype/src/include;../../../../../third_party/abseil-cpp;../../../../../third_party/icu/source/common;../../../../../third_party/icu/source/i18n;../../../../../v8/include;../../../../../out/vs2019/gen/v8/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_SHARED;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_app.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_app.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_app.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_app.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_barcode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_barcode.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_barcode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_barcode.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_caret.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_caret.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_caret.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_caret.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_checkbox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_checkbox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_checkbox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_checkbox.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_combobox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_combobox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_combobox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_combobox.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_comboedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_comboedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_comboedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_comboedit.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_combolist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_combolist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_combolist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_combolist.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_datetimeedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_datetimeedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_datetimeedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_datetimeedit.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_datetimepicker.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_datetimepicker.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_datetimepicker.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_datetimepicker.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_edit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_edit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_edit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_edit.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_event.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_event.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_event.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_event.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_eventmouse.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_eventmouse.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_eventmouse.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_eventmouse.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_eventscroll.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_eventscroll.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_eventscroll.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_eventscroll.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_eventselectchanged.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_eventselectchanged.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_eventselectchanged.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_eventselectchanged.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_eventtextwillchange.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_eventtextwillchange.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_eventtextwillchange.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_eventtextwillchange.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_eventvalidate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_eventvalidate.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_eventvalidate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_eventvalidate.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_listbox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_listbox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_listbox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_listbox.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_message.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_message.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_message.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_message.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_messagekey.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_messagekey.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_messagekey.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_messagekey.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_messagekillfocus.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_messagekillfocus.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_messagekillfocus.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_messagekillfocus.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_messagemouse.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_messagemouse.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_messagemouse.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_messagemouse.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_messagemousewheel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_messagemousewheel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_messagemousewheel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_messagemousewheel.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_messagesetfocus.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_messagesetfocus.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_messagesetfocus.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_messagesetfocus.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_monthcalendar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_monthcalendar.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_monthcalendar.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_monthcalendar.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_notedriver.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_notedriver.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_notedriver.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_notedriver.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_picturebox.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_picturebox.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_picturebox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_picturebox.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_pushbutton.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_pushbutton.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_pushbutton.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_pushbutton.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_scrollbar.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_scrollbar.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_scrollbar.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_scrollbar.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_themebackground.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_themebackground.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_themebackground.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_themebackground.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_themepart.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_themepart.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_themepart.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_themepart.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_themetext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_themetext.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_themetext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_themetext.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_widget.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_widget.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_widget.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_widget.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/cfwl_widgetmgr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_widgetmgr.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_widgetmgr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/cfwl_widgetmgr.h" />
+    <None Include="../../../../../xfa/fwl/fwl_widgetdef.h" />
+    <None Include="../../../../../xfa/fwl/fwl_widgethit.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/ifwl_themeprovider.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/ifwl_themeprovider.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/ifwl_themeprovider.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/ifwl_themeprovider.h" />
+    <None Include="../../../../../xfa/fwl/ifwl_widgetdelegate.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_barcodetp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_barcodetp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_barcodetp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_barcodetp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_carettp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_carettp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_carettp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_carettp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_checkboxtp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_checkboxtp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_checkboxtp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_checkboxtp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_comboboxtp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_comboboxtp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_comboboxtp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_comboboxtp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_datetimepickertp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_datetimepickertp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_datetimepickertp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_datetimepickertp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_edittp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_edittp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_edittp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_edittp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_fontmanager.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_fontmanager.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_fontmanager.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_fontmanager.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_listboxtp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_listboxtp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_listboxtp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_listboxtp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_monthcalendartp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_monthcalendartp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_monthcalendartp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_monthcalendartp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_pictureboxtp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_pictureboxtp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_pictureboxtp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_pictureboxtp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_pushbuttontp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_pushbuttontp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_pushbuttontp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_pushbuttontp.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_scrollbartp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_scrollbartp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_scrollbartp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_scrollbartp.h" />
+    <None Include="../../../../../xfa/fwl/theme/cfwl_utils.h" />
+    <CustomBuild Include="../../../../../xfa/fwl/theme/cfwl_widgettp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl/cfwl_widgettp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fwl/fwl/cfwl_widgettp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../xfa/fwl/theme/cfwl_widgettp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/xfa/fwl/fwl.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/xfa/fwl/fwl.stamp" />
+  </Target>
+</Project>

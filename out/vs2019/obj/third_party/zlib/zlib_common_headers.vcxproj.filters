@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="../../../../../third_party/zlib/chromeconf.h" />
+    <None Include="../../../../../third_party/zlib/deflate.h" />
+    <None Include="../../../../../third_party/zlib/inffast.h" />
+    <None Include="../../../../../third_party/zlib/inffixed.h" />
+    <None Include="../../../../../third_party/zlib/inflate.h" />
+    <None Include="../../../../../third_party/zlib/inftrees.h" />
+    <None Include="../../../../../third_party/zlib/zconf.h" />
+    <None Include="../../../../../third_party/zlib/zlib.h" />
+    <None Include="../../../../../third_party/zlib/zutil.h" />
+  </ItemGroup>
+</Project>

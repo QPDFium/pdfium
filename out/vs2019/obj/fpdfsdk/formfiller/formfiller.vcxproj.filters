@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_button.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_button.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_checkbox.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_checkbox.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_combobox.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_combobox.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_fieldaction.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_fieldaction.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_formfield.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_formfield.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_interactiveformfiller.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_interactiveformfiller.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_listbox.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_listbox.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_perwindowdata.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_perwindowdata.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_pushbutton.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_pushbutton.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_radiobutton.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_radiobutton.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_textfield.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_textfield.h" />
+    <CustomBuild Include="../../../../../fpdfsdk/formfiller/cffl_textobject.cpp" />
+    <None Include="../../../../../fpdfsdk/formfiller/cffl_textobject.h" />
+  </ItemGroup>
+</Project>

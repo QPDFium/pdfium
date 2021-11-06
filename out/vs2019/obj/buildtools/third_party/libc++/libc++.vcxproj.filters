@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="trunk\src">
+      <UniqueIdentifier>{38BFD58D-FE57-463B-C06D-593CFBF66657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trunk">
+      <UniqueIdentifier>{698F3F9F-82CE-56BB-EA1B-05B40FCA8A75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trunk\src\support\win32">
+      <UniqueIdentifier>{0EC8D51B-844A-C561-0555-71F21ED7CD1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trunk\src\support">
+      <UniqueIdentifier>{011B2041-7FB1-EEF7-DA0F-41B223BDE976}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/algorithm.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/any.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/atomic.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/barrier.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/bind.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/charconv.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/chrono.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/condition_variable.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/condition_variable_destructor.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/debug.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/exception.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/functional.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/future.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/hash.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/ios.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/ios.instantiations.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/iostream.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/locale.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/memory.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/mutex.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/mutex_destructor.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/new.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/optional.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/random.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/random_shuffle.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/regex.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/shared_mutex.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/stdexcept.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/string.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/strstream.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/system_error.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/thread.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/typeinfo.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/utility.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/valarray.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/variant.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/vector.cpp">
+      <Filter>trunk\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/locale_win32.cpp">
+      <Filter>trunk\src\support\win32</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/support.cpp">
+      <Filter>trunk\src\support\win32</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/thread_win32.cpp">
+      <Filter>trunk\src\support\win32</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

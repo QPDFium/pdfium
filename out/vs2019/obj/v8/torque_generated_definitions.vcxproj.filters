@@ -1,0 +1,1885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated">
+      <UniqueIdentifier>{2B03DAFF-8243-5568-F8FB-E911966B258C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8">
+      <UniqueIdentifier>{7759FF7E-003C-E2C6-7163-B259E1BF5CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen">
+      <UniqueIdentifier>{0E8AB76B-5751-F980-0EC7-B9741E74BA80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019">
+      <UniqueIdentifier>{7078447C-44AA-E0CF-74C8-BF2E4C761502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out">
+      <UniqueIdentifier>{FBD62108-6F7E-E78E-9895-92E1AA2F5AC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\src\builtins">
+      <UniqueIdentifier>{E3AC156C-839F-FDBC-081A-6E6BD7647AF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\src">
+      <UniqueIdentifier>{0005F3AD-0141-70B9-4CD6-24AB899ECAF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\src\ic">
+      <UniqueIdentifier>{560A3912-444A-7529-B9C6-961B79B9F670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\src\objects">
+      <UniqueIdentifier>{FC32DAF2-A16C-5F7E-745D-F23BEAA3B5BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\test\torque">
+      <UniqueIdentifier>{C101A247-0E36-C780-28CE-138738E95009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\test">
+      <UniqueIdentifier>{5AD50D16-C9F7-38CB-A921-14FB868B9492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\third_party\v8\builtins">
+      <UniqueIdentifier>{A579F65F-5A9F-161E-019B-28998B36A075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\third_party\v8">
+      <UniqueIdentifier>{89940F4C-5FB1-BB41-9363-D8CC4B7A574D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\torque-generated\third_party">
+      <UniqueIdentifier>{0082BECC-CFED-854F-5363-45DAC7B185D9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/class-forward-declarations.h">
+      <Filter>..\out\vs2019\gen\v8\torque-generated</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/class-verifiers.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/class-verifiers.h">
+      <Filter>..\out\vs2019\gen\v8\torque-generated</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/factory.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/objects-printer.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/aggregate-error-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/aggregate-error-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/aggregate-error-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-at-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-at-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-at-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-concat-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-concat-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-concat-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-copywithin-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-copywithin-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-copywithin-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-every-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-every-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-every-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-filter-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-filter-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-filter-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-find-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-find-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-find-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findindex-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findindex-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findindex-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlast-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlast-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlast-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlastindex-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlastindex-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-findlastindex-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-foreach-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-foreach-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-foreach-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-from-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-from-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-from-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-isarray-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-isarray-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-isarray-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-join-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-join-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-join-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-lastindexof-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-lastindexof-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-lastindexof-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-map-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-map-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-map-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-of-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-of-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-of-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-right-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-right-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-right-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reduce-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reverse-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reverse-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-reverse-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-shift-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-shift-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-shift-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-slice-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-slice-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-slice-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-some-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-some-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-some-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-splice-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-splice-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-splice-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-unshift-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-unshift-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-unshift-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/arraybuffer-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/arraybuffer-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/arraybuffer-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/base-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/base-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/base-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/boolean-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/boolean-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/boolean-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-bigint-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-bigint-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-bigint-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-string-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-string-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/builtins-string-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/cast-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/cast-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/cast-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/collections-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/collections-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/collections-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/constructor-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/constructor-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/constructor-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/conversion-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/conversion-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/conversion-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/convert-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/convert-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/convert-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/console-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/console-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/console-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/data-view-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/data-view-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/data-view-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/finalization-registry-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/finalization-registry-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/finalization-registry-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frames-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frames-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frames-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frame-arguments-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frame-arguments-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/frame-arguments-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/function-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/function-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/function-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/growable-fixed-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/growable-fixed-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/growable-fixed-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-callable-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-callable-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-callable-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-dynamic-check-maps-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-dynamic-check-maps-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-dynamic-check-maps-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/ic-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-coverage-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-coverage-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-coverage-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/internal-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/math-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/math-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/math-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/number-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/number-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/number-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-fromentries-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-fromentries-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-fromentries-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/object-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-abstract-operations-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-abstract-operations-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-abstract-operations-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-element-closure-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-element-closure-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-all-element-closure-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-any-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-any-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-any-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-constructor-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-constructor-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-constructor-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-finally-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-finally-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-finally-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-misc-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-misc-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-misc-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-race-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-race-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-race-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-reaction-job-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-reaction-job-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-reaction-job-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-resolve-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-resolve-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-resolve-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-then-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-then-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-then-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-jobs-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-jobs-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/promise-jobs-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-constructor-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-constructor-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-constructor-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-delete-property-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-delete-property-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-delete-property-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-property-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-property-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-property-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-prototype-of-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-prototype-of-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-get-prototype-of-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-has-property-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-has-property-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-has-property-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-is-extensible-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-is-extensible-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-is-extensible-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-prevent-extensions-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-prevent-extensions-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-prevent-extensions-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revocable-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revocable-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revocable-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revoke-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revoke-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-revoke-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-property-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-property-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-property-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-prototype-of-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-prototype-of-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-set-prototype-of-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/proxy-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/reflect-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/reflect-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/reflect-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-exec-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-exec-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-exec-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-all-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-all-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-all-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-match-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-replace-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-replace-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-replace-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-search-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-search-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-search-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-source-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-source-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-source-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-split-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-split-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-split-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-test-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-test-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-test-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/regexp-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-at-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-at-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-at-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-endswith-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-endswith-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-endswith-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-html-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-html-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-html-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-includes-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-includes-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-includes-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-indexof-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-indexof-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-indexof-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-match-search-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-match-search-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-match-search-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-pad-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-pad-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-pad-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-repeat-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-repeat-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-repeat-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-replaceall-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-replaceall-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-replaceall-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-slice-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-slice-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-slice-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-startswith-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-startswith-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-startswith-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substr-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substr-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substr-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substring-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substring-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-substring-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-trim-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-trim-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/string-trim-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/symbol-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/symbol-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/symbol-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/torque-internal-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/torque-internal-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/torque-internal-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-at-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-at-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-at-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-createtypedarray-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-createtypedarray-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-createtypedarray-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-every-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-every-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-every-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-entries-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-entries-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-entries-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-filter-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-filter-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-filter-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-find-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-find-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-find-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findindex-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findindex-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findindex-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlast-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlast-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlast-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlastindex-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlastindex-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-findlastindex-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-foreach-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-foreach-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-foreach-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-from-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-from-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-from-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-keys-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-keys-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-keys-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-of-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-of-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-of-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduce-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduce-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduce-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduceright-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduceright-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-reduceright-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-set-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-set-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-set-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-slice-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-slice-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-slice-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-some-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-some-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-some-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-sort-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-sort-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-sort-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-subarray-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-subarray-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-subarray-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-values-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-values-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-values-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/typed-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/weak-ref-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/weak-ref-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/builtins/weak-ref-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/ic/handler-configuration-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\ic</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/ic/handler-configuration-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\ic</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/ic/handler-configuration-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\ic</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/allocation-site-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/allocation-site-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/allocation-site-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/api-callbacks-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/api-callbacks-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/api-callbacks-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/arguments-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/arguments-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/arguments-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/bigint-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/bigint-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/bigint-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/cell-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/cell-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/cell-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/code-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/code-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/code-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/contexts-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/contexts-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/contexts-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/data-handler-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/data-handler-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/data-handler-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/debug-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/debug-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/debug-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/descriptor-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/descriptor-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/descriptor-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/embedder-data-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/embedder-data-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/embedder-data-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-cell-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-cell-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-cell-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-vector-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-vector-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/feedback-vector-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/fixed-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/fixed-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/fixed-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/foreign-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/foreign-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/foreign-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/free-space-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/free-space-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/free-space-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-number-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-number-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-number-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-object-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-object-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/heap-object-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-buffer-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-buffer-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-buffer-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collection-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-function-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-function-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-function-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-generator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-generator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-generator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-promise-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-promise-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-promise-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-proxy-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-proxy-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-proxy-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-string-iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-string-iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-string-iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-regexp-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-temporal-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-temporal-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-temporal-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-weak-refs-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-weak-refs-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-weak-refs-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/literal-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/literal-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/literal-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/map-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/map-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/map-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/megadom-handler-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/megadom-handler-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/megadom-handler-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/microtask-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/microtask-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/microtask-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/module-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/module-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/module-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/name-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/name-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/name-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/oddball-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/oddball-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/oddball-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/ordered-hash-table-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/ordered-hash-table-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/ordered-hash-table-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/primitive-heap-object-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/primitive-heap-object-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/primitive-heap-object-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/promise-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/promise-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/promise-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-array-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-array-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-array-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-cell-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-cell-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-cell-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-descriptor-object-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-descriptor-object-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/property-descriptor-object-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/prototype-info-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/prototype-info-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/prototype-info-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/regexp-match-info-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/regexp-match-info-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/regexp-match-info-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/scope-info-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/scope-info-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/scope-info-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/script-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/script-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/script-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/shared-function-info-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/shared-function-info-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/shared-function-info-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/source-text-module-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/source-text-module-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/source-text-module-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/stack-frame-info-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/stack-frame-info-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/stack-frame-info-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/string-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/string-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/string-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/struct-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/struct-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/struct-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-hash-table-helpers-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-hash-table-helpers-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-hash-table-helpers-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-name-dictionary-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-name-dictionary-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/swiss-name-dictionary-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/synthetic-module-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/synthetic-module-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/synthetic-module-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/template-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/template-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/template-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/templates-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/templates-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/templates-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/torque-defined-classes-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/torque-defined-classes-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/torque-defined-classes-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/test/torque/test-torque-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\test\torque</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/test/torque/test-torque-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\test\torque</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/test/torque/test-torque-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\test\torque</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/third_party/v8/builtins/array-sort-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\third_party\v8\builtins</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/third_party/v8/builtins/array-sort-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\third_party\v8\builtins</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/third_party/v8/builtins/array-sort-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\third_party\v8\builtins</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/intl-objects-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/intl-objects-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/intl-objects-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-break-iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-break-iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-break-iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-collator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-date-time-format-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-date-time-format-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-date-time-format-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-display-names-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-display-names-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-display-names-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-list-format-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-list-format-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-list-format-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-locale-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-locale-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-locale-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-number-format-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-number-format-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-number-format-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-plural-rules-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-plural-rules-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-plural-rules-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-relative-time-format-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-relative-time-format-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-relative-time-format-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segment-iterator-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segment-iterator-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segment-iterator-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segmenter-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segmenter-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segmenter-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segments-tq-inl.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segments-tq.cc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </CustomBuild>
+    <None Include="../../../../out/vs2019/gen/v8/torque-generated/src/objects/js-segments-tq.inc">
+      <Filter>..\out\vs2019\gen\v8\torque-generated\src\objects</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1502 @@
+ninja_required_version = 1.7.2
+
+rule gn
+  command = ../../buildtools/win/gn.exe --root=../.. -q --ide=vs2019 --regeneration gen .
+  pool = console
+  description = Regenerating ninja files
+
+build build.ninja: gn
+  generator = 1
+  depfile = build.ninja.d
+
+pool build_toolchain_action_pool
+  depth = 12
+
+pool build_toolchain_link_pool
+  depth = 5
+
+subninja toolchain.ninja
+
+build freetype_common: phony obj/freetype_common.stamp
+build fuzzers: phony obj/fuzzers.stamp
+build pdfium: phony ./pdfium.dll.lib
+build pdfium_all: phony obj/pdfium_all.stamp
+build pdfium_diff: phony ./pdfium_diff.exe
+build pdfium_embeddertest_deps: phony obj/pdfium_embeddertest_deps.stamp
+build pdfium_embeddertests: phony ./pdfium_embeddertests.exe
+build pdfium_public_headers: phony obj/pdfium_public_headers.stamp
+build pdfium_public_headers_impl: phony obj/pdfium_public_headers_impl.stamp
+build pdfium_unittest_deps: phony obj/pdfium_unittest_deps.stamp
+build pdfium_unittests: phony ./pdfium_unittests.exe
+build samples: phony obj/samples.stamp
+build constants: phony obj/constants/constants.stamp
+build fpdfsdk: phony obj/fpdfsdk/fpdfsdk.stamp
+build fxbarcode: phony obj/fxbarcode/fxbarcode.stamp
+build fxjs: phony obj/fxjs/fxjs.stamp
+build third_party: phony obj/third_party/third_party.stamp
+build v8: phony ./v8.dll.lib
+build bigint_shell: phony ./bigint_shell.exe
+build bytecode_builtins_list_generator: phony ./bytecode_builtins_list_generator.exe
+build cctest: phony ./cctest.exe
+build cppgc_hello_world: phony ./cppgc_hello_world.exe
+build d8: phony ./d8.exe
+build gen-regexp-special-case: phony ./gen-regexp-special-case.exe
+build generate-bytecode-expectations: phony ./generate-bytecode-expectations.exe
+build inspector-test: phony ./inspector-test.exe
+build miniunz_bin: phony ./miniunz_bin.exe
+build minizip_bin: phony ./minizip_bin.exe
+build mkgrokdump: phony ./mkgrokdump.exe
+build mksnapshot: phony ./mksnapshot.exe
+build nasm: phony ./nasm.exe
+build pdfium_test: phony ./pdfium_test.exe
+build torque: phony ./torque.exe
+build torque-language-server: phony ./torque-language-server.exe
+build unittests: phony ./unittests.exe
+build v8_cppgc_shared_unittests: phony ./v8_cppgc_shared_unittests.exe
+build v8_hello_world: phony ./v8_hello_world.exe
+build v8_sample_process: phony ./v8_sample_process.exe
+build v8_shell: phony ./v8_shell.exe
+build v8_simple_inspector_fuzzer: phony ./v8_simple_inspector_fuzzer.exe
+build v8_simple_json_fuzzer: phony ./v8_simple_json_fuzzer.exe
+build v8_simple_parser_fuzzer: phony ./v8_simple_parser_fuzzer.exe
+build v8_simple_regexp_builtins_fuzzer: phony ./v8_simple_regexp_builtins_fuzzer.exe
+build v8_simple_regexp_fuzzer: phony ./v8_simple_regexp_fuzzer.exe
+build zlib_bench: phony ./zlib_bench.exe
+build absl: phony ./absl.dll.lib
+build absl_component_deps: phony obj/third_party/abseil-cpp/absl_component_deps.stamp
+build algorithm: phony obj/third_party/abseil-cpp/absl/algorithm/algorithm.stamp
+build algorithm_test: phony obj/third_party/abseil-cpp/absl/algorithm/algorithm_test.stamp
+build any: phony obj/third_party/abseil-cpp/absl/types/any.stamp
+build ascii_test: phony obj/third_party/abseil-cpp/absl/strings/ascii_test.stamp
+build asm_to_inline_asm_default: phony obj/v8/asm_to_inline_asm_default.stamp
+build atomic_hook: phony obj/third_party/abseil-cpp/absl/base/atomic_hook.stamp
+build bad_any_cast: phony obj/third_party/abseil-cpp/absl/types/bad_any_cast.stamp
+build bad_any_cast_impl: phony obj/third_party/abseil-cpp/absl/types/bad_any_cast_impl.stamp
+build bad_optional_access: phony obj/third_party/abseil-cpp/absl/types/bad_optional_access.stamp
+build bad_variant_access: phony obj/third_party/abseil-cpp/absl/types/bad_variant_access.stamp
+build base: phony obj/third_party/abseil-cpp/absl/base/base.stamp
+build base_internal: phony obj/third_party/abseil-cpp/absl/base/base_internal.stamp
+build bigint: phony obj/third_party/bigint.stamp
+build bind_front: phony obj/third_party/abseil-cpp/absl/functional/bind_front.stamp
+build bits: phony obj/third_party/abseil-cpp/absl/numeric/bits.stamp
+build branding_buildflags: phony obj/build/branding_buildflags.stamp
+build btree: phony obj/third_party/abseil-cpp/absl/container/btree.stamp
+build buildflag_header_h: phony obj/build/buildflag_header_h.stamp
+build cctest_headers: phony obj/v8/test/cctest/cctest_headers.stamp
+build cctest_sources: phony obj/v8/test/cctest/cctest_sources.stamp
+build chromecast_buildflags: phony obj/build/chromecast_buildflags.stamp
+build chromeos_buildflags: phony obj/build/chromeos_buildflags.stamp
+build city: phony obj/third_party/abseil-cpp/absl/hash/city.stamp
+build civil_time: phony obj/third_party/abseil-cpp/absl/time/internal/cctz/civil_time.stamp
+build cleanup: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup.stamp
+build cleanup_internal: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup_internal.stamp
+build cleanup_test: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup_test.stamp
+build cmaps: phony obj/core/fpdfapi/cmaps/cmaps.stamp
+build common: phony obj/third_party/abseil-cpp/absl/container/common.stamp
+build common_deps: phony obj/build/config/common_deps.stamp
+build common_test_headers: phony obj/v8/test/common_test_headers.stamp
+build compare: phony obj/third_party/abseil-cpp/absl/types/compare.stamp
+build compiler_buildflags: phony obj/build/config/compiler/compiler_buildflags.stamp
+build compressed_tuple: phony obj/third_party/abseil-cpp/absl/container/compressed_tuple.stamp
+build compression_utils_portable: phony obj/third_party/zlib/google/compression_utils_portable.lib
+build config: phony obj/third_party/abseil-cpp/absl/base/config.stamp
+build config_test: phony obj/third_party/abseil-cpp/absl/base/config_test.stamp
+build container: phony obj/third_party/abseil-cpp/absl/algorithm/container.stamp
+build container_memory: phony obj/third_party/abseil-cpp/absl/container/container_memory.stamp
+build container_test: phony obj/third_party/abseil-cpp/absl/algorithm/container_test.stamp
+build copy_cdb_to_output: phony obj/build/win/copy_cdb_to_output.stamp
+build copy_prereqs: phony obj/v8/tools/v8windbg/copy_prereqs.stamp
+build cord: phony obj/third_party/abseil-cpp/absl/strings/cord.stamp
+build cord_internal: phony obj/third_party/abseil-cpp/absl/strings/cord_internal.stamp
+build cord_rep_btree_navigator_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_navigator_test.stamp
+build cord_rep_btree_reader_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_reader_test.stamp
+build cord_rep_btree_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_test.stamp
+build cord_rep_consume_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_consume_test.stamp
+build cord_rep_test_util: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_test_util.stamp
+build cord_test_helpers: phony obj/third_party/abseil-cpp/absl/strings/cord_test_helpers.stamp
+build cordz_functions: phony obj/third_party/abseil-cpp/absl/strings/cordz_functions.stamp
+build cordz_functions_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_functions_test.stamp
+build cordz_handle: phony obj/third_party/abseil-cpp/absl/strings/cordz_handle.stamp
+build cordz_info: phony obj/third_party/abseil-cpp/absl/strings/cordz_info.stamp
+build cordz_info_statistics_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_info_statistics_test.stamp
+build cordz_info_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_info_test.stamp
+build cordz_sample_token: phony obj/third_party/abseil-cpp/absl/strings/cordz_sample_token.stamp
+build cordz_statistics: phony obj/third_party/abseil-cpp/absl/strings/cordz_statistics.stamp
+build cordz_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_test.stamp
+build cordz_test_helpers: phony obj/third_party/abseil-cpp/absl/strings/cordz_test_helpers.stamp
+build cordz_update_scope: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_scope.stamp
+build cordz_update_scope_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_scope_test.stamp
+build cordz_update_tracker: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker.stamp
+build cordz_update_tracker_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker_test.stamp
+build core_headers: phony obj/third_party/abseil-cpp/absl/base/core_headers.stamp
+build counting_allocator: phony obj/third_party/abseil-cpp/absl/container/counting_allocator.stamp
+build cppgc: phony ./cppgc.dll.lib
+build cppgc_base: phony obj/v8/cppgc_base.stamp
+build cppgc_headers: phony obj/v8/cppgc_headers.stamp
+build cppgc_unittests_sources: phony obj/v8/test/unittests/cppgc_unittests_sources.stamp
+build crdtp: phony obj/v8/third_party/inspector_protocol/crdtp.stamp
+build crdtp_platform: phony obj/v8/third_party/inspector_protocol/crdtp_platform.stamp
+build crdtp_test: phony obj/v8/third_party/inspector_protocol/crdtp_test.stamp
+build crdtp_test_platform: phony obj/v8/third_party/inspector_protocol/crdtp_test_platform.stamp
+build crt: phony obj/xfa/fgas/crt/crt.stamp
+build css: phony obj/core/fxcrt/css/css.stamp
+build debugging_internal: phony obj/third_party/abseil-cpp/absl/debugging/debugging_internal.stamp
+build default: phony obj/third_party/abseil-cpp/default.stamp
+build default_exe_manifest: phony obj/build/win/default_exe_manifest.stamp
+build demangle_internal: phony obj/third_party/abseil-cpp/absl/debugging/demangle_internal.stamp
+build deps: phony obj/build/config/sanitizers/deps.stamp
+build dynamic_annotations: phony obj/third_party/abseil-cpp/absl/base/dynamic_annotations.stamp
+build edit: phony obj/core/fpdfapi/edit/edit.stamp
+build embedder_test_support: phony obj/testing/embedder_test_support.stamp
+build endian: phony obj/third_party/abseil-cpp/absl/base/endian.stamp
+build errno_saver: phony obj/third_party/abseil-cpp/absl/base/errno_saver.stamp
+build examine_stack: phony obj/third_party/abseil-cpp/absl/debugging/examine_stack.stamp
+build exception_testing: phony obj/third_party/abseil-cpp/absl/base/exception_testing.stamp
+build executable_deps: phony obj/build/config/executable_deps.stamp
+build exponential_biased: phony obj/third_party/abseil-cpp/absl/base/exponential_biased.stamp
+build extra_icudata: phony obj/third_party/icu/extra_icudata.stamp
+build failure_signal_handler: phony obj/third_party/abseil-cpp/absl/debugging/failure_signal_handler.stamp
+build fast_type_id: phony obj/third_party/abseil-cpp/absl/base/fast_type_id.stamp
+build fde: phony obj/xfa/fde/fde.stamp
+build fdrm: phony obj/core/fdrm/fdrm.stamp
+build fixed_array: phony obj/third_party/abseil-cpp/absl/container/fixed_array.stamp
+build flat_hash_map: phony obj/third_party/abseil-cpp/absl/container/flat_hash_map.stamp
+build flat_hash_set: phony obj/third_party/abseil-cpp/absl/container/flat_hash_set.stamp
+build fm2js: phony obj/xfa/fxfa/fm2js/fm2js.stamp
+build formfiller: phony obj/fpdfsdk/formfiller/formfiller.stamp
+build fpdfdoc: phony obj/core/fpdfdoc/fpdfdoc.stamp
+build fpdftext: phony obj/core/fpdftext/fpdftext.stamp
+build fpdfxfa: phony obj/fpdfsdk/fpdfxfa/fpdfxfa.stamp
+build function_ref: phony obj/third_party/abseil-cpp/absl/functional/function_ref.stamp
+build fuzzer_helper: phony obj/testing/fuzzers/fuzzer_helper.stamp
+build fuzzer_impls: phony obj/testing/fuzzers/fuzzer_impls.stamp
+build fuzzer_init: phony obj/testing/fuzzers/fuzzer_init.stamp
+build fuzzer_init_public: phony obj/testing/fuzzers/fuzzer_init_public.stamp
+build fuzzer_support: phony obj/v8/fuzzer_support.stamp
+build fuzzer_utils: phony obj/testing/fuzzers/fuzzer_utils.stamp
+build fuzzer_xfa_process_state: phony obj/testing/fuzzers/fuzzer_xfa_process_state.stamp
+build fwl: phony obj/xfa/fwl/fwl.stamp
+build fx_agg: phony obj/third_party/fx_agg.stamp
+build fx_freetype: phony obj/third_party/fx_freetype.stamp
+build fx_lcms2: phony obj/third_party/fx_lcms2.stamp
+build fx_libopenjpeg: phony obj/third_party/fx_libopenjpeg.stamp
+build fx_lpng: phony obj/third_party/fx_lpng.stamp
+build fx_tiff: phony obj/third_party/fx_tiff.stamp
+build fxcodec: phony obj/core/fxcodec/fxcodec.stamp
+build fxcrt: phony obj/core/fxcrt/fxcrt.stamp
+build fxfa: phony obj/xfa/fxfa/fxfa.stamp
+build fxge: phony obj/core/fxge/fxge.stamp
+build gc: phony obj/fxjs/gc.stamp
+build gen_heap_constants: phony obj/v8/tools/debug_helper/gen_heap_constants.stamp
+build generate_bytecode_builtins_list: phony obj/v8/generate_bytecode_builtins_list.stamp
+build graphcycles_internal: phony obj/third_party/abseil-cpp/absl/synchronization/graphcycles_internal.stamp
+build graphics: phony obj/xfa/fgas/graphics/graphics.stamp
+build hash: phony obj/third_party/abseil-cpp/absl/hash/hash.stamp
+build hash_function_defaults: phony obj/third_party/abseil-cpp/absl/container/hash_function_defaults.stamp
+build hash_generator_testing: phony obj/third_party/abseil-cpp/absl/container/hash_generator_testing.stamp
+build hash_policy_testing: phony obj/third_party/abseil-cpp/absl/container/hash_policy_testing.stamp
+build hash_policy_traits: phony obj/third_party/abseil-cpp/absl/container/hash_policy_traits.stamp
+build hash_testing: phony obj/third_party/abseil-cpp/absl/hash/hash_testing.stamp
+build hashtable_debug: phony obj/third_party/abseil-cpp/absl/container/hashtable_debug.stamp
+build hashtable_debug_hooks: phony obj/third_party/abseil-cpp/absl/container/hashtable_debug_hooks.stamp
+build hashtablez_sampler: phony obj/third_party/abseil-cpp/absl/container/hashtablez_sampler.stamp
+build have_sse: phony obj/third_party/abseil-cpp/absl/container/have_sse.stamp
+build icu: phony obj/third_party/icu/icu.stamp
+build icudata: phony obj/third_party/icu/icudata.stamp
+build icui18n: phony ./icui18n.dll.lib
+build icui18n_hidden_visibility: phony ./icui18n_hidden_visibility.dll.lib
+build icuuc: phony obj/third_party/icu/icuuc.stamp
+build icuuc_hidden_visibility: phony obj/third_party/icu/icuuc_hidden_visibility.stamp
+build icuuc_private: phony ./icuuc.dll.lib
+build icuuc_private_hidden_visibility: phony ./icuuc_hidden_visibility.dll.lib
+build icuuc_public: phony obj/third_party/icu/icuuc_public.stamp
+build image_diff: phony obj/testing/image_diff/image_diff.stamp
+build inlined_vector: phony obj/third_party/abseil-cpp/absl/container/inlined_vector.stamp
+build inlined_vector_internal: phony obj/third_party/abseil-cpp/absl/container/inlined_vector_internal.stamp
+build inlined_vector_test: phony obj/third_party/abseil-cpp/absl/container/inlined_vector_test.stamp
+build inspector: phony obj/v8/src/inspector/inspector.stamp
+build inspector_fuzzer: phony obj/v8/inspector_fuzzer.stamp
+build inspector_string_conversions: phony obj/v8/src/inspector/inspector_string_conversions.stamp
+build inspector_test: phony obj/v8/test/inspector/inspector_test.stamp
+build inspector_test_headers: phony obj/v8/src/inspector/inspector_test_headers.stamp
+build int128: phony obj/third_party/abseil-cpp/absl/numeric/int128.stamp
+build internal: phony obj/third_party/abseil-cpp/absl/strings/internal.stamp
+build jpeg: phony obj/third_party/jpeg.stamp
+build json_fuzzer: phony obj/v8/json_fuzzer.stamp
+build kernel_timeout_internal: phony obj/third_party/abseil-cpp/absl/synchronization/kernel_timeout_internal.stamp
+build lcms2: phony obj/third_party/lcms2.stamp
+build leak_check: phony obj/third_party/abseil-cpp/absl/debugging/leak_check.stamp
+build leak_check_api_disabled_for_testing: phony obj/third_party/abseil-cpp/absl/debugging/leak_check_api_disabled_for_testing.stamp
+build leak_check_disable: phony obj/third_party/abseil-cpp/absl/debugging/leak_check_disable.stamp
+build libc++: phony ./libc++.dll.lib
+build libjpeg: phony obj/third_party/libjpeg_turbo/libjpeg.lib
+build libjpeg_headers: phony obj/third_party/libjpeg_turbo/libjpeg_headers.stamp
+build libopenjpeg2: phony obj/third_party/libopenjpeg2.stamp
+build llvm-symbolizer_data: phony obj/build/config/clang/llvm-symbolizer_data.stamp
+build loadable_module_deps: phony obj/build/config/loadable_module_deps.stamp
+build log_severity: phony obj/third_party/abseil-cpp/absl/base/log_severity.stamp
+build low_level_hash: phony obj/third_party/abseil-cpp/absl/hash/low_level_hash.stamp
+build low_level_hash_test: phony obj/third_party/abseil-cpp/absl/hash/low_level_hash_test.stamp
+build malloc_internal: phony obj/third_party/abseil-cpp/absl/base/malloc_internal.stamp
+build match_test: phony obj/third_party/abseil-cpp/absl/strings/match_test.stamp
+build memory: phony obj/third_party/abseil-cpp/absl/memory/memory.stamp
+build memory_test: phony obj/third_party/abseil-cpp/absl/memory/memory_test.stamp
+build minizip: phony obj/third_party/zlib/minizip.lib
+build node_hash_map: phony obj/third_party/abseil-cpp/absl/container/node_hash_map.stamp
+build node_hash_policy: phony obj/third_party/abseil-cpp/absl/container/node_hash_policy.stamp
+build node_hash_set: phony obj/third_party/abseil-cpp/absl/container/node_hash_set.stamp
+build optional: phony obj/third_party/abseil-cpp/absl/types/optional.stamp
+build optional_test: phony obj/third_party/abseil-cpp/absl/types/optional_test.stamp
+build options_sources: phony obj/build/config/sanitizers/options_sources.lib
+build os_buildflags: phony obj/build/os_buildflags.stamp
+build page: phony obj/core/fpdfapi/page/page.stamp
+build parser_fuzzer: phony obj/v8/parser_fuzzer.stamp
+build path_service: phony obj/testing/path_service.stamp
+build pdf_bidi_fuzzer_impl: phony obj/testing/fuzzers/pdf_bidi_fuzzer_impl.stamp
+build pdf_bidi_fuzzer_src: phony obj/testing/fuzzers/pdf_bidi_fuzzer_src.stamp
+build pdf_cfgas_stringformatter_fuzzer_impl: phony obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_impl.stamp
+build pdf_cfgas_stringformatter_fuzzer_src: phony obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_src.stamp
+build pdf_cfx_barcode_fuzzer_impl: phony obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_impl.stamp
+build pdf_cfx_barcode_fuzzer_src: phony obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_src.stamp
+build pdf_cjs_util_fuzzer_impl: phony obj/testing/fuzzers/pdf_cjs_util_fuzzer_impl.stamp
+build pdf_cjs_util_fuzzer_src: phony obj/testing/fuzzers/pdf_cjs_util_fuzzer_src.stamp
+build pdf_cmap_fuzzer_impl: phony obj/testing/fuzzers/pdf_cmap_fuzzer_impl.stamp
+build pdf_cmap_fuzzer_src: phony obj/testing/fuzzers/pdf_cmap_fuzzer_src.stamp
+build pdf_codec_a85_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_a85_fuzzer_impl.stamp
+build pdf_codec_a85_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_a85_fuzzer_src.stamp
+build pdf_codec_bmp_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_bmp_fuzzer_impl.stamp
+build pdf_codec_bmp_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_bmp_fuzzer_src.stamp
+build pdf_codec_fax_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_fax_fuzzer_impl.stamp
+build pdf_codec_fax_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_fax_fuzzer_src.stamp
+build pdf_codec_gif_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_gif_fuzzer_impl.stamp
+build pdf_codec_gif_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_gif_fuzzer_src.stamp
+build pdf_codec_icc_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_icc_fuzzer_impl.stamp
+build pdf_codec_icc_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_icc_fuzzer_src.stamp
+build pdf_codec_jbig2_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_impl.stamp
+build pdf_codec_jbig2_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_src.stamp
+build pdf_codec_jpeg_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_impl.stamp
+build pdf_codec_jpeg_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_src.stamp
+build pdf_codec_png_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_png_fuzzer_impl.stamp
+build pdf_codec_png_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_png_fuzzer_src.stamp
+build pdf_codec_rle_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_rle_fuzzer_impl.stamp
+build pdf_codec_rle_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_rle_fuzzer_src.stamp
+build pdf_codec_tiff_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_tiff_fuzzer_impl.stamp
+build pdf_codec_tiff_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_tiff_fuzzer_src.stamp
+build pdf_cpdf_tounicodemap_fuzzer_impl: phony obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_impl.stamp
+build pdf_cpdf_tounicodemap_fuzzer_src: phony obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_src.stamp
+build pdf_css_fuzzer_impl: phony obj/testing/fuzzers/pdf_css_fuzzer_impl.stamp
+build pdf_css_fuzzer_src: phony obj/testing/fuzzers/pdf_css_fuzzer_src.stamp
+build pdf_fm2js_fuzzer_impl: phony obj/testing/fuzzers/pdf_fm2js_fuzzer_impl.stamp
+build pdf_fm2js_fuzzer_src: phony obj/testing/fuzzers/pdf_fm2js_fuzzer_src.stamp
+build pdf_font_fuzzer_impl: phony obj/testing/fuzzers/pdf_font_fuzzer_impl.stamp
+build pdf_font_fuzzer_src: phony obj/testing/fuzzers/pdf_font_fuzzer_src.stamp
+build pdf_formcalc_context_fuzzer_impl: phony obj/testing/fuzzers/pdf_formcalc_context_fuzzer_impl.stamp
+build pdf_formcalc_context_fuzzer_src: phony obj/testing/fuzzers/pdf_formcalc_context_fuzzer_src.stamp
+build pdf_formcalc_fuzzer_impl: phony obj/testing/fuzzers/pdf_formcalc_fuzzer_impl.stamp
+build pdf_formcalc_fuzzer_src: phony obj/testing/fuzzers/pdf_formcalc_fuzzer_src.stamp
+build pdf_fx_date_helpers_fuzzer_impl: phony obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_impl.stamp
+build pdf_fx_date_helpers_fuzzer_src: phony obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_src.stamp
+build pdf_hint_table_fuzzer_impl: phony obj/testing/fuzzers/pdf_hint_table_fuzzer_impl.stamp
+build pdf_hint_table_fuzzer_src: phony obj/testing/fuzzers/pdf_hint_table_fuzzer_src.stamp
+build pdf_jpx_fuzzer_impl: phony obj/testing/fuzzers/pdf_jpx_fuzzer_impl.stamp
+build pdf_jpx_fuzzer_src: phony obj/testing/fuzzers/pdf_jpx_fuzzer_src.stamp
+build pdf_lzw_fuzzer_impl: phony obj/testing/fuzzers/pdf_lzw_fuzzer_impl.stamp
+build pdf_lzw_fuzzer_src: phony obj/testing/fuzzers/pdf_lzw_fuzzer_src.stamp
+build pdf_nametree_fuzzer_impl: phony obj/testing/fuzzers/pdf_nametree_fuzzer_impl.stamp
+build pdf_nametree_fuzzer_src: phony obj/testing/fuzzers/pdf_nametree_fuzzer_src.stamp
+build pdf_psengine_fuzzer_impl: phony obj/testing/fuzzers/pdf_psengine_fuzzer_impl.stamp
+build pdf_psengine_fuzzer_src: phony obj/testing/fuzzers/pdf_psengine_fuzzer_src.stamp
+build pdf_scanlinecompositor_fuzzer_impl: phony obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_impl.stamp
+build pdf_scanlinecompositor_fuzzer_src: phony obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_src.stamp
+build pdf_streamparser_fuzzer_impl: phony obj/testing/fuzzers/pdf_streamparser_fuzzer_impl.stamp
+build pdf_streamparser_fuzzer_src: phony obj/testing/fuzzers/pdf_streamparser_fuzzer_src.stamp
+build pdf_xml_fuzzer_impl: phony obj/testing/fuzzers/pdf_xml_fuzzer_impl.stamp
+build pdf_xml_fuzzer_src: phony obj/testing/fuzzers/pdf_xml_fuzzer_src.stamp
+build pdfium_base: phony obj/third_party/pdfium_base.stamp
+build pdfium_base_test_support: phony obj/third_party/pdfium_base_test_support.stamp
+build pdfium_fuzzer_impl: phony obj/testing/fuzzers/pdfium_fuzzer_impl.stamp
+build pdfium_fuzzer_src: phony obj/testing/fuzzers/pdfium_fuzzer_src.stamp
+build pdfium_xfa_fuzzer_impl: phony obj/testing/fuzzers/pdfium_xfa_fuzzer_impl.stamp
+build pdfium_xfa_fuzzer_src: phony obj/testing/fuzzers/pdfium_xfa_fuzzer_src.stamp
+build pdfium_xfa_lpm_fuzzer_impl: phony obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_impl.stamp
+build pdfium_xfa_lpm_fuzzer_src: phony obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_src.stamp
+build per_thread_sem_test_common: phony obj/third_party/abseil-cpp/absl/synchronization/per_thread_sem_test_common.stamp
+build periodic_sampler: phony obj/third_party/abseil-cpp/absl/base/periodic_sampler.stamp
+build png: phony obj/third_party/png.stamp
+build postmortem-metadata: phony obj/v8/postmortem-metadata.stamp
+build pow10_helper: phony obj/third_party/abseil-cpp/absl/strings/pow10_helper.stamp
+build pretty_function: phony obj/third_party/abseil-cpp/absl/base/pretty_function.stamp
+build protocol_compatibility: phony obj/v8/src/inspector/protocol_compatibility.stamp
+build protocol_generated_sources: phony obj/v8/src/inspector/protocol_generated_sources.stamp
+build pwl: phony obj/fpdfsdk/pwl/pwl.stamp
+build raw_hash_map: phony obj/third_party/abseil-cpp/absl/container/raw_hash_map.stamp
+build raw_hash_set: phony obj/third_party/abseil-cpp/absl/container/raw_hash_set.stamp
+build raw_logging_internal: phony obj/third_party/abseil-cpp/absl/base/raw_logging_internal.stamp
+build regexp_builtins_fuzzer: phony obj/v8/regexp_builtins_fuzzer.stamp
+build regexp_fuzzer: phony obj/v8/regexp_fuzzer.stamp
+build render: phony obj/core/fpdfapi/render/render.stamp
+build representation: phony obj/third_party/abseil-cpp/absl/numeric/representation.stamp
+build run_gen-regexp-special-case: phony obj/v8/run_gen-regexp-special-case.stamp
+build run_mkgrokdump: phony obj/v8/tools/debug_helper/run_mkgrokdump.stamp
+build run_mksnapshot_default: phony obj/v8/run_mksnapshot_default.stamp
+build run_torque: phony obj/v8/run_torque.stamp
+build runtime_libs: phony obj/build/win/runtime_libs.stamp
+build sample_recorder: phony obj/third_party/abseil-cpp/absl/profiling/sample_recorder.stamp
+build scoped_set_env: phony obj/third_party/abseil-cpp/absl/base/scoped_set_env.stamp
+build shared_library_deps: phony obj/build/config/shared_library_deps.stamp
+build simd: phony obj/third_party/libjpeg_turbo/simd.lib
+build simd_asm: phony obj/third_party/libjpeg_turbo/simd_asm.lib
+build simd_asm_action: phony obj/third_party/libjpeg_turbo/simd_asm_action.stamp
+build skia_shared: phony obj/third_party/skia_shared.stamp
+build span: phony obj/third_party/abseil-cpp/absl/types/span.stamp
+build spinlock_test_common: phony obj/third_party/abseil-cpp/absl/base/spinlock_test_common.stamp
+build spinlock_wait: phony obj/third_party/abseil-cpp/absl/base/spinlock_wait.stamp
+build spy_hash_state: phony obj/third_party/abseil-cpp/absl/hash/spy_hash_state.stamp
+build stack_consumption: phony obj/third_party/abseil-cpp/absl/debugging/stack_consumption.stamp
+build stacktrace: phony obj/third_party/abseil-cpp/absl/debugging/stacktrace.stamp
+build status: phony obj/third_party/abseil-cpp/absl/status/status.stamp
+build statusor: phony obj/third_party/abseil-cpp/absl/status/statusor.stamp
+build statusor_test: phony obj/third_party/abseil-cpp/absl/status/statusor_test.stamp
+build str_format: phony obj/third_party/abseil-cpp/absl/strings/str_format.stamp
+build str_format_internal: phony obj/third_party/abseil-cpp/absl/strings/str_format_internal.stamp
+build str_replace_test: phony obj/third_party/abseil-cpp/absl/strings/str_replace_test.stamp
+build strerror: phony obj/third_party/abseil-cpp/absl/base/strerror.stamp
+build string_view_test: phony obj/third_party/abseil-cpp/absl/strings/string_view_test.stamp
+build strings: phony obj/third_party/abseil-cpp/absl/strings/strings.stamp
+build symbolize: phony obj/third_party/abseil-cpp/absl/debugging/symbolize.stamp
+build synchronization: phony obj/third_party/abseil-cpp/absl/synchronization/synchronization.stamp
+build test_environments: phony obj/testing/test_environments.stamp
+build test_instance_tracker: phony obj/third_party/abseil-cpp/absl/container/test_instance_tracker.stamp
+build test_scripts_shared: phony obj/testing/test_scripts_shared.stamp
+build test_support: phony obj/testing/test_support.stamp
+build test_util: phony obj/third_party/abseil-cpp/absl/time/test_util.stamp
+build thread_pool: phony obj/third_party/abseil-cpp/absl/synchronization/thread_pool.stamp
+build throw_delegate: phony obj/third_party/abseil-cpp/absl/base/throw_delegate.stamp
+build time: phony obj/third_party/abseil-cpp/absl/time/time.stamp
+build time_zone: phony obj/third_party/abseil-cpp/absl/time/internal/cctz/time_zone.stamp
+build torque_base: phony obj/v8/torque_base.stamp
+build torque_generated_definitions: phony obj/v8/torque_generated_definitions.stamp
+build torque_generated_initializers: phony obj/v8/torque_generated_initializers.stamp
+build torque_ls_base: phony obj/v8/torque_ls_base.stamp
+build torque_runtime_support: phony obj/v8/torque_runtime_support.stamp
+build tracked: phony obj/third_party/abseil-cpp/absl/container/tracked.stamp
+build turbojpeg: phony obj/third_party/libjpeg_turbo/turbojpeg.lib
+build type_traits: phony obj/third_party/abseil-cpp/absl/meta/type_traits.stamp
+build type_traits_test: phony obj/third_party/abseil-cpp/absl/meta/type_traits_test.stamp
+build unit_test_support: phony obj/testing/unit_test_support.stamp
+build unittests_sources: phony obj/v8/test/unittests/unittests_sources.stamp
+build unordered_map_constructor_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_constructor_test.stamp
+build unordered_map_lookup_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_lookup_test.stamp
+build unordered_map_members_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_members_test.stamp
+build unordered_map_modifiers_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_modifiers_test.stamp
+build unordered_set_constructor_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_constructor_test.stamp
+build unordered_set_lookup_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_lookup_test.stamp
+build unordered_set_members_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_members_test.stamp
+build unordered_set_modifiers_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_modifiers_test.stamp
+build unowned_ptr: phony obj/core/fxcrt/unowned_ptr.stamp
+build utility: phony obj/third_party/abseil-cpp/absl/utility/utility.stamp
+build v8_android_test_runner_deps: phony obj/v8/tools/v8_android_test_runner_deps.stamp
+build v8_archive: phony obj/v8/v8_archive.stamp
+build v8_base: phony obj/v8/v8_base.stamp
+build v8_base_without_compiler: phony obj/v8/v8_base_without_compiler.stamp
+build v8_benchmarks: phony obj/v8/test/benchmarks/v8_benchmarks.stamp
+build v8_bigint: phony obj/v8/v8_bigint.stamp
+build v8_bot_default: phony obj/v8/test/v8_bot_default.stamp
+build v8_check_static_initializers: phony obj/v8/tools/v8_check_static_initializers.stamp
+build v8_clusterfuzz: phony obj/v8/v8_clusterfuzz.stamp
+build v8_compiler: phony obj/v8/v8_compiler.stamp
+build v8_compiler_for_mksnapshot: phony obj/v8/v8_compiler_for_mksnapshot.stamp
+build v8_compiler_opt: phony obj/v8/v8_compiler_opt.stamp
+build v8_config_headers: phony obj/v8/v8_config_headers.stamp
+build v8_cppgc_shared: phony obj/v8/v8_cppgc_shared.stamp
+build v8_cppgc_shared_for_testing: phony ./v8_cppgc_shared_for_testing.dll.lib
+build v8_cppgc_shared_unittests_sources: phony obj/v8/test/unittests/v8_cppgc_shared_unittests_sources.stamp
+build v8_d8_default: phony obj/v8/test/v8_d8_default.stamp
+build v8_debug_helper: phony ./v8_debug_helper.dll.lib
+build v8_debugger: phony obj/v8/test/debugger/v8_debugger.stamp
+build v8_default: phony obj/v8/test/v8_default.stamp
+build v8_dump_build_config: phony obj/v8/v8_dump_build_config.stamp
+build v8_flags: phony obj/v8/v8_flags.stamp
+build v8_for_testing: phony ./v8_for_testing.dll.lib
+build v8_fuzzer: phony obj/v8/test/fuzzer/v8_fuzzer.stamp
+build v8_fuzzers: phony obj/v8/v8_fuzzers.stamp
+build v8_headers: phony obj/v8/v8_headers.stamp
+build v8_init: phony obj/v8/v8_init.stamp
+build v8_initializers: phony obj/v8/v8_initializers.stamp
+build v8_internal_headers: phony obj/v8/v8_internal_headers.stamp
+build v8_intl: phony obj/v8/test/intl/v8_intl.stamp
+build v8_jsfunfuzz: phony obj/v8/tools/jsfunfuzz/v8_jsfunfuzz.stamp
+build v8_libbase: phony ./v8_libbase.dll.lib
+build v8_libplatform: phony ./v8_libplatform.dll.lib
+build v8_maybe_icu: phony obj/v8/v8_maybe_icu.stamp
+build v8_message: phony obj/v8/test/message/v8_message.stamp
+build v8_mjsunit: phony obj/v8/test/mjsunit/v8_mjsunit.stamp
+build v8_mozilla: phony obj/v8/test/mozilla/v8_mozilla.stamp
+build v8_optimize_for_size: phony obj/v8/test/v8_optimize_for_size.stamp
+build v8_perf: phony obj/v8/test/v8_perf.stamp
+build v8_python_base: phony obj/v8/v8_python_base.stamp
+build v8_run_gcmole: phony obj/v8/tools/gcmole/v8_run_gcmole.stamp
+build v8_run_num_fuzzer: phony obj/v8/test/v8_run_num_fuzzer.stamp
+build v8_shared_internal_headers: phony obj/v8/v8_shared_internal_headers.stamp
+build v8_snapshot: phony obj/v8/v8_snapshot.stamp
+build v8_test262: phony obj/v8/test/test262/v8_test262.stamp
+build v8_testrunner: phony obj/v8/tools/v8_testrunner.stamp
+build v8_tracing: phony obj/v8/v8_tracing.stamp
+build v8_version: phony obj/v8/v8_version.stamp
+build v8_webkit: phony obj/v8/test/webkit/v8_webkit.stamp
+build v8windbg: phony ./v8windbg.dll.lib
+build v8windbg_base: phony obj/v8/tools/v8windbg/v8windbg_base.stamp
+build v8windbg_test: phony obj/v8/tools/v8windbg/v8windbg_test.stamp
+build v8windbg_test_script: phony obj/v8/tools/v8windbg/v8windbg_test_script.stamp
+build variant: phony obj/third_party/abseil-cpp/absl/types/variant.stamp
+build variant_test: phony obj/third_party/abseil-cpp/absl/types/variant_test.stamp
+build zlib_adler32_simd: phony obj/third_party/zlib/zlib_adler32_simd.stamp
+build zlib_common_headers: phony obj/third_party/zlib/zlib_common_headers.stamp
+build zlib_crc32_simd: phony obj/third_party/zlib/zlib_crc32_simd.stamp
+build zlib_inflate_chunk_simd: phony obj/third_party/zlib/zlib_inflate_chunk_simd.stamp
+build zlib_x86_simd: phony obj/third_party/zlib/zlib_x86_simd.stamp
+build $:freetype_common: phony obj/freetype_common.stamp
+build $:fuzzers: phony obj/fuzzers.stamp
+build $:pdfium: phony ./pdfium.dll.lib
+build $:pdfium_all: phony obj/pdfium_all.stamp
+build $:pdfium_diff: phony ./pdfium_diff.exe
+build $:pdfium_embeddertest_deps: phony obj/pdfium_embeddertest_deps.stamp
+build $:pdfium_embeddertests: phony ./pdfium_embeddertests.exe
+build $:pdfium_public_headers: phony obj/pdfium_public_headers.stamp
+build $:pdfium_public_headers_impl: phony obj/pdfium_public_headers_impl.stamp
+build $:pdfium_unittest_deps: phony obj/pdfium_unittest_deps.stamp
+build $:pdfium_unittests: phony ./pdfium_unittests.exe
+build $:samples: phony obj/samples.stamp
+build build$:branding_buildflags: phony obj/build/branding_buildflags.stamp
+build build$:buildflag_header_h: phony obj/build/buildflag_header_h.stamp
+build build$:chromecast_buildflags: phony obj/build/chromecast_buildflags.stamp
+build build$:chromeos_buildflags: phony obj/build/chromeos_buildflags.stamp
+build build$:os_buildflags: phony obj/build/os_buildflags.stamp
+build build/config$:common_deps: phony obj/build/config/common_deps.stamp
+build build/config$:executable_deps: phony obj/build/config/executable_deps.stamp
+build build/config$:loadable_module_deps: phony obj/build/config/loadable_module_deps.stamp
+build build/config$:shared_library_deps: phony obj/build/config/shared_library_deps.stamp
+build build/config/clang$:llvm-symbolizer_data: phony obj/build/config/clang/llvm-symbolizer_data.stamp
+build build/config/compiler$:compiler_buildflags: phony obj/build/config/compiler/compiler_buildflags.stamp
+build build/config/sanitizers$:deps: phony obj/build/config/sanitizers/deps.stamp
+build build/config/sanitizers$:options_sources: phony obj/build/config/sanitizers/options_sources.lib
+build build/win$:copy_cdb_to_output: phony obj/build/win/copy_cdb_to_output.stamp
+build build/win$:default_exe_manifest: phony obj/build/win/default_exe_manifest.stamp
+build build/win$:runtime_libs: phony obj/build/win/runtime_libs.stamp
+build buildtools/third_party/libc++$:libc++: phony ./libc++.dll.lib
+build buildtools/third_party/libc++: phony ./libc++.dll.lib
+build constants$:constants: phony obj/constants/constants.stamp
+build core/fdrm$:fdrm: phony obj/core/fdrm/fdrm.stamp
+build core/fdrm: phony obj/core/fdrm/fdrm.stamp
+build core/fdrm$:unittests: phony obj/core/fdrm/unittests.stamp
+build core/fpdfapi/cmaps$:cmaps: phony obj/core/fpdfapi/cmaps/cmaps.stamp
+build core/fpdfapi/cmaps: phony obj/core/fpdfapi/cmaps/cmaps.stamp
+build core/fpdfapi/edit$:edit: phony obj/core/fpdfapi/edit/edit.stamp
+build core/fpdfapi/edit: phony obj/core/fpdfapi/edit/edit.stamp
+build core/fpdfapi/edit$:embeddertests: phony obj/core/fpdfapi/edit/embeddertests.stamp
+build core/fpdfapi/edit$:unittests: phony obj/core/fpdfapi/edit/unittests.stamp
+build core/fpdfapi/font$:font: phony obj/core/fpdfapi/font/font.stamp
+build core/fpdfapi/font: phony obj/core/fpdfapi/font/font.stamp
+build core/fpdfapi/font$:unittests: phony obj/core/fpdfapi/font/unittests.stamp
+build core/fpdfapi/page$:page: phony obj/core/fpdfapi/page/page.stamp
+build core/fpdfapi/page: phony obj/core/fpdfapi/page/page.stamp
+build core/fpdfapi/page$:unittests: phony obj/core/fpdfapi/page/unittests.stamp
+build core/fpdfapi/parser$:embeddertests: phony obj/core/fpdfapi/parser/embeddertests.stamp
+build core/fpdfapi/parser$:parser: phony obj/core/fpdfapi/parser/parser.stamp
+build core/fpdfapi/parser: phony obj/core/fpdfapi/parser/parser.stamp
+build core/fpdfapi/parser$:unittests: phony obj/core/fpdfapi/parser/unittests.stamp
+build core/fpdfapi/render$:embeddertests: phony obj/core/fpdfapi/render/embeddertests.stamp
+build core/fpdfapi/render$:render: phony obj/core/fpdfapi/render/render.stamp
+build core/fpdfapi/render: phony obj/core/fpdfapi/render/render.stamp
+build core/fpdfapi/render$:unittests: phony obj/core/fpdfapi/render/unittests.stamp
+build core/fpdfdoc$:fpdfdoc: phony obj/core/fpdfdoc/fpdfdoc.stamp
+build core/fpdfdoc: phony obj/core/fpdfdoc/fpdfdoc.stamp
+build core/fpdfdoc$:unittests: phony obj/core/fpdfdoc/unittests.stamp
+build core/fpdftext$:fpdftext: phony obj/core/fpdftext/fpdftext.stamp
+build core/fpdftext: phony obj/core/fpdftext/fpdftext.stamp
+build core/fpdftext$:unittests: phony obj/core/fpdftext/unittests.stamp
+build core/fxcodec$:embeddertests: phony obj/core/fxcodec/embeddertests.stamp
+build core/fxcodec$:fxcodec: phony obj/core/fxcodec/fxcodec.stamp
+build core/fxcodec: phony obj/core/fxcodec/fxcodec.stamp
+build core/fxcodec$:unittests: phony obj/core/fxcodec/unittests.stamp
+build core/fxcrt$:fxcrt: phony obj/core/fxcrt/fxcrt.stamp
+build core/fxcrt: phony obj/core/fxcrt/fxcrt.stamp
+build core/fxcrt$:unittests: phony obj/core/fxcrt/unittests.stamp
+build core/fxcrt$:unowned_ptr: phony obj/core/fxcrt/unowned_ptr.stamp
+build core/fxcrt/css$:css: phony obj/core/fxcrt/css/css.stamp
+build core/fxcrt/css: phony obj/core/fxcrt/css/css.stamp
+build core/fxcrt/css$:unittests: phony obj/core/fxcrt/css/unittests.stamp
+build core/fxge$:embeddertests: phony obj/core/fxge/embeddertests.stamp
+build core/fxge$:fxge: phony obj/core/fxge/fxge.stamp
+build core/fxge: phony obj/core/fxge/fxge.stamp
+build core/fxge$:unittests: phony obj/core/fxge/unittests.stamp
+build fpdfsdk$:embeddertests: phony obj/fpdfsdk/embeddertests.stamp
+build fpdfsdk$:fpdfsdk: phony obj/fpdfsdk/fpdfsdk.stamp
+build fpdfsdk$:unittests: phony obj/fpdfsdk/unittests.stamp
+build fpdfsdk/formfiller$:formfiller: phony obj/fpdfsdk/formfiller/formfiller.stamp
+build fpdfsdk/formfiller: phony obj/fpdfsdk/formfiller/formfiller.stamp
+build fpdfsdk/fpdfxfa$:embeddertests: phony obj/fpdfsdk/fpdfxfa/embeddertests.stamp
+build fpdfsdk/fpdfxfa$:fpdfxfa: phony obj/fpdfsdk/fpdfxfa/fpdfxfa.stamp
+build fpdfsdk/fpdfxfa: phony obj/fpdfsdk/fpdfxfa/fpdfxfa.stamp
+build fpdfsdk/pwl$:embeddertests: phony obj/fpdfsdk/pwl/embeddertests.stamp
+build fpdfsdk/pwl$:pwl: phony obj/fpdfsdk/pwl/pwl.stamp
+build fpdfsdk/pwl: phony obj/fpdfsdk/pwl/pwl.stamp
+build fxbarcode$:fxbarcode: phony obj/fxbarcode/fxbarcode.stamp
+build fxbarcode$:unittests: phony obj/fxbarcode/unittests.stamp
+build fxjs$:embeddertests: phony obj/fxjs/embeddertests.stamp
+build fxjs$:fxjs: phony obj/fxjs/fxjs.stamp
+build fxjs$:gc: phony obj/fxjs/gc.stamp
+build fxjs$:unittests: phony obj/fxjs/unittests.stamp
+build samples$:pdfium_test: phony ./pdfium_test.exe
+build samples$:samples: phony obj/samples/samples.stamp
+build testing$:embedder_test_support: phony obj/testing/embedder_test_support.stamp
+build testing$:path_service: phony obj/testing/path_service.stamp
+build testing$:test_environments: phony obj/testing/test_environments.stamp
+build testing$:test_scripts_shared: phony obj/testing/test_scripts_shared.stamp
+build testing$:test_support: phony obj/testing/test_support.stamp
+build testing$:unit_test_support: phony obj/testing/unit_test_support.stamp
+build testing/fuzzers$:fuzzer_helper: phony obj/testing/fuzzers/fuzzer_helper.stamp
+build testing/fuzzers$:fuzzer_impls: phony obj/testing/fuzzers/fuzzer_impls.stamp
+build testing/fuzzers$:fuzzer_init: phony obj/testing/fuzzers/fuzzer_init.stamp
+build testing/fuzzers$:fuzzer_init_public: phony obj/testing/fuzzers/fuzzer_init_public.stamp
+build testing/fuzzers$:fuzzer_utils: phony obj/testing/fuzzers/fuzzer_utils.stamp
+build testing/fuzzers$:fuzzer_xfa_process_state: phony obj/testing/fuzzers/fuzzer_xfa_process_state.stamp
+build testing/fuzzers$:fuzzers: phony obj/testing/fuzzers/fuzzers.stamp
+build testing/fuzzers: phony obj/testing/fuzzers/fuzzers.stamp
+build testing/fuzzers$:pdf_bidi_fuzzer_impl: phony obj/testing/fuzzers/pdf_bidi_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_bidi_fuzzer_src: phony obj/testing/fuzzers/pdf_bidi_fuzzer_src.stamp
+build testing/fuzzers$:pdf_cfgas_stringformatter_fuzzer_impl: phony obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_cfgas_stringformatter_fuzzer_src: phony obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_src.stamp
+build testing/fuzzers$:pdf_cfx_barcode_fuzzer_impl: phony obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_cfx_barcode_fuzzer_src: phony obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_src.stamp
+build testing/fuzzers$:pdf_cjs_util_fuzzer_impl: phony obj/testing/fuzzers/pdf_cjs_util_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_cjs_util_fuzzer_src: phony obj/testing/fuzzers/pdf_cjs_util_fuzzer_src.stamp
+build testing/fuzzers$:pdf_cmap_fuzzer_impl: phony obj/testing/fuzzers/pdf_cmap_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_cmap_fuzzer_src: phony obj/testing/fuzzers/pdf_cmap_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_a85_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_a85_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_a85_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_a85_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_bmp_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_bmp_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_bmp_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_bmp_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_fax_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_fax_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_fax_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_fax_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_gif_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_gif_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_gif_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_gif_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_icc_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_icc_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_icc_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_icc_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_jbig2_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_jbig2_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_jpeg_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_jpeg_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_png_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_png_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_png_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_png_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_rle_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_rle_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_rle_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_rle_fuzzer_src.stamp
+build testing/fuzzers$:pdf_codec_tiff_fuzzer_impl: phony obj/testing/fuzzers/pdf_codec_tiff_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_codec_tiff_fuzzer_src: phony obj/testing/fuzzers/pdf_codec_tiff_fuzzer_src.stamp
+build testing/fuzzers$:pdf_cpdf_tounicodemap_fuzzer_impl: phony obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_cpdf_tounicodemap_fuzzer_src: phony obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_src.stamp
+build testing/fuzzers$:pdf_css_fuzzer_impl: phony obj/testing/fuzzers/pdf_css_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_css_fuzzer_src: phony obj/testing/fuzzers/pdf_css_fuzzer_src.stamp
+build testing/fuzzers$:pdf_fm2js_fuzzer_impl: phony obj/testing/fuzzers/pdf_fm2js_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_fm2js_fuzzer_src: phony obj/testing/fuzzers/pdf_fm2js_fuzzer_src.stamp
+build testing/fuzzers$:pdf_font_fuzzer_impl: phony obj/testing/fuzzers/pdf_font_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_font_fuzzer_src: phony obj/testing/fuzzers/pdf_font_fuzzer_src.stamp
+build testing/fuzzers$:pdf_formcalc_context_fuzzer_impl: phony obj/testing/fuzzers/pdf_formcalc_context_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_formcalc_context_fuzzer_src: phony obj/testing/fuzzers/pdf_formcalc_context_fuzzer_src.stamp
+build testing/fuzzers$:pdf_formcalc_fuzzer_impl: phony obj/testing/fuzzers/pdf_formcalc_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_formcalc_fuzzer_src: phony obj/testing/fuzzers/pdf_formcalc_fuzzer_src.stamp
+build testing/fuzzers$:pdf_fx_date_helpers_fuzzer_impl: phony obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_fx_date_helpers_fuzzer_src: phony obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_src.stamp
+build testing/fuzzers$:pdf_hint_table_fuzzer_impl: phony obj/testing/fuzzers/pdf_hint_table_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_hint_table_fuzzer_src: phony obj/testing/fuzzers/pdf_hint_table_fuzzer_src.stamp
+build testing/fuzzers$:pdf_jpx_fuzzer_impl: phony obj/testing/fuzzers/pdf_jpx_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_jpx_fuzzer_src: phony obj/testing/fuzzers/pdf_jpx_fuzzer_src.stamp
+build testing/fuzzers$:pdf_lzw_fuzzer_impl: phony obj/testing/fuzzers/pdf_lzw_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_lzw_fuzzer_src: phony obj/testing/fuzzers/pdf_lzw_fuzzer_src.stamp
+build testing/fuzzers$:pdf_nametree_fuzzer_impl: phony obj/testing/fuzzers/pdf_nametree_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_nametree_fuzzer_src: phony obj/testing/fuzzers/pdf_nametree_fuzzer_src.stamp
+build testing/fuzzers$:pdf_psengine_fuzzer_impl: phony obj/testing/fuzzers/pdf_psengine_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_psengine_fuzzer_src: phony obj/testing/fuzzers/pdf_psengine_fuzzer_src.stamp
+build testing/fuzzers$:pdf_scanlinecompositor_fuzzer_impl: phony obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_scanlinecompositor_fuzzer_src: phony obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_src.stamp
+build testing/fuzzers$:pdf_streamparser_fuzzer_impl: phony obj/testing/fuzzers/pdf_streamparser_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_streamparser_fuzzer_src: phony obj/testing/fuzzers/pdf_streamparser_fuzzer_src.stamp
+build testing/fuzzers$:pdf_xml_fuzzer_impl: phony obj/testing/fuzzers/pdf_xml_fuzzer_impl.stamp
+build testing/fuzzers$:pdf_xml_fuzzer_src: phony obj/testing/fuzzers/pdf_xml_fuzzer_src.stamp
+build testing/fuzzers$:pdfium_fuzzer_impl: phony obj/testing/fuzzers/pdfium_fuzzer_impl.stamp
+build testing/fuzzers$:pdfium_fuzzer_src: phony obj/testing/fuzzers/pdfium_fuzzer_src.stamp
+build testing/fuzzers$:pdfium_xfa_fuzzer_impl: phony obj/testing/fuzzers/pdfium_xfa_fuzzer_impl.stamp
+build testing/fuzzers$:pdfium_xfa_fuzzer_src: phony obj/testing/fuzzers/pdfium_xfa_fuzzer_src.stamp
+build testing/fuzzers$:pdfium_xfa_lpm_fuzzer_impl: phony obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_impl.stamp
+build testing/fuzzers$:pdfium_xfa_lpm_fuzzer_src: phony obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_src.stamp
+build testing/gmock$:gmock: phony obj/testing/gmock/gmock.stamp
+build testing/gmock: phony obj/testing/gmock/gmock.stamp
+build testing/gmock$:gmock_main: phony obj/testing/gmock/gmock_main.stamp
+build testing/gtest$:gtest: phony obj/testing/gtest/gtest.lib
+build testing/gtest: phony obj/testing/gtest/gtest.lib
+build testing/gtest$:gtest_main: phony obj/testing/gtest/gtest_main.stamp
+build testing/image_diff$:image_diff: phony obj/testing/image_diff/image_diff.stamp
+build testing/image_diff: phony obj/testing/image_diff/image_diff.stamp
+build third_party$:bigint: phony obj/third_party/bigint.stamp
+build third_party$:fx_agg: phony obj/third_party/fx_agg.stamp
+build third_party$:fx_freetype: phony obj/third_party/fx_freetype.stamp
+build third_party$:fx_lcms2: phony obj/third_party/fx_lcms2.stamp
+build third_party$:fx_libopenjpeg: phony obj/third_party/fx_libopenjpeg.stamp
+build third_party$:fx_lpng: phony obj/third_party/fx_lpng.stamp
+build third_party$:fx_tiff: phony obj/third_party/fx_tiff.stamp
+build third_party$:jpeg: phony obj/third_party/jpeg.stamp
+build third_party$:lcms2: phony obj/third_party/lcms2.stamp
+build third_party$:libopenjpeg2: phony obj/third_party/libopenjpeg2.stamp
+build third_party$:pdfium_base: phony obj/third_party/pdfium_base.stamp
+build third_party$:pdfium_base_test_support: phony obj/third_party/pdfium_base_test_support.stamp
+build third_party$:png: phony obj/third_party/png.stamp
+build third_party$:skia_shared: phony obj/third_party/skia_shared.stamp
+build third_party$:third_party: phony obj/third_party/third_party.stamp
+build third_party$:zlib: phony obj/third_party/zlib.stamp
+build third_party/abseil-cpp$:absl: phony ./absl.dll.lib
+build third_party/abseil-cpp$:absl_component_deps: phony obj/third_party/abseil-cpp/absl_component_deps.stamp
+build third_party/abseil-cpp$:default: phony obj/third_party/abseil-cpp/default.stamp
+build third_party/abseil-cpp/absl/algorithm$:algorithm: phony obj/third_party/abseil-cpp/absl/algorithm/algorithm.stamp
+build third_party/abseil-cpp/absl/algorithm: phony obj/third_party/abseil-cpp/absl/algorithm/algorithm.stamp
+build third_party/abseil-cpp/absl/algorithm$:algorithm_test: phony obj/third_party/abseil-cpp/absl/algorithm/algorithm_test.stamp
+build third_party/abseil-cpp/absl/algorithm$:container: phony obj/third_party/abseil-cpp/absl/algorithm/container.stamp
+build third_party/abseil-cpp/absl/algorithm$:container_test: phony obj/third_party/abseil-cpp/absl/algorithm/container_test.stamp
+build third_party/abseil-cpp/absl/base$:atomic_hook: phony obj/third_party/abseil-cpp/absl/base/atomic_hook.stamp
+build third_party/abseil-cpp/absl/base$:base: phony obj/third_party/abseil-cpp/absl/base/base.stamp
+build third_party/abseil-cpp/absl/base: phony obj/third_party/abseil-cpp/absl/base/base.stamp
+build third_party/abseil-cpp/absl/base$:base_internal: phony obj/third_party/abseil-cpp/absl/base/base_internal.stamp
+build third_party/abseil-cpp/absl/base$:config: phony obj/third_party/abseil-cpp/absl/base/config.stamp
+build third_party/abseil-cpp/absl/base$:config_test: phony obj/third_party/abseil-cpp/absl/base/config_test.stamp
+build third_party/abseil-cpp/absl/base$:core_headers: phony obj/third_party/abseil-cpp/absl/base/core_headers.stamp
+build third_party/abseil-cpp/absl/base$:dynamic_annotations: phony obj/third_party/abseil-cpp/absl/base/dynamic_annotations.stamp
+build third_party/abseil-cpp/absl/base$:endian: phony obj/third_party/abseil-cpp/absl/base/endian.stamp
+build third_party/abseil-cpp/absl/base$:errno_saver: phony obj/third_party/abseil-cpp/absl/base/errno_saver.stamp
+build third_party/abseil-cpp/absl/base$:exception_testing: phony obj/third_party/abseil-cpp/absl/base/exception_testing.stamp
+build third_party/abseil-cpp/absl/base$:exponential_biased: phony obj/third_party/abseil-cpp/absl/base/exponential_biased.stamp
+build third_party/abseil-cpp/absl/base$:fast_type_id: phony obj/third_party/abseil-cpp/absl/base/fast_type_id.stamp
+build third_party/abseil-cpp/absl/base$:log_severity: phony obj/third_party/abseil-cpp/absl/base/log_severity.stamp
+build third_party/abseil-cpp/absl/base$:malloc_internal: phony obj/third_party/abseil-cpp/absl/base/malloc_internal.stamp
+build third_party/abseil-cpp/absl/base$:periodic_sampler: phony obj/third_party/abseil-cpp/absl/base/periodic_sampler.stamp
+build third_party/abseil-cpp/absl/base$:pretty_function: phony obj/third_party/abseil-cpp/absl/base/pretty_function.stamp
+build third_party/abseil-cpp/absl/base$:raw_logging_internal: phony obj/third_party/abseil-cpp/absl/base/raw_logging_internal.stamp
+build third_party/abseil-cpp/absl/base$:scoped_set_env: phony obj/third_party/abseil-cpp/absl/base/scoped_set_env.stamp
+build third_party/abseil-cpp/absl/base$:spinlock_test_common: phony obj/third_party/abseil-cpp/absl/base/spinlock_test_common.stamp
+build third_party/abseil-cpp/absl/base$:spinlock_wait: phony obj/third_party/abseil-cpp/absl/base/spinlock_wait.stamp
+build third_party/abseil-cpp/absl/base$:strerror: phony obj/third_party/abseil-cpp/absl/base/strerror.stamp
+build third_party/abseil-cpp/absl/base$:throw_delegate: phony obj/third_party/abseil-cpp/absl/base/throw_delegate.stamp
+build third_party/abseil-cpp/absl/cleanup$:cleanup: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup.stamp
+build third_party/abseil-cpp/absl/cleanup: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup.stamp
+build third_party/abseil-cpp/absl/cleanup$:cleanup_internal: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup_internal.stamp
+build third_party/abseil-cpp/absl/cleanup$:cleanup_test: phony obj/third_party/abseil-cpp/absl/cleanup/cleanup_test.stamp
+build third_party/abseil-cpp/absl/container$:btree: phony obj/third_party/abseil-cpp/absl/container/btree.stamp
+build third_party/abseil-cpp/absl/container$:common: phony obj/third_party/abseil-cpp/absl/container/common.stamp
+build third_party/abseil-cpp/absl/container$:compressed_tuple: phony obj/third_party/abseil-cpp/absl/container/compressed_tuple.stamp
+build third_party/abseil-cpp/absl/container$:container_memory: phony obj/third_party/abseil-cpp/absl/container/container_memory.stamp
+build third_party/abseil-cpp/absl/container$:counting_allocator: phony obj/third_party/abseil-cpp/absl/container/counting_allocator.stamp
+build third_party/abseil-cpp/absl/container$:fixed_array: phony obj/third_party/abseil-cpp/absl/container/fixed_array.stamp
+build third_party/abseil-cpp/absl/container$:flat_hash_map: phony obj/third_party/abseil-cpp/absl/container/flat_hash_map.stamp
+build third_party/abseil-cpp/absl/container$:flat_hash_set: phony obj/third_party/abseil-cpp/absl/container/flat_hash_set.stamp
+build third_party/abseil-cpp/absl/container$:hash_function_defaults: phony obj/third_party/abseil-cpp/absl/container/hash_function_defaults.stamp
+build third_party/abseil-cpp/absl/container$:hash_generator_testing: phony obj/third_party/abseil-cpp/absl/container/hash_generator_testing.stamp
+build third_party/abseil-cpp/absl/container$:hash_policy_testing: phony obj/third_party/abseil-cpp/absl/container/hash_policy_testing.stamp
+build third_party/abseil-cpp/absl/container$:hash_policy_traits: phony obj/third_party/abseil-cpp/absl/container/hash_policy_traits.stamp
+build third_party/abseil-cpp/absl/container$:hashtable_debug: phony obj/third_party/abseil-cpp/absl/container/hashtable_debug.stamp
+build third_party/abseil-cpp/absl/container$:hashtable_debug_hooks: phony obj/third_party/abseil-cpp/absl/container/hashtable_debug_hooks.stamp
+build third_party/abseil-cpp/absl/container$:hashtablez_sampler: phony obj/third_party/abseil-cpp/absl/container/hashtablez_sampler.stamp
+build third_party/abseil-cpp/absl/container$:have_sse: phony obj/third_party/abseil-cpp/absl/container/have_sse.stamp
+build third_party/abseil-cpp/absl/container$:inlined_vector: phony obj/third_party/abseil-cpp/absl/container/inlined_vector.stamp
+build third_party/abseil-cpp/absl/container$:inlined_vector_internal: phony obj/third_party/abseil-cpp/absl/container/inlined_vector_internal.stamp
+build third_party/abseil-cpp/absl/container$:inlined_vector_test: phony obj/third_party/abseil-cpp/absl/container/inlined_vector_test.stamp
+build third_party/abseil-cpp/absl/container$:layout: phony obj/third_party/abseil-cpp/absl/container/layout.stamp
+build third_party/abseil-cpp/absl/container$:node_hash_map: phony obj/third_party/abseil-cpp/absl/container/node_hash_map.stamp
+build third_party/abseil-cpp/absl/container$:node_hash_policy: phony obj/third_party/abseil-cpp/absl/container/node_hash_policy.stamp
+build third_party/abseil-cpp/absl/container$:node_hash_set: phony obj/third_party/abseil-cpp/absl/container/node_hash_set.stamp
+build third_party/abseil-cpp/absl/container$:raw_hash_map: phony obj/third_party/abseil-cpp/absl/container/raw_hash_map.stamp
+build third_party/abseil-cpp/absl/container$:raw_hash_set: phony obj/third_party/abseil-cpp/absl/container/raw_hash_set.stamp
+build third_party/abseil-cpp/absl/container$:test_instance_tracker: phony obj/third_party/abseil-cpp/absl/container/test_instance_tracker.stamp
+build third_party/abseil-cpp/absl/container$:tracked: phony obj/third_party/abseil-cpp/absl/container/tracked.stamp
+build third_party/abseil-cpp/absl/container$:unordered_map_constructor_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_constructor_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_map_lookup_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_lookup_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_map_members_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_members_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_map_modifiers_test: phony obj/third_party/abseil-cpp/absl/container/unordered_map_modifiers_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_set_constructor_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_constructor_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_set_lookup_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_lookup_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_set_members_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_members_test.stamp
+build third_party/abseil-cpp/absl/container$:unordered_set_modifiers_test: phony obj/third_party/abseil-cpp/absl/container/unordered_set_modifiers_test.stamp
+build third_party/abseil-cpp/absl/debugging$:debugging_internal: phony obj/third_party/abseil-cpp/absl/debugging/debugging_internal.stamp
+build third_party/abseil-cpp/absl/debugging$:demangle_internal: phony obj/third_party/abseil-cpp/absl/debugging/demangle_internal.stamp
+build third_party/abseil-cpp/absl/debugging$:examine_stack: phony obj/third_party/abseil-cpp/absl/debugging/examine_stack.stamp
+build third_party/abseil-cpp/absl/debugging$:failure_signal_handler: phony obj/third_party/abseil-cpp/absl/debugging/failure_signal_handler.stamp
+build third_party/abseil-cpp/absl/debugging$:leak_check: phony obj/third_party/abseil-cpp/absl/debugging/leak_check.stamp
+build third_party/abseil-cpp/absl/debugging$:leak_check_api_disabled_for_testing: phony obj/third_party/abseil-cpp/absl/debugging/leak_check_api_disabled_for_testing.stamp
+build third_party/abseil-cpp/absl/debugging$:leak_check_disable: phony obj/third_party/abseil-cpp/absl/debugging/leak_check_disable.stamp
+build third_party/abseil-cpp/absl/debugging$:stack_consumption: phony obj/third_party/abseil-cpp/absl/debugging/stack_consumption.stamp
+build third_party/abseil-cpp/absl/debugging$:stacktrace: phony obj/third_party/abseil-cpp/absl/debugging/stacktrace.stamp
+build third_party/abseil-cpp/absl/debugging$:symbolize: phony obj/third_party/abseil-cpp/absl/debugging/symbolize.stamp
+build third_party/abseil-cpp/absl/functional$:bind_front: phony obj/third_party/abseil-cpp/absl/functional/bind_front.stamp
+build third_party/abseil-cpp/absl/functional$:function_ref: phony obj/third_party/abseil-cpp/absl/functional/function_ref.stamp
+build third_party/abseil-cpp/absl/hash$:city: phony obj/third_party/abseil-cpp/absl/hash/city.stamp
+build third_party/abseil-cpp/absl/hash$:hash: phony obj/third_party/abseil-cpp/absl/hash/hash.stamp
+build third_party/abseil-cpp/absl/hash: phony obj/third_party/abseil-cpp/absl/hash/hash.stamp
+build third_party/abseil-cpp/absl/hash$:hash_testing: phony obj/third_party/abseil-cpp/absl/hash/hash_testing.stamp
+build third_party/abseil-cpp/absl/hash$:low_level_hash: phony obj/third_party/abseil-cpp/absl/hash/low_level_hash.stamp
+build third_party/abseil-cpp/absl/hash$:low_level_hash_test: phony obj/third_party/abseil-cpp/absl/hash/low_level_hash_test.stamp
+build third_party/abseil-cpp/absl/hash$:spy_hash_state: phony obj/third_party/abseil-cpp/absl/hash/spy_hash_state.stamp
+build third_party/abseil-cpp/absl/memory$:memory: phony obj/third_party/abseil-cpp/absl/memory/memory.stamp
+build third_party/abseil-cpp/absl/memory: phony obj/third_party/abseil-cpp/absl/memory/memory.stamp
+build third_party/abseil-cpp/absl/memory$:memory_test: phony obj/third_party/abseil-cpp/absl/memory/memory_test.stamp
+build third_party/abseil-cpp/absl/meta$:type_traits: phony obj/third_party/abseil-cpp/absl/meta/type_traits.stamp
+build third_party/abseil-cpp/absl/meta$:type_traits_test: phony obj/third_party/abseil-cpp/absl/meta/type_traits_test.stamp
+build third_party/abseil-cpp/absl/numeric$:bits: phony obj/third_party/abseil-cpp/absl/numeric/bits.stamp
+build third_party/abseil-cpp/absl/numeric$:int128: phony obj/third_party/abseil-cpp/absl/numeric/int128.stamp
+build third_party/abseil-cpp/absl/numeric$:representation: phony obj/third_party/abseil-cpp/absl/numeric/representation.stamp
+build third_party/abseil-cpp/absl/profiling$:sample_recorder: phony obj/third_party/abseil-cpp/absl/profiling/sample_recorder.stamp
+build third_party/abseil-cpp/absl/status$:status: phony obj/third_party/abseil-cpp/absl/status/status.stamp
+build third_party/abseil-cpp/absl/status: phony obj/third_party/abseil-cpp/absl/status/status.stamp
+build third_party/abseil-cpp/absl/status$:statusor: phony obj/third_party/abseil-cpp/absl/status/statusor.stamp
+build third_party/abseil-cpp/absl/status$:statusor_test: phony obj/third_party/abseil-cpp/absl/status/statusor_test.stamp
+build third_party/abseil-cpp/absl/strings$:ascii_test: phony obj/third_party/abseil-cpp/absl/strings/ascii_test.stamp
+build third_party/abseil-cpp/absl/strings$:cord: phony obj/third_party/abseil-cpp/absl/strings/cord.stamp
+build third_party/abseil-cpp/absl/strings$:cord_internal: phony obj/third_party/abseil-cpp/absl/strings/cord_internal.stamp
+build third_party/abseil-cpp/absl/strings$:cord_rep_btree_navigator_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_navigator_test.stamp
+build third_party/abseil-cpp/absl/strings$:cord_rep_btree_reader_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_reader_test.stamp
+build third_party/abseil-cpp/absl/strings$:cord_rep_btree_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_test.stamp
+build third_party/abseil-cpp/absl/strings$:cord_rep_consume_test: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_consume_test.stamp
+build third_party/abseil-cpp/absl/strings$:cord_rep_test_util: phony obj/third_party/abseil-cpp/absl/strings/cord_rep_test_util.stamp
+build third_party/abseil-cpp/absl/strings$:cord_test_helpers: phony obj/third_party/abseil-cpp/absl/strings/cord_test_helpers.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_functions: phony obj/third_party/abseil-cpp/absl/strings/cordz_functions.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_functions_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_functions_test.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_handle: phony obj/third_party/abseil-cpp/absl/strings/cordz_handle.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_info: phony obj/third_party/abseil-cpp/absl/strings/cordz_info.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_info_statistics_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_info_statistics_test.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_info_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_info_test.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_sample_token: phony obj/third_party/abseil-cpp/absl/strings/cordz_sample_token.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_statistics: phony obj/third_party/abseil-cpp/absl/strings/cordz_statistics.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_test.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_test_helpers: phony obj/third_party/abseil-cpp/absl/strings/cordz_test_helpers.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_update_scope: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_scope.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_update_scope_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_scope_test.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_update_tracker: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker.stamp
+build third_party/abseil-cpp/absl/strings$:cordz_update_tracker_test: phony obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker_test.stamp
+build third_party/abseil-cpp/absl/strings$:internal: phony obj/third_party/abseil-cpp/absl/strings/internal.stamp
+build third_party/abseil-cpp/absl/strings$:match_test: phony obj/third_party/abseil-cpp/absl/strings/match_test.stamp
+build third_party/abseil-cpp/absl/strings$:pow10_helper: phony obj/third_party/abseil-cpp/absl/strings/pow10_helper.stamp
+build third_party/abseil-cpp/absl/strings$:str_format: phony obj/third_party/abseil-cpp/absl/strings/str_format.stamp
+build third_party/abseil-cpp/absl/strings$:str_format_internal: phony obj/third_party/abseil-cpp/absl/strings/str_format_internal.stamp
+build third_party/abseil-cpp/absl/strings$:str_replace_test: phony obj/third_party/abseil-cpp/absl/strings/str_replace_test.stamp
+build third_party/abseil-cpp/absl/strings$:string_view_test: phony obj/third_party/abseil-cpp/absl/strings/string_view_test.stamp
+build third_party/abseil-cpp/absl/strings$:strings: phony obj/third_party/abseil-cpp/absl/strings/strings.stamp
+build third_party/abseil-cpp/absl/strings: phony obj/third_party/abseil-cpp/absl/strings/strings.stamp
+build third_party/abseil-cpp/absl/synchronization$:graphcycles_internal: phony obj/third_party/abseil-cpp/absl/synchronization/graphcycles_internal.stamp
+build third_party/abseil-cpp/absl/synchronization$:kernel_timeout_internal: phony obj/third_party/abseil-cpp/absl/synchronization/kernel_timeout_internal.stamp
+build third_party/abseil-cpp/absl/synchronization$:per_thread_sem_test_common: phony obj/third_party/abseil-cpp/absl/synchronization/per_thread_sem_test_common.stamp
+build third_party/abseil-cpp/absl/synchronization$:synchronization: phony obj/third_party/abseil-cpp/absl/synchronization/synchronization.stamp
+build third_party/abseil-cpp/absl/synchronization: phony obj/third_party/abseil-cpp/absl/synchronization/synchronization.stamp
+build third_party/abseil-cpp/absl/synchronization$:thread_pool: phony obj/third_party/abseil-cpp/absl/synchronization/thread_pool.stamp
+build third_party/abseil-cpp/absl/time$:test_util: phony obj/third_party/abseil-cpp/absl/time/test_util.stamp
+build third_party/abseil-cpp/absl/time$:time: phony obj/third_party/abseil-cpp/absl/time/time.stamp
+build third_party/abseil-cpp/absl/time: phony obj/third_party/abseil-cpp/absl/time/time.stamp
+build third_party/abseil-cpp/absl/time/internal/cctz$:civil_time: phony obj/third_party/abseil-cpp/absl/time/internal/cctz/civil_time.stamp
+build third_party/abseil-cpp/absl/time/internal/cctz$:time_zone: phony obj/third_party/abseil-cpp/absl/time/internal/cctz/time_zone.stamp
+build third_party/abseil-cpp/absl/types$:any: phony obj/third_party/abseil-cpp/absl/types/any.stamp
+build third_party/abseil-cpp/absl/types$:bad_any_cast: phony obj/third_party/abseil-cpp/absl/types/bad_any_cast.stamp
+build third_party/abseil-cpp/absl/types$:bad_any_cast_impl: phony obj/third_party/abseil-cpp/absl/types/bad_any_cast_impl.stamp
+build third_party/abseil-cpp/absl/types$:bad_optional_access: phony obj/third_party/abseil-cpp/absl/types/bad_optional_access.stamp
+build third_party/abseil-cpp/absl/types$:bad_variant_access: phony obj/third_party/abseil-cpp/absl/types/bad_variant_access.stamp
+build third_party/abseil-cpp/absl/types$:compare: phony obj/third_party/abseil-cpp/absl/types/compare.stamp
+build third_party/abseil-cpp/absl/types$:optional: phony obj/third_party/abseil-cpp/absl/types/optional.stamp
+build third_party/abseil-cpp/absl/types$:optional_test: phony obj/third_party/abseil-cpp/absl/types/optional_test.stamp
+build third_party/abseil-cpp/absl/types$:span: phony obj/third_party/abseil-cpp/absl/types/span.stamp
+build third_party/abseil-cpp/absl/types$:variant: phony obj/third_party/abseil-cpp/absl/types/variant.stamp
+build third_party/abseil-cpp/absl/types$:variant_test: phony obj/third_party/abseil-cpp/absl/types/variant_test.stamp
+build third_party/abseil-cpp/absl/utility$:utility: phony obj/third_party/abseil-cpp/absl/utility/utility.stamp
+build third_party/abseil-cpp/absl/utility: phony obj/third_party/abseil-cpp/absl/utility/utility.stamp
+build third_party/googletest$:gmock: phony obj/third_party/googletest/gmock.stamp
+build third_party/googletest$:gmock_main: phony obj/third_party/googletest/gmock_main.lib
+build third_party/googletest$:gtest: phony obj/third_party/googletest/gtest.stamp
+build third_party/googletest$:gtest_main: phony obj/third_party/googletest/gtest_main.stamp
+build third_party/icu$:extra_icudata: phony obj/third_party/icu/extra_icudata.stamp
+build third_party/icu$:icu: phony obj/third_party/icu/icu.stamp
+build third_party/icu: phony obj/third_party/icu/icu.stamp
+build third_party/icu$:icudata: phony obj/third_party/icu/icudata.stamp
+build third_party/icu$:icui18n: phony ./icui18n.dll.lib
+build third_party/icu$:icui18n_hidden_visibility: phony ./icui18n_hidden_visibility.dll.lib
+build third_party/icu$:icuuc: phony obj/third_party/icu/icuuc.stamp
+build third_party/icu$:icuuc_hidden_visibility: phony obj/third_party/icu/icuuc_hidden_visibility.stamp
+build third_party/icu$:icuuc_private: phony ./icuuc.dll.lib
+build third_party/icu$:icuuc_private_hidden_visibility: phony ./icuuc_hidden_visibility.dll.lib
+build third_party/icu$:icuuc_public: phony obj/third_party/icu/icuuc_public.stamp
+build third_party/libjpeg_turbo$:libjpeg: phony obj/third_party/libjpeg_turbo/libjpeg.lib
+build third_party/libjpeg_turbo$:libjpeg_headers: phony obj/third_party/libjpeg_turbo/libjpeg_headers.stamp
+build third_party/libjpeg_turbo$:simd: phony obj/third_party/libjpeg_turbo/simd.lib
+build third_party/libjpeg_turbo$:simd_asm: phony obj/third_party/libjpeg_turbo/simd_asm.lib
+build third_party/libjpeg_turbo$:simd_asm_action: phony obj/third_party/libjpeg_turbo/simd_asm_action.stamp
+build third_party/libjpeg_turbo$:turbojpeg: phony obj/third_party/libjpeg_turbo/turbojpeg.lib
+build third_party/nasm$:nasm: phony ./nasm.exe
+build third_party/nasm: phony ./nasm.exe
+build third_party/zlib$:miniunz_bin: phony ./miniunz_bin.exe
+build third_party/zlib$:minizip: phony obj/third_party/zlib/minizip.lib
+build third_party/zlib$:minizip_bin: phony ./minizip_bin.exe
+build third_party/zlib$:zlib: phony ./zlib.dll.lib
+build third_party/zlib: phony ./zlib.dll.lib
+build third_party/zlib$:zlib_adler32_simd: phony obj/third_party/zlib/zlib_adler32_simd.stamp
+build third_party/zlib$:zlib_bench: phony ./zlib_bench.exe
+build third_party/zlib$:zlib_common_headers: phony obj/third_party/zlib/zlib_common_headers.stamp
+build third_party/zlib$:zlib_crc32_simd: phony obj/third_party/zlib/zlib_crc32_simd.stamp
+build third_party/zlib$:zlib_inflate_chunk_simd: phony obj/third_party/zlib/zlib_inflate_chunk_simd.stamp
+build third_party/zlib$:zlib_x86_simd: phony obj/third_party/zlib/zlib_x86_simd.stamp
+build third_party/zlib/google$:compression_utils_portable: phony obj/third_party/zlib/google/compression_utils_portable.lib
+build v8$:asm_to_inline_asm_default: phony obj/v8/asm_to_inline_asm_default.stamp
+build v8$:bytecode_builtins_list_generator: phony ./bytecode_builtins_list_generator.exe
+build v8$:cppgc: phony ./cppgc.dll.lib
+build v8$:cppgc_base: phony obj/v8/cppgc_base.stamp
+build v8$:cppgc_headers: phony obj/v8/cppgc_headers.stamp
+build v8$:cppgc_hello_world: phony ./cppgc_hello_world.exe
+build v8$:d8: phony ./d8.exe
+build v8$:fuzzer_support: phony obj/v8/fuzzer_support.stamp
+build v8$:gen-regexp-special-case: phony ./gen-regexp-special-case.exe
+build v8$:generate_bytecode_builtins_list: phony obj/v8/generate_bytecode_builtins_list.stamp
+build v8$:gn_all: phony obj/v8/gn_all.stamp
+build v8$:inspector_fuzzer: phony obj/v8/inspector_fuzzer.stamp
+build v8$:json_fuzzer: phony obj/v8/json_fuzzer.stamp
+build v8$:mksnapshot: phony ./mksnapshot.exe
+build v8$:parser_fuzzer: phony obj/v8/parser_fuzzer.stamp
+build v8$:postmortem-metadata: phony obj/v8/postmortem-metadata.stamp
+build v8$:regexp_builtins_fuzzer: phony obj/v8/regexp_builtins_fuzzer.stamp
+build v8$:regexp_fuzzer: phony obj/v8/regexp_fuzzer.stamp
+build v8$:run_gen-regexp-special-case: phony obj/v8/run_gen-regexp-special-case.stamp
+build v8$:run_mksnapshot_default: phony obj/v8/run_mksnapshot_default.stamp
+build v8$:run_torque: phony obj/v8/run_torque.stamp
+build v8$:torque: phony ./torque.exe
+build v8$:torque-language-server: phony ./torque-language-server.exe
+build v8$:torque_base: phony obj/v8/torque_base.stamp
+build v8$:torque_generated_definitions: phony obj/v8/torque_generated_definitions.stamp
+build v8$:torque_generated_initializers: phony obj/v8/torque_generated_initializers.stamp
+build v8$:torque_ls_base: phony obj/v8/torque_ls_base.stamp
+build v8$:torque_runtime_support: phony obj/v8/torque_runtime_support.stamp
+build v8$:v8: phony ./v8.dll.lib
+build v8$:v8_archive: phony obj/v8/v8_archive.stamp
+build v8$:v8_base: phony obj/v8/v8_base.stamp
+build v8$:v8_base_without_compiler: phony obj/v8/v8_base_without_compiler.stamp
+build v8$:v8_bigint: phony obj/v8/v8_bigint.stamp
+build v8$:v8_clusterfuzz: phony obj/v8/v8_clusterfuzz.stamp
+build v8$:v8_compiler: phony obj/v8/v8_compiler.stamp
+build v8$:v8_compiler_for_mksnapshot: phony obj/v8/v8_compiler_for_mksnapshot.stamp
+build v8$:v8_compiler_opt: phony obj/v8/v8_compiler_opt.stamp
+build v8$:v8_config_headers: phony obj/v8/v8_config_headers.stamp
+build v8$:v8_cppgc_shared: phony obj/v8/v8_cppgc_shared.stamp
+build v8$:v8_cppgc_shared_for_testing: phony ./v8_cppgc_shared_for_testing.dll.lib
+build v8$:v8_dump_build_config: phony obj/v8/v8_dump_build_config.stamp
+build v8$:v8_flags: phony obj/v8/v8_flags.stamp
+build v8$:v8_for_testing: phony ./v8_for_testing.dll.lib
+build v8$:v8_fuzzers: phony obj/v8/v8_fuzzers.stamp
+build v8$:v8_generated_cc_files: phony obj/v8/v8_generated_cc_files.stamp
+build v8$:v8_headers: phony obj/v8/v8_headers.stamp
+build v8$:v8_hello_world: phony ./v8_hello_world.exe
+build v8$:v8_init: phony obj/v8/v8_init.stamp
+build v8$:v8_initializers: phony obj/v8/v8_initializers.stamp
+build v8$:v8_internal_headers: phony obj/v8/v8_internal_headers.stamp
+build v8$:v8_libbase: phony ./v8_libbase.dll.lib
+build v8$:v8_libplatform: phony ./v8_libplatform.dll.lib
+build v8$:v8_maybe_icu: phony obj/v8/v8_maybe_icu.stamp
+build v8$:v8_python_base: phony obj/v8/v8_python_base.stamp
+build v8$:v8_sample_process: phony ./v8_sample_process.exe
+build v8$:v8_shared_internal_headers: phony obj/v8/v8_shared_internal_headers.stamp
+build v8$:v8_shell: phony ./v8_shell.exe
+build v8$:v8_simple_inspector_fuzzer: phony ./v8_simple_inspector_fuzzer.exe
+build v8$:v8_simple_json_fuzzer: phony ./v8_simple_json_fuzzer.exe
+build v8$:v8_simple_parser_fuzzer: phony ./v8_simple_parser_fuzzer.exe
+build v8$:v8_simple_regexp_builtins_fuzzer: phony ./v8_simple_regexp_builtins_fuzzer.exe
+build v8$:v8_simple_regexp_fuzzer: phony ./v8_simple_regexp_fuzzer.exe
+build v8$:v8_snapshot: phony obj/v8/v8_snapshot.stamp
+build v8$:v8_tracing: phony obj/v8/v8_tracing.stamp
+build v8$:v8_version: phony obj/v8/v8_version.stamp
+build v8/src/inspector$:inspector: phony obj/v8/src/inspector/inspector.stamp
+build v8/src/inspector: phony obj/v8/src/inspector/inspector.stamp
+build v8/src/inspector$:inspector_string_conversions: phony obj/v8/src/inspector/inspector_string_conversions.stamp
+build v8/src/inspector$:inspector_test_headers: phony obj/v8/src/inspector/inspector_test_headers.stamp
+build v8/src/inspector$:protocol_compatibility: phony obj/v8/src/inspector/protocol_compatibility.stamp
+build v8/src/inspector$:protocol_generated_sources: phony obj/v8/src/inspector/protocol_generated_sources.stamp
+build v8/src/inspector$:v8_generated_cc_files: phony obj/v8/src/inspector/v8_generated_cc_files.stamp
+build v8/test$:common_test_headers: phony obj/v8/test/common_test_headers.stamp
+build v8/test$:gn_all: phony obj/v8/test/gn_all.stamp
+build v8/test$:v8_bot_default: phony obj/v8/test/v8_bot_default.stamp
+build v8/test$:v8_d8_default: phony obj/v8/test/v8_d8_default.stamp
+build v8/test$:v8_default: phony obj/v8/test/v8_default.stamp
+build v8/test$:v8_optimize_for_size: phony obj/v8/test/v8_optimize_for_size.stamp
+build v8/test$:v8_perf: phony obj/v8/test/v8_perf.stamp
+build v8/test$:v8_run_num_fuzzer: phony obj/v8/test/v8_run_num_fuzzer.stamp
+build v8/test/benchmarks$:v8_benchmarks: phony obj/v8/test/benchmarks/v8_benchmarks.stamp
+build v8/test/benchmarks/cpp$:gn_all: phony obj/v8/test/benchmarks/cpp/gn_all.stamp
+build v8/test/bigint$:bigint_shell: phony ./bigint_shell.exe
+build v8/test/cctest$:cctest: phony ./cctest.exe
+build v8/test/cctest: phony ./cctest.exe
+build v8/test/cctest$:cctest_headers: phony obj/v8/test/cctest/cctest_headers.stamp
+build v8/test/cctest$:cctest_sources: phony obj/v8/test/cctest/cctest_sources.stamp
+build v8/test/cctest$:generate-bytecode-expectations: phony ./generate-bytecode-expectations.exe
+build v8/test/debugger$:v8_debugger: phony obj/v8/test/debugger/v8_debugger.stamp
+build v8/test/fuzzer$:v8_fuzzer: phony obj/v8/test/fuzzer/v8_fuzzer.stamp
+build v8/test/inspector$:inspector-test: phony ./inspector-test.exe
+build v8/test/inspector$:inspector_test: phony obj/v8/test/inspector/inspector_test.stamp
+build v8/test/intl$:v8_intl: phony obj/v8/test/intl/v8_intl.stamp
+build v8/test/message$:v8_message: phony obj/v8/test/message/v8_message.stamp
+build v8/test/mjsunit$:v8_mjsunit: phony obj/v8/test/mjsunit/v8_mjsunit.stamp
+build v8/test/mkgrokdump$:mkgrokdump: phony ./mkgrokdump.exe
+build v8/test/mkgrokdump: phony ./mkgrokdump.exe
+build v8/test/mozilla$:v8_mozilla: phony obj/v8/test/mozilla/v8_mozilla.stamp
+build v8/test/test262$:v8_test262: phony obj/v8/test/test262/v8_test262.stamp
+build v8/test/unittests$:cppgc_unittests_sources: phony obj/v8/test/unittests/cppgc_unittests_sources.stamp
+build v8/test/unittests$:unittests: phony ./unittests.exe
+build v8/test/unittests: phony ./unittests.exe
+build v8/test/unittests$:unittests_sources: phony obj/v8/test/unittests/unittests_sources.stamp
+build v8/test/unittests$:v8_cppgc_shared_unittests: phony ./v8_cppgc_shared_unittests.exe
+build v8/test/unittests$:v8_cppgc_shared_unittests_sources: phony obj/v8/test/unittests/v8_cppgc_shared_unittests_sources.stamp
+build v8/test/webkit$:v8_webkit: phony obj/v8/test/webkit/v8_webkit.stamp
+build v8/third_party/inspector_protocol$:crdtp: phony obj/v8/third_party/inspector_protocol/crdtp.stamp
+build v8/third_party/inspector_protocol$:crdtp_platform: phony obj/v8/third_party/inspector_protocol/crdtp_platform.stamp
+build v8/third_party/inspector_protocol$:crdtp_test: phony obj/v8/third_party/inspector_protocol/crdtp_test.stamp
+build v8/third_party/inspector_protocol$:crdtp_test_platform: phony obj/v8/third_party/inspector_protocol/crdtp_test_platform.stamp
+build v8/tools$:gn_all: phony obj/v8/tools/gn_all.stamp
+build v8/tools$:v8_android_test_runner_deps: phony obj/v8/tools/v8_android_test_runner_deps.stamp
+build v8/tools$:v8_check_static_initializers: phony obj/v8/tools/v8_check_static_initializers.stamp
+build v8/tools$:v8_testrunner: phony obj/v8/tools/v8_testrunner.stamp
+build v8/tools/debug_helper$:gen_heap_constants: phony obj/v8/tools/debug_helper/gen_heap_constants.stamp
+build v8/tools/debug_helper$:run_mkgrokdump: phony obj/v8/tools/debug_helper/run_mkgrokdump.stamp
+build v8/tools/debug_helper$:v8_debug_helper: phony ./v8_debug_helper.dll.lib
+build v8/tools/gcmole$:v8_run_gcmole: phony obj/v8/tools/gcmole/v8_run_gcmole.stamp
+build v8/tools/jsfunfuzz$:v8_jsfunfuzz: phony obj/v8/tools/jsfunfuzz/v8_jsfunfuzz.stamp
+build v8/tools/v8windbg$:copy_prereqs: phony obj/v8/tools/v8windbg/copy_prereqs.stamp
+build v8/tools/v8windbg$:v8windbg: phony ./v8windbg.dll.lib
+build v8/tools/v8windbg: phony ./v8windbg.dll.lib
+build v8/tools/v8windbg$:v8windbg_base: phony obj/v8/tools/v8windbg/v8windbg_base.stamp
+build v8/tools/v8windbg$:v8windbg_test: phony obj/v8/tools/v8windbg/v8windbg_test.stamp
+build v8/tools/v8windbg$:v8windbg_test_script: phony obj/v8/tools/v8windbg/v8windbg_test_script.stamp
+build xfa/fde$:fde: phony obj/xfa/fde/fde.stamp
+build xfa/fde: phony obj/xfa/fde/fde.stamp
+build xfa/fde$:unittests: phony obj/xfa/fde/unittests.stamp
+build xfa/fgas/crt$:crt: phony obj/xfa/fgas/crt/crt.stamp
+build xfa/fgas/crt: phony obj/xfa/fgas/crt/crt.stamp
+build xfa/fgas/crt$:unittests: phony obj/xfa/fgas/crt/unittests.stamp
+build xfa/fgas/font$:font: phony obj/xfa/fgas/font/font.stamp
+build xfa/fgas/font: phony obj/xfa/fgas/font/font.stamp
+build xfa/fgas/graphics$:graphics: phony obj/xfa/fgas/graphics/graphics.stamp
+build xfa/fgas/graphics: phony obj/xfa/fgas/graphics/graphics.stamp
+build xfa/fgas/layout$:layout: phony obj/xfa/fgas/layout/layout.stamp
+build xfa/fgas/layout: phony obj/xfa/fgas/layout/layout.stamp
+build xfa/fgas/layout$:unittests: phony obj/xfa/fgas/layout/unittests.stamp
+build xfa/fwl$:embeddertests: phony obj/xfa/fwl/embeddertests.stamp
+build xfa/fwl$:fwl: phony obj/xfa/fwl/fwl.stamp
+build xfa/fwl: phony obj/xfa/fwl/fwl.stamp
+build xfa/fxfa$:fxfa: phony obj/xfa/fxfa/fxfa.stamp
+build xfa/fxfa: phony obj/xfa/fxfa/fxfa.stamp
+build xfa/fxfa$:unittests: phony obj/xfa/fxfa/unittests.stamp
+build xfa/fxfa/fm2js$:fm2js: phony obj/xfa/fxfa/fm2js/fm2js.stamp
+build xfa/fxfa/fm2js: phony obj/xfa/fxfa/fm2js/fm2js.stamp
+build xfa/fxfa/fm2js$:unittests: phony obj/xfa/fxfa/fm2js/unittests.stamp
+build xfa/fxfa/layout$:embeddertests: phony obj/xfa/fxfa/layout/embeddertests.stamp
+build xfa/fxfa/layout$:layout: phony obj/xfa/fxfa/layout/layout.stamp
+build xfa/fxfa/layout: phony obj/xfa/fxfa/layout/layout.stamp
+build xfa/fxfa/parser$:embeddertests: phony obj/xfa/fxfa/parser/embeddertests.stamp
+build xfa/fxfa/parser$:parser: phony obj/xfa/fxfa/parser/parser.stamp
+build xfa/fxfa/parser: phony obj/xfa/fxfa/parser/parser.stamp
+build xfa/fxfa/parser$:unittests: phony obj/xfa/fxfa/parser/unittests.stamp
+
+build all: phony $
+    obj/freetype_common.stamp $
+    obj/fuzzers.stamp $
+    ./pdfium.dll.lib $
+    obj/pdfium_all.stamp $
+    ./pdfium_diff.exe $
+    obj/pdfium_embeddertest_deps.stamp $
+    ./pdfium_embeddertests.exe $
+    obj/pdfium_public_headers.stamp $
+    obj/pdfium_public_headers_impl.stamp $
+    obj/pdfium_unittest_deps.stamp $
+    ./pdfium_unittests.exe $
+    obj/samples.stamp $
+    obj/build/branding_buildflags.stamp $
+    obj/build/buildflag_header_h.stamp $
+    obj/build/chromecast_buildflags.stamp $
+    obj/build/chromeos_buildflags.stamp $
+    obj/build/os_buildflags.stamp $
+    obj/build/config/common_deps.stamp $
+    obj/build/config/executable_deps.stamp $
+    obj/build/config/loadable_module_deps.stamp $
+    obj/build/config/shared_library_deps.stamp $
+    obj/build/config/clang/llvm-symbolizer_data.stamp $
+    obj/build/config/compiler/compiler_buildflags.stamp $
+    obj/build/config/sanitizers/deps.stamp $
+    obj/build/config/sanitizers/options_sources.lib $
+    obj/build/win/copy_cdb_to_output.stamp $
+    obj/build/win/default_exe_manifest.stamp $
+    obj/build/win/runtime_libs.stamp $
+    ./libc++.dll.lib $
+    obj/constants/constants.stamp $
+    obj/core/fdrm/fdrm.stamp $
+    obj/core/fdrm/unittests.stamp $
+    obj/core/fpdfapi/cmaps/cmaps.stamp $
+    obj/core/fpdfapi/edit/edit.stamp $
+    obj/core/fpdfapi/edit/embeddertests.stamp $
+    obj/core/fpdfapi/edit/unittests.stamp $
+    obj/core/fpdfapi/font/font.stamp $
+    obj/core/fpdfapi/font/unittests.stamp $
+    obj/core/fpdfapi/page/page.stamp $
+    obj/core/fpdfapi/page/unittests.stamp $
+    obj/core/fpdfapi/parser/embeddertests.stamp $
+    obj/core/fpdfapi/parser/parser.stamp $
+    obj/core/fpdfapi/parser/unittests.stamp $
+    obj/core/fpdfapi/render/embeddertests.stamp $
+    obj/core/fpdfapi/render/render.stamp $
+    obj/core/fpdfapi/render/unittests.stamp $
+    obj/core/fpdfdoc/fpdfdoc.stamp $
+    obj/core/fpdfdoc/unittests.stamp $
+    obj/core/fpdftext/fpdftext.stamp $
+    obj/core/fpdftext/unittests.stamp $
+    obj/core/fxcodec/embeddertests.stamp $
+    obj/core/fxcodec/fxcodec.stamp $
+    obj/core/fxcodec/unittests.stamp $
+    obj/core/fxcrt/fxcrt.stamp $
+    obj/core/fxcrt/unittests.stamp $
+    obj/core/fxcrt/unowned_ptr.stamp $
+    obj/core/fxcrt/css/css.stamp $
+    obj/core/fxcrt/css/unittests.stamp $
+    obj/core/fxge/embeddertests.stamp $
+    obj/core/fxge/fxge.stamp $
+    obj/core/fxge/unittests.stamp $
+    obj/fpdfsdk/embeddertests.stamp $
+    obj/fpdfsdk/fpdfsdk.stamp $
+    obj/fpdfsdk/unittests.stamp $
+    obj/fpdfsdk/formfiller/formfiller.stamp $
+    obj/fpdfsdk/fpdfxfa/embeddertests.stamp $
+    obj/fpdfsdk/fpdfxfa/fpdfxfa.stamp $
+    obj/fpdfsdk/pwl/embeddertests.stamp $
+    obj/fpdfsdk/pwl/pwl.stamp $
+    obj/fxbarcode/fxbarcode.stamp $
+    obj/fxbarcode/unittests.stamp $
+    obj/fxjs/embeddertests.stamp $
+    obj/fxjs/fxjs.stamp $
+    obj/fxjs/gc.stamp $
+    obj/fxjs/unittests.stamp $
+    ./pdfium_test.exe $
+    obj/samples/samples.stamp $
+    obj/testing/embedder_test_support.stamp $
+    obj/testing/path_service.stamp $
+    obj/testing/test_environments.stamp $
+    obj/testing/test_scripts_shared.stamp $
+    obj/testing/test_support.stamp $
+    obj/testing/unit_test_support.stamp $
+    obj/testing/fuzzers/fuzzer_helper.stamp $
+    obj/testing/fuzzers/fuzzer_impls.stamp $
+    obj/testing/fuzzers/fuzzer_init.stamp $
+    obj/testing/fuzzers/fuzzer_init_public.stamp $
+    obj/testing/fuzzers/fuzzer_utils.stamp $
+    obj/testing/fuzzers/fuzzer_xfa_process_state.stamp $
+    obj/testing/fuzzers/fuzzers.stamp $
+    obj/testing/fuzzers/pdf_bidi_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_bidi_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_cfgas_stringformatter_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_cfx_barcode_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_cjs_util_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_cjs_util_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_cmap_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_cmap_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_a85_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_a85_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_bmp_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_bmp_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_fax_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_fax_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_gif_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_gif_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_icc_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_icc_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_jbig2_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_jpeg_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_png_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_png_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_rle_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_rle_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_codec_tiff_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_codec_tiff_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_cpdf_tounicodemap_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_css_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_css_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_fm2js_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_fm2js_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_font_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_font_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_formcalc_context_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_formcalc_context_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_formcalc_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_formcalc_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_fx_date_helpers_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_hint_table_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_hint_table_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_jpx_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_jpx_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_lzw_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_lzw_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_nametree_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_nametree_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_psengine_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_psengine_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_scanlinecompositor_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_streamparser_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_streamparser_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdf_xml_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdf_xml_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdfium_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdfium_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdfium_xfa_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdfium_xfa_fuzzer_src.stamp $
+    obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_impl.stamp $
+    obj/testing/fuzzers/pdfium_xfa_lpm_fuzzer_src.stamp $
+    obj/testing/gmock/gmock.stamp $
+    obj/testing/gmock/gmock_main.stamp $
+    obj/testing/gtest/gtest.lib $
+    obj/testing/gtest/gtest_main.stamp $
+    obj/testing/image_diff/image_diff.stamp $
+    obj/third_party/bigint.stamp $
+    obj/third_party/fx_agg.stamp $
+    obj/third_party/fx_freetype.stamp $
+    obj/third_party/fx_lcms2.stamp $
+    obj/third_party/fx_libopenjpeg.stamp $
+    obj/third_party/fx_lpng.stamp $
+    obj/third_party/fx_tiff.stamp $
+    obj/third_party/jpeg.stamp $
+    obj/third_party/lcms2.stamp $
+    obj/third_party/libopenjpeg2.stamp $
+    obj/third_party/pdfium_base.stamp $
+    obj/third_party/pdfium_base_test_support.stamp $
+    obj/third_party/png.stamp $
+    obj/third_party/skia_shared.stamp $
+    obj/third_party/third_party.stamp $
+    obj/third_party/zlib.stamp $
+    ./absl.dll.lib $
+    obj/third_party/abseil-cpp/absl_component_deps.stamp $
+    obj/third_party/abseil-cpp/default.stamp $
+    obj/third_party/abseil-cpp/absl/algorithm/algorithm.stamp $
+    obj/third_party/abseil-cpp/absl/algorithm/algorithm_test.stamp $
+    obj/third_party/abseil-cpp/absl/algorithm/container.stamp $
+    obj/third_party/abseil-cpp/absl/algorithm/container_test.stamp $
+    obj/third_party/abseil-cpp/absl/base/atomic_hook.stamp $
+    obj/third_party/abseil-cpp/absl/base/base.stamp $
+    obj/third_party/abseil-cpp/absl/base/base_internal.stamp $
+    obj/third_party/abseil-cpp/absl/base/config.stamp $
+    obj/third_party/abseil-cpp/absl/base/config_test.stamp $
+    obj/third_party/abseil-cpp/absl/base/core_headers.stamp $
+    obj/third_party/abseil-cpp/absl/base/dynamic_annotations.stamp $
+    obj/third_party/abseil-cpp/absl/base/endian.stamp $
+    obj/third_party/abseil-cpp/absl/base/errno_saver.stamp $
+    obj/third_party/abseil-cpp/absl/base/exception_testing.stamp $
+    obj/third_party/abseil-cpp/absl/base/exponential_biased.stamp $
+    obj/third_party/abseil-cpp/absl/base/fast_type_id.stamp $
+    obj/third_party/abseil-cpp/absl/base/log_severity.stamp $
+    obj/third_party/abseil-cpp/absl/base/malloc_internal.stamp $
+    obj/third_party/abseil-cpp/absl/base/periodic_sampler.stamp $
+    obj/third_party/abseil-cpp/absl/base/pretty_function.stamp $
+    obj/third_party/abseil-cpp/absl/base/raw_logging_internal.stamp $
+    obj/third_party/abseil-cpp/absl/base/scoped_set_env.stamp $
+    obj/third_party/abseil-cpp/absl/base/spinlock_test_common.stamp $
+    obj/third_party/abseil-cpp/absl/base/spinlock_wait.stamp $
+    obj/third_party/abseil-cpp/absl/base/strerror.stamp $
+    obj/third_party/abseil-cpp/absl/base/throw_delegate.stamp $
+    obj/third_party/abseil-cpp/absl/cleanup/cleanup.stamp $
+    obj/third_party/abseil-cpp/absl/cleanup/cleanup_internal.stamp $
+    obj/third_party/abseil-cpp/absl/cleanup/cleanup_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/btree.stamp $
+    obj/third_party/abseil-cpp/absl/container/common.stamp $
+    obj/third_party/abseil-cpp/absl/container/compressed_tuple.stamp $
+    obj/third_party/abseil-cpp/absl/container/container_memory.stamp $
+    obj/third_party/abseil-cpp/absl/container/counting_allocator.stamp $
+    obj/third_party/abseil-cpp/absl/container/fixed_array.stamp $
+    obj/third_party/abseil-cpp/absl/container/flat_hash_map.stamp $
+    obj/third_party/abseil-cpp/absl/container/flat_hash_set.stamp $
+    obj/third_party/abseil-cpp/absl/container/hash_function_defaults.stamp $
+    obj/third_party/abseil-cpp/absl/container/hash_generator_testing.stamp $
+    obj/third_party/abseil-cpp/absl/container/hash_policy_testing.stamp $
+    obj/third_party/abseil-cpp/absl/container/hash_policy_traits.stamp $
+    obj/third_party/abseil-cpp/absl/container/hashtable_debug.stamp $
+    obj/third_party/abseil-cpp/absl/container/hashtable_debug_hooks.stamp $
+    obj/third_party/abseil-cpp/absl/container/hashtablez_sampler.stamp $
+    obj/third_party/abseil-cpp/absl/container/have_sse.stamp $
+    obj/third_party/abseil-cpp/absl/container/inlined_vector.stamp $
+    obj/third_party/abseil-cpp/absl/container/inlined_vector_internal.stamp $
+    obj/third_party/abseil-cpp/absl/container/inlined_vector_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/layout.stamp $
+    obj/third_party/abseil-cpp/absl/container/node_hash_map.stamp $
+    obj/third_party/abseil-cpp/absl/container/node_hash_policy.stamp $
+    obj/third_party/abseil-cpp/absl/container/node_hash_set.stamp $
+    obj/third_party/abseil-cpp/absl/container/raw_hash_map.stamp $
+    obj/third_party/abseil-cpp/absl/container/raw_hash_set.stamp $
+    obj/third_party/abseil-cpp/absl/container/test_instance_tracker.stamp $
+    obj/third_party/abseil-cpp/absl/container/tracked.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_map_constructor_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_map_lookup_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_map_members_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_map_modifiers_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_set_constructor_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_set_lookup_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_set_members_test.stamp $
+    obj/third_party/abseil-cpp/absl/container/unordered_set_modifiers_test.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/debugging_internal.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/demangle_internal.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/examine_stack.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/failure_signal_handler.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/leak_check.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/leak_check_api_disabled_for_testing.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/leak_check_disable.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/stack_consumption.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/stacktrace.stamp $
+    obj/third_party/abseil-cpp/absl/debugging/symbolize.stamp $
+    obj/third_party/abseil-cpp/absl/functional/bind_front.stamp $
+    obj/third_party/abseil-cpp/absl/functional/function_ref.stamp $
+    obj/third_party/abseil-cpp/absl/hash/city.stamp $
+    obj/third_party/abseil-cpp/absl/hash/hash.stamp $
+    obj/third_party/abseil-cpp/absl/hash/hash_testing.stamp $
+    obj/third_party/abseil-cpp/absl/hash/low_level_hash.stamp $
+    obj/third_party/abseil-cpp/absl/hash/low_level_hash_test.stamp $
+    obj/third_party/abseil-cpp/absl/hash/spy_hash_state.stamp $
+    obj/third_party/abseil-cpp/absl/memory/memory.stamp $
+    obj/third_party/abseil-cpp/absl/memory/memory_test.stamp $
+    obj/third_party/abseil-cpp/absl/meta/type_traits.stamp $
+    obj/third_party/abseil-cpp/absl/meta/type_traits_test.stamp $
+    obj/third_party/abseil-cpp/absl/numeric/bits.stamp $
+    obj/third_party/abseil-cpp/absl/numeric/int128.stamp $
+    obj/third_party/abseil-cpp/absl/numeric/representation.stamp $
+    obj/third_party/abseil-cpp/absl/profiling/sample_recorder.stamp $
+    obj/third_party/abseil-cpp/absl/status/status.stamp $
+    obj/third_party/abseil-cpp/absl/status/statusor.stamp $
+    obj/third_party/abseil-cpp/absl/status/statusor_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/ascii_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_internal.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_navigator_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_reader_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_rep_btree_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_rep_consume_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_rep_test_util.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cord_test_helpers.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_functions.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_functions_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_handle.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_info.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_info_statistics_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_info_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_sample_token.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_statistics.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_test_helpers.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_update_scope.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_update_scope_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker.stamp $
+    obj/third_party/abseil-cpp/absl/strings/cordz_update_tracker_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/internal.stamp $
+    obj/third_party/abseil-cpp/absl/strings/match_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/pow10_helper.stamp $
+    obj/third_party/abseil-cpp/absl/strings/str_format.stamp $
+    obj/third_party/abseil-cpp/absl/strings/str_format_internal.stamp $
+    obj/third_party/abseil-cpp/absl/strings/str_replace_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/string_view_test.stamp $
+    obj/third_party/abseil-cpp/absl/strings/strings.stamp $
+    obj/third_party/abseil-cpp/absl/synchronization/graphcycles_internal.stamp $
+    obj/third_party/abseil-cpp/absl/synchronization/kernel_timeout_internal.stamp $
+    obj/third_party/abseil-cpp/absl/synchronization/per_thread_sem_test_common.stamp $
+    obj/third_party/abseil-cpp/absl/synchronization/synchronization.stamp $
+    obj/third_party/abseil-cpp/absl/synchronization/thread_pool.stamp $
+    obj/third_party/abseil-cpp/absl/time/test_util.stamp $
+    obj/third_party/abseil-cpp/absl/time/time.stamp $
+    obj/third_party/abseil-cpp/absl/time/internal/cctz/civil_time.stamp $
+    obj/third_party/abseil-cpp/absl/time/internal/cctz/time_zone.stamp $
+    obj/third_party/abseil-cpp/absl/types/any.stamp $
+    obj/third_party/abseil-cpp/absl/types/bad_any_cast.stamp $
+    obj/third_party/abseil-cpp/absl/types/bad_any_cast_impl.stamp $
+    obj/third_party/abseil-cpp/absl/types/bad_optional_access.stamp $
+    obj/third_party/abseil-cpp/absl/types/bad_variant_access.stamp $
+    obj/third_party/abseil-cpp/absl/types/compare.stamp $
+    obj/third_party/abseil-cpp/absl/types/optional.stamp $
+    obj/third_party/abseil-cpp/absl/types/optional_test.stamp $
+    obj/third_party/abseil-cpp/absl/types/span.stamp $
+    obj/third_party/abseil-cpp/absl/types/variant.stamp $
+    obj/third_party/abseil-cpp/absl/types/variant_test.stamp $
+    obj/third_party/abseil-cpp/absl/utility/utility.stamp $
+    obj/third_party/googletest/gmock.stamp $
+    obj/third_party/googletest/gmock_main.lib $
+    obj/third_party/googletest/gtest.stamp $
+    obj/third_party/googletest/gtest_main.stamp $
+    obj/third_party/icu/extra_icudata.stamp $
+    obj/third_party/icu/icu.stamp $
+    obj/third_party/icu/icudata.stamp $
+    ./icui18n.dll.lib $
+    ./icui18n_hidden_visibility.dll.lib $
+    obj/third_party/icu/icuuc.stamp $
+    obj/third_party/icu/icuuc_hidden_visibility.stamp $
+    ./icuuc.dll.lib $
+    ./icuuc_hidden_visibility.dll.lib $
+    obj/third_party/icu/icuuc_public.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.lib $
+    obj/third_party/libjpeg_turbo/libjpeg_headers.stamp $
+    obj/third_party/libjpeg_turbo/simd.lib $
+    obj/third_party/libjpeg_turbo/simd_asm.lib $
+    obj/third_party/libjpeg_turbo/simd_asm_action.stamp $
+    obj/third_party/libjpeg_turbo/turbojpeg.lib $
+    ./nasm.exe $
+    ./miniunz_bin.exe $
+    obj/third_party/zlib/minizip.lib $
+    ./minizip_bin.exe $
+    ./zlib.dll.lib $
+    obj/third_party/zlib/zlib_adler32_simd.stamp $
+    ./zlib_bench.exe $
+    obj/third_party/zlib/zlib_common_headers.stamp $
+    obj/third_party/zlib/zlib_crc32_simd.stamp $
+    obj/third_party/zlib/zlib_inflate_chunk_simd.stamp $
+    obj/third_party/zlib/zlib_x86_simd.stamp $
+    obj/third_party/zlib/google/compression_utils_portable.lib $
+    obj/v8/asm_to_inline_asm_default.stamp $
+    ./bytecode_builtins_list_generator.exe $
+    ./cppgc.dll.lib $
+    obj/v8/cppgc_base.stamp $
+    obj/v8/cppgc_headers.stamp $
+    ./cppgc_hello_world.exe $
+    ./d8.exe $
+    obj/v8/fuzzer_support.stamp $
+    ./gen-regexp-special-case.exe $
+    obj/v8/generate_bytecode_builtins_list.stamp $
+    obj/v8/gn_all.stamp $
+    obj/v8/inspector_fuzzer.stamp $
+    obj/v8/json_fuzzer.stamp $
+    ./mksnapshot.exe $
+    obj/v8/parser_fuzzer.stamp $
+    obj/v8/postmortem-metadata.stamp $
+    obj/v8/regexp_builtins_fuzzer.stamp $
+    obj/v8/regexp_fuzzer.stamp $
+    obj/v8/run_gen-regexp-special-case.stamp $
+    obj/v8/run_mksnapshot_default.stamp $
+    obj/v8/run_torque.stamp $
+    ./torque.exe $
+    ./torque-language-server.exe $
+    obj/v8/torque_base.stamp $
+    obj/v8/torque_generated_definitions.stamp $
+    obj/v8/torque_generated_initializers.stamp $
+    obj/v8/torque_ls_base.stamp $
+    obj/v8/torque_runtime_support.stamp $
+    ./v8.dll.lib $
+    obj/v8/v8_archive.stamp $
+    obj/v8/v8_base.stamp $
+    obj/v8/v8_base_without_compiler.stamp $
+    obj/v8/v8_bigint.stamp $
+    obj/v8/v8_clusterfuzz.stamp $
+    obj/v8/v8_compiler.stamp $
+    obj/v8/v8_compiler_for_mksnapshot.stamp $
+    obj/v8/v8_compiler_opt.stamp $
+    obj/v8/v8_config_headers.stamp $
+    obj/v8/v8_cppgc_shared.stamp $
+    ./v8_cppgc_shared_for_testing.dll.lib $
+    obj/v8/v8_dump_build_config.stamp $
+    obj/v8/v8_flags.stamp $
+    ./v8_for_testing.dll.lib $
+    obj/v8/v8_fuzzers.stamp $
+    obj/v8/v8_generated_cc_files.stamp $
+    obj/v8/v8_headers.stamp $
+    ./v8_hello_world.exe $
+    obj/v8/v8_init.stamp $
+    obj/v8/v8_initializers.stamp $
+    obj/v8/v8_internal_headers.stamp $
+    ./v8_libbase.dll.lib $
+    ./v8_libplatform.dll.lib $
+    obj/v8/v8_maybe_icu.stamp $
+    obj/v8/v8_python_base.stamp $
+    ./v8_sample_process.exe $
+    obj/v8/v8_shared_internal_headers.stamp $
+    ./v8_shell.exe $
+    ./v8_simple_inspector_fuzzer.exe $
+    ./v8_simple_json_fuzzer.exe $
+    ./v8_simple_parser_fuzzer.exe $
+    ./v8_simple_regexp_builtins_fuzzer.exe $
+    ./v8_simple_regexp_fuzzer.exe $
+    obj/v8/v8_snapshot.stamp $
+    obj/v8/v8_tracing.stamp $
+    obj/v8/v8_version.stamp $
+    obj/v8/src/inspector/inspector.stamp $
+    obj/v8/src/inspector/inspector_string_conversions.stamp $
+    obj/v8/src/inspector/inspector_test_headers.stamp $
+    obj/v8/src/inspector/protocol_compatibility.stamp $
+    obj/v8/src/inspector/protocol_generated_sources.stamp $
+    obj/v8/src/inspector/v8_generated_cc_files.stamp $
+    obj/v8/test/common_test_headers.stamp $
+    obj/v8/test/gn_all.stamp $
+    obj/v8/test/v8_bot_default.stamp $
+    obj/v8/test/v8_d8_default.stamp $
+    obj/v8/test/v8_default.stamp $
+    obj/v8/test/v8_optimize_for_size.stamp $
+    obj/v8/test/v8_perf.stamp $
+    obj/v8/test/v8_run_num_fuzzer.stamp $
+    obj/v8/test/benchmarks/v8_benchmarks.stamp $
+    obj/v8/test/benchmarks/cpp/gn_all.stamp $
+    ./bigint_shell.exe $
+    ./cctest.exe $
+    obj/v8/test/cctest/cctest_headers.stamp $
+    obj/v8/test/cctest/cctest_sources.stamp $
+    ./generate-bytecode-expectations.exe $
+    obj/v8/test/debugger/v8_debugger.stamp $
+    obj/v8/test/fuzzer/v8_fuzzer.stamp $
+    ./inspector-test.exe $
+    obj/v8/test/inspector/inspector_test.stamp $
+    obj/v8/test/intl/v8_intl.stamp $
+    obj/v8/test/message/v8_message.stamp $
+    obj/v8/test/mjsunit/v8_mjsunit.stamp $
+    ./mkgrokdump.exe $
+    obj/v8/test/mozilla/v8_mozilla.stamp $
+    obj/v8/test/test262/v8_test262.stamp $
+    obj/v8/test/unittests/cppgc_unittests_sources.stamp $
+    ./unittests.exe $
+    obj/v8/test/unittests/unittests_sources.stamp $
+    ./v8_cppgc_shared_unittests.exe $
+    obj/v8/test/unittests/v8_cppgc_shared_unittests_sources.stamp $
+    obj/v8/test/webkit/v8_webkit.stamp $
+    obj/v8/third_party/inspector_protocol/crdtp.stamp $
+    obj/v8/third_party/inspector_protocol/crdtp_platform.stamp $
+    obj/v8/third_party/inspector_protocol/crdtp_test.stamp $
+    obj/v8/third_party/inspector_protocol/crdtp_test_platform.stamp $
+    obj/v8/tools/gn_all.stamp $
+    obj/v8/tools/v8_android_test_runner_deps.stamp $
+    obj/v8/tools/v8_check_static_initializers.stamp $
+    obj/v8/tools/v8_testrunner.stamp $
+    obj/v8/tools/debug_helper/gen_heap_constants.stamp $
+    obj/v8/tools/debug_helper/run_mkgrokdump.stamp $
+    ./v8_debug_helper.dll.lib $
+    obj/v8/tools/gcmole/v8_run_gcmole.stamp $
+    obj/v8/tools/jsfunfuzz/v8_jsfunfuzz.stamp $
+    obj/v8/tools/v8windbg/copy_prereqs.stamp $
+    ./v8windbg.dll.lib $
+    obj/v8/tools/v8windbg/v8windbg_base.stamp $
+    obj/v8/tools/v8windbg/v8windbg_test.stamp $
+    obj/v8/tools/v8windbg/v8windbg_test_script.stamp $
+    obj/xfa/fde/fde.stamp $
+    obj/xfa/fde/unittests.stamp $
+    obj/xfa/fgas/crt/crt.stamp $
+    obj/xfa/fgas/crt/unittests.stamp $
+    obj/xfa/fgas/font/font.stamp $
+    obj/xfa/fgas/graphics/graphics.stamp $
+    obj/xfa/fgas/layout/layout.stamp $
+    obj/xfa/fgas/layout/unittests.stamp $
+    obj/xfa/fwl/embeddertests.stamp $
+    obj/xfa/fwl/fwl.stamp $
+    obj/xfa/fxfa/fxfa.stamp $
+    obj/xfa/fxfa/unittests.stamp $
+    obj/xfa/fxfa/fm2js/fm2js.stamp $
+    obj/xfa/fxfa/fm2js/unittests.stamp $
+    obj/xfa/fxfa/layout/embeddertests.stamp $
+    obj/xfa/fxfa/layout/layout.stamp $
+    obj/xfa/fxfa/parser/embeddertests.stamp $
+    obj/xfa/fxfa/parser/parser.stamp $
+    obj/xfa/fxfa/parser/unittests.stamp
+
+default all

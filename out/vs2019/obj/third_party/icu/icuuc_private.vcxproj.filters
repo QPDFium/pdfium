@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source\common">
+      <UniqueIdentifier>{982D3564-DA2B-EBAD-27C0-ABBB06F80EFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{DA2023F0-71E4-A00C-1CFD-FD2374E50D28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\stubdata">
+      <UniqueIdentifier>{44890D92-01FA-AB60-2E4E-4501CAACD6E1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/appendable.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bmpset.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/bmpset.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/brkeng.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/brkeng.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/brkiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytesinkutil.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/bytesinkutil.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestream.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestriebuilder.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestrie.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/bytestrieiterator.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/caniter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/capi_helper.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/characterproperties.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/chariter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/charstr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/charstr.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/charstrmap.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cmemory.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cmemory.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/cpputils.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cstr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cstr.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cstring.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cstring.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/cwchar.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/cwchar.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dictbe.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/dictbe.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dictionarydata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/dictionarydata.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/dtintrv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/edits.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/errorcode.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/filteredbrk.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/filterednormalizer2.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/hash.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/icudataver.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/icuplug.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/icuplugimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loadednormalizer2impl.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localebuilder.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localematcher.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/localeprioritylist.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/localeprioritylist.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/localsvc.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locavailable.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locbased.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locbased.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdispnames.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdistance.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locdistance.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locdspnm.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locid.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loclikely.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/loclikelysubtags.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/loclikelysubtags.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locmap.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locmap.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locresdata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/locutil.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/locutil.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/lsr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/lsr.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/messageimpl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/messagepattern.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/msvcres.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/mutex.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/norm2allmodes.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/norm2_nfc_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normalizer2.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normalizer2impl.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/normalizer2impl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/normlzr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/parsepos.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/patternprops.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/patternprops.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/pluralmap.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/pluralmap.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/propname.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/propname_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/propname.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/propsvec.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/propsvec.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/punycode.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/punycode.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/putil.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/putilimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbi_cache.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbi_cache.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbi.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbidata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbidata.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbinode.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbinode.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbirb.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbirb.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/rbbirpt.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbiscan.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbiscan.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbisetb.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbisetb.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbistbl.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/rbbitblb.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/rbbitblb.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resbund_cnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resbund.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/resource.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/resource.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/restrace.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/restrace.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ruleiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ruleiter.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/schriter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/serv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/serv.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servlk.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servlkf.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/servloc.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servls.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servnotf.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/servnotf.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servrbf.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/servslkf.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/sharedobject.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/sharedobject.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/simpleformatter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/sprpimpl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/static_unicode_sets.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/static_unicode_sets.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/stringpiece.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/stringtriebuilder.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uarrsort.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uarrsort.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/uassert.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidi.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubidiimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidiln.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidi_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubidi_props_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/ubidi_props.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubiditransform.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubidiwrt.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ubrk.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ubrkimpl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucase.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucase.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucasemap.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucasemap_imp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucasemap_titlecase_brkiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucase_props_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucat.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uchar.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uchar_props_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstriebuilder.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstrie.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucharstrieiterator.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uchriter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucln_cmn.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucln_cmn.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/ucln.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/ucln_imp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucmndata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucmndata.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv2022.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_bld.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_bld.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvbocu.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_cb.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_cnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_cnv.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_ct.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvdisp.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_err.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_ext.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_ext.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvhz.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_imp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_io.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnv_io.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvisci.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvlat1.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_lmb.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvmbcs.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucnvmbcs.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvscsu.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnvsel.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_set.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u16.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u32.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u7.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucnv_u8.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucol_data.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucol_swp.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucol_swp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucptrie.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucptrie_impl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ucurr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ucurrimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udatamem.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/udatamem.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/udataswp.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/udataswp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/uelement.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uenum.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uenumimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uhash.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uhash.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uhash_us.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uidna.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uinit.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uinvchar.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uinvchar.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulayout_props.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ulist.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulist.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ulocimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc_keytype.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uloc_tag.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umapfile.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/umapfile.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umath.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umutablecptrie.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/umutex.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/umutex.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unames.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifiedcache.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unifiedcache.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifilt.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unifunct.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uniquecharstr.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset_closure.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uniset_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unisetspan.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unisetspan.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unistrappender.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_case.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_case_locale.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_cnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unistr_titlecase_brkiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unormcmp.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/unorm.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/unormimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uobject.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uposixdefs.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uprops.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uprops.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uresbund.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ures_cnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uresdata.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uresdata.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/uresimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/ureslocs.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usc_impl.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/usc_impl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uscript.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uscript_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uset.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uset_imp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usetiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uset_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ushape.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/usprep.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustack.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrcase.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrcase_locale.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_cnv.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustr_cnv.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrenum.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustrenum.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrfmt.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/ustrfmt.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/ustr_imp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustring.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_titlecase_brkiter.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustrtrns.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/ustr_wcs.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utext.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utf_impl.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/util.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/util.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/util_props.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrace.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utracimp.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie2_builder.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie2.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utrie2.h">
+      <Filter>source\common</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/utrie2_impl.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utrie.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utrie_swap.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uts46.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/utypeinfo.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/utypes.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvector.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvector.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvectr32.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvectr32.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/uvectr64.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/uvectr64.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/common/wintz.cpp">
+      <Filter>source\common</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/icu/source/common/wintz.h">
+      <Filter>source\common</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/icu/source/stubdata/stubdata.cpp">
+      <Filter>source\stubdata</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

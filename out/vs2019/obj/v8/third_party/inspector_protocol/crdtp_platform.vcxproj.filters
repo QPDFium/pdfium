@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="crdtp">
+      <UniqueIdentifier>{3CCFB064-8431-6829-9415-6A46387B6F04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../v8/third_party/inspector_protocol/crdtp/json_platform.h">
+      <Filter>crdtp</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../v8/third_party/inspector_protocol/crdtp/json_platform_v8.cc">
+      <Filter>crdtp</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

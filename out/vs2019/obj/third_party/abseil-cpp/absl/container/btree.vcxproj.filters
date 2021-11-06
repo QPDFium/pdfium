@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/container/internal/btree.h">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/container/internal/btree_container.h">
+      <Filter>internal</Filter>
+    </None>
+  </ItemGroup>
+</Project>

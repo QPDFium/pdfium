@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fdrm/fx_crypt.cpp" />
+    <None Include="../../../../../core/fdrm/fx_crypt.h" />
+    <CustomBuild Include="../../../../../core/fdrm/fx_crypt_aes.cpp" />
+    <CustomBuild Include="../../../../../core/fdrm/fx_crypt_sha.cpp" />
+  </ItemGroup>
+</Project>

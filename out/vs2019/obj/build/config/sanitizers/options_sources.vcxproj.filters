@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\..\..\build\sanitizers">
+      <UniqueIdentifier>{B425D224-0458-6824-915B-656503C260F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\build">
+      <UniqueIdentifier>{2EA9A752-CA54-BCC6-50BF-D2CCDABA23F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{BC2D405D-5A7E-241B-15FC-441581082017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{A8A4AA46-5437-4AB8-6540-F14ED994B38E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../build/sanitizers/sanitizer_options.cc">
+      <Filter>..\..\..\build\sanitizers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

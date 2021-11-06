@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm">
+      <UniqueIdentifier>{EE7F72C7-EC21-3585-DBAB-2CACD0769E40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\out\vs2019\obj\third_party\libjpeg_turbo">
+      <UniqueIdentifier>{F020A560-3B97-1C97-1A2B-D47E6701F6C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\out\vs2019\obj\third_party">
+      <UniqueIdentifier>{9F39B854-0B76-861F-63A4-94F4C2D13383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\out\vs2019\obj">
+      <UniqueIdentifier>{E0A83EF6-6803-30BF-8FBD-E124EFC4CB30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\out\vs2019">
+      <UniqueIdentifier>{4E0E846B-9413-75AF-F971-945710521A98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\out">
+      <UniqueIdentifier>{F26FF866-925A-C788-6265-891138C06337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{A8A4AA46-5437-4AB8-6540-F14ED994B38E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="simd_asm/jccolor-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jccolor-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jcgray-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jcgray-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jchuff-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jcphuff-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jcsample-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jcsample-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdcolor-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdcolor-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdmerge-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdmerge-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdsample-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jdsample-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jfdctflt-sse.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jfdctfst-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jfdctint-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jfdctint-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jidctflt-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jidctfst-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jidctint-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jidctint-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jidctred-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jquantf-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jquanti-avx2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jquanti-sse2.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="simd_asm/jsimdcpu.o">
+      <Filter>..\..\out\vs2019\obj\third_party\libjpeg_turbo\simd_asm</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

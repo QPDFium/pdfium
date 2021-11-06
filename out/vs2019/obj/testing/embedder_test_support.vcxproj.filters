@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../testing/embedder_test.cpp" />
+    <None Include="../../../../testing/embedder_test.h" />
+    <CustomBuild Include="../../../../testing/embedder_test_constants.cpp" />
+    <None Include="../../../../testing/embedder_test_constants.h" />
+    <CustomBuild Include="../../../../testing/embedder_test_environment.cpp" />
+    <None Include="../../../../testing/embedder_test_environment.h" />
+    <None Include="../../../../testing/embedder_test_mock_delegate.h" />
+    <None Include="../../../../testing/embedder_test_timer_handling_delegate.h" />
+    <CustomBuild Include="../../../../testing/fake_file_access.cpp" />
+    <None Include="../../../../testing/fake_file_access.h" />
+    <CustomBuild Include="../../../../testing/range_set.cpp" />
+    <None Include="../../../../testing/range_set.h" />
+    <CustomBuild Include="../../../../testing/external_engine_embedder_test.cpp" />
+    <None Include="../../../../testing/external_engine_embedder_test.h" />
+    <CustomBuild Include="../../../../testing/js_embedder_test.cpp" />
+    <None Include="../../../../testing/js_embedder_test.h" />
+    <CustomBuild Include="../../../../testing/xfa_js_embedder_test.cpp" />
+    <None Include="../../../../testing/xfa_js_embedder_test.h" />
+  </ItemGroup>
+</Project>

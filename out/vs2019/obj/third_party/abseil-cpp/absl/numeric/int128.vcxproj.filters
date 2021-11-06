@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/numeric/int128.cc" />
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/numeric/int128_have_intrinsic.inc" />
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/numeric/int128_no_intrinsic.inc" />
+  </ItemGroup>
+</Project>

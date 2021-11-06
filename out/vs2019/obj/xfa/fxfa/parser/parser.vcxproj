@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0482AF08-2BBF-EBB0-849D-4596DC68BB52}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>parser</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/xfa/fxfa/parser/parser.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/vs2019/gen;../../../../../../buildtools/third_party/libc++;../../../../../../third_party/freetype/include;../../../../../../third_party/freetype/src/include;../../../../../../third_party/abseil-cpp;../../../../../../third_party/icu/source/common;../../../../../../third_party/icu/source/i18n;../../../../../../v8/include;../../../../../../out/vs2019/gen/v8/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_SHARED;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_datawindow.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_datawindow.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_datawindow.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_datawindow.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_eventpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_eventpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_eventpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_eventpseudomodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_hostpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_hostpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_hostpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_hostpseudomodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_layoutpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_layoutpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_layoutpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_layoutpseudomodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_logpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_logpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_logpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_logpseudomodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cscript_signaturepseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cscript_signaturepseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cscript_signaturepseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cscript_signaturepseudomodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_accessiblecontent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_accessiblecontent.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_accessiblecontent.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_accessiblecontent.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_acrobat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_acrobat.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_acrobat.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_acrobat.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_acrobat7.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_acrobat7.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_acrobat7.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_acrobat7.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_adbe_jsconsole.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_adbe_jsconsole.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_adbe_jsconsole.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_adbe_jsconsole.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_adbe_jsdebugger.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_adbe_jsdebugger.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_adbe_jsdebugger.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_adbe_jsdebugger.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_addsilentprint.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_addsilentprint.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_addsilentprint.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_addsilentprint.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_addviewerpreferences.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_addviewerpreferences.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_addviewerpreferences.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_addviewerpreferences.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_adjustdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_adjustdata.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_adjustdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_adjustdata.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_adobeextensionlevel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_adobeextensionlevel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_adobeextensionlevel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_adobeextensionlevel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_agent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_agent.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_agent.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_agent.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_alwaysembed.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_alwaysembed.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_alwaysembed.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_alwaysembed.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_amd.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_amd.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_amd.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_amd.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_appearancefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_appearancefilter.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_appearancefilter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_appearancefilter.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_arc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_arc.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_arc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_arc.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_area.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_area.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_area.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_area.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_arraynodelist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_arraynodelist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_arraynodelist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_arraynodelist.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_assist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_assist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_assist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_assist.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_attachnodelist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_attachnodelist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_attachnodelist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_attachnodelist.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_attributes.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_attributes.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_attributes.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_attributes.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_autosave.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_autosave.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_autosave.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_autosave.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_barcode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_barcode.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_barcode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_barcode.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_base.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_base.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_base.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_base.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_batchoutput.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_batchoutput.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_batchoutput.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_batchoutput.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_behavioroverride.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_behavioroverride.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_behavioroverride.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_behavioroverride.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_bind.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_bind.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_bind.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_bind.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_binditems.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_binditems.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_binditems.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_binditems.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_bookend.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_bookend.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_bookend.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_bookend.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_boolean.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_boolean.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_boolean.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_boolean.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_border.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_border.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_border.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_border.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_box.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_box.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_box.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_box.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_break.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_break.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_break.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_break.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_breakafter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_breakafter.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_breakafter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_breakafter.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_breakbefore.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_breakbefore.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_breakbefore.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_breakbefore.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_button.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_button.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_button.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_button.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_cache.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_cache.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_cache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_cache.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_calculate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_calculate.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_calculate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_calculate.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_calendarsymbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_calendarsymbols.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_calendarsymbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_calendarsymbols.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_caption.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_caption.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_caption.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_caption.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_certificate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_certificate.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_certificate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_certificate.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_certificates.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_certificates.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_certificates.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_certificates.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_change.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_change.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_change.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_change.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_checkbutton.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_checkbutton.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_checkbutton.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_checkbutton.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_choicelist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_choicelist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_choicelist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_choicelist.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_color.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_color.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_color.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_color.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_comb.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_comb.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_comb.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_comb.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_command.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_command.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_command.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_command.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_common.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_common.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_common.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_common.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_compress.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_compress.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_compress.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_compress.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_compression.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_compression.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_compression.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_compression.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_compresslogicalstructure.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_compresslogicalstructure.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_compresslogicalstructure.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_compresslogicalstructure.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_compressobjectstream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_compressobjectstream.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_compressobjectstream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_compressobjectstream.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_config.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_config.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_config.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_config.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_conformance.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_conformance.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_conformance.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_conformance.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_connect.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_connect.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_connect.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_connect.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_connectionset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_connectionset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_connectionset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_connectionset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_connectstring.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_connectstring.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_connectstring.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_connectstring.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_contentarea.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_contentarea.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_contentarea.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_contentarea.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_contentcopy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_contentcopy.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_contentcopy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_contentcopy.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_copies.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_copies.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_copies.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_copies.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_corner.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_corner.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_corner.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_corner.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_creator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_creator.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_creator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_creator.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_currencysymbol.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_currencysymbol.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_currencysymbol.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_currencysymbol.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_currencysymbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_currencysymbols.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_currencysymbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_currencysymbols.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_currentpage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_currentpage.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_currentpage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_currentpage.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_data.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_data.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_data.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_data.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_dataexporter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_dataexporter.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_dataexporter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_dataexporter.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datagroup.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datagroup.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datagroup.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datagroup.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datamodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datamodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datamodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datamodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datavalue.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datavalue.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datavalue.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datavalue.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_date.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_date.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_date.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_date.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datepattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datepattern.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datepattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datepattern.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datepatterns.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datepatterns.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datepatterns.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datepatterns.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datetime.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datetime.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datetime.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datetime.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datetimeedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datetimeedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datetimeedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datetimeedit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_datetimesymbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_datetimesymbols.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_datetimesymbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_datetimesymbols.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_day.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_day.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_day.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_day.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_daynames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_daynames.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_daynames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_daynames.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_debug.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_debug.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_debug.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_debug.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_decimal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_decimal.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_decimal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_decimal.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_defaulttypeface.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_defaulttypeface.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_defaulttypeface.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_defaulttypeface.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_defaultui.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_defaultui.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_defaultui.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_defaultui.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_delete.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_delete.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_delete.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_delete.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_delta.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_delta.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_delta.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_delta.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_desc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_desc.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_desc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_desc.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_destination.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_destination.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_destination.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_destination.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_digestmethod.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_digestmethod.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_digestmethod.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_digestmethod.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_digestmethods.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_digestmethods.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_digestmethods.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_digestmethods.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_document.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_document.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_document.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_document.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_document_builder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_document_builder.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_document_builder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_document_builder.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_documentassembly.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_documentassembly.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_documentassembly.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_documentassembly.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_draw.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_draw.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_draw.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_draw.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_driver.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_driver.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_driver.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_driver.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_dsigdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_dsigdata.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_dsigdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_dsigdata.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_duplexoption.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_duplexoption.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_duplexoption.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_duplexoption.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_dynamicrender.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_dynamicrender.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_dynamicrender.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_dynamicrender.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_edge.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_edge.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_edge.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_edge.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_effectiveinputpolicy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_effectiveinputpolicy.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_effectiveinputpolicy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_effectiveinputpolicy.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_effectiveoutputpolicy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_effectiveoutputpolicy.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_effectiveoutputpolicy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_effectiveoutputpolicy.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_embed.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_embed.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_embed.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_embed.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encoding.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encoding.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encoding.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encoding.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encodings.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encodings.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encodings.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encodings.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encrypt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encrypt.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encrypt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encrypt.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encryption.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encryption.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encryption.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encryption.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionlevel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encryptionlevel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encryptionlevel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionlevel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionmethod.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encryptionmethod.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encryptionmethod.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionmethod.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionmethods.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_encryptionmethods.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_encryptionmethods.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_encryptionmethods.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_enforce.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_enforce.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_enforce.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_enforce.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_equate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_equate.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_equate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_equate.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_equaterange.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_equaterange.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_equaterange.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_equaterange.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_era.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_era.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_era.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_era.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_eranames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_eranames.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_eranames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_eranames.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_event.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_event.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_event.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_event.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_exclgroup.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_exclgroup.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_exclgroup.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_exclgroup.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_exclude.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_exclude.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_exclude.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_exclude.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_excludens.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_excludens.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_excludens.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_excludens.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_exdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_exdata.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_exdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_exdata.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_execute.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_execute.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_execute.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_execute.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_exobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_exobject.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_exobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_exobject.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_extras.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_extras.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_extras.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_extras.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_field.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_field.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_field.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_field.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_fill.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_fill.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_fill.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_fill.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_filter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_filter.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_filter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_filter.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_fliplabel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_fliplabel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_fliplabel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_fliplabel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_float.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_float.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_float.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_float.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_font.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_font.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_font.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_font.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_fontinfo.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_fontinfo.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_fontinfo.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_fontinfo.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_form.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_form.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_form.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_form.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_format.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_format.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_format.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_format.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_formfieldfilling.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_formfieldfilling.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_formfieldfilling.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_formfieldfilling.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_groupparent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_groupparent.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_groupparent.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_groupparent.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_handler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_handler.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_handler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_handler.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_hyphenation.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_hyphenation.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_hyphenation.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_hyphenation.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_ifempty.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_ifempty.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_ifempty.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_ifempty.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_image.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_image.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_image.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_image.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_imageedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_imageedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_imageedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_imageedit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_includexdpcontent.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_includexdpcontent.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_includexdpcontent.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_includexdpcontent.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_incrementalload.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_incrementalload.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_incrementalload.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_incrementalload.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_incrementalmerge.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_incrementalmerge.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_incrementalmerge.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_incrementalmerge.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_insert.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_insert.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_insert.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_insert.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_instancemanager.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_instancemanager.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_instancemanager.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_instancemanager.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_integer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_integer.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_integer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_integer.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_interactive.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_interactive.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_interactive.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_interactive.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_issuers.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_issuers.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_issuers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_issuers.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_items.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_items.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_items.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_items.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_jog.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_jog.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_jog.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_jog.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_keep.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_keep.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_keep.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_keep.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_keyusage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_keyusage.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_keyusage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_keyusage.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_labelprinter.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_labelprinter.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_labelprinter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_labelprinter.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_layout.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_layout.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_layout.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_layout.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_level.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_level.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_level.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_level.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_line.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_line.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_line.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_line.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_linear.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_linear.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_linear.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_linear.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_linearized.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_linearized.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_linearized.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_linearized.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_list.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_list.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_list.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_list.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_locale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_locale.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_locale.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_locale.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_localemgr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_localemgr.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_localemgr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_localemgr.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_localeset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_localeset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_localeset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_localeset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_localevalue.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_localevalue.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_localevalue.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_localevalue.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_lockdocument.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_lockdocument.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_lockdocument.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_lockdocument.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_log.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_log.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_log.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_log.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_manifest.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_manifest.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_manifest.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_manifest.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_map.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_map.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_map.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_map.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_margin.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_margin.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_margin.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_margin.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_mdp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_mdp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_mdp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_mdp.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_measurement.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_measurement.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_measurement.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_measurement.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_medium.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_medium.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_medium.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_medium.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_mediuminfo.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_mediuminfo.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_mediuminfo.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_mediuminfo.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_meridiem.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_meridiem.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_meridiem.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_meridiem.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_meridiemnames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_meridiemnames.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_meridiemnames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_meridiemnames.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_message.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_message.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_message.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_message.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_messaging.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_messaging.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_messaging.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_messaging.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_mode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_mode.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_mode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_mode.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_modifyannots.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_modifyannots.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_modifyannots.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_modifyannots.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_month.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_month.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_month.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_month.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_monthnames.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_monthnames.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_monthnames.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_monthnames.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_msgid.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_msgid.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_msgid.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_msgid.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_nameattr.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_nameattr.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_nameattr.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_nameattr.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_neverembed.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_neverembed.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_neverembed.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_neverembed.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_node.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_node.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_node.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_node.h" />
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_nodeiteratortemplate.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_nodelocale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_nodelocale.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_nodelocale.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_nodelocale.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_nodeowner.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_nodeowner.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_nodeowner.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_nodeowner.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numberofcopies.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numberofcopies.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numberofcopies.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numberofcopies.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numberpattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numberpattern.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numberpattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numberpattern.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numberpatterns.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numberpatterns.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numberpatterns.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numberpatterns.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numbersymbol.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numbersymbol.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numbersymbol.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numbersymbol.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numbersymbols.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numbersymbols.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numbersymbols.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numbersymbols.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_numericedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_numericedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_numericedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_numericedit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_object.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_object.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_object.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_object.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_occur.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_occur.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_occur.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_occur.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_oid.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_oid.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_oid.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_oid.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_oids.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_oids.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_oids.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_oids.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_openaction.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_openaction.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_openaction.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_openaction.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_operation.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_operation.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_operation.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_operation.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_output.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_output.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_output.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_output.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_outputbin.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_outputbin.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_outputbin.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_outputbin.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_outputxsl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_outputxsl.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_outputxsl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_outputxsl.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_overflow.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_overflow.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_overflow.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_overflow.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_overprint.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_overprint.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_overprint.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_overprint.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_packet.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_packet.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_packet.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_packet.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_packets.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_packets.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_packets.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_packets.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pagearea.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pagearea.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pagearea.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pagearea.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pageoffset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pageoffset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pageoffset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pageoffset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pagerange.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pagerange.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pagerange.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pagerange.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pageset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pageset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pageset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pageset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pagination.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pagination.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pagination.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pagination.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_paginationoverride.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_paginationoverride.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_paginationoverride.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_paginationoverride.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_para.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_para.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_para.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_para.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_part.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_part.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_part.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_part.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_password.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_password.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_password.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_password.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_passwordedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_passwordedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_passwordedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_passwordedit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pattern.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pattern.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pcl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pcl.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pcl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pcl.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pdf.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pdf.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pdf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pdf.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_pdfa.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_pdfa.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_pdfa.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_pdfa.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_permissions.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_permissions.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_permissions.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_permissions.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_picktraybypdfsize.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_picktraybypdfsize.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_picktraybypdfsize.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_picktraybypdfsize.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_picture.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_picture.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_picture.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_picture.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_plaintextmetadata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_plaintextmetadata.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_plaintextmetadata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_plaintextmetadata.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_presence.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_presence.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_presence.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_presence.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_present.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_present.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_present.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_present.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_print.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_print.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_print.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_print.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_printername.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_printername.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_printername.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_printername.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_printhighquality.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_printhighquality.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_printhighquality.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_printhighquality.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_printscaling.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_printscaling.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_printscaling.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_printscaling.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_producer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_producer.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_producer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_producer.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_proto.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_proto.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_proto.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_proto.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_ps.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_ps.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_ps.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_ps.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_psmap.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_psmap.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_psmap.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_psmap.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_query.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_query.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_query.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_query.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_radial.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_radial.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_radial.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_radial.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_range.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_range.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_range.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_range.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_reason.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_reason.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_reason.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_reason.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_reasons.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_reasons.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_reasons.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_reasons.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_record.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_record.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_record.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_record.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_recordset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_recordset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_recordset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_recordset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_rectangle.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_rectangle.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_rectangle.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_rectangle.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_ref.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_ref.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_ref.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_ref.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_relevant.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_relevant.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_relevant.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_relevant.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_rename.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_rename.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_rename.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_rename.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_renderpolicy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_renderpolicy.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_renderpolicy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_renderpolicy.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_rootelement.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_rootelement.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_rootelement.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_rootelement.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_runscripts.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_runscripts.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_runscripts.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_runscripts.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_script.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_script.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_script.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_script.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_scriptmodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_scriptmodel.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_scriptmodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_scriptmodel.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_select.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_select.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_select.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_select.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_setproperty.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_setproperty.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_setproperty.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_setproperty.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_severity.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_severity.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_severity.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_severity.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_sharptext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_sharptext.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_sharptext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_sharptext.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_sharpxhtml.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_sharpxhtml.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_sharpxhtml.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_sharpxhtml.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_sharpxml.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_sharpxml.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_sharpxml.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_sharpxml.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_signature.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_signature.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_signature.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_signature.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_signatureproperties.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_signatureproperties.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_signatureproperties.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_signatureproperties.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_signdata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_signdata.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_signdata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_signdata.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_signing.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_signing.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_signing.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_signing.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_silentprint.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_silentprint.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_silentprint.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_silentprint.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_soapaction.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_soapaction.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_soapaction.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_soapaction.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_soapaddress.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_soapaddress.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_soapaddress.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_soapaddress.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_solid.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_solid.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_solid.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_solid.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_source.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_source.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_source.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_source.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_sourceset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_sourceset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_sourceset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_sourceset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_speak.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_speak.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_speak.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_speak.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_staple.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_staple.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_staple.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_staple.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_startnode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_startnode.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_startnode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_startnode.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_startpage.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_startpage.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_startpage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_startpage.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_stipple.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_stipple.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_stipple.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_stipple.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_stroke.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_stroke.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_stroke.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_stroke.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_subform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_subform.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_subform.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_subform.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_subformset.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_subformset.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_subformset.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_subformset.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_subjectdn.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_subjectdn.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_subjectdn.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_subjectdn.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_subjectdns.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_subjectdns.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_subjectdns.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_subjectdns.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_submit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_submit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_submit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_submit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_submitformat.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_submitformat.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_submitformat.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_submitformat.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_submiturl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_submiturl.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_submiturl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_submiturl.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_subsetbelow.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_subsetbelow.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_subsetbelow.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_subsetbelow.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_suppressbanner.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_suppressbanner.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_suppressbanner.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_suppressbanner.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_tagged.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_tagged.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_tagged.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_tagged.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_template.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_template.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_template.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_template.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_templatecache.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_templatecache.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_templatecache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_templatecache.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_text.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_text.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_text.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_text.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_textedit.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_textedit.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_textedit.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_textedit.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_thisproxy.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_thisproxy.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_thisproxy.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_thisproxy.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_threshold.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_threshold.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_threshold.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_threshold.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_time.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_time.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_time.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_time.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_timepattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_timepattern.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_timepattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_timepattern.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_timepatterns.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_timepatterns.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_timepatterns.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_timepatterns.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_timestamp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_timestamp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_timestamp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_timestamp.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_timezoneprovider.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_timezoneprovider.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_timezoneprovider.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_timezoneprovider.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_to.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_to.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_to.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_to.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_tooltip.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_tooltip.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_tooltip.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_tooltip.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_trace.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_trace.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_trace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_trace.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_transform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_transform.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_transform.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_transform.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_traversal.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_traversal.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_traversal.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_traversal.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_traverse.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_traverse.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_traverse.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_traverse.h" />
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_traversestrategy_xfacontainernode.h" />
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_traversestrategy_xfanode.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_treelist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_treelist.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_treelist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_treelist.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_type.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_type.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_type.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_type.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_typeface.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_typeface.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_typeface.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_typeface.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_typefaces.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_typefaces.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_typefaces.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_typefaces.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_ui.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_ui.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_ui.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_ui.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_update.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_update.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_update.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_update.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_uri.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_uri.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_uri.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_uri.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_user.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_user.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_user.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_user.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_validate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_validate.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_validate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_validate.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_validateapprovalsignatures.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_validateapprovalsignatures.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_validateapprovalsignatures.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_validateapprovalsignatures.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_validationmessaging.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_validationmessaging.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_validationmessaging.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_validationmessaging.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_value.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_value.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_value.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_value.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_variables.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_variables.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_variables.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_variables.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_version.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_version.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_version.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_version.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_versioncontrol.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_versioncontrol.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_versioncontrol.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_versioncontrol.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_viewerpreferences.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_viewerpreferences.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_viewerpreferences.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_viewerpreferences.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_webclient.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_webclient.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_webclient.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_webclient.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_whitespace.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_whitespace.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_whitespace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_whitespace.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_window.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_window.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_window.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_window.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_wsdladdress.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_wsdladdress.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_wsdladdress.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_wsdladdress.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_wsdlconnection.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_wsdlconnection.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_wsdlconnection.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_wsdlconnection.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xdc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xdc.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xdc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xdc.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xdp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xdp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xdp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xdp.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xfa.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xfa.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xfa.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xfa.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xmlconnection.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xmlconnection.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xmlconnection.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xmlconnection.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xmllocale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xmllocale.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xmllocale.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xmllocale.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xsdconnection.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xsdconnection.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xsdconnection.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xsdconnection.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_xsl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_xsl.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_xsl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_xsl.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/cxfa_zpl.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/cxfa_zpl.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/cxfa_zpl.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/cxfa_zpl.h" />
+    <None Include="../../../../../../xfa/fxfa/parser/gced_locale_iface.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/xfa_basic_data.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/xfa_basic_data.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/xfa_basic_data.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/xfa_basic_data.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/xfa_document_datamerger_imp.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/xfa_document_datamerger_imp.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/xfa_document_datamerger_imp.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/xfa_document_datamerger_imp.h" />
+    <CustomBuild Include="../../../../../../xfa/fxfa/parser/xfa_utils.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser/xfa_utils.obj</Command>
+      <Outputs>$(OutDir)obj/xfa/fxfa/parser/parser/xfa_utils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../xfa/fxfa/parser/xfa_utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/xfa/fxfa/parser/parser.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/xfa/fxfa/parser/parser.stamp" />
+  </Target>
+</Project>

@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CDA20820-A099-8E8B-9A87-00A388DFB5FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cctest_sources</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/v8/test/cctest/cctest_sources.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/vs2019/gen;../../../../../../buildtools/third_party/libc++;../../../../../../v8/include;../../../../../../out/vs2019/gen/v8/include;../../../../../../v8;../../../../../../out/vs2019/gen/v8;../../../../../../third_party/icu/source/common;../../../../../../third_party/icu/source/i18n;../../../../../../v8/tools/debug_helper;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wmissing-field-initializers -Wno-shadow -Wunreachable-code -Wshorten-64-to-32 /Ob2 /Oy- /Zc:inline /Gw -Wno-string-concatenation %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4309;4996;4245;4267;4324;4701;4702;4703;4709;4714;4715;4718;4723;4724;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>V8_INTL_SUPPORT;USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;V8_TYPED_ARRAY_MAX_SIZE_IN_HEAP=64;ENABLE_MINOR_MC;ENABLE_HANDLE_ZAPPING;V8_ATOMIC_OBJECT_FIELD_WRITES;V8_ATOMIC_MARKING_STATE;V8_ENABLE_LAZY_SOURCE_POSITIONS;V8_SHARED_RO_HEAP;V8_WIN64_UNWINDING_INFO;V8_ENABLE_REGEXP_INTERPRETER_THREADED_DISPATCH;V8_SNAPSHOT_COMPRESSION;V8_SHORT_BUILTIN_CALLS;V8_ENABLE_SYSTEM_INSTRUMENTATION;V8_ALLOCATION_FOLDING;V8_ALLOCATION_SITE_TRACKING;V8_ADVANCED_BIGINT_ALGORITHMS;V8_INCLUDE_RECEIVER_IN_ARGC;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;V8_TARGET_ARCH_X64;V8_HAVE_TARGET_OS;V8_TARGET_OS_WIN;V8_RUNTIME_CALL_STATS;USING_V8_SHARED;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;USING_V8_DEBUG_HELPER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../../v8/test/common/assembler-tester.h" />
+    <None Include="../../../../../../v8/test/common/flag-utils.h" />
+    <None Include="../../../../../../v8/test/cctest/cctest-utils.h" />
+    <None Include="../../../../../../v8/test/cctest/collector.h" />
+    <None Include="../../../../../../v8/test/cctest/compiler/c-signature.h" />
+    <None Include="../../../../../../v8/test/cctest/compiler/call-tester.h" />
+    <None Include="../../../../../../v8/test/cctest/compiler/code-assembler-tester.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/codegen-tester.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/codegen-tester.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/codegen-tester.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/codegen-tester.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/function-tester.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/function-tester.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/function-tester.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/function-tester.h" />
+    <None Include="../../../../../../v8/test/cctest/compiler/node-observer-tester.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-atomic-load-store-codegen.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-atomic-load-store-codegen.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-atomic-load-store-codegen.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-basic-block-profiler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-basic-block-profiler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-basic-block-profiler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-branch-combine.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-branch-combine.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-branch-combine.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-calls-with-arraylike-or-spread.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-calls-with-arraylike-or-spread.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-calls-with-arraylike-or-spread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-code-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-code-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-code-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-code-generator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-code-generator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-code-generator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-concurrent-shared-function-info.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-shared-function-info.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-shared-function-info.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-gap-resolver.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-gap-resolver.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-gap-resolver.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-graph-visualizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-graph-visualizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-graph-visualizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-instruction-scheduler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-instruction-scheduler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-instruction-scheduler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-instruction.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-instruction.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-instruction.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-constant-cache.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-js-constant-cache.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-js-constant-cache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-context-specialization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-js-context-specialization.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-js-context-specialization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-js-typed-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-js-typed-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-js-typed-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-jump-threading.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-jump-threading.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-jump-threading.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-linkage.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-linkage.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-linkage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-loop-analysis.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-loop-analysis.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-loop-analysis.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-machine-operator-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-machine-operator-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-machine-operator-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-node.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-node.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-node.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-representation-change.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-representation-change.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-representation-change.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-bytecode-graph-builder.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-bytecode-graph-builder.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-bytecode-graph-builder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-calls-to-external-references.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-calls-to-external-references.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-calls-to-external-references.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-deopt.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-deopt.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-deopt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsbranches.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-jsbranches.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-jsbranches.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jscalls.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-jscalls.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-jscalls.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsexceptions.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-jsexceptions.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-jsexceptions.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsobjects.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-jsobjects.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-jsobjects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-jsops.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-jsops.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-jsops.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-load-store.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-load-store.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-load-store.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-machops.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-machops.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-machops.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-stackcheck.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-stackcheck.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-stackcheck.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-tail-calls.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-tail-calls.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-tail-calls.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-unwinding-info.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-unwinding-info.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-unwinding-info.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-run-variables.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-run-variables.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-run-variables.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-sloppy-equality.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-sloppy-equality.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-sloppy-equality.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/test-verify-type.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-verify-type.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-verify-type.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/compiler/value-helper.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/value-helper.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/value-helper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/compiler/value-helper.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/disasm-regex-helper.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/disasm-regex-helper.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/disasm-regex-helper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/disasm-regex-helper.h" />
+    <None Include="../../../../../../v8/test/cctest/expression-type-collector-macros.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-fixed.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/gay-fixed.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/gay-fixed.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/gay-fixed.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-precision.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/gay-precision.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/gay-precision.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/gay-precision.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/gay-shortest.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/gay-shortest.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/gay-shortest.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/gay-shortest.h" />
+    <None Include="../../../../../../v8/test/cctest/heap/heap-tester.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/heap-utils.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/heap-utils.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/heap-utils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/heap/heap-utils.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-alloc.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-alloc.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-alloc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-array-buffer-tracker.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-array-buffer-tracker.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-array-buffer-tracker.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-compaction.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-compaction.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-compaction.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-concurrent-allocation.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-allocation.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-allocation.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-concurrent-marking.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-marking.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-marking.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-embedder-tracing.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-embedder-tracing.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-embedder-tracing.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-external-string-tracker.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-external-string-tracker.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-external-string-tracker.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-heap.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-heap.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-heap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-incremental-marking.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-incremental-marking.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-incremental-marking.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-invalidated-slots.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-invalidated-slots.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-invalidated-slots.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-iterators.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-iterators.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-iterators.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-lab.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-lab.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-lab.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-mark-compact.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-mark-compact.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-mark-compact.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-memory-measurement.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-memory-measurement.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-memory-measurement.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-page-promotion.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-page-promotion.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-page-promotion.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-shared-heap.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-shared-heap.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-shared-heap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-spaces.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-spaces.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-spaces.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-unmapper.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-unmapper.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-unmapper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-weak-references.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-weak-references.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-weak-references.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/heap/test-write-barrier.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-write-barrier.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-write-barrier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/bytecode-expectations-printer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/bytecode-expectations-printer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/bytecode-expectations-printer.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/interpreter-tester.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/interpreter-tester.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/interpreter-tester.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/interpreter-tester.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/source-position-matcher.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/source-position-matcher.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/source-position-matcher.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/interpreter/source-position-matcher.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-bytecode-generator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-bytecode-generator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-bytecode-generator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-interpreter-intrinsics.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-interpreter-intrinsics.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-interpreter-intrinsics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-interpreter.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-interpreter.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-interpreter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/interpreter/test-source-positions.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-source-positions.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-source-positions.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libplatform/test-tracing.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-tracing.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-tracing.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libsampler/signals-and-mutexes.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/signals-and-mutexes.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/signals-and-mutexes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/libsampler/test-sampler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-sampler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-sampler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/manually-externalized-buffer.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-parse-decision.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-parse-decision.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-parse-decision.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-preparser.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-preparser.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-preparser.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-scanner-streams.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-scanner-streams.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-scanner-streams.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/parsing/test-scanner.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-scanner.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-scanner.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/print-extension.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/print-extension.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/print-extension.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/print-extension.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/profiler-extension.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/profiler-extension.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/profiler-extension.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/profiler-extension.h" />
+    <None Include="../../../../../../v8/test/cctest/scope-test-helper.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/setup-isolate-for-tests.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/setup-isolate-for-tests.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/setup-isolate-for-tests.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/setup-isolate-for-tests.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-access-checks.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-access-checks.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-access-checks.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-accessor-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-accessor-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-accessor-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-accessors.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-accessors.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-accessors.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-allocation.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-allocation.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-allocation.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-accessors.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-accessors.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-accessors.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-array-buffer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-array-buffer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-array-buffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-icu.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-icu.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-icu.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-interceptors.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-interceptors.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-interceptors.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-stack-traces.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-stack-traces.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-stack-traces.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api-typed-array.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api-typed-array.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api-typed-array.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-api.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-api.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-api.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/test-api.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-array-list.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-array-list.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-array-list.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-atomicops.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-atomicops.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-atomicops.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bignum-dtoa.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-bignum-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-bignum-dtoa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bignum.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-bignum.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-bignum.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-bit-vector.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-bit-vector.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-bit-vector.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-circular-queue.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-circular-queue.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-circular-queue.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-layout.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-code-layout.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-code-layout.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-pages.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-code-pages.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-code-pages.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-code-stub-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-code-stub-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-code-stub-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-compiler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-compiler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-compiler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-descriptor-array.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-descriptor-array.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-descriptor-array.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-feedback-vector.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-feedback-vector.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-feedback-vector.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-js-array.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-js-array.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-js-array.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-prototype.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-prototype.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-prototype.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-script-context-table.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-script-context-table.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-script-context-table.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-string.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-string.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-string.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-concurrent-transition-array.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-concurrent-transition-array.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-concurrent-transition-array.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-constantpool.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-constantpool.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-constantpool.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-conversions.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-conversions.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-conversions.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-cpu-profiler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-cpu-profiler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-cpu-profiler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-date.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-date.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-date.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-debug-helper.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-debug-helper.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-debug-helper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-debug.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-debug.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-debug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-decls.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-decls.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-decls.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-deoptimization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-deoptimization.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-deoptimization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-descriptor-array.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-descriptor-array.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-descriptor-array.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-dictionary.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-dictionary.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-dictionary.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-diy-fp.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-diy-fp.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-diy-fp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-double.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-double.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-double.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-dtoa.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-dtoa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-elements-kind.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-elements-kind.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-elements-kind.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-factory.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-factory.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-factory.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-fast-dtoa.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-fast-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-fast-dtoa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-feedback-vector.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-feedback-vector.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-feedback-vector.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/test-feedback-vector.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-field-type-tracking.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-field-type-tracking.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-field-type-tracking.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-fixed-dtoa.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-fixed-dtoa.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-fixed-dtoa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-flags.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-flags.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-flags.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-func-name-inference.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-func-name-inference.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-func-name-inference.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-global-handles.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-global-handles.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-global-handles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-global-object.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-global-object.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-global-object.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-hashcode.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-hashcode.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-hashcode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-hashmap.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-hashmap.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-hashmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-heap-profiler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-heap-profiler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-heap-profiler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-icache.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-icache.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-icache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-identity-map.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-identity-map.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-identity-map.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-ignition-statistics-extension.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-ignition-statistics-extension.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-ignition-statistics-extension.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-inobject-slack-tracking.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-inobject-slack-tracking.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-inobject-slack-tracking.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-inspector.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-inspector.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-inspector.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-intl.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-intl.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-intl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-js-weak-refs.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-js-weak-refs.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-js-weak-refs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-liveedit.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-liveedit.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-liveedit.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-local-handles.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-local-handles.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-local-handles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-lockers.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-lockers.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-lockers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-log.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-log.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-log.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-managed.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-managed.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-managed.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-mementos.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-mementos.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-mementos.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-modules.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-modules.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-modules.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-object.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-object.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-object.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-orderedhashtable.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-orderedhashtable.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-orderedhashtable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-parsing.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-parsing.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-parsing.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-persistent-handles.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-persistent-handles.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-persistent-handles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-platform.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-platform.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-platform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-profile-generator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-profile-generator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-profile-generator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-property-details.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-property-details.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-property-details.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-ptr-compr-cage.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-ptr-compr-cage.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-ptr-compr-cage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-random-number-generator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-random-number-generator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-random-number-generator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-regexp.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-regexp.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-regexp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-representation.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-representation.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-representation.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-roots.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-roots.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-roots.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-sampler-api.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-sampler-api.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-sampler-api.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-serialize.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-serialize.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-serialize.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-shared-strings.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-shared-strings.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-shared-strings.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-smi-lexicographic-compare.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-smi-lexicographic-compare.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-smi-lexicographic-compare.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-strings.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-strings.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-strings.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-strtod.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-strtod.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-strtod.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary-csa.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary-csa.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary-csa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary-infra.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary-infra.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary-infra.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-swiss-name-dictionary.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-swiss-name-dictionary.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-symbols.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-symbols.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-symbols.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-thread-termination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-thread-termination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-thread-termination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-threads.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-threads.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-threads.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-trace-event.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-trace-event.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-trace-event.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-traced-value.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-traced-value.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-traced-value.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-transitions.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-transitions.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-transitions.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/test-transitions.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-typedarrays.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-typedarrays.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-typedarrays.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-types.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-types.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-types.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-unscopables-hidden-prototype.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-unscopables-hidden-prototype.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-unscopables-hidden-prototype.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-unwinder-code-pages.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-unwinder-code-pages.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-unwinder-code-pages.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-usecounters.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-usecounters.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-usecounters.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-utils.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-utils.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-utils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-verifiers.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-verifiers.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-verifiers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-version.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-version.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-version.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-weakmaps.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-weakmaps.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-weakmaps.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-weaksets.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-weaksets.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-weaksets.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-web-snapshots.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-web-snapshots.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-web-snapshots.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/torque/test-torque.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-torque.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-torque.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/trace-extension.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/trace-extension.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/trace-extension.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/trace-extension.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/unicode-helpers.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/unicode-helpers.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/unicode-helpers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../v8/test/cctest/unicode-helpers.h" />
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-assembler-x64.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-assembler-x64.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-assembler-x64.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-disasm-x64.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-disasm-x64.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-disasm-x64.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-log-stack-tracer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-log-stack-tracer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-log-stack-tracer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-macro-assembler-x64.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-macro-assembler-x64.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-macro-assembler-x64.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-stack-unwinding-win64.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-stack-unwinding-win64.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-stack-unwinding-win64.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../v8/test/cctest/test-v8windbg.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources/test-v8windbg.obj</Command>
+      <Outputs>$(OutDir)obj/v8/test/cctest/cctest_sources/test-v8windbg.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/v8/test/cctest/cctest_sources.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/v8/test/cctest/cctest_sources.stamp" />
+  </Target>
+</Project>

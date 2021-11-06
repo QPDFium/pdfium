@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/time/civil_time.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/time/clock.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/time/duration.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/time/format.cc" />
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/time/internal/get_current_time_chrono.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/time/internal/get_current_time_posix.inc">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/time/time.cc" />
+  </ItemGroup>
+</Project>

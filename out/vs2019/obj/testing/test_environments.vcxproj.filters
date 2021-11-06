@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../testing/pdf_test_environment.cpp" />
+    <None Include="../../../../testing/pdf_test_environment.h" />
+    <CustomBuild Include="../../../../testing/v8_test_environment.cpp" />
+    <None Include="../../../../testing/v8_test_environment.h" />
+    <CustomBuild Include="../../../../testing/xfa_test_environment.cpp" />
+    <None Include="../../../../testing/xfa_test_environment.h" />
+  </ItemGroup>
+</Project>

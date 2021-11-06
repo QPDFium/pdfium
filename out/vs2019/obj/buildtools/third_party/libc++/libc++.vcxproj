@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3BC42C09-6FA1-65BF-213C-282D6781EC0B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libc++</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\libc++.dll.lib</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/vs2019/gen;../../../../../../buildtools/third_party/libc++;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -fstrict-aliasing -Wno-macro-redefined -std:c++17 -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /EHsc /GR %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_LIBCPP_BUILDING_LIBRARY;USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;NTDDI_VERSION=NTDDI_WIN7;_WIN32_WINNT=_WIN32_WINNT_WIN7;WINVER=_WIN32_WINNT_WIN7;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/algorithm.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/algorithm.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/algorithm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/any.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/any.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/any.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/atomic.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/atomic.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/atomic.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/barrier.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/barrier.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/barrier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/bind.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/bind.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/bind.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/charconv.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/charconv.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/charconv.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/chrono.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/chrono.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/chrono.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/condition_variable.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/condition_variable.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/condition_variable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/condition_variable_destructor.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/condition_variable_destructor.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/condition_variable_destructor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/debug.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/debug.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/debug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/exception.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/exception.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/exception.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/functional.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/functional.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/functional.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/future.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/future.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/future.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/hash.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/hash.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/hash.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/ios.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/ios.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/ios.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/ios.instantiations.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/ios.instantiations.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/ios.instantiations.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/iostream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/iostream.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/iostream.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/locale.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/locale.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/locale.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/memory.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/memory.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/memory.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/mutex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/mutex.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/mutex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/mutex_destructor.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/mutex_destructor.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/mutex_destructor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/new.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/new.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/new.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/optional.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/optional.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/optional.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/random.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/random.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/random.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/random_shuffle.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/random_shuffle.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/random_shuffle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/regex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/regex.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/regex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/shared_mutex.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/shared_mutex.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/shared_mutex.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/stdexcept.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/stdexcept.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/stdexcept.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/string.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/string.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/string.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/strstream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/strstream.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/strstream.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/system_error.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/system_error.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/system_error.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/thread.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/thread.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/thread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/typeinfo.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/typeinfo.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/typeinfo.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/utility.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/utility.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/utility.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/valarray.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/valarray.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/valarray.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/variant.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/variant.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/variant.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/vector.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/vector.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/vector.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/locale_win32.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/locale_win32.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/locale_win32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/support.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/support.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/support.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../buildtools/third_party/libc++/trunk/src/support/win32/thread_win32.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/buildtools/third_party/libc++/libc++/thread_win32.obj</Command>
+      <Outputs>$(OutDir)obj/buildtools/third_party/libc++/libc++/thread_win32.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  libc++.dll.lib" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean libc++.dll.lib" />
+  </Target>
+</Project>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{623695F3-CFEB-2834-F7F8-4705AA8D485C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>v8_compiler_opt</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/v8/v8_compiler_opt.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../v8;../../../../v8/include;../../../../out/vs2019/gen/v8;../../../../out/vs2019/gen/v8/include;../../../../third_party/icu/source/common;../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wmissing-field-initializers -Wno-shadow -Wunreachable-code -Wshorten-64-to-32 /Ob2 /Oy- /Zc:inline /Gw -Wexit-time-destructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4245;4267;4324;4701;4702;4703;4709;4714;4715;4718;4723;4724;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;V8_TYPED_ARRAY_MAX_SIZE_IN_HEAP=64;ENABLE_MINOR_MC;V8_INTL_SUPPORT;ENABLE_HANDLE_ZAPPING;V8_ATOMIC_OBJECT_FIELD_WRITES;V8_ATOMIC_MARKING_STATE;V8_ENABLE_LAZY_SOURCE_POSITIONS;V8_SHARED_RO_HEAP;V8_WIN64_UNWINDING_INFO;V8_ENABLE_REGEXP_INTERPRETER_THREADED_DISPATCH;V8_SNAPSHOT_COMPRESSION;V8_SHORT_BUILTIN_CALLS;V8_ENABLE_SYSTEM_INSTRUMENTATION;V8_ALLOCATION_FOLDING;V8_ALLOCATION_SITE_TRACKING;V8_ADVANCED_BIGINT_ALGORITHMS;V8_INCLUDE_RECEIVER_IN_ARGC;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;V8_TARGET_ARCH_X64;V8_HAVE_TARGET_OS;V8_TARGET_OS_WIN;V8_RUNTIME_CALL_STATS;BUILDING_V8_SHARED;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/compiler/access-builder.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/access-builder.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/access-builder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/access-info.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/access-info.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/access-info.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/add-type-assertions-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/add-type-assertions-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/add-type-assertions-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/all-nodes.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/all-nodes.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/all-nodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/code-generator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/code-generator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/code-generator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/frame-elider.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/frame-elider.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/frame-elider.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/gap-resolver.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/gap-resolver.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/gap-resolver.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction-scheduler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/instruction-scheduler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/instruction-scheduler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction-selector.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/instruction-selector.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/instruction-selector.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/instruction.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/instruction.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/instruction.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/jump-threading.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/jump-threading.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/jump-threading.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/mid-tier-register-allocator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/mid-tier-register-allocator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/mid-tier-register-allocator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/move-optimizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/move-optimizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/move-optimizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/register-allocator-verifier.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/register-allocator-verifier.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/register-allocator-verifier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/register-allocator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/register-allocator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/register-allocator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/spill-placer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/spill-placer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/spill-placer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/basic-block-instrumentor.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/basic-block-instrumentor.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/basic-block-instrumentor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/branch-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/branch-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/branch-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-analysis.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/bytecode-analysis.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/bytecode-analysis.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-graph-builder.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/bytecode-graph-builder.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/bytecode-graph-builder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/bytecode-liveness-map.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/bytecode-liveness-map.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/bytecode-liveness-map.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/c-linkage.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/c-linkage.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/c-linkage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/checkpoint-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/checkpoint-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/checkpoint-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/code-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/code-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/code-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-node-cache.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/common-node-cache.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/common-node-cache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-operator-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/common-operator-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/common-operator-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/common-operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/common-operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/common-operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/compilation-dependencies.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/compilation-dependencies.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/compilation-dependencies.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/compiler-source-position-table.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/compiler-source-position-table.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/compiler-source-position-table.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/constant-folding-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/constant-folding-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/constant-folding-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/control-equivalence.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/control-equivalence.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/control-equivalence.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/control-flow-optimizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/control-flow-optimizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/control-flow-optimizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/csa-load-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/csa-load-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/csa-load-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/dead-code-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/dead-code-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/dead-code-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/decompression-optimizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/decompression-optimizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/decompression-optimizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/effect-control-linearizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/effect-control-linearizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/effect-control-linearizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/escape-analysis-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/escape-analysis-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/escape-analysis-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/escape-analysis.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/escape-analysis.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/escape-analysis.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/fast-api-calls.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/fast-api-calls.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/fast-api-calls.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/feedback-source.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/feedback-source.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/feedback-source.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/frame-states.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/frame-states.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/frame-states.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/frame.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/frame.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/frame.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/graph-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/graph-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/graph-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/graph-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-trimmer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/graph-trimmer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/graph-trimmer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph-visualizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/graph-visualizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/graph-visualizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/graph.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/graph.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/graph.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/heap-refs.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/heap-refs.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/heap-refs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-call-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-call-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-call-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-context-specialization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-context-specialization.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-context-specialization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-create-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-create-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-create-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-generic-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-generic-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-generic-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-graph.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-graph.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-graph.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-heap-broker.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-heap-broker.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-heap-broker.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-heap-copy-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-heap-copy-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-heap-copy-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-inlining-heuristic.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-inlining-heuristic.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-inlining-heuristic.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-inlining.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-inlining.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-inlining.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-intrinsic-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-intrinsic-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-intrinsic-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-native-context-specialization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-native-context-specialization.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-native-context-specialization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-type-hint-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-type-hint-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-type-hint-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/js-typed-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/js-typed-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/js-typed-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/linkage.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/linkage.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/linkage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/load-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/load-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/load-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-analysis.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/loop-analysis.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/loop-analysis.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-peeling.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/loop-peeling.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/loop-peeling.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-unrolling.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/loop-unrolling.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/loop-unrolling.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/loop-variable-optimizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/loop-variable-optimizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/loop-variable-optimizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-graph-verifier.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/machine-graph-verifier.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/machine-graph-verifier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-graph.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/machine-graph.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/machine-graph.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-operator-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/machine-operator-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/machine-operator-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/machine-operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/machine-operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/machine-operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/map-inference.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/map-inference.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/map-inference.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/memory-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/memory-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/memory-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/memory-optimizer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/memory-optimizer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/memory-optimizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-marker.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node-marker.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node-marker.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-matchers.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node-matchers.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node-matchers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-observer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node-observer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node-observer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-origin-table.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node-origin-table.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node-origin-table.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node-properties.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node-properties.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node-properties.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/node.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/node.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/node.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/opcodes.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/opcodes.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/opcodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operation-typer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/operation-typer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/operation-typer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operator-properties.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/operator-properties.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/operator-properties.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/osr.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/osr.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/osr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/pipeline-statistics.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/pipeline-statistics.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/pipeline-statistics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/pipeline.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/pipeline.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/pipeline.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/property-access-builder.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/property-access-builder.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/property-access-builder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/raw-machine-assembler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/raw-machine-assembler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/raw-machine-assembler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/redundancy-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/redundancy-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/redundancy-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/refs-map.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/refs-map.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/refs-map.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/representation-change.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/representation-change.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/representation-change.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/schedule.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/schedule.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/schedule.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/scheduler.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/scheduler.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/scheduler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/select-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/select-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/select-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-lowering.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/simplified-lowering.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/simplified-lowering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-operator-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/simplified-operator-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/simplified-operator-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/simplified-operator.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/simplified-operator.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/simplified-operator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/state-values-utils.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/state-values-utils.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/state-values-utils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/store-store-elimination.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/store-store-elimination.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/store-store-elimination.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/type-cache.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/type-cache.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/type-cache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/type-narrowing-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/type-narrowing-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/type-narrowing-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/typed-optimization.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/typed-optimization.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/typed-optimization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/typer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/typer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/typer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/types.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/types.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/types.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/value-numbering-reducer.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/value-numbering-reducer.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/value-numbering-reducer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/verifier.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/verifier.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/verifier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/zone-stats.cc">
+      <Command>call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt/zone-stats.obj</Command>
+      <Outputs>$(OutDir)obj/v8/v8_compiler_opt/zone-stats.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/v8/v8_compiler_opt.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/v8/v8_compiler_opt.stamp" />
+  </Target>
+</Project>

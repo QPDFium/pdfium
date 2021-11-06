@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/base/internal/spinlock_akaros.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/base/internal/spinlock_linux.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/base/internal/spinlock_posix.inc">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/base/internal/spinlock_wait.cc">
+      <Filter>internal</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/base/internal/spinlock_win32.inc">
+      <Filter>internal</Filter>
+    </None>
+  </ItemGroup>
+</Project>

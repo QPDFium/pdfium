@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{23791AAD-6C28-8331-37E0-F9DEE19E297E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../testing/fx_string_testhelpers.cpp" />
+    <None Include="../../../../testing/fx_string_testhelpers.h" />
+    <CustomBuild Include="../../../../testing/invalid_seekable_read_stream.cpp" />
+    <None Include="../../../../testing/invalid_seekable_read_stream.h" />
+    <None Include="../../../../testing/pseudo_retainable.h" />
+    <CustomBuild Include="../../../../testing/scoped_set_tz.cpp" />
+    <None Include="../../../../testing/scoped_set_tz.h" />
+    <CustomBuild Include="../../../../testing/string_write_stream.cpp" />
+    <None Include="../../../../testing/string_write_stream.h" />
+    <CustomBuild Include="../../../../testing/test_loader.cpp" />
+    <None Include="../../../../testing/test_loader.h" />
+    <None Include="../../../../testing/test_support.h" />
+    <CustomBuild Include="../../../../testing/utils/bitmap_saver.cpp">
+      <Filter>utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../testing/utils/bitmap_saver.h">
+      <Filter>utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../testing/utils/file_util.cpp">
+      <Filter>utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../testing/utils/file_util.h">
+      <Filter>utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../testing/utils/hash.cpp">
+      <Filter>utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../testing/utils/hash.h">
+      <Filter>utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../testing/v8_initializer.cpp" />
+    <None Include="../../../../testing/v8_initializer.h" />
+  </ItemGroup>
+</Project>

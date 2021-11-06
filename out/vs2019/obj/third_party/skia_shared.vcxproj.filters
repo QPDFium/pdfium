@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="skia_shared">
+      <UniqueIdentifier>{FEBD99C7-9B23-BFDD-DD6A-20C6A7EC7F51}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../third_party/skia_shared/SkFloatToDecimal.cpp">
+      <Filter>skia_shared</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/skia_shared/SkFloatToDecimal.h">
+      <Filter>skia_shared</Filter>
+    </None>
+  </ItemGroup>
+</Project>

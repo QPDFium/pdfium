@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_aarch64-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_arm-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_config.h">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_emscripten-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_generic-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_powerpc-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_riscv-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_unimplemented-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_win32-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/debugging/internal/stacktrace_x86-inl.inc">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/debugging/stacktrace.cc" />
+  </ItemGroup>
+</Project>

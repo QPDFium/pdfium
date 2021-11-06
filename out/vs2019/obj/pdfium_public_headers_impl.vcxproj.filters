@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="public\cpp">
+      <UniqueIdentifier>{4CE871D8-CF41-F5A7-17E4-8E1C84940224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="public">
+      <UniqueIdentifier>{8916BD77-96C0-B1A6-EA3D-2989EE410847}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../public/cpp/fpdf_deleters.h">
+      <Filter>public\cpp</Filter>
+    </None>
+    <None Include="../../../public/cpp/fpdf_scopers.h">
+      <Filter>public\cpp</Filter>
+    </None>
+    <None Include="../../../public/fpdf_annot.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_attachment.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_catalog.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_dataavail.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_doc.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_edit.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_ext.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_flatten.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_formfill.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_fwlevent.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_javascript.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_ppo.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_progressive.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_save.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_searchex.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_signature.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_structtree.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_sysfontinfo.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_text.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdf_transformpage.h">
+      <Filter>public</Filter>
+    </None>
+    <None Include="../../../public/fpdfview.h">
+      <Filter>public</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="../../../../constants/access_permissions.h" />
+    <CustomBuild Include="../../../../constants/annotation_common.cpp" />
+    <None Include="../../../../constants/annotation_common.h" />
+    <None Include="../../../../constants/annotation_flags.h" />
+    <CustomBuild Include="../../../../constants/appearance.cpp" />
+    <None Include="../../../../constants/appearance.h" />
+    <None Include="../../../../constants/ascii.h" />
+    <CustomBuild Include="../../../../constants/form_fields.cpp" />
+    <None Include="../../../../constants/form_fields.h" />
+    <None Include="../../../../constants/form_flags.h" />
+    <CustomBuild Include="../../../../constants/page_object.cpp" />
+    <None Include="../../../../constants/page_object.h" />
+    <CustomBuild Include="../../../../constants/stream_dict_common.cpp" />
+    <None Include="../../../../constants/stream_dict_common.h" />
+    <CustomBuild Include="../../../../constants/transparency.cpp" />
+    <None Include="../../../../constants/transparency.h" />
+  </ItemGroup>
+</Project>

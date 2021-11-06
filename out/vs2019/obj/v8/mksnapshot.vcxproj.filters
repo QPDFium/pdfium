@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\snapshot\embedded">
+      <UniqueIdentifier>{0914058B-D6A5-D516-AA7D-2B8CBFB907F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\snapshot">
+      <UniqueIdentifier>{45494930-91AB-037E-2AB4-ACE929A50747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/embedded-empty.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/embedded-file-writer.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/embedded-file-writer.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-aix.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-aix.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-base.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-base.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-generic.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-generic.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-mac.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-mac.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-win.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/snapshot/embedded/platform-embedded-file-writer-win.h">
+      <Filter>src\snapshot\embedded</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/snapshot/mksnapshot.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot-empty.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

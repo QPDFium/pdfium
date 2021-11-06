@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_array_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_cross_ref_avail_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_document_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_hint_tables_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_indirect_object_holder_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_object_avail_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_object_stream_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_object_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_object_walker_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_page_object_avail_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_parser_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_read_validator_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_simple_parser_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_stream_acc_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_syntax_parser_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/fpdf_parser_decode_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/fpdf_parser_utility_unittest.cpp" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_seekablemultistream_unittest.cpp" />
+  </ItemGroup>
+</Project>

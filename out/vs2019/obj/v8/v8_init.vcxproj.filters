@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\init">
+      <UniqueIdentifier>{0DFC9A87-0155-3C53-AAF4-F6BB05D678FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/init/setup-isolate-full.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source\common\unicode">
+      <UniqueIdentifier>{DB557C98-704E-8113-55DB-55FB34AA45DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\common">
+      <UniqueIdentifier>{982D3564-DA2B-EBAD-27C0-ABBB06F80EFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{DA2023F0-71E4-A00C-1CFD-FD2374E50D28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../third_party/icu/source/common/unicode/appendable.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/brkiter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/bytestream.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/bytestriebuilder.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/bytestrie.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/caniter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/casemap.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/char16ptr.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/chariter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/dbbi.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/docmain.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/dtintrv.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/edits.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/enumset.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/errorcode.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/filteredbrk.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/icudataver.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/icuplug.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/idna.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/localebuilder.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/localematcher.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/localpointer.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/locdspnm.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/locid.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/messagepattern.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/normalizer2.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/normlzr.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/parseerr.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/parsepos.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/platform.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ptypes.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/putil.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/rbbi.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/rep.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/resbund.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/schriter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/simpleformatter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/std_string.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/strenum.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/stringoptions.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/stringpiece.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/stringtriebuilder.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/symtable.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ubidi.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ubiditransform.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ubrk.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucasemap.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucat.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uchar.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucharstriebuilder.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucharstrie.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uchriter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uclean.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucnv_cb.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucnv_err.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucnv.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucnvsel.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uconfig.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucpmap.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucptrie.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ucurr.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/udata.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/udisplaycontext.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uenum.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uidna.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uiter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uldnames.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uloc.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/umachine.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/umisc.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/umutablecptrie.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unifilt.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unifunct.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unimatch.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uniset.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unistr.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unorm2.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/unorm.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uobject.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/urename.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/urep.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ures.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uscript.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uset.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/usetiter.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ushape.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/usprep.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ustring.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/ustringtrie.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utext.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utf16.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utf32.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utf8.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utf.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utf_old.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utrace.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/utypes.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uvernum.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+    <None Include="../../../../../third_party/icu/source/common/unicode/uversion.h">
+      <Filter>source\common\unicode</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\api">
+      <UniqueIdentifier>{1F5CE53F-73AA-8835-5BCA-093AB9A31A38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ast">
+      <UniqueIdentifier>{0D5909B6-456A-8E25-7393-FA5891BB1B9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\baseline">
+      <UniqueIdentifier>{B17A65E9-CEB3-9234-ED0F-F5E841AB3EA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\builtins">
+      <UniqueIdentifier>{DE53AEB8-0D67-021F-B30F-0EEBFF146C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen">
+      <UniqueIdentifier>{A53049AB-D190-D2C0-93CE-04EF4D78DF2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{5C3F1AB9-1290-10AE-B933-CF80561941FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler-dispatcher">
+      <UniqueIdentifier>{0CC8988F-EA4B-17A2-7407-24FCD0A4D8DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\date">
+      <UniqueIdentifier>{B1BD4043-339E-F63F-07BF-352D7C56E8AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\debug">
+      <UniqueIdentifier>{111EAA30-C639-C883-1DDE-D4B86FC1FAAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deoptimizer">
+      <UniqueIdentifier>{E2518451-726E-C88A-54BE-D2C64AF03058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\diagnostics">
+      <UniqueIdentifier>{0F14C5BD-BB00-627B-1A3D-F29240065BC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\execution">
+      <UniqueIdentifier>{B0D59D66-0B8D-3D8C-E6F1-D953111B6108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extensions">
+      <UniqueIdentifier>{6D5E1016-CD0D-4FCF-C170-388DB8FE9341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\flags">
+      <UniqueIdentifier>{A3D09F09-CA37-3FC2-55EA-518001FF0A4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\handles">
+      <UniqueIdentifier>{CE356507-0015-98D9-920F-722919BA8094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\heap">
+      <UniqueIdentifier>{19B3F6EE-F232-8635-AEDF-406086FD378F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\heap\cppgc-js">
+      <UniqueIdentifier>{284ECF58-EE88-5200-DE8E-7C2D6FC390E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ic">
+      <UniqueIdentifier>{B1E9DB05-3005-45C4-6BAA-8B759B8AC69E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\init">
+      <UniqueIdentifier>{0DFC9A87-0155-3C53-AAF4-F6BB05D678FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\interpreter">
+      <UniqueIdentifier>{B5E0D3E1-2903-6CDC-BD7C-41E3BD5C8EAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\json">
+      <UniqueIdentifier>{F4B19EA2-2B18-D07B-036A-7E2435B8F639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libsampler">
+      <UniqueIdentifier>{9F21D738-CFDB-0062-A888-4BAD594617F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\logging">
+      <UniqueIdentifier>{5D19F21E-4CE6-A8DE-BFED-015C6896C86B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\numbers">
+      <UniqueIdentifier>{68379905-9492-27ED-5C4D-3783BC684FD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\objects">
+      <UniqueIdentifier>{1E39EB9B-68FA-8C14-A397-01DFCA45EC72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\parsing">
+      <UniqueIdentifier>{0F0ABB8A-4530-4842-29DF-7181BBD10023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\profiler">
+      <UniqueIdentifier>{2D50675F-504D-8308-199A-8F7E3585AC8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp\experimental">
+      <UniqueIdentifier>{22BF7263-A9F6-821A-57A7-DD856F2C58F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp">
+      <UniqueIdentifier>{86AADEC8-03BA-EBB7-78FA-B90B827153EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\roots">
+      <UniqueIdentifier>{6F891005-121E-2506-1409-6C543F096F83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\runtime">
+      <UniqueIdentifier>{1036D233-DF54-B4D7-16A7-906E8AEE990F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\snapshot">
+      <UniqueIdentifier>{45494930-91AB-037E-2AB4-ACE929A50747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\snapshot\embedded">
+      <UniqueIdentifier>{0914058B-D6A5-D516-AA7D-2B8CBFB907F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\strings">
+      <UniqueIdentifier>{E78AE62D-579C-D6AE-4172-31BBF3E770C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tasks">
+      <UniqueIdentifier>{146B7B51-9C61-00D9-7BC0-820F9832F296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\siphash">
+      <UniqueIdentifier>{603034E8-F94A-7D84-DF7F-55BE6D1B8598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party">
+      <UniqueIdentifier>{9BD31BDD-8D35-CC4D-E8F7-A9830ECDF817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tracing">
+      <UniqueIdentifier>{D7A17AAC-F76A-1EA9-FC37-F2D5B8F551DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8FC2063E-4721-2C9C-FF62-6C19AE822741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\web-snapshot">
+      <UniqueIdentifier>{AB59DF05-7BF3-9532-62DB-4AFEFF6DC7CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\zone">
+      <UniqueIdentifier>{B7B5E15A-99F4-5BF3-9BEF-929D1527B55B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\heap\third-party">
+      <UniqueIdentifier>{3CC19271-8AFC-A6C2-BF68-673A0A4092D5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen\shared-ia32-x64">
+      <UniqueIdentifier>{D463E2D6-3148-6EE3-8237-8DE9B73643DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codegen\x64">
+      <UniqueIdentifier>{5D214674-6897-91E8-6BC7-BAB2025C76AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler\backend\x64">
+      <UniqueIdentifier>{20FCAA33-3E71-4197-3048-D75E1724331B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler\backend">
+      <UniqueIdentifier>{F46034A4-B263-A986-8802-AD53B1CE5E01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compiler">
+      <UniqueIdentifier>{AD208415-7CDF-8A22-3B4D-31D583BED58C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deoptimizer\x64">
+      <UniqueIdentifier>{3DA279BE-DE72-664F-43F1-C340870458B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\diagnostics\x64">
+      <UniqueIdentifier>{8D13FCC5-8BB8-C153-39CF-030957589929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\execution\x64">
+      <UniqueIdentifier>{FBF1EEF8-9D4C-0EC1-C721-9AE78051FD8E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regexp\x64">
+      <UniqueIdentifier>{80E4453F-7B0E-AEFF-5670-296E731D016A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\src\regexp">
+      <UniqueIdentifier>{2E3D8983-930A-59B8-8109-F44711173CE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8\src">
+      <UniqueIdentifier>{8EC47864-FE70-03FB-5A13-A4D4795A942F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen\v8">
+      <UniqueIdentifier>{7759FF7E-003C-E2C6-7163-B259E1BF5CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019\gen">
+      <UniqueIdentifier>{0E8AB76B-5751-F980-0EC7-B9741E74BA80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out\vs2019">
+      <UniqueIdentifier>{7078447C-44AA-E0CF-74C8-BF2E4C761502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\out">
+      <UniqueIdentifier>{FBD62108-6F7E-E78E-9895-92E1AA2F5AC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../v8/src/api/api-arguments.cc">
+      <Filter>src\api</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/api/api-natives.cc">
+      <Filter>src\api</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/api/api.cc">
+      <Filter>src\api</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/ast-function-literal-id-reindexer.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/ast-value-factory.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/ast.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/modules.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/prettyprinter.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/scopes.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/source-range-ast-visitor.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ast/variables.cc">
+      <Filter>src\ast</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/baseline/baseline-batch-compiler.cc">
+      <Filter>src\baseline</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/baseline/baseline-compiler.cc">
+      <Filter>src\baseline</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/baseline/baseline.cc">
+      <Filter>src\baseline</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/baseline/bytecode-offset-iterator.cc">
+      <Filter>src\baseline</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/accessors.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-api.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-array.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-arraybuffer.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-async-module.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-bigint.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-callsite.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-collections.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-console.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-dataview.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-date.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-error.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-function.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-global.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-internal.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-intl.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-json.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-number.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-object.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-reflect.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-regexp.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-sharedarraybuffer.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-string.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-symbol.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-temporal.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-trace.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-typed-array.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins-weak-refs.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/builtins.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/builtins/constants-table-builder.cc">
+      <Filter>src\builtins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/aligned-slot-allocator.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/assembler.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/bailout-reason.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/code-comments.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/code-desc.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/code-factory.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/code-reference.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/compilation-cache.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/compiler.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/constant-pool.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/external-reference-encoder.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/external-reference-table.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/external-reference.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/flush-instruction-cache.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/handler-table.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/interface-descriptors.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/machine-type.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/optimized-compilation-info.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/pending-optimization-table.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/register-configuration.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/reloc-info.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/safepoint-table.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/source-position-table.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/source-position.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/string-constants.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/tick-counter.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/tnode.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/turbo-assembler.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/unoptimized-compilation-info.cc">
+      <Filter>src\codegen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/common/assert-scope.cc">
+      <Filter>src\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler-dispatcher/lazy-compile-dispatcher.cc">
+      <Filter>src\compiler-dispatcher</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler-dispatcher/optimizing-compile-dispatcher.cc">
+      <Filter>src\compiler-dispatcher</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/date/date.cc">
+      <Filter>src\date</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/date/dateparser.cc">
+      <Filter>src\date</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-coverage.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-evaluate.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-frames.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-interface.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-property-iterator.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-scope-iterator.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-scopes.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-stack-trace-iterator.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug-type-profile.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/debug.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/debug/liveedit.cc">
+      <Filter>src\debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/deoptimize-reason.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/deoptimized-frame-info.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/deoptimizer.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/materialized-object-store.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/translated-state.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/translation-array.cc">
+      <Filter>src\deoptimizer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/basic-block-profiler.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/compilation-statistics.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/disassembler.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/eh-frame.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/gdb-jit.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/objects-debug.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/objects-printer.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/perf-jit.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/unwinder.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/arguments.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/execution.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/external-pointer-table.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/frames.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/futex-emulation.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/interrupts-scope.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/isolate.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/local-isolate.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/messages.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/microtask-queue.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/protectors.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/runtime-profiler.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/simulator-base.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/stack-guard.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/thread-id.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/thread-local-top.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/v8threads.cc">
+      <Filter>src\execution</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/cputracemark-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/externalize-string-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/gc-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/ignition-statistics-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/statistics-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/extensions/trigger-failure-extension.cc">
+      <Filter>src\extensions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/flags/flags.cc">
+      <Filter>src\flags</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/handles/global-handles.cc">
+      <Filter>src\handles</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/handles/handles.cc">
+      <Filter>src\handles</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/handles/local-handles.cc">
+      <Filter>src\handles</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/handles/persistent-handles.cc">
+      <Filter>src\handles</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/allocation-observer.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/array-buffer-sweeper.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/base-space.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/basic-memory-chunk.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/code-object-registry.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/code-range.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/code-stats.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/collection-barrier.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/combined-heap.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/concurrent-allocator.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/concurrent-marking.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/cppgc-js/cpp-heap.cc">
+      <Filter>src\heap\cppgc-js</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/cppgc-js/cpp-snapshot.cc">
+      <Filter>src\heap\cppgc-js</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/cppgc-js/unified-heap-marking-verifier.cc">
+      <Filter>src\heap\cppgc-js</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/cppgc-js/unified-heap-marking-visitor.cc">
+      <Filter>src\heap\cppgc-js</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/embedder-tracing.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/factory-base.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/factory.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/finalization-registry-cleanup-task.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/free-list.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/gc-idle-time-handler.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/gc-tracer.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/heap-controller.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/heap-write-barrier.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/heap.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/incremental-marking-job.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/incremental-marking.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/index-generator.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/invalidated-slots.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/large-spaces.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/local-factory.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/local-heap.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/mark-compact.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/marking-barrier.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/marking-worklist.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/marking.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/memory-allocator.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/memory-chunk-layout.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/memory-chunk.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/memory-measurement.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/memory-reducer.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/new-spaces.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/object-stats.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/objects-visiting.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/paged-spaces.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/read-only-heap.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/read-only-spaces.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/safepoint.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/scavenge-job.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/scavenger.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/slot-set.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/spaces.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/stress-marking-observer.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/stress-scavenge-observer.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/sweeper.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/weak-object-worklists.cc">
+      <Filter>src\heap</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ic/call-optimization.cc">
+      <Filter>src\ic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ic/handler-configuration.cc">
+      <Filter>src\ic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ic/ic-stats.cc">
+      <Filter>src\ic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ic/ic.cc">
+      <Filter>src\ic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/ic/stub-cache.cc">
+      <Filter>src\ic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/bootstrapper.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/icu_util.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/isolate-allocator.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/startup-data-util.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/v8.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/init/vm-cage.cc">
+      <Filter>src\init</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-array-builder.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-array-iterator.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-array-random-iterator.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-array-writer.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-decoder.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-flags.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-generator.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-label.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-node.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-operands.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-register-optimizer.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-register.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecode-source-info.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/bytecodes.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/constant-array-builder.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/control-flow-builders.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/handler-table-builder.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/interpreter-intrinsics.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/interpreter/interpreter.cc">
+      <Filter>src\interpreter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/json/json-parser.cc">
+      <Filter>src\json</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/json/json-stringifier.cc">
+      <Filter>src\json</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/libsampler/sampler.cc">
+      <Filter>src\libsampler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/counters.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/local-logger.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/log-utils.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/log.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/metrics.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/runtime-call-stats.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/logging/tracing-flags.cc">
+      <Filter>src\logging</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/numbers/conversions.cc">
+      <Filter>src\numbers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/numbers/math-random.cc">
+      <Filter>src\numbers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/backing-store.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/bigint.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/code-kind.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/code.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/compilation-cache-table.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/contexts.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/debug-objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/elements-kind.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/elements.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/embedder-data-array.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/feedback-vector.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/field-type.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/intl-objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-array-buffer.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-break-iterator.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-collator.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-date-time-format.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-display-names.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-function.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-list-format.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-locale.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-number-format.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-plural-rules.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-regexp.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-relative-time-format.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-segment-iterator.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-segmenter.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/js-segments.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/keys.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/literal-objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/lookup-cache.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/lookup.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/managed.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/map-updater.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/map.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/module.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/object-type.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/option-utils.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/ordered-hash-table.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/osr-optimized-code-cache.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/property-descriptor.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/property.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/scope-info.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/shared-function-info.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/source-text-module.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/stack-frame-info.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/string-comparator.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/string-table.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/string.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/swiss-name-dictionary.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/synthetic-module.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/tagged-impl.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/template-objects.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/templates.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/transitions.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/type-hints.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/value-serializer.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/objects/visitors.cc">
+      <Filter>src\objects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/func-name-inferrer.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/import-assertions.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/literal-buffer.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/parse-info.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/parser.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/parsing.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/pending-compilation-error-handler.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/preparse-data.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/preparser.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/rewriter.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/scanner-character-streams.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/scanner.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/parsing/token.cc">
+      <Filter>src\parsing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/allocation-tracker.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/cpu-profiler.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/heap-profiler.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/heap-snapshot-generator.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/profile-generator.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/profiler-listener.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/profiler-stats.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/sampling-heap-profiler.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/strings-storage.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/symbolizer.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/tick-sample.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/tracing-cpu-profiler.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/profiler/weak-code-registry.cc">
+      <Filter>src\profiler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/experimental/experimental-bytecode.cc">
+      <Filter>src\regexp\experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/experimental/experimental-compiler.cc">
+      <Filter>src\regexp\experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/experimental/experimental-interpreter.cc">
+      <Filter>src\regexp\experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/experimental/experimental.cc">
+      <Filter>src\regexp\experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/property-sequences.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-ast.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-bytecode-generator.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-bytecode-peephole.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-bytecodes.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-compiler-tonode.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-compiler.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-dotprinter.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-error.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-interpreter.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-macro-assembler-tracer.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-macro-assembler.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-parser.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-stack.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp-utils.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/regexp.cc">
+      <Filter>src\regexp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/roots/roots.cc">
+      <Filter>src\roots</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-array.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-atomics.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-bigint.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-classes.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-collections.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-compiler.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-date.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-debug.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-forin.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-function.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-futex.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-generator.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-internal.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-intl.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-literals.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-module.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-numbers.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-object.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-operators.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-promise.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-proxy.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-regexp.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-scopes.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-strings.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-symbol.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-test.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-trace.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-typedarray.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime-weak-refs.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/runtime/runtime.cc">
+      <Filter>src\runtime</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/code-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/context-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/context-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/embedded/embedded-data.cc">
+      <Filter>src\snapshot\embedded</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/object-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/read-only-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/read-only-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/roots-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/serializer-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/shared-heap-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/shared-heap-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot-compression.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot-data.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot-source-sink.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot-utils.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/snapshot.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/startup-deserializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/snapshot/startup-serializer.cc">
+      <Filter>src\snapshot</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/char-predicates.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/string-builder.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/string-case.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/string-stream.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/unicode-decoder.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/unicode.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/strings/uri.cc">
+      <Filter>src\strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tasks/cancelable-task.cc">
+      <Filter>src\tasks</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tasks/operations-barrier.cc">
+      <Filter>src\tasks</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tasks/task-utils.cc">
+      <Filter>src\tasks</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/third_party/siphash/halfsiphash.cc">
+      <Filter>src\third_party\siphash</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tracing/trace-event.cc">
+      <Filter>src\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tracing/traced-value.cc">
+      <Filter>src\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/tracing/tracing-category-observer.cc">
+      <Filter>src\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/address-map.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/allocation.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/bit-vector.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/detachable-vector.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/identity-map.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/memcopy.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/ostreams.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/utils.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/utils/version.cc">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/web-snapshot/web-snapshot.cc">
+      <Filter>src\web-snapshot</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/web-snapshot/web-snapshot.h">
+      <Filter>src\web-snapshot</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/zone/accounting-allocator.cc">
+      <Filter>src\zone</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/zone/type-stats.cc">
+      <Filter>src\zone</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/zone/zone-segment.cc">
+      <Filter>src\zone</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/zone/zone.cc">
+      <Filter>src\zone</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/heap/third-party/heap-api-stub.cc">
+      <Filter>src\heap\third-party</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/shared-ia32-x64/macro-assembler-shared-ia32-x64.cc">
+      <Filter>src\codegen\shared-ia32-x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/x64/assembler-x64.cc">
+      <Filter>src\codegen\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/x64/cpu-x64.cc">
+      <Filter>src\codegen\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/codegen/x64/macro-assembler-x64.cc">
+      <Filter>src\codegen\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/x64/code-generator-x64.cc">
+      <Filter>src\compiler\backend\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/x64/instruction-scheduler-x64.cc">
+      <Filter>src\compiler\backend\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/x64/instruction-selector-x64.cc">
+      <Filter>src\compiler\backend\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/compiler/backend/x64/unwinding-info-writer-x64.cc">
+      <Filter>src\compiler\backend\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/deoptimizer/x64/deoptimizer-x64.cc">
+      <Filter>src\deoptimizer\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/x64/disasm-x64.cc">
+      <Filter>src\diagnostics\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/x64/eh-frame-x64.cc">
+      <Filter>src\diagnostics\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/x64/unwinder-x64.cc">
+      <Filter>src\diagnostics\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/execution/x64/frame-constants-x64.cc">
+      <Filter>src\execution\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/regexp/x64/regexp-macro-assembler-x64.cc">
+      <Filter>src\regexp\x64</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/diagnostics/unwinding-info-win64.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/diagnostics/system-jit-metadata-win.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/diagnostics/system-jit-win.cc">
+      <Filter>src\diagnostics</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/diagnostics/system-jit-win.h">
+      <Filter>src\diagnostics</Filter>
+    </None>
+    <CustomBuild Include="../../../../out/vs2019/gen/v8/src/regexp/special-case.cc">
+      <Filter>..\out\vs2019\gen\v8\src\regexp</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

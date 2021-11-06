@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="../../../../../../v8/test/inspector/frontend-channel.h" />
+    <CustomBuild Include="../../../../../../v8/test/inspector/isolate-data.cc" />
+    <None Include="../../../../../../v8/test/inspector/isolate-data.h" />
+    <CustomBuild Include="../../../../../../v8/test/inspector/task-runner.cc" />
+    <None Include="../../../../../../v8/test/inspector/task-runner.h" />
+    <CustomBuild Include="../../../../../../v8/test/inspector/tasks.cc" />
+    <None Include="../../../../../../v8/test/inspector/tasks.h" />
+    <CustomBuild Include="../../../../../../v8/test/inspector/utils.cc" />
+    <None Include="../../../../../../v8/test/inspector/utils.h" />
+  </ItemGroup>
+</Project>

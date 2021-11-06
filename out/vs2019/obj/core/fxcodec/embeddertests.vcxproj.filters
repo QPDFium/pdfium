@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="jbig2">
+      <UniqueIdentifier>{380408B4-0C06-0911-B49E-11D64B5F9010}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fxcodec/jbig2/jbig2_embeddertest.cpp">
+      <Filter>jbig2</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

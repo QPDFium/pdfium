@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC702D88-1230-F06A-A889-2F83E773B71F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fx_lcms2</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/third_party/fx_lcms2.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/freetype/include;../../../../third_party/freetype/src/include;../../../../third_party/abseil-cpp;../../../../third_party/icu/source/common;../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wno-missing-braces %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4267;4996;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../third_party/lcms/include/lcms2.h" />
+    <None Include="../../../../third_party/lcms/include/lcms2_plugin.h" />
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsalpha.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsalpha.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsalpha.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscam02.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmscam02.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmscam02.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscgats.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmscgats.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmscgats.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmscnvrt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmscnvrt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmscnvrt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmserr.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmserr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmserr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsgamma.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsgamma.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsgamma.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsgmt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsgmt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsgmt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmshalf.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmshalf.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmshalf.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsintrp.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsintrp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsintrp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsio0.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsio0.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsio0.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsio1.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsio1.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsio1.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmslut.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmslut.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmslut.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsmd5.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsmd5.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsmd5.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsmtrx.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsmtrx.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsmtrx.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsnamed.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsnamed.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsnamed.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsopt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsopt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsopt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmspack.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmspack.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmspack.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmspcs.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmspcs.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmspcs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsplugin.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsplugin.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsplugin.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsps2.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsps2.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsps2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmssamp.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmssamp.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmssamp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmssm.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmssm.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmssm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmstypes.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmstypes.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmstypes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsvirt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsvirt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsvirt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmswtpnt.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmswtpnt.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmswtpnt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/lcms/src/cmsxform.c">
+      <Command>call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2/cmsxform.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/fx_lcms2/cmsxform.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/third_party/fx_lcms2.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/fx_lcms2.stamp" />
+  </Target>
+</Project>

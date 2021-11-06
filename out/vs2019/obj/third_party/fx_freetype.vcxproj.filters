@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="freetype\include">
+      <UniqueIdentifier>{16DD037C-3FD5-B229-42BF-58757D815CC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype">
+      <UniqueIdentifier>{B4031CD0-6411-2B6F-191C-C6A7BC7DA3E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\include\freetype\config">
+      <UniqueIdentifier>{DE5167FD-4AAA-8562-32AF-4312C7C55FBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\include\freetype">
+      <UniqueIdentifier>{F82C7B9F-F063-F0E7-9653-8616AC7A5B61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\include">
+      <UniqueIdentifier>{291F8DA3-BBEB-CD5A-7069-8E6EBD1CFED6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src">
+      <UniqueIdentifier>{C5CEDD94-8433-5F2A-8585-71030D9C30FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\include\freetype\internal">
+      <UniqueIdentifier>{60D6C44C-B3BF-1A72-15D4-6EA1C12B6ACB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\include\freetype\internal\services">
+      <UniqueIdentifier>{7D3180BE-9F24-9651-61B9-9DB60BDC67C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\base">
+      <UniqueIdentifier>{58517499-267D-07C7-92C0-E6B4FF6ACB77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src">
+      <UniqueIdentifier>{47385CE7-7502-B70A-332B-0427675D10DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\cff">
+      <UniqueIdentifier>{896444E2-9BEA-F8AD-9844-F1411B4A5822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\cid">
+      <UniqueIdentifier>{B80FC501-96AE-5E9E-18B9-6E8A8AAE8B9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\psaux">
+      <UniqueIdentifier>{48738542-5CF2-D368-67AF-3A4F7FB0E02B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\pshinter">
+      <UniqueIdentifier>{9EA15153-5518-9163-0667-E9B5C18D5144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\psnames">
+      <UniqueIdentifier>{00A2CD42-3FCB-60AB-CB0F-9B00CE752376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\raster">
+      <UniqueIdentifier>{EA148FCF-6FC9-043C-2392-A9538E279B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\sfnt">
+      <UniqueIdentifier>{A629B651-776B-EBB7-BD9C-804DE82B41C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\smooth">
+      <UniqueIdentifier>{E0F0C654-BF2B-F306-844D-73AEB262DF5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\truetype">
+      <UniqueIdentifier>{151F0646-104B-0BFD-1FF2-AD11C8DFA6C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="freetype\src\src\type1">
+      <UniqueIdentifier>{222ABF6D-C802-2699-2338-A12E79D10E23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../third_party/freetype/include/pstables.h">
+      <Filter>freetype\include</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/config/ftconfig.h">
+      <Filter>freetype\src\include\freetype\config</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/config/ftheader.h">
+      <Filter>freetype\src\include\freetype\config</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/config/ftmodule.h">
+      <Filter>freetype\src\include\freetype\config</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/config/ftoption.h">
+      <Filter>freetype\src\include\freetype\config</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/config/ftstdlib.h">
+      <Filter>freetype\src\include\freetype\config</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/freetype.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftadvanc.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftbbox.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftbdf.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftbitmap.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftbzip2.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftcache.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftchapters.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftcid.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftcolor.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftdriver.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/fterrdef.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/fterrors.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftfntfmt.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftgasp.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftglyph.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftgxval.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftgzip.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftimage.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftincrem.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftlcdfil.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftlist.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftlzw.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftmac.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftmm.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftmodapi.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftmoderr.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftotval.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftoutln.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftparams.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftpfr.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftrender.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftsizes.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftsnames.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftstroke.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftsynth.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftsystem.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/fttrigon.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/fttypes.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ftwinfnt.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/autohint.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/cffotypes.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/cfftypes.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftcalc.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftdebug.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftdrv.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftgloadr.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/fthash.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftmemory.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftobjs.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftpsprop.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftrfork.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftserv.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftstream.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/fttrace.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/ftvalid.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/psaux.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/pshints.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svbdf.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svcfftl.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svcid.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svfntfmt.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svgldict.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svgxval.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svkern.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svmetric.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svmm.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svotval.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svpfr.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svpostnm.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svprop.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svpscmap.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svpsinfo.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svsfnt.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svttcmap.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svtteng.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svttglyf.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/services/svwinfnt.h">
+      <Filter>freetype\src\include\freetype\internal\services</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/sfnt.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/t1types.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/internal/tttypes.h">
+      <Filter>freetype\src\include\freetype\internal</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/t1tables.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/ttnameid.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/tttables.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/freetype/tttags.h">
+      <Filter>freetype\src\include\freetype</Filter>
+    </None>
+    <None Include="../../../../third_party/freetype/src/include/ft2build.h">
+      <Filter>freetype\src\include</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftbase.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/freetype/src/src/base/ftbase.h">
+      <Filter>freetype\src\src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftbitmap.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftdebug.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftfstype.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftglyph.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftinit.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftmm.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/base/ftsystem.c">
+      <Filter>freetype\src\src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/cff/cff.c">
+      <Filter>freetype\src\src\cff</Filter>
+    </CustomBuild>
+    <None Include="../../../../third_party/freetype/src/src/cff/cffobjs.h">
+      <Filter>freetype\src\src\cff</Filter>
+    </None>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/cid/type1cid.c">
+      <Filter>freetype\src\src\cid</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/psaux/psaux.c">
+      <Filter>freetype\src\src\psaux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/pshinter/pshinter.c">
+      <Filter>freetype\src\src\pshinter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/psnames/psmodule.c">
+      <Filter>freetype\src\src\psnames</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/raster/raster.c">
+      <Filter>freetype\src\src\raster</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/sfnt/sfnt.c">
+      <Filter>freetype\src\src\sfnt</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/smooth/smooth.c">
+      <Filter>freetype\src\src\smooth</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/truetype/truetype.c">
+      <Filter>freetype\src\src\truetype</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../third_party/freetype/src/src/type1/type1.c">
+      <Filter>freetype\src\src\type1</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

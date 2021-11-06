@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="contrib\optimizations">
+      <UniqueIdentifier>{F0DF0740-6134-61F1-12A6-812AFAF33528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contrib">
+      <UniqueIdentifier>{89A43375-990C-64BB-F7F4-915DF45BB2FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/zlib/adler32.c" />
+    <None Include="../../../../../third_party/zlib/chromeconf.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/compress.c" />
+    <None Include="../../../../../third_party/zlib/contrib/optimizations/insert_string.h">
+      <Filter>contrib\optimizations</Filter>
+    </None>
+    <CustomBuild Include="../../../../../third_party/zlib/cpu_features.c" />
+    <None Include="../../../../../third_party/zlib/cpu_features.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/crc32.c" />
+    <None Include="../../../../../third_party/zlib/crc32.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/deflate.c" />
+    <None Include="../../../../../third_party/zlib/deflate.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzclose.c" />
+    <None Include="../../../../../third_party/zlib/gzguts.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzlib.c" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzread.c" />
+    <CustomBuild Include="../../../../../third_party/zlib/gzwrite.c" />
+    <CustomBuild Include="../../../../../third_party/zlib/infback.c" />
+    <CustomBuild Include="../../../../../third_party/zlib/inffast.c" />
+    <None Include="../../../../../third_party/zlib/inffast.h" />
+    <None Include="../../../../../third_party/zlib/inffixed.h" />
+    <None Include="../../../../../third_party/zlib/inflate.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/inftrees.c" />
+    <None Include="../../../../../third_party/zlib/inftrees.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/trees.c" />
+    <None Include="../../../../../third_party/zlib/trees.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/uncompr.c" />
+    <None Include="../../../../../third_party/zlib/zconf.h" />
+    <None Include="../../../../../third_party/zlib/zlib.h" />
+    <CustomBuild Include="../../../../../third_party/zlib/zutil.c" />
+    <None Include="../../../../../third_party/zlib/zutil.h" />
+  </ItemGroup>
+</Project>

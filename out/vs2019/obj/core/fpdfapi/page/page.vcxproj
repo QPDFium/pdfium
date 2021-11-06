@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1092F1B8-31EA-8378-E59D-98999C9DAE0D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>page</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/core/fpdfapi/page/page.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/vs2019/gen;../../../../../../buildtools/third_party/libc++;../../../../../../third_party/freetype/include;../../../../../../third_party/freetype/src/include;../../../../../../third_party/abseil-cpp;../../../../../../third_party/icu/source/common;../../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_allstates.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_allstates.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_allstates.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_allstates.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_annotcontext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_annotcontext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_annotcontext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_annotcontext.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_basedcs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_basedcs.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_basedcs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_basedcs.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_clippath.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_clippath.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_clippath.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_clippath.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_color.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_color.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_color.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_color.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_colorspace.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_colorspace.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_colorspace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_colorspace.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_colorstate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_colorstate.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_colorstate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_colorstate.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_contentmarkitem.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_contentmarkitem.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_contentmarkitem.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_contentmarkitem.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_contentmarks.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_contentmarks.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_contentmarks.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_contentmarks.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_contentparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_contentparser.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_contentparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_contentparser.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_devicecs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_devicecs.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_devicecs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_devicecs.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_dib.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_dib.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_dib.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_dib.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_docpagedata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_docpagedata.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_docpagedata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_docpagedata.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_expintfunc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_expintfunc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_expintfunc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_expintfunc.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_form.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_form.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_form.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_form.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_formobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_formobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_formobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_formobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_function.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_function.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_function.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_function.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_generalstate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_generalstate.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_generalstate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_generalstate.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_graphicstates.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_graphicstates.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_graphicstates.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_graphicstates.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_iccprofile.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_iccprofile.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_iccprofile.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_iccprofile.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_image.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_image.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_image.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_image.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_imageobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_imageobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_imageobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_imageobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_meshstream.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_meshstream.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_meshstream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_meshstream.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_occontext.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_occontext.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_occontext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_occontext.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_page.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_page.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_page.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_page.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_pagemodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_pagemodule.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_pagemodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_pagemodule.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_pageobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_pageobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_pageobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_pageobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_pageobjectholder.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_pageobjectholder.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_pageobjectholder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_pageobjectholder.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_path.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_path.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_path.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_path.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_pathobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_pathobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_pathobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_pathobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_pattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_pattern.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_pattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_pattern.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_patterncs.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_patterncs.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_patterncs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_patterncs.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_psengine.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_psengine.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_psengine.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_psengine.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_psfunc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_psfunc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_psfunc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_psfunc.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_sampledfunc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_sampledfunc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_sampledfunc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_sampledfunc.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_shadingobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_shadingobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_shadingobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_shadingobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_shadingpattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_shadingpattern.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_shadingpattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_shadingpattern.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_stitchfunc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_stitchfunc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_stitchfunc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_stitchfunc.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_streamcontentparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_streamcontentparser.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_streamcontentparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_streamcontentparser.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_streamparser.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_streamparser.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_streamparser.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_streamparser.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_textobject.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_textobject.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_textobject.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_textobject.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_textstate.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_textstate.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_textstate.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_textstate.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_tilingpattern.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_tilingpattern.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_tilingpattern.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_tilingpattern.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_transferfunc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_transferfunc.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_transferfunc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_transferfunc.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_transferfuncdib.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_transferfuncdib.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_transferfuncdib.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_transferfuncdib.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/page/cpdf_transparency.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page/cpdf_transparency.obj</Command>
+      <Outputs>$(OutDir)obj/core/fpdfapi/page/page/cpdf_transparency.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../core/fpdfapi/page/cpdf_transparency.h" />
+    <None Include="../../../../../../core/fpdfapi/page/ipdf_page.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/core/fpdfapi/page/page.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/core/fpdfapi/page/page.stamp" />
+  </Target>
+</Project>

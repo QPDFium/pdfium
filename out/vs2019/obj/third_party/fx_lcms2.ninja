@@ -1,0 +1,36 @@
+defines = -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DWIN32_LEAN_AND_MEAN -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /W3 /wd4800 /wd4267 /wd4996 -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wno-missing-braces
+cflags_c = /TC
+label_name = fx_lcms2
+target_out_dir = obj/third_party
+target_output_name = fx_lcms2
+
+build obj/third_party/fx_lcms2/cmsalpha.obj: cc ../../third_party/lcms/src/cmsalpha.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmscam02.obj: cc ../../third_party/lcms/src/cmscam02.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmscgats.obj: cc ../../third_party/lcms/src/cmscgats.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmscnvrt.obj: cc ../../third_party/lcms/src/cmscnvrt.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmserr.obj: cc ../../third_party/lcms/src/cmserr.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsgamma.obj: cc ../../third_party/lcms/src/cmsgamma.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsgmt.obj: cc ../../third_party/lcms/src/cmsgmt.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmshalf.obj: cc ../../third_party/lcms/src/cmshalf.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsintrp.obj: cc ../../third_party/lcms/src/cmsintrp.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsio0.obj: cc ../../third_party/lcms/src/cmsio0.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsio1.obj: cc ../../third_party/lcms/src/cmsio1.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmslut.obj: cc ../../third_party/lcms/src/cmslut.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsmd5.obj: cc ../../third_party/lcms/src/cmsmd5.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsmtrx.obj: cc ../../third_party/lcms/src/cmsmtrx.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsnamed.obj: cc ../../third_party/lcms/src/cmsnamed.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsopt.obj: cc ../../third_party/lcms/src/cmsopt.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmspack.obj: cc ../../third_party/lcms/src/cmspack.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmspcs.obj: cc ../../third_party/lcms/src/cmspcs.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsplugin.obj: cc ../../third_party/lcms/src/cmsplugin.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsps2.obj: cc ../../third_party/lcms/src/cmsps2.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmssamp.obj: cc ../../third_party/lcms/src/cmssamp.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmssm.obj: cc ../../third_party/lcms/src/cmssm.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmstypes.obj: cc ../../third_party/lcms/src/cmstypes.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsvirt.obj: cc ../../third_party/lcms/src/cmsvirt.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmswtpnt.obj: cc ../../third_party/lcms/src/cmswtpnt.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_lcms2/cmsxform.obj: cc ../../third_party/lcms/src/cmsxform.c || obj/third_party/icu/icudata.stamp
+
+build obj/third_party/fx_lcms2.stamp: stamp obj/third_party/fx_lcms2/cmsalpha.obj obj/third_party/fx_lcms2/cmscam02.obj obj/third_party/fx_lcms2/cmscgats.obj obj/third_party/fx_lcms2/cmscnvrt.obj obj/third_party/fx_lcms2/cmserr.obj obj/third_party/fx_lcms2/cmsgamma.obj obj/third_party/fx_lcms2/cmsgmt.obj obj/third_party/fx_lcms2/cmshalf.obj obj/third_party/fx_lcms2/cmsintrp.obj obj/third_party/fx_lcms2/cmsio0.obj obj/third_party/fx_lcms2/cmsio1.obj obj/third_party/fx_lcms2/cmslut.obj obj/third_party/fx_lcms2/cmsmd5.obj obj/third_party/fx_lcms2/cmsmtrx.obj obj/third_party/fx_lcms2/cmsnamed.obj obj/third_party/fx_lcms2/cmsopt.obj obj/third_party/fx_lcms2/cmspack.obj obj/third_party/fx_lcms2/cmspcs.obj obj/third_party/fx_lcms2/cmsplugin.obj obj/third_party/fx_lcms2/cmsps2.obj obj/third_party/fx_lcms2/cmssamp.obj obj/third_party/fx_lcms2/cmssm.obj obj/third_party/fx_lcms2/cmstypes.obj obj/third_party/fx_lcms2/cmsvirt.obj obj/third_party/fx_lcms2/cmswtpnt.obj obj/third_party/fx_lcms2/cmsxform.obj || obj/core/fxcrt/fxcrt.stamp obj/core/fxcrt/unowned_ptr.stamp obj/third_party/fx_freetype.stamp obj/third_party/pdfium_base.stamp ./absl.dll.lib ./icuuc.dll.lib

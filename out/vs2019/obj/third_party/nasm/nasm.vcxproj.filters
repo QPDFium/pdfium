@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="asm">
+      <UniqueIdentifier>{6EB83891-68BF-C399-68E7-A98339635383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{07AEAFC7-2F39-B64B-2877-3FB44E06BFBE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="disasm">
+      <UniqueIdentifier>{195F649F-91E6-0A80-3E5E-B99DCF4C6EC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="macros">
+      <UniqueIdentifier>{9D04413E-98E8-E5BC-DF0F-0E01AB35540B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nasmlib">
+      <UniqueIdentifier>{5074D29A-9287-9E3F-E745-7CA5053CE1C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="output">
+      <UniqueIdentifier>{3F749C53-2E5F-99BE-992F-FED2B26EF65C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdlib">
+      <UniqueIdentifier>{F1D60479-50EA-EED6-0D5B-2E7361475A3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86">
+      <UniqueIdentifier>{68317225-948B-0DFE-CC65-408DFAD3B990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{B47397CE-16D3-9563-9B23-4F6BCE09822D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/assemble.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/directbl.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/directiv.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/error.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/eval.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/exprdump.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/exprlib.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/floats.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/labels.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/listing.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/parser.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/pptok.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/pragma.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/preproc-nop.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/preproc.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/quote.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/rdstrnum.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/segalloc.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/srcfile.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/stdscan.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/strfunc.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/tokhash.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/warnings.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/common/common.c">
+      <Filter>common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/disasm/disasm.c">
+      <Filter>disasm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/disasm/sync.c">
+      <Filter>disasm</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/macros/macros.c">
+      <Filter>macros</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/alloc.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/asprintf.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/badenum.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/bsi.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/crc64.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/file.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/filename.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/hashtbl.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/ilog2.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/md5c.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/mmap.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/nctype.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/path.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/perfhash.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/raa.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/rbtree.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/readnum.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/realpath.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/rlimit.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/saa.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/string.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/strlist.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/ver.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/nasmlib/zerobuf.c">
+      <Filter>nasmlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/codeview.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/legacy.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/nulldbg.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/nullout.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outaout.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outas86.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outbin.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outcoff.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outdbg.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outelf.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outform.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outieee.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outlib.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outmacho.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outobj.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/output/outrdf2.c">
+      <Filter>output</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/stdlib/snprintf.c">
+      <Filter>stdlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/stdlib/strlcpy.c">
+      <Filter>stdlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/stdlib/strnlen.c">
+      <Filter>stdlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/stdlib/strrchrnul.c">
+      <Filter>stdlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/stdlib/vsnprintf.c">
+      <Filter>stdlib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/disp8.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/iflag.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/insnsa.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/insnsb.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/insnsd.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/insnsn.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/regdis.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/regflags.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/regs.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/x86/regvals.c">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/nasm/asm/nasm.c">
+      <Filter>asm</Filter>
+    </CustomBuild>
+    <None Include="../../../../../third_party/nasm/config/config-linux.h">
+      <Filter>config</Filter>
+    </None>
+    <None Include="../../../../../third_party/nasm/config/config-mac.h">
+      <Filter>config</Filter>
+    </None>
+    <None Include="../../../../../third_party/nasm/config/config.h">
+      <Filter>config</Filter>
+    </None>
+    <None Include="../../../../../third_party/nasm/config/msvc.h">
+      <Filter>config</Filter>
+    </None>
+    <None Include="../../../../../third_party/nasm/config/unconfig.h">
+      <Filter>config</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A15384D-2F66-6E3F-16A6-066D87B85A7B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fxjs</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\obj/fxjs/fxjs.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../..;../../../../out/vs2019/gen;../../../../buildtools/third_party/libc++;../../../../third_party/freetype/include;../../../../third_party/freetype/src/include;../../../../third_party/abseil-cpp;../../../../third_party/icu/source/common;../../../../third_party/icu/source/i18n;../../../../v8/include;../../../../out/vs2019/gen/v8/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc:twoPhase /Zc:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes -Wno-trigraphs -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /Ob2 /Oy- /Zc:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing /GR- -I../../buildtools/third_party/libc++/trunk/include -ftrivial-auto-var-init=pattern /guard:cf,nochecks -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4324;4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_AURA=1;CR_CLANG_REVISION=&quot;llvmorg-14-init-5759-g02895eed-1&quot;;_HAS_NODISCARD;COMPONENT_BUILD;_LIBCPP_ABI_UNSTABLE;_LIBCPP_ENABLE_NODISCARD;_LIBCPP_NO_AUTO_LINK;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;_WINDOWS;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32;_SECURE_ATL;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;NTDDI_VERSION=NTDDI_WIN10_VB;_WIN32_WINNT=0x0A00;WINVER=0x0A00;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;PNG_PREFIX;PNG_USE_READ_MACROS;OPJ_STATIC;PDF_ENABLE_V8;PDF_ENABLE_XFA;PDF_ENABLE_XFA_BMP;PDF_ENABLE_XFA_GIF;PDF_ENABLE_XFA_PNG;PDF_ENABLE_XFA_TIFF;FT_CONFIG_MODULES_H=&quot;freetype-custom-config/ftmodule.h&quot;;FT_CONFIG_OPTIONS_H=&quot;freetype-custom-config/ftoption.h&quot;;ABSL_CONSUME_DLL;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;USING_V8_SHARED;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_SHARED_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;CPPGC_CAGED_HEAP;USING_V8_BASE_SHARED;USING_V8_PLATFORM_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../fxjs/cjs_event_context_stub.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_event_context_stub.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_event_context_stub.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_event_context_stub.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_runtimestub.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_runtimestub.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_runtimestub.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_runtimestub.h" />
+    <None Include="../../../../fxjs/ijs_event_context.h" />
+    <CustomBuild Include="../../../../fxjs/ijs_runtime.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/ijs_runtime.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/ijs_runtime.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/ijs_runtime.h" />
+    <CustomBuild Include="../../../../fxjs/cfx_globaldata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfx_globaldata.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfx_globaldata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cfx_globaldata.h" />
+    <CustomBuild Include="../../../../fxjs/cfx_keyvalue.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfx_keyvalue.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfx_keyvalue.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cfx_keyvalue.h" />
+    <CustomBuild Include="../../../../fxjs/cfx_v8.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfx_v8.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfx_v8.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cfx_v8.h" />
+    <CustomBuild Include="../../../../fxjs/cfx_v8_array_buffer_allocator.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfx_v8_array_buffer_allocator.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfx_v8_array_buffer_allocator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cfx_v8_array_buffer_allocator.h" />
+    <CustomBuild Include="../../../../fxjs/cfxjs_engine.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjs_engine.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjs_engine.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cfxjs_engine.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_annot.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_annot.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_annot.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_annot.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_app.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_app.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_app.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_app.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_border.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_border.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_border.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_border.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_color.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_color.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_color.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_color.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_console.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_console.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_console.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_console.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_delaydata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_delaydata.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_delaydata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_delaydata.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_display.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_display.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_display.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_display.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_document.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_document.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_document.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_document.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_event.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_event.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_event.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_event.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_event_context.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_event_context.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_event_context.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_event_context.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_field.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_field.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_field.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_field.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_font.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_font.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_font.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_font.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_global.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_global.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_global.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_global.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_globalarrays.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_globalarrays.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_globalarrays.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_globalarrays.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_globalconsts.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_globalconsts.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_globalconsts.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_globalconsts.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_highlight.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_highlight.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_highlight.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_highlight.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_icon.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_icon.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_icon.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_icon.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_object.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_object.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_object.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_object.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_position.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_position.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_position.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_position.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_publicmethods.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_publicmethods.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_publicmethods.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_publicmethods.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_result.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_result.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_result.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_result.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_runtime.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_runtime.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_runtime.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_runtime.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_scalehow.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_scalehow.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_scalehow.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_scalehow.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_scalewhen.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_scalewhen.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_scalewhen.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_scalewhen.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_style.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_style.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_style.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_style.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_timerobj.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_timerobj.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_timerobj.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_timerobj.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_util.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_util.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_util.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_util.h" />
+    <CustomBuild Include="../../../../fxjs/cjs_zoomtype.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjs_zoomtype.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjs_zoomtype.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/cjs_zoomtype.h" />
+    <CustomBuild Include="../../../../fxjs/fx_date_helpers.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/fx_date_helpers.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/fx_date_helpers.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/fx_date_helpers.h" />
+    <CustomBuild Include="../../../../fxjs/fxv8.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/fxv8.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/fxv8.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/fxv8.h" />
+    <CustomBuild Include="../../../../fxjs/global_timer.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/global_timer.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/global_timer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/global_timer.h" />
+    <CustomBuild Include="../../../../fxjs/js_define.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/js_define.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/js_define.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/js_define.h" />
+    <CustomBuild Include="../../../../fxjs/js_resources.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/js_resources.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/js_resources.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/js_resources.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_class.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_class.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_class.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_class.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_context.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_context.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_context.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_context.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_engine.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_engine.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_engine.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_engine.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_formcalc_context.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_formcalc_context.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_formcalc_context.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_formcalc_context.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_isolatetracker.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_isolatetracker.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_isolatetracker.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_isolatetracker.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_mapmodule.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_mapmodule.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_mapmodule.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_mapmodule.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_nodehelper.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_nodehelper.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_nodehelper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_nodehelper.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_resolveprocessor.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_resolveprocessor.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_resolveprocessor.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_resolveprocessor.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_runtimedata.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_runtimedata.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_runtimedata.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_runtimedata.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cfxjse_value.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cfxjse_value.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cfxjse_value.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cfxjse_value.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_boolean.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_boolean.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_boolean.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_boolean.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_container.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_container.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_container.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_container.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_datawindow.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_datawindow.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_datawindow.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_datawindow.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_delta.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_delta.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_delta.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_delta.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_desc.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_desc.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_desc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_desc.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_draw.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_draw.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_draw.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_draw.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_encrypt.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_encrypt.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_encrypt.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_encrypt.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_eventpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_eventpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_eventpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_eventpseudomodel.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_exclgroup.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_exclgroup.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_exclgroup.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_exclgroup.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_extras.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_extras.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_extras.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_extras.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_field.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_field.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_field.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_field.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_form.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_form.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_form.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_form.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_handler.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_handler.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_handler.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_handler.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_hostpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_hostpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_hostpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_hostpseudomodel.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_instancemanager.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_instancemanager.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_instancemanager.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_instancemanager.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_layoutpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_layoutpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_layoutpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_layoutpseudomodel.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_list.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_list.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_list.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_list.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_logpseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_logpseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_logpseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_logpseudomodel.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_manifest.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_manifest.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_manifest.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_manifest.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_model.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_model.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_model.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_model.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_node.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_node.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_node.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_node.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_object.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_object.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_object.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_object.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_occur.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_occur.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_occur.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_occur.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_packet.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_packet.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_packet.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_packet.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_script.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_script.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_script.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_script.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_signaturepseudomodel.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_signaturepseudomodel.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_signaturepseudomodel.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_signaturepseudomodel.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_source.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_source.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_source.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_source.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_subform.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_subform.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_subform.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_subform.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_template.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_template.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_template.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_template.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_textnode.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_textnode.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_textnode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_textnode.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_tree.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_tree.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_tree.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_tree.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_treelist.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_treelist.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_treelist.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_treelist.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_wsdlconnection.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_wsdlconnection.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_wsdlconnection.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_wsdlconnection.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/cjx_xfa.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/cjx_xfa.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/cjx_xfa.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/cjx_xfa.h" />
+    <CustomBuild Include="../../../../fxjs/xfa/fxjse.cpp">
+      <Command>call ninja.exe -C $(OutDir)  obj/fxjs/fxjs/fxjse.obj</Command>
+      <Outputs>$(OutDir)obj/fxjs/fxjs/fxjse.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../../fxjs/xfa/fxjse.h" />
+    <None Include="../../../../fxjs/xfa/jse_define.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir)  obj/fxjs/fxjs.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/fxjs/fxjs.stamp" />
+  </Target>
+</Project>

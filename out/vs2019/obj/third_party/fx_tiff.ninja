@@ -1,0 +1,43 @@
+defines = -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -D_CRT_NONSTDC_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE -DUSE_LIBJPEG_TURBO=1 -DMANGLE_JPEG_NAMES
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/zlib -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n -I../../third_party/libjpeg_turbo
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare /W3 /wd4800 /wd4267 /wd4996 -Wno-unused-variable -Wno-c++11-narrowing -Wno-misleading-indentation /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /utf-8 -Wc++11-narrowing -Wdeprecated-copy
+cflags_c = /TC
+label_name = fx_tiff
+target_out_dir = obj/third_party
+target_output_name = fx_tiff
+
+build obj/third_party/fx_tiff/tif_aux.obj: cc ../../third_party/libtiff/tif_aux.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_close.obj: cc ../../third_party/libtiff/tif_close.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_codec.obj: cc ../../third_party/libtiff/tif_codec.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_color.obj: cc ../../third_party/libtiff/tif_color.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_compress.obj: cc ../../third_party/libtiff/tif_compress.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_dir.obj: cc ../../third_party/libtiff/tif_dir.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_dirinfo.obj: cc ../../third_party/libtiff/tif_dirinfo.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_dirread.obj: cc ../../third_party/libtiff/tif_dirread.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_dirwrite.obj: cc ../../third_party/libtiff/tif_dirwrite.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_dumpmode.obj: cc ../../third_party/libtiff/tif_dumpmode.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_error.obj: cc ../../third_party/libtiff/tif_error.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_extension.obj: cc ../../third_party/libtiff/tif_extension.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_fax3.obj: cc ../../third_party/libtiff/tif_fax3.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_fax3sm.obj: cc ../../third_party/libtiff/tif_fax3sm.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_flush.obj: cc ../../third_party/libtiff/tif_flush.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_getimage.obj: cc ../../third_party/libtiff/tif_getimage.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_jpeg.obj: cc ../../third_party/libtiff/tif_jpeg.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_luv.obj: cc ../../third_party/libtiff/tif_luv.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_lzw.obj: cc ../../third_party/libtiff/tif_lzw.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_next.obj: cc ../../third_party/libtiff/tif_next.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_open.obj: cc ../../third_party/libtiff/tif_open.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_packbits.obj: cc ../../third_party/libtiff/tif_packbits.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_pixarlog.obj: cc ../../third_party/libtiff/tif_pixarlog.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_predict.obj: cc ../../third_party/libtiff/tif_predict.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_print.obj: cc ../../third_party/libtiff/tif_print.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_read.obj: cc ../../third_party/libtiff/tif_read.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_strip.obj: cc ../../third_party/libtiff/tif_strip.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_swab.obj: cc ../../third_party/libtiff/tif_swab.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_thunder.obj: cc ../../third_party/libtiff/tif_thunder.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_tile.obj: cc ../../third_party/libtiff/tif_tile.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_version.obj: cc ../../third_party/libtiff/tif_version.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_warning.obj: cc ../../third_party/libtiff/tif_warning.c || obj/third_party/icu/icudata.stamp
+build obj/third_party/fx_tiff/tif_write.obj: cc ../../third_party/libtiff/tif_write.c || obj/third_party/icu/icudata.stamp
+
+build obj/third_party/fx_tiff.stamp: stamp obj/third_party/fx_tiff/tif_aux.obj obj/third_party/fx_tiff/tif_close.obj obj/third_party/fx_tiff/tif_codec.obj obj/third_party/fx_tiff/tif_color.obj obj/third_party/fx_tiff/tif_compress.obj obj/third_party/fx_tiff/tif_dir.obj obj/third_party/fx_tiff/tif_dirinfo.obj obj/third_party/fx_tiff/tif_dirread.obj obj/third_party/fx_tiff/tif_dirwrite.obj obj/third_party/fx_tiff/tif_dumpmode.obj obj/third_party/fx_tiff/tif_error.obj obj/third_party/fx_tiff/tif_extension.obj obj/third_party/fx_tiff/tif_fax3.obj obj/third_party/fx_tiff/tif_fax3sm.obj obj/third_party/fx_tiff/tif_flush.obj obj/third_party/fx_tiff/tif_getimage.obj obj/third_party/fx_tiff/tif_jpeg.obj obj/third_party/fx_tiff/tif_luv.obj obj/third_party/fx_tiff/tif_lzw.obj obj/third_party/fx_tiff/tif_next.obj obj/third_party/fx_tiff/tif_open.obj obj/third_party/fx_tiff/tif_packbits.obj obj/third_party/fx_tiff/tif_pixarlog.obj obj/third_party/fx_tiff/tif_predict.obj obj/third_party/fx_tiff/tif_print.obj obj/third_party/fx_tiff/tif_read.obj obj/third_party/fx_tiff/tif_strip.obj obj/third_party/fx_tiff/tif_swab.obj obj/third_party/fx_tiff/tif_thunder.obj obj/third_party/fx_tiff/tif_tile.obj obj/third_party/fx_tiff/tif_version.obj obj/third_party/fx_tiff/tif_warning.obj obj/third_party/fx_tiff/tif_write.obj || obj/third_party/zlib.stamp obj/core/fxcrt/fxcrt.stamp obj/third_party/jpeg.stamp ./zlib.dll.lib obj/core/fxcrt/unowned_ptr.stamp obj/third_party/fx_freetype.stamp obj/third_party/pdfium_base.stamp ./absl.dll.lib ./icuuc.dll.lib obj/third_party/libjpeg_turbo/libjpeg.lib obj/third_party/libjpeg_turbo/libjpeg_headers.stamp obj/third_party/libjpeg_turbo/simd.lib obj/third_party/libjpeg_turbo/simd_asm.lib

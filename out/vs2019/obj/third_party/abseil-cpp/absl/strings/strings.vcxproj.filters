@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="internal">
+      <UniqueIdentifier>{BF304C9E-898D-15C8-E53B-FB121AC64111}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/ascii.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/charconv.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/escaping.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/charconv_bigint.cc">
+      <Filter>internal</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/charconv_bigint.h">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/charconv_parse.cc">
+      <Filter>internal</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/charconv_parse.h">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/memutil.cc">
+      <Filter>internal</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/memutil.h">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/stl_type_traits.h">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_join_internal.h">
+      <Filter>internal</Filter>
+    </None>
+    <None Include="../../../../../../../third_party/abseil-cpp/absl/strings/internal/str_split_internal.h">
+      <Filter>internal</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/match.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/numbers.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/str_cat.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/str_replace.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/str_split.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/string_view.cc" />
+    <CustomBuild Include="../../../../../../../third_party/abseil-cpp/absl/strings/substitute.cc" />
+  </ItemGroup>
+</Project>

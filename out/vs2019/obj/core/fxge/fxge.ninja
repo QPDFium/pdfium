@@ -1,0 +1,75 @@
+defines = -DDEFINE_PS_TABLES_DATA -DUSE_AURA=1 "-DCR_CLANG_REVISION=\"llvmorg-14-init-5759-g02895eed-1\"" -D_HAS_NODISCARD -DCOMPONENT_BUILD -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_NO_AUTO_LINK -D__STD_C -D_CRT_RAND_S -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_ATL_NO_OPENGL -D_WINDOWS -DCERT_CHAIN_PARA_HAS_EXTRA_FIELDS -DPSAPI_VERSION=2 -DWIN32 -D_SECURE_ATL -DWINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP -DNOMINMAX -D_UNICODE -DUNICODE -DNTDDI_VERSION=NTDDI_WIN10_VB -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DPNG_PREFIX -DPNG_USE_READ_MACROS -DOPJ_STATIC -DPDF_ENABLE_V8 -DPDF_ENABLE_XFA -DPDF_ENABLE_XFA_BMP -DPDF_ENABLE_XFA_GIF -DPDF_ENABLE_XFA_PNG -DPDF_ENABLE_XFA_TIFF "-DFT_CONFIG_MODULES_H=\"freetype-custom-config/ftmodule.h\"" "-DFT_CONFIG_OPTIONS_H=\"freetype-custom-config/ftoption.h\"" -DABSL_CONSUME_DLL -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE
+include_dirs = -I../.. -Igen -I../../buildtools/third_party/libc++ -I../../third_party/freetype/include -I../../third_party/freetype/src/include -I../../third_party/abseil-cpp -I../../third_party/icu/source/common -I../../third_party/icu/source/i18n
+cflags = -fno-delete-null-pointer-checks -fno-ident -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers /Gy /FS /bigobj /utf-8 /Zc$:twoPhase /Zc$:sizedDealloc- /D__WRL_ENABLE_FUNCTION_STATICS__ -fmsc-version=1916 /Zc$:dllexportInlines- -m64 -msse3 /Brepro -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -ffile-compilation-dir=. -no-canonical-prefixes /W4 -Wimplicit-fallthrough -Wunreachable-code-aggressive -Wthread-safety -Wextra-semi /WX /wd4996 -Wno-missing-field-initializers -Wno-unused-parameter -Wloop-analysis -Wno-unneeded-internal-declaration -Wno-nonportable-include-path -Wno-null-pointer-subtraction -Wenum-compare-conditional -Wno-psabi -Wno-ignored-pragma-optimize -Wno-builtin-assume-aligned-alignment -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-bitwise-instead-of-logical /O1 /Ob2 /Oy- /Zc$:inline /Gw /Oi /Z7 -gcodeview-ghash -Xclang -fuse-ctor-homing -ftrivial-auto-var-init=pattern /guard$:cf,nochecks /MD -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Wno-switch /wd4324 /wd4577 /utf-8 -Wc++11-narrowing -Wdeprecated-copy -Wshadow -Wexit-time-destructors -Wglobal-constructors
+cflags_cc = -Wno-trigraphs /TP /GR- -I../../buildtools/third_party/libc++/trunk/include
+label_name = fxge
+target_out_dir = obj/core/fxge
+target_output_name = fxge
+
+build obj/core/fxge/fxge/cfx_cliprgn.obj: cxx ../../core/fxge/cfx_cliprgn.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_color.obj: cxx ../../core/fxge/cfx_color.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_drawutils.obj: cxx ../../core/fxge/cfx_drawutils.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_face.obj: cxx ../../core/fxge/cfx_face.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_folderfontinfo.obj: cxx ../../core/fxge/cfx_folderfontinfo.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_font.obj: cxx ../../core/fxge/cfx_font.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_fontcache.obj: cxx ../../core/fxge/cfx_fontcache.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_fontmapper.obj: cxx ../../core/fxge/cfx_fontmapper.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_fontmgr.obj: cxx ../../core/fxge/cfx_fontmgr.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_gemodule.obj: cxx ../../core/fxge/cfx_gemodule.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_glyphbitmap.obj: cxx ../../core/fxge/cfx_glyphbitmap.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_glyphcache.obj: cxx ../../core/fxge/cfx_glyphcache.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_graphstate.obj: cxx ../../core/fxge/cfx_graphstate.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_graphstatedata.obj: cxx ../../core/fxge/cfx_graphstatedata.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_path.obj: cxx ../../core/fxge/cfx_path.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_renderdevice.obj: cxx ../../core/fxge/cfx_renderdevice.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_substfont.obj: cxx ../../core/fxge/cfx_substfont.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_unicodeencoding.obj: cxx ../../core/fxge/cfx_unicodeencoding.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_bitmapcomposer.obj: cxx ../../core/fxge/dib/cfx_bitmapcomposer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_bitmapstorer.obj: cxx ../../core/fxge/dib/cfx_bitmapstorer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_cmyk_to_srgb.obj: cxx ../../core/fxge/dib/cfx_cmyk_to_srgb.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_dibbase.obj: cxx ../../core/fxge/dib/cfx_dibbase.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_dibitmap.obj: cxx ../../core/fxge/dib/cfx_dibitmap.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_imagerenderer.obj: cxx ../../core/fxge/dib/cfx_imagerenderer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_imagestretcher.obj: cxx ../../core/fxge/dib/cfx_imagestretcher.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_imagetransformer.obj: cxx ../../core/fxge/dib/cfx_imagetransformer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_scanlinecompositor.obj: cxx ../../core/fxge/dib/cfx_scanlinecompositor.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cstretchengine.obj: cxx ../../core/fxge/dib/cstretchengine.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/fx_dib.obj: cxx ../../core/fxge/dib/fx_dib.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitDingbats.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitDingbats.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitFixed.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitFixed.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitFixedBold.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitFixedBold.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitFixedBoldItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitFixedBoldItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitFixedItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitFixedItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSans.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSans.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSansBold.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSansBold.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSansBoldItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSansBoldItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSansItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSansItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSansMM.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSansMM.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSerif.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSerif.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSerifBold.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSerifBold.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSerifBoldItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSerifBoldItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSerifItalic.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSerifItalic.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSerifMM.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSerifMM.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/FoxitSymbol.obj: cxx ../../core/fxge/fontdata/chromefontdata/FoxitSymbol.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/fx_freetype.obj: cxx ../../core/fxge/freetype/fx_freetype.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/fx_font.obj: cxx ../../core/fxge/fx_font.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/renderdevicedriver_iface.obj: cxx ../../core/fxge/renderdevicedriver_iface.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/scoped_font_transform.obj: cxx ../../core/fxge/scoped_font_transform.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/text_char_pos.obj: cxx ../../core/fxge/text_char_pos.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/text_glyph_pos.obj: cxx ../../core/fxge/text_glyph_pos.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_unicodeencodingex.obj: cxx ../../core/fxge/cfx_unicodeencodingex.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/fx_agg_driver.obj: cxx ../../core/fxge/agg/fx_agg_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_windowsrenderdevice.obj: cxx ../../core/fxge/cfx_windowsrenderdevice.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_dibextractor.obj: cxx ../../core/fxge/dib/cfx_dibextractor.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_psfonttracker.obj: cxx ../../core/fxge/win32/cfx_psfonttracker.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cfx_psrenderer.obj: cxx ../../core/fxge/win32/cfx_psrenderer.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cgdi_device_driver.obj: cxx ../../core/fxge/win32/cgdi_device_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cgdi_display_driver.obj: cxx ../../core/fxge/win32/cgdi_display_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cgdi_plus_ext.obj: cxx ../../core/fxge/win32/cgdi_plus_ext.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cgdi_printer_driver.obj: cxx ../../core/fxge/win32/cgdi_printer_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cps_printer_driver.obj: cxx ../../core/fxge/win32/cps_printer_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cpsoutput.obj: cxx ../../core/fxge/win32/cpsoutput.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/ctext_only_printer_driver.obj: cxx ../../core/fxge/win32/ctext_only_printer_driver.cpp || obj/third_party/icu/icudata.stamp
+build obj/core/fxge/fxge/cwin32_platform.obj: cxx ../../core/fxge/win32/cwin32_platform.cpp || obj/third_party/icu/icudata.stamp
+
+build obj/core/fxge/fxge.stamp: stamp obj/core/fxge/fxge/cfx_cliprgn.obj obj/core/fxge/fxge/cfx_color.obj obj/core/fxge/fxge/cfx_drawutils.obj obj/core/fxge/fxge/cfx_face.obj obj/core/fxge/fxge/cfx_folderfontinfo.obj obj/core/fxge/fxge/cfx_font.obj obj/core/fxge/fxge/cfx_fontcache.obj obj/core/fxge/fxge/cfx_fontmapper.obj obj/core/fxge/fxge/cfx_fontmgr.obj obj/core/fxge/fxge/cfx_gemodule.obj obj/core/fxge/fxge/cfx_glyphbitmap.obj obj/core/fxge/fxge/cfx_glyphcache.obj obj/core/fxge/fxge/cfx_graphstate.obj obj/core/fxge/fxge/cfx_graphstatedata.obj obj/core/fxge/fxge/cfx_path.obj obj/core/fxge/fxge/cfx_renderdevice.obj obj/core/fxge/fxge/cfx_substfont.obj obj/core/fxge/fxge/cfx_unicodeencoding.obj obj/core/fxge/fxge/cfx_bitmapcomposer.obj obj/core/fxge/fxge/cfx_bitmapstorer.obj obj/core/fxge/fxge/cfx_cmyk_to_srgb.obj obj/core/fxge/fxge/cfx_dibbase.obj obj/core/fxge/fxge/cfx_dibitmap.obj obj/core/fxge/fxge/cfx_imagerenderer.obj obj/core/fxge/fxge/cfx_imagestretcher.obj obj/core/fxge/fxge/cfx_imagetransformer.obj obj/core/fxge/fxge/cfx_scanlinecompositor.obj obj/core/fxge/fxge/cstretchengine.obj obj/core/fxge/fxge/fx_dib.obj obj/core/fxge/fxge/FoxitDingbats.obj obj/core/fxge/fxge/FoxitFixed.obj obj/core/fxge/fxge/FoxitFixedBold.obj obj/core/fxge/fxge/FoxitFixedBoldItalic.obj obj/core/fxge/fxge/FoxitFixedItalic.obj obj/core/fxge/fxge/FoxitSans.obj obj/core/fxge/fxge/FoxitSansBold.obj obj/core/fxge/fxge/FoxitSansBoldItalic.obj obj/core/fxge/fxge/FoxitSansItalic.obj obj/core/fxge/fxge/FoxitSansMM.obj obj/core/fxge/fxge/FoxitSerif.obj obj/core/fxge/fxge/FoxitSerifBold.obj obj/core/fxge/fxge/FoxitSerifBoldItalic.obj obj/core/fxge/fxge/FoxitSerifItalic.obj obj/core/fxge/fxge/FoxitSerifMM.obj obj/core/fxge/fxge/FoxitSymbol.obj obj/core/fxge/fxge/fx_freetype.obj obj/core/fxge/fxge/fx_font.obj obj/core/fxge/fxge/renderdevicedriver_iface.obj obj/core/fxge/fxge/scoped_font_transform.obj obj/core/fxge/fxge/text_char_pos.obj obj/core/fxge/fxge/text_glyph_pos.obj obj/core/fxge/fxge/cfx_unicodeencodingex.obj obj/core/fxge/fxge/fx_agg_driver.obj obj/core/fxge/fxge/cfx_windowsrenderdevice.obj obj/core/fxge/fxge/cfx_dibextractor.obj obj/core/fxge/fxge/cfx_psfonttracker.obj obj/core/fxge/fxge/cfx_psrenderer.obj obj/core/fxge/fxge/cgdi_device_driver.obj obj/core/fxge/fxge/cgdi_display_driver.obj obj/core/fxge/fxge/cgdi_plus_ext.obj obj/core/fxge/fxge/cgdi_printer_driver.obj obj/core/fxge/fxge/cps_printer_driver.obj obj/core/fxge/fxge/cpsoutput.obj obj/core/fxge/fxge/ctext_only_printer_driver.obj obj/core/fxge/fxge/cwin32_platform.obj || obj/core/fxcrt/fxcrt.stamp obj/third_party/fx_agg.stamp obj/core/fxcrt/unowned_ptr.stamp obj/third_party/fx_freetype.stamp obj/third_party/pdfium_base.stamp ./absl.dll.lib ./icuuc.dll.lib

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\base\trace_event\common">
+      <UniqueIdentifier>{010D3D01-5A45-EFFA-BFF4-F184065DEC3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\base\trace_event">
+      <UniqueIdentifier>{89343095-9770-71E4-ADB6-FF479033A646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\base">
+      <UniqueIdentifier>{75A87448-82D5-A482-73D7-30FC73F47474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\libplatform">
+      <UniqueIdentifier>{EF33FF9B-8F83-B30C-5928-DBF541698FFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libplatform">
+      <UniqueIdentifier>{2D322343-0E68-1B6A-F267-660FB98B59A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libplatform\tracing">
+      <UniqueIdentifier>{2A9EF5EC-78BC-B5EC-F150-BBC139FB11DD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../base/trace_event/common/trace_event_common.h">
+      <Filter>..\base\trace_event\common</Filter>
+    </None>
+    <None Include="../../../../v8/include/libplatform/libplatform-export.h">
+      <Filter>include\libplatform</Filter>
+    </None>
+    <None Include="../../../../v8/include/libplatform/libplatform.h">
+      <Filter>include\libplatform</Filter>
+    </None>
+    <None Include="../../../../v8/include/libplatform/v8-tracing.h">
+      <Filter>include\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/default-foreground-task-runner.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/default-foreground-task-runner.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/default-job.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/default-job.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/default-platform.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/default-platform.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/default-worker-threads-task-runner.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/default-worker-threads-task-runner.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/delayed-task-queue.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/delayed-task-queue.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/task-queue.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/task-queue.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/trace-buffer.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/tracing/trace-buffer.h">
+      <Filter>src\libplatform\tracing</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/trace-config.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/trace-object.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/trace-writer.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/tracing/trace-writer.h">
+      <Filter>src\libplatform\tracing</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/tracing-controller.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../v8/src/libplatform/worker-thread.cc">
+      <Filter>src\libplatform</Filter>
+    </CustomBuild>
+    <None Include="../../../../v8/src/libplatform/worker-thread.h">
+      <Filter>src\libplatform</Filter>
+    </None>
+    <None Include="../../../../v8/src/libplatform/tracing/recorder.h">
+      <Filter>src\libplatform\tracing</Filter>
+    </None>
+    <CustomBuild Include="../../../../v8/src/libplatform/tracing/recorder-win.cc">
+      <Filter>src\libplatform\tracing</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

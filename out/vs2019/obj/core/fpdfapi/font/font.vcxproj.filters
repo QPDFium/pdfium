@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cfx_cttgsubtable.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cfx_cttgsubtable.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cfx_stockfontarray.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cfx_stockfontarray.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_cid2unicodemap.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_cid2unicodemap.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_cidfont.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_cidfont.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_cmap.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_cmap.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_cmapmanager.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_cmapmanager.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_cmapparser.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_cmapparser.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_font.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_font.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_fontencoding.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_fontencoding.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_fontglobals.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_fontglobals.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_simplefont.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_simplefont.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_tounicodemap.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_tounicodemap.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_truetypefont.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_truetypefont.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_type1font.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_type1font.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_type3char.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_type3char.h" />
+    <CustomBuild Include="../../../../../../core/fpdfapi/font/cpdf_type3font.cpp" />
+    <None Include="../../../../../../core/fpdfapi/font/cpdf_type3font.h" />
+  </ItemGroup>
+</Project>

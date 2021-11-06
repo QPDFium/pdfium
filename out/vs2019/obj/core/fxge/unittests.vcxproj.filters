@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dib">
+      <UniqueIdentifier>{A0A7E6BD-0829-6D26-4234-7CA5567467E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{F4FDF6B9-F642-C567-A862-8E878CE54B8B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../core/fxge/cfx_folderfontinfo_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxge/cfx_fontmapper_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxge/cfx_path_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxge/dib/cfx_cmyk_to_srgb_unittest.cpp">
+      <Filter>dib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxge/dib/cfx_dibbase_unittest.cpp">
+      <Filter>dib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxge/dib/cfx_dibitmap_unittest.cpp">
+      <Filter>dib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxge/dib/cstretchengine_unittest.cpp">
+      <Filter>dib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../core/fxge/fx_font_unittest.cpp" />
+    <CustomBuild Include="../../../../../core/fxge/win32/cfx_psrenderer_unittest.cpp">
+      <Filter>win32</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
