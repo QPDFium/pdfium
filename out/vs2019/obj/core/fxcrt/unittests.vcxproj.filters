@@ -58,6 +58,5 @@
     <CustomBuild Include="../../../../../core/fxcrt/xml/cfx_xmltext_unittest.cpp">
       <Filter>xml</Filter>
     </CustomBuild>
-    <CustomBuild Include="../../../../../core/fxcrt/cfx_memorystream_unittest.cpp" />
   </ItemGroup>
 </Project>

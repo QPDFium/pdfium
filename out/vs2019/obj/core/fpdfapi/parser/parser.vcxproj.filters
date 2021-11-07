@@ -68,7 +68,5 @@
     <None Include="../../../../../../core/fpdfapi/parser/fpdf_parser_decode.h" />
     <CustomBuild Include="../../../../../../core/fpdfapi/parser/fpdf_parser_utility.cpp" />
     <None Include="../../../../../../core/fpdfapi/parser/fpdf_parser_utility.h" />
-    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_seekablemultistream.cpp" />
-    <None Include="../../../../../../core/fpdfapi/parser/cpdf_seekablemultistream.h" />
   </ItemGroup>
 </Project>

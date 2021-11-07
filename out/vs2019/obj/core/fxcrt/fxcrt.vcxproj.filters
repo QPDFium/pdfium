@@ -122,7 +122,5 @@
     <CustomBuild Include="../../../../../core/fxcrt/cfx_fileaccess_windows.cpp" />
     <None Include="../../../../../core/fxcrt/cfx_fileaccess_windows.h" />
     <CustomBuild Include="../../../../../core/fxcrt/fx_folder_windows.cpp" />
-    <CustomBuild Include="../../../../../core/fxcrt/cfx_memorystream.cpp" />
-    <None Include="../../../../../core/fxcrt/cfx_memorystream.h" />
   </ItemGroup>
 </Project>

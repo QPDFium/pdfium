@@ -196,8 +196,6 @@
     <None Include="../../../../../core/fxge/text_char_pos.h" />
     <CustomBuild Include="../../../../../core/fxge/text_glyph_pos.cpp" />
     <None Include="../../../../../core/fxge/text_glyph_pos.h" />
-    <CustomBuild Include="../../../../../core/fxge/cfx_unicodeencodingex.cpp" />
-    <None Include="../../../../../core/fxge/cfx_unicodeencodingex.h" />
     <CustomBuild Include="../../../../../core/fxge/agg/fx_agg_driver.cpp">
       <Filter>agg</Filter>
     </CustomBuild>

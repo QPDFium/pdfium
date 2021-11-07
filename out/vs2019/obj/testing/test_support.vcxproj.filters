@@ -36,7 +36,5 @@
     <None Include="../../../../testing/utils/hash.h">
       <Filter>utils</Filter>
     </None>
-    <CustomBuild Include="../../../../testing/v8_initializer.cpp" />
-    <None Include="../../../../testing/v8_initializer.h" />
   </ItemGroup>
 </Project>

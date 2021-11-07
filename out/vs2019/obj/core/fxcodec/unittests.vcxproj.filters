@@ -10,9 +10,6 @@
     <Filter Include="jpx">
       <UniqueIdentifier>{E8D1FA95-3209-0E93-F2BD-47E0EDEA4B04}</UniqueIdentifier>
     </Filter>
-    <Filter Include="gif">
-      <UniqueIdentifier>{CB88D884-5D3F-BE08-A0DF-826DDB6E713F}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="../../../../../core/fxcodec/basic/a85_unittest.cpp">
@@ -29,13 +26,6 @@
     </CustomBuild>
     <CustomBuild Include="../../../../../core/fxcodec/jpx/jpx_unittest.cpp">
       <Filter>jpx</Filter>
-    </CustomBuild>
-    <CustomBuild Include="../../../../../core/fxcodec/progressive_decoder_unittest.cpp" />
-    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gifcontext_unittest.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/lzw_decompressor_unittest.cpp">
-      <Filter>gif</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

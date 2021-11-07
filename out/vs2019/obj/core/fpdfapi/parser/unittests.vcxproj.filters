@@ -19,6 +19,5 @@
     <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_syntax_parser_unittest.cpp" />
     <CustomBuild Include="../../../../../../core/fpdfapi/parser/fpdf_parser_decode_unittest.cpp" />
     <CustomBuild Include="../../../../../../core/fpdfapi/parser/fpdf_parser_utility_unittest.cpp" />
-    <CustomBuild Include="../../../../../../core/fpdfapi/parser/cpdf_seekablemultistream_unittest.cpp" />
   </ItemGroup>
 </Project>

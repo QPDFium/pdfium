@@ -4,9 +4,5 @@
   <ItemGroup>
     <CustomBuild Include="../../../../testing/pdf_test_environment.cpp" />
     <None Include="../../../../testing/pdf_test_environment.h" />
-    <CustomBuild Include="../../../../testing/v8_test_environment.cpp" />
-    <None Include="../../../../testing/v8_test_environment.h" />
-    <CustomBuild Include="../../../../testing/xfa_test_environment.cpp" />
-    <None Include="../../../../testing/xfa_test_environment.h" />
   </ItemGroup>
 </Project>

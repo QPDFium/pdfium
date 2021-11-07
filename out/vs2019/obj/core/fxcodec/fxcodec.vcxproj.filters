@@ -22,18 +22,6 @@
     <Filter Include="jpx">
       <UniqueIdentifier>{E8D1FA95-3209-0E93-F2BD-47E0EDEA4B04}</UniqueIdentifier>
     </Filter>
-    <Filter Include="bmp">
-      <UniqueIdentifier>{4AFAA0E9-88A1-5399-7B06-782386E94415}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="gif">
-      <UniqueIdentifier>{CB88D884-5D3F-BE08-A0DF-826DDB6E713F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="png">
-      <UniqueIdentifier>{8A39A4A0-B481-5B42-987F-86BC4EA28E81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tiff">
-      <UniqueIdentifier>{46ED83E1-E45F-5FD5-1853-A03E6040CE29}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="../../../../../core/fxcodec/basic/basicmodule.cpp">
@@ -205,83 +193,5 @@
     </None>
     <CustomBuild Include="../../../../../core/fxcodec/scanlinedecoder.cpp" />
     <None Include="../../../../../core/fxcodec/scanlinedecoder.h" />
-    <CustomBuild Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.cpp">
-      <Filter>jpeg</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/jpeg/jpeg_progressive_decoder.h">
-      <Filter>jpeg</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/progressive_decoder.cpp" />
-    <None Include="../../../../../core/fxcodec/progressive_decoder.h" />
-    <None Include="../../../../../core/fxcodec/progressive_decoder_iface.h" />
-    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_decoder.cpp">
-      <Filter>bmp</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/bmp/bmp_decoder.h">
-      <Filter>bmp</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.cpp">
-      <Filter>bmp</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/bmp/bmp_progressive_decoder.h">
-      <Filter>bmp</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.cpp">
-      <Filter>bmp</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpcontext.h">
-      <Filter>bmp</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.cpp">
-      <Filter>bmp</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/bmp/cfx_bmpdecompressor.h">
-      <Filter>bmp</Filter>
-    </None>
-    <None Include="../../../../../core/fxcodec/bmp/fx_bmp.h">
-      <Filter>bmp</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gif.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/gif/cfx_gif.h">
-      <Filter>gif</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/cfx_gifcontext.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/gif/cfx_gifcontext.h">
-      <Filter>gif</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_decoder.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/gif/gif_decoder.h">
-      <Filter>gif</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/gif/gif_progressive_decoder.h">
-      <Filter>gif</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/gif/lzw_decompressor.cpp">
-      <Filter>gif</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/gif/lzw_decompressor.h">
-      <Filter>gif</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/png/png_decoder.cpp">
-      <Filter>png</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/png/png_decoder.h">
-      <Filter>png</Filter>
-    </None>
-    <CustomBuild Include="../../../../../core/fxcodec/tiff/tiff_decoder.cpp">
-      <Filter>tiff</Filter>
-    </CustomBuild>
-    <None Include="../../../../../core/fxcodec/tiff/tiff_decoder.h">
-      <Filter>tiff</Filter>
-    </None>
   </ItemGroup>
 </Project>

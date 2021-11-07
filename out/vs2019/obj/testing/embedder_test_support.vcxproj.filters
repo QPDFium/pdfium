@@ -14,11 +14,5 @@
     <None Include="../../../../testing/fake_file_access.h" />
     <CustomBuild Include="../../../../testing/range_set.cpp" />
     <None Include="../../../../testing/range_set.h" />
-    <CustomBuild Include="../../../../testing/external_engine_embedder_test.cpp" />
-    <None Include="../../../../testing/external_engine_embedder_test.h" />
-    <CustomBuild Include="../../../../testing/js_embedder_test.cpp" />
-    <None Include="../../../../testing/js_embedder_test.h" />
-    <CustomBuild Include="../../../../testing/xfa_js_embedder_test.cpp" />
-    <None Include="../../../../testing/xfa_js_embedder_test.h" />
   </ItemGroup>
 </Project>

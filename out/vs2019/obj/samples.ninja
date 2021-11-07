@@ -4,6 +4,5 @@ label_name = samples
 target_out_dir = obj
 target_output_name = samples
 
-build obj/samples.inputdeps.stamp: stamp obj/third_party/icu/icudata.stamp obj/v8/generate_bytecode_builtins_list.stamp obj/v8/run_gen-regexp-special-case.stamp obj/v8/run_torque.stamp obj/v8/src/inspector/protocol_generated_sources.stamp
 
 build obj/samples.stamp: stamp || obj/samples/samples.stamp
